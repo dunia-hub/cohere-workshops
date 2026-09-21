@@ -9,6 +9,8 @@ IGNORED_DIRECTORIES = {
     "build",
     "dist",
     "node_modules",
+    ".pytest_cache",
+    ".ruff_cache",
 }
 
 SUPPORTED_EXTENSIONS = {
