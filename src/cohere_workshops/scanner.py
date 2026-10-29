@@ -16,6 +16,11 @@ SENSITIVE_FILE_NAMES = {
     "service-account.json",
 }
 
+SILENT_DIRECTORIES = {
+    ".git",
+    ".venv",
+}
+
 IGNORED_DIRECTORIES = {
     ".git",
     ".venv",
@@ -131,7 +136,13 @@ def scan_repository(repository: Path) -> ScanResult:
 
         relative_path = path.relative_to(repository)
 
+        if any(part in SILENT_DIRECTORIES for part in relative_path.parts):
+            continue
+
         if any(part in IGNORED_DIRECTORIES for part in relative_path.parts):
+            exclusions.append(
+                ExcludedFile(relative_path.as_posix(), "ignored_directory")
+            )
             continue
 
         if path.name.lower() in SENSITIVE_FILE_NAMES:

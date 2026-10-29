@@ -93,3 +93,30 @@ def test_respects_git_ignore_rules(tmp_path: Path) -> None:
         ("artifacts/generated.py", "git_ignored"),
         ("ignored.py", "git_ignored"),
     ]
+
+
+def test_records_ignored_directory_exclusions(tmp_path: Path) -> None:
+    pkg_build = tmp_path / "pkg" / "build"
+    pkg_build.mkdir(parents=True)
+    (pkg_build / "core.py").write_text("def core(): pass", encoding="utf-8")
+
+    virtual_env = tmp_path / ".venv"
+    virtual_env.mkdir()
+    (virtual_env / "site.py").write_text("pass", encoding="utf-8")
+
+    git_dir = tmp_path / ".git"
+    git_dir.mkdir()
+    (git_dir / "config.json").write_text("{}", encoding="utf-8")
+
+    (tmp_path / "main.py").write_text("print('ok')", encoding="utf-8")
+
+    result = scan_repository(tmp_path)
+
+    assert [path.name for path in result.files] == ["main.py"]
+    assert [
+        (excluded.path, excluded.reason)
+        for excluded in result.exclusions
+    ] == [
+        ("pkg/build/core.py", "ignored_directory"),
+    ]
+
