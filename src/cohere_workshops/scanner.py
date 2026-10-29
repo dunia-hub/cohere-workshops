@@ -85,10 +85,7 @@ def _git_ignored_paths(
     if repository_check.returncode != 0:
         return set()
 
-    relative_paths = [
-        path.relative_to(repository).as_posix()
-        for path in paths
-    ]
+    relative_paths = [path.relative_to(repository).as_posix() for path in paths]
     completed = subprocess.run(
         [
             "git",
@@ -108,11 +105,7 @@ def _git_ignored_paths(
     if completed.returncode not in {0, 1}:
         raise RuntimeError("Git failed to evaluate repository ignore rules")
 
-    return {
-        path
-        for path in completed.stdout.split("\0")
-        if path
-    }
+    return {path for path in completed.stdout.split("\0") if path}
 
 
 def scan_repository(repository: Path) -> ScanResult:
@@ -132,21 +125,21 @@ def scan_repository(repository: Path) -> ScanResult:
         relative_path = path.relative_to(repository)
 
         if any(part in IGNORED_DIRECTORIES for part in relative_path.parts):
+            if not any(part in {".git", ".venv"} for part in relative_path.parts):
+                exclusions.append(
+                    ExcludedFile(relative_path.as_posix(), "ignored_directory")
+                )
             continue
 
         if path.name.lower() in SENSITIVE_FILE_NAMES:
-            exclusions.append(
-                ExcludedFile(relative_path.as_posix(), "sensitive_path")
-            )
+            exclusions.append(ExcludedFile(relative_path.as_posix(), "sensitive_path"))
             continue
 
         if path.suffix.lower() not in SUPPORTED_EXTENSIONS:
             continue
 
         if path.stat().st_size > MAX_FILE_SIZE_BYTES:
-            exclusions.append(
-                ExcludedFile(relative_path.as_posix(), "file_too_large")
-            )
+            exclusions.append(ExcludedFile(relative_path.as_posix(), "file_too_large"))
             continue
 
         candidates.append(path)
@@ -158,14 +151,14 @@ def scan_repository(repository: Path) -> ScanResult:
         relative_path = path.relative_to(repository).as_posix()
 
         if relative_path in ignored_paths:
-            exclusions.append(
-                ExcludedFile(relative_path, "git_ignored")
-            )
+            exclusions.append(ExcludedFile(relative_path, "git_ignored"))
         else:
             files.append(path)
 
     return ScanResult(
-        files=tuple(sorted(files)),
+        files=tuple(
+            sorted(files, key=lambda path: path.relative_to(repository).as_posix())
+        ),
         exclusions=tuple(sorted(exclusions, key=lambda item: item.path)),
     )
 

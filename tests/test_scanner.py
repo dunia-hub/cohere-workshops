@@ -20,14 +20,14 @@ def test_discovers_supported_files_and_ignores_generated_directories(
     (virtual_environment / "ignored.py").write_text("", encoding="utf-8")
 
     discovered = [
-        path.relative_to(tmp_path)
-        for path in discover_source_files(tmp_path)
+        path.relative_to(tmp_path) for path in discover_source_files(tmp_path)
     ]
 
     assert discovered == [
         Path("README.md"),
         Path("app.py"),
     ]
+
 
 def test_ignores_files_larger_than_limit(tmp_path: Path) -> None:
     oversized_file = tmp_path / "oversized.py"
@@ -44,8 +44,7 @@ def test_ignores_sensitive_file_names(tmp_path: Path) -> None:
     )
 
     discovered = [
-        path.relative_to(tmp_path)
-        for path in discover_source_files(tmp_path)
+        path.relative_to(tmp_path) for path in discover_source_files(tmp_path)
     ]
 
     assert discovered == [Path("config.json")]
@@ -59,10 +58,7 @@ def test_records_safety_exclusions(tmp_path: Path) -> None:
     result = scan_repository(tmp_path)
 
     assert [path.name for path in result.files] == ["app.py"]
-    assert [
-        (excluded.path, excluded.reason)
-        for excluded in result.exclusions
-    ] == [
+    assert [(excluded.path, excluded.reason) for excluded in result.exclusions] == [
         (".env", "sensitive_path"),
         ("large.py", "file_too_large"),
     ]
@@ -86,10 +82,20 @@ def test_respects_git_ignore_rules(tmp_path: Path) -> None:
     result = scan_repository(tmp_path)
 
     assert [path.name for path in result.files] == ["kept.py"]
-    assert [
-        (excluded.path, excluded.reason)
-        for excluded in result.exclusions
-    ] == [
+    assert [(excluded.path, excluded.reason) for excluded in result.exclusions] == [
         ("artifacts/generated.py", "git_ignored"),
         ("ignored.py", "git_ignored"),
     ]
+
+
+def test_records_ignored_directory_exclusions(tmp_path: Path) -> None:
+    build_dir = tmp_path / "pkg" / "build"
+    build_dir.mkdir(parents=True)
+    (build_dir / "core.py").write_text("pass", encoding="utf-8")
+
+    result = scan_repository(tmp_path)
+
+    assert (
+        "pkg/build/core.py",
+        "ignored_directory",
+    ) in [(excluded.path, excluded.reason) for excluded in result.exclusions]
