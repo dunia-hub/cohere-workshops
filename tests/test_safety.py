@@ -8,6 +8,12 @@ def test_detects_high_confidence_secret_patterns() -> None:
             "AKIA" + "IOSFODNN7EXAMPLE",
             "ghp_" + "abcdefghijklmnopqrstuvwxyzABCDEFGHIJ",
             "AIza" + ("A" * 35),
+            "sk-" + ("a" * 40),
+            "sk-proj-" + ("b" * 30),
+            "sk-ant-" + ("c" * 30),
+            "xoxb-" + ("d" * 30),
+            "xoxp-" + ("e" * 30),
+            "sk_live_" + ("f" * 30),
         )
     )
 
@@ -16,6 +22,10 @@ def test_detects_high_confidence_secret_patterns() -> None:
         "aws_access_key",
         "github_token",
         "google_api_key",
+        "openai_api_key",
+        "anthropic_api_key",
+        "slack_token",
+        "stripe_secret_key",
     )
 
 
