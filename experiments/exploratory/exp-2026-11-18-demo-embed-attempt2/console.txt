@@ -1,0 +1,42 @@
+$ cohere-versions /home/dhub/cohere-workshops/demo_repo --old v1 --new v2 --output /home/dhub/cohere-workshops/experiments/exploratory/exp-2026-11-18-demo-embed/raw-output.jsonl
+v1 (62eb1ea) -> v2 (722f230)
+Indexed at symbol level: 4 current, 2 superseded, 1 removed
+Skipped 1 unchanged older chunks
+
+Query: How is the transfer fee calculated?
+Rank  Score   Version     Rev    Location
+1     0.5622  superseded  v1     payments.py::calculate_transfer_fee
+2     0.5573  current     v2     payments.py::calculate_transfer_fee
+3     0.3451  superseded  v1     payments.py::send_payment
+4     0.3424  current     v2     payments.py::send_payment
+5     0.3235  current     v2     receipts.py::format_receipt
+Top result is current: NO
+Outdated code in top 5: 2
+Score gap, best current minus best outdated: -0.0049
+
+Query: Check that a phone number is valid before sending money
+Rank  Score   Version     Rev    Location
+1     0.5716  removed     v1     payments.py::validate_phone_number
+2     0.5159  superseded  v1     payments.py::send_payment
+3     0.4476  current     v2     payments.py::send_payment
+4     0.4407  current     v2     payments.py::normalize_phone_number
+5     0.3274  current     v2     receipts.py::format_receipt
+Top result is current: NO
+Outdated code in top 5: 2
+Score gap, best current minus best outdated: -0.1240
+
+Query: Send a mobile money payment
+Rank  Score   Version     Rev    Location
+1     0.5201  current     v2     payments.py::send_payment
+2     0.5049  superseded  v1     payments.py::send_payment
+3     0.3729  superseded  v1     payments.py::calculate_transfer_fee
+4     0.3342  current     v2     payments.py::calculate_transfer_fee
+5     0.3307  current     v2     receipts.py::format_receipt
+Top result is current: yes
+Outdated code in top 5: 2
+Score gap, best current minus best outdated: +0.0152
+
+Saved 3 records to /home/dhub/cohere-workshops/experiments/exploratory/exp-2026-11-18-demo-embed/raw-output.jsonl
+
+[exit code 0, 3.421 s]
+

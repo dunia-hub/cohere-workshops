@@ -77,6 +77,11 @@ def build_parser() -> argparse.ArgumentParser:
     parser.add_argument("--keep", type=int, default=4, help="Most evidence sent per search.")
     parser.add_argument("--max-tool-calls", type=int, default=3)
     parser.add_argument(
+        "--command-model",
+        default=COMMAND_MODEL,
+        help=f"Cohere Command model for tool planning and answers. Default: {COMMAND_MODEL}.",
+    )
+    parser.add_argument(
         "--offline",
         action="store_true",
         help="Practice without an API key. Not real answers.",
@@ -100,7 +105,7 @@ def main(arguments: Sequence[str] | None = None) -> None:
     models = (
         {"embed": "offline", "rerank": "offline", "command": "offline"}
         if options.offline
-        else {"embed": EMBED_MODEL, "rerank": RERANK_MODEL, "command": COMMAND_MODEL}
+        else {"embed": EMBED_MODEL, "rerank": RERANK_MODEL, "command": options.command_model}
     )
 
     corpus = build_versioned_corpus(repository, options.old, options.new)
@@ -113,7 +118,11 @@ def main(arguments: Sequence[str] | None = None) -> None:
         client, corpus, validator, candidates=options.candidates, keep=options.keep
     )
     result = run_agent(
-        client, tool, options.question, max_tool_calls=options.max_tool_calls
+        client,
+        tool,
+        options.question,
+        model=options.command_model,
+        max_tool_calls=options.max_tool_calls,
     )
 
     for plan in result.tool_plans:

@@ -1,0 +1,40 @@
+$ cohere-agent /home/dhub/cohere-workshops/demo_repo --old v1 --new v2 --target v2 --question How is the transfer fee calculated? --output /home/dhub/cohere-workshops/experiments/exploratory/exp-2026-11-18-demo-agent/raw-output.jsonl
+Question: How is the transfer fee calculated?
+Target: v2 (722f230, 2026-11-18)
+
+[stderr]
+Traceback (most recent call last):
+  File "/home/dhub/cohere-workshops/.venv/bin/cohere-agent", line 8, in <module>
+    sys.exit(main())
+             ~~~~^^
+  File "/home/dhub/cohere-workshops/src/cohere_workshops/agent_cli.py", line 115, in main
+    result = run_agent(
+        client, tool, options.question, max_tool_calls=options.max_tool_calls
+    )
+  File "/home/dhub/cohere-workshops/src/cohere_workshops/agent.py", line 152, in run_agent
+    plans, forced = gather_evidence(
+                    ~~~~~~~~~~~~~~~^
+        client, tool, question, model=model, max_tool_calls=max_tool_calls
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/dhub/cohere-workshops/src/cohere_workshops/agent.py", line 106, in gather_evidence
+    response = client.chat(
+        model=model, messages=messages, tools=[SEARCH_TOOL], temperature=0
+    )
+  File "/home/dhub/cohere-workshops/.venv/lib/python3.14/site-packages/cohere/client.py", line 35, in _wrapped
+    return method(*args, **kwargs)
+  File "/home/dhub/cohere-workshops/.venv/lib/python3.14/site-packages/cohere/v2/client.py", line 360, in chat
+    _response = self._raw_client.chat(
+        model=model,
+    ...<19 lines>...
+        request_options=request_options,
+    )
+  File "/home/dhub/cohere-workshops/.venv/lib/python3.14/site-packages/cohere/v2/raw_client.py", line 645, in chat
+    raise TooManyRequestsError(
+    ...<8 lines>...
+    )
+cohere.errors.too_many_requests_error.TooManyRequestsError: headers: {'access-control-expose-headers': 'X-Debug-Trace-ID', 'cache-control': 'no-cache, no-store, no-transform, must-revalidate, private, max-age=0', 'content-encoding': 'gzip', 'content-type': 'application/json', 'expires': 'Thu, 01 Jan 1970 00:00:00 GMT', 'pragma': 'no-cache', 'vary': 'Origin,Accept-Encoding', 'x-accel-expires': '0', 'x-debug-trace-id': '73639a7f2317c871d63fb74324462f60', 'date': 'Wed, 18 Nov 2026 12:18:24 GMT', 'x-envoy-upstream-service-time': '7', 'server': 'envoy', 'via': '1.1 google', 'alt-svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000', 'transfer-encoding': 'chunked'}, status_code: 429, body: {'id': 'c14af656-390f-4a59-866e-d695133d90e0', 'message': 'You are past the per-month request limit for this model, please wait and try again later.'}
+
+[exit code 1, 5.926 s]
+

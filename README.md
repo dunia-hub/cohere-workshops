@@ -20,12 +20,12 @@ Dunia Hub's open source workshop series and research project on version-aware co
 
 ## What we found so far
 
-These are exploratory runs on a small practice project and on this repository. They are not final research results.
+These are exploratory runs on the small practice project (`cohere-demo-repo`), recorded in `experiments/exploratory/exp-2026-11-22-demo-*`. They are not final research results.
 
-- **Embed alone:** old code often ranked first, by gaps under 0.01.
-- **Rerank:** improved the order, but old and new code still scored almost the same. Adding commit details to the text Rerank reads made the ranking worse.
+- **Embed alone:** old code ranked first in 2 of 3 queries, once by a gap under 0.01 (0.0049) and once clearly (0.124).
+- **Rerank:** fixed the order on one of those two queries, but old and new code still scored almost the same there (0.9629 vs 0.9622). Adding commit details to the text Rerank reads made the ranking worse on 2 of 3 queries.
 - **Git check:** a simple rule against Git history removed invalid code every time.
-- **Agent:** across four live questions, every answer matched its target commit, with no stale references, even though search put wrong-version code first in 5 of 12 searches.
+- **Agent (Command A):** across 4 questions at 2 target versions, 7 of 8 answers were fully correct and 1 was incomplete. No answer stated a fact from the wrong version, even though search put wrong-version code first in 4 of 8 searches.
 
 The lesson: **the model ranks and answers, Git decides what is valid.**
 

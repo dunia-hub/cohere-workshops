@@ -1,0 +1,67 @@
+{
+  "answer_key_id": "demo-repo-agent-v1",
+  "created": "2026-11-18",
+  "repository": "Practice repository created by cohere-demo-repo",
+  "source_of_truth": "src/cohere_workshops/demo_repo.py",
+  "verification": "Checked by reading payments.py at tags v1 and v2 and by running calculate_transfer_fee(500) and send_payment at each tag. v1: fee(500)=10.0, api=v1, validate_phone_number present. v2: fee(500)=0, api=v2, validate_phone_number absent.",
+  "scoring_rule": "An answer at a target is correct when it states the target's facts and states none of the other version's facts. A declined answer is scored as declined, not as correct.",
+  "committed_before_runs": true,
+  "questions": [
+    {
+      "id": "q1",
+      "question": "How is the transfer fee calculated?",
+      "targets": {
+        "v2": {
+          "facts": ["Tiered pricing", "No fee up to 1000", "1 percent up to 10000", "1.5 percent above 10000"],
+          "stale_facts": ["Flat 2 percent of the amount"]
+        },
+        "v1": {
+          "facts": ["Flat 2 percent of the amount"],
+          "stale_facts": ["Tiered pricing", "No fee up to 1000", "1 percent up to 10000", "1.5 percent above 10000"]
+        }
+      }
+    },
+    {
+      "id": "q2",
+      "question": "How is a phone number checked before sending money?",
+      "targets": {
+        "v2": {
+          "facts": ["normalize_phone_number converts the number to international format 2547XXXXXXXX", "Accepts 10 digits starting with 0 or 12 digits starting with 254", "Raises ValueError for an invalid number"],
+          "stale_facts": ["validate_phone_number", "Must start with 07 and have 10 digits"]
+        },
+        "v1": {
+          "facts": ["validate_phone_number checks the number starts with 07 and has 10 digits", "send_payment raises ValueError if validation fails"],
+          "stale_facts": ["normalize_phone_number", "International format 2547XXXXXXXX"]
+        }
+      }
+    },
+    {
+      "id": "q3",
+      "question": "Which payments API version does send_payment use?",
+      "targets": {
+        "v2": {
+          "facts": ["v2"],
+          "stale_facts": ["v1"]
+        },
+        "v1": {
+          "facts": ["v1"],
+          "stale_facts": ["v2"]
+        }
+      }
+    },
+    {
+      "id": "q4",
+      "question": "What fee is charged on a transfer of 500?",
+      "targets": {
+        "v2": {
+          "facts": ["0, because 500 is within the no-fee tier up to 1000"],
+          "stale_facts": ["10", "2 percent"]
+        },
+        "v1": {
+          "facts": ["10, which is 2 percent of 500"],
+          "stale_facts": ["0", "No fee"]
+        }
+      }
+    }
+  ]
+}

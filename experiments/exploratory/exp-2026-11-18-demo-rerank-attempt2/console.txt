@@ -1,0 +1,103 @@
+$ cohere-rerank /home/dhub/cohere-workshops/demo_repo --old v1 --new v2 --format both --output /home/dhub/cohere-workshops/experiments/exploratory/exp-2026-11-18-demo-rerank/raw-output.jsonl
+v1 (2026-11-18) -> v2 (2026-11-18)
+
+=== Query: How is the transfer fee calculated?
+
+Embed order (before Rerank)
+Rank  Score   Was  Version     Location
+1     0.5622  1    superseded  payments.py::calculate_transfer_fee
+2     0.5573  2    current     payments.py::calculate_transfer_fee
+3     0.3451  3    superseded  payments.py::send_payment
+4     0.3424  4    current     payments.py::send_payment
+5     0.3235  5    current     receipts.py::format_receipt
+
+Rerank order (format: code)
+Rank  Score   Was  Version     Location
+1     0.9630  2    current     payments.py::calculate_transfer_fee
+2     0.9622  1    superseded  payments.py::calculate_transfer_fee
+3     0.8664  4    current     payments.py::send_payment
+4     0.8648  3    superseded  payments.py::send_payment
+5     0.6788  5    current     receipts.py::format_receipt
+Stale code above current code: Embed YES -> Rerank no
+Current code in top 3: YES | Stale share of top 3: 33%
+After the Git filter, top result: payments.py::calculate_transfer_fee
+
+Rerank order (format: metadata)
+Rank  Score   Was  Version     Location
+1     0.9671  2    current     payments.py::calculate_transfer_fee
+2     0.9657  1    superseded  payments.py::calculate_transfer_fee
+3     0.8713  3    superseded  payments.py::send_payment
+4     0.8657  4    current     payments.py::send_payment
+5     0.6856  5    current     receipts.py::format_receipt
+Stale code above current code: Embed YES -> Rerank no
+Current code in top 3: YES | Stale share of top 3: 67%
+After the Git filter, top result: payments.py::calculate_transfer_fee
+
+=== Query: Check that a phone number is valid before sending money
+
+Embed order (before Rerank)
+Rank  Score   Was  Version     Location
+1     0.5716  1    removed     payments.py::validate_phone_number
+2     0.5159  2    superseded  payments.py::send_payment
+3     0.4476  3    current     payments.py::send_payment
+4     0.4407  4    current     payments.py::normalize_phone_number
+5     0.3274  5    current     receipts.py::format_receipt
+
+Rerank order (format: code)
+Rank  Score   Was  Version     Location
+1     0.9722  2    superseded  payments.py::send_payment
+2     0.9148  1    removed     payments.py::validate_phone_number
+3     0.8542  3    current     payments.py::send_payment
+4     0.7729  4    current     payments.py::normalize_phone_number
+5     0.5094  5    current     receipts.py::format_receipt
+Stale code above current code: Embed YES -> Rerank YES
+Current code in top 3: YES | Stale share of top 3: 67%
+After the Git filter, top result: payments.py::send_payment
+
+Rerank order (format: metadata)
+Rank  Score   Was  Version     Location
+1     0.9920  2    superseded  payments.py::send_payment
+2     0.9196  1    removed     payments.py::validate_phone_number
+3     0.8833  3    current     payments.py::send_payment
+4     0.7414  4    current     payments.py::normalize_phone_number
+5     0.5172  5    current     receipts.py::format_receipt
+Stale code above current code: Embed YES -> Rerank YES
+Current code in top 3: YES | Stale share of top 3: 67%
+After the Git filter, top result: payments.py::send_payment
+
+=== Query: Send a mobile money payment
+
+Embed order (before Rerank)
+Rank  Score   Was  Version     Location
+1     0.5201  1    current     payments.py::send_payment
+2     0.5049  2    superseded  payments.py::send_payment
+3     0.3729  3    superseded  payments.py::calculate_transfer_fee
+4     0.3342  4    current     payments.py::calculate_transfer_fee
+5     0.3307  5    current     receipts.py::format_receipt
+
+Rerank order (format: code)
+Rank  Score   Was  Version     Location
+1     0.8886  1    current     payments.py::send_payment
+2     0.8865  2    superseded  payments.py::send_payment
+3     0.5637  5    current     receipts.py::format_receipt
+4     0.5016  7    current     payments.py::normalize_phone_number
+5     0.4938  6    removed     payments.py::validate_phone_number
+Stale code above current code: Embed no -> Rerank no
+Current code in top 3: YES | Stale share of top 3: 33%
+After the Git filter, top result: payments.py::send_payment
+
+Rerank order (format: metadata)
+Rank  Score   Was  Version     Location
+1     0.8978  2    superseded  payments.py::send_payment
+2     0.8845  1    current     payments.py::send_payment
+3     0.5483  5    current     receipts.py::format_receipt
+4     0.4977  7    current     payments.py::normalize_phone_number
+5     0.4820  6    removed     payments.py::validate_phone_number
+Stale code above current code: Embed no -> Rerank YES
+Current code in top 3: YES | Stale share of top 3: 33%
+After the Git filter, top result: payments.py::send_payment
+
+Saved 6 records to /home/dhub/cohere-workshops/experiments/exploratory/exp-2026-11-18-demo-rerank/raw-output.jsonl
+
+[exit code 0, 5.846 s]
+

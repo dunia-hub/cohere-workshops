@@ -68,3 +68,36 @@ def test_live_mode_requires_api_key(
 
     with pytest.raises(RuntimeError, match="COHERE_API_KEY is missing"):
         agent_cli.main([str(demo_repository), "--old", "v1", "--new", "v2"])
+
+
+def test_command_model_is_used_and_recorded(
+    demo_repository: Path,
+    tmp_path: Path,
+    monkeypatch: pytest.MonkeyPatch,
+) -> None:
+    class RecordingClient(agent_cli.OfflineAgentClient):
+        def __init__(self) -> None:
+            self.chat_models: list[object] = []
+
+        def chat(self, **kwargs: object) -> object:
+            self.chat_models.append(kwargs["model"])
+            return super().chat(**kwargs)
+
+    client = RecordingClient()
+    monkeypatch.setattr(agent_cli, "create_client", lambda offline: client)
+    output = tmp_path / "trace.jsonl"
+
+    agent_cli.main(
+        [
+            str(demo_repository),
+            "--old", "v1",
+            "--new", "v2",
+            "--command-model", "command-a-03-2025",
+            "--output", str(output),
+        ]
+    )
+
+    [record] = [json.loads(line) for line in output.read_text().splitlines()]
+    assert client.chat_models
+    assert set(client.chat_models) == {"command-a-03-2025"}
+    assert record["models"]["command"] == "command-a-03-2025"

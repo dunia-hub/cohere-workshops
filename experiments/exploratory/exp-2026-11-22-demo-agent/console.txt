@@ -1,0 +1,185 @@
+$ cohere-agent /home/dhub/cohere-workshops/demo_repo --old v1 --new v2 --target v2 --question How is the transfer fee calculated? --command-model command-a-03-2025 --output /home/dhub/cohere-workshops/experiments/exploratory/exp-2026-11-22-demo-agent/raw-output.jsonl
+Question: How is the transfer fee calculated?
+Target: v2 (722f230, 2026-11-18)
+
+Command's plan: I will search for 'transfer fee calculation' to find out how the transfer fee is calculated.
+
+Search 1: "transfer fee calculation"
+Rank  Score   Git check  Found in  Location
+1     0.9610  valid      v2        payments.py::calculate_transfer_fee
+2     0.9582  REJECTED   v1        payments.py::calculate_transfer_fee
+3     0.8483  valid      v2        payments.py::send_payment
+4     0.8452  REJECTED   v1        payments.py::send_payment
+5     0.6528  valid      v2        receipts.py::format_receipt
+6     0.2795  REJECTED   v1        payments.py::validate_phone_number
+
+Answer: The transfer fee is calculated using tiered pricing based on the amount being transferred. If the amount is less than or equal to 1000, the fee is 0. If the amount is between 1000 and 10000, the fee is 1% of the amount. If the amount is greater than 10000, the fee is 1.5% of the amount. The fee is rounded to two decimal places.
+  - payments.py::calculate_transfer_fee lines 4-10 @ 722f230
+Stale references in answer: none
+
+Saved trace to /home/dhub/cohere-workshops/experiments/exploratory/exp-2026-11-22-demo-agent/raw-output.jsonl
+
+[exit code 0, 8.248 s]
+
+$ cohere-agent /home/dhub/cohere-workshops/demo_repo --old v1 --new v2 --target v1 --question How is the transfer fee calculated? --command-model command-a-03-2025 --output /home/dhub/cohere-workshops/experiments/exploratory/exp-2026-11-22-demo-agent/raw-output.jsonl
+Question: How is the transfer fee calculated?
+Target: v1 (62eb1ea, 2026-11-18)
+
+Command's plan: I will search for 'transfer fee calculation' to find out how the transfer fee is calculated.
+
+Search 1: "transfer fee calculation"
+Rank  Score   Git check  Found in  Location
+1     0.9612  REJECTED   v2        payments.py::calculate_transfer_fee
+2     0.9582  valid      v1        payments.py::calculate_transfer_fee
+3     0.8483  REJECTED   v2        payments.py::send_payment
+4     0.8457  valid      v1        payments.py::send_payment
+5     0.6563  valid      v2        receipts.py::format_receipt
+6     0.2795  valid      v1        payments.py::validate_phone_number
+
+Answer: The transfer fee is calculated as a flat 2 percent of the transfer amount, rounded to two decimal places.
+  - payments.py::calculate_transfer_fee lines 4-6 @ 62eb1ea
+Stale references in answer: none
+
+Saved trace to /home/dhub/cohere-workshops/experiments/exploratory/exp-2026-11-22-demo-agent/raw-output.jsonl
+
+[exit code 0, 5.784 s]
+
+$ cohere-agent /home/dhub/cohere-workshops/demo_repo --old v1 --new v2 --target v2 --question How is a phone number checked before sending money? --command-model command-a-03-2025 --output /home/dhub/cohere-workshops/experiments/exploratory/exp-2026-11-22-demo-agent/raw-output.jsonl
+Question: How is a phone number checked before sending money?
+Target: v2 (722f230, 2026-11-18)
+
+Command's plan: I will search for 'phone number check before sending money'.
+
+Search 1: "phone number check before sending money"
+Rank  Score   Git check  Found in  Location
+1     0.9583  REJECTED   v1        payments.py::send_payment
+2     0.8347  REJECTED   v1        payments.py::validate_phone_number
+3     0.8298  valid      v2        payments.py::send_payment
+4     0.6036  valid      v2        payments.py::normalize_phone_number
+5     0.5405  valid      v2        receipts.py::format_receipt
+6     0.3901  REJECTED   v1        payments.py::calculate_transfer_fee
+
+Answer: The phone number is checked by normalizing it to the international format (2547XXXXXXXX) for Kenyan numbers. This involves removing non-digit characters, ensuring the number starts with '254' and has a total of 12 digits. If the number starts with '0' and has 10 digits, it is converted to the international format by replacing the '0' with '254'. If the number is already in the correct international format, it is returned as is. Invalid numbers raise a ValueError.
+  - payments.py::normalize_phone_number lines 13-20 @ 722f230
+Stale references in answer: none
+
+Saved trace to /home/dhub/cohere-workshops/experiments/exploratory/exp-2026-11-22-demo-agent/raw-output.jsonl
+
+[exit code 0, 10.769 s]
+
+$ cohere-agent /home/dhub/cohere-workshops/demo_repo --old v1 --new v2 --target v1 --question How is a phone number checked before sending money? --command-model command-a-03-2025 --output /home/dhub/cohere-workshops/experiments/exploratory/exp-2026-11-22-demo-agent/raw-output.jsonl
+Question: How is a phone number checked before sending money?
+Target: v1 (62eb1ea, 2026-11-18)
+
+Command's plan: I will search for 'phone number check before sending money'.
+
+Search 1: "phone number check before sending money"
+Rank  Score   Git check  Found in  Location
+1     0.9583  valid      v1        payments.py::send_payment
+2     0.8326  valid      v1        payments.py::validate_phone_number
+3     0.8304  REJECTED   v2        payments.py::send_payment
+4     0.6036  REJECTED   v2        payments.py::normalize_phone_number
+5     0.5405  valid      v2        receipts.py::format_receipt
+6     0.3901  valid      v1        payments.py::calculate_transfer_fee
+
+Answer: A phone number is checked before sending money by ensuring it starts with '07' and has exactly 10 digits, which is specific to Kenyan phone numbers.
+  - payments.py::send_payment lines 14-19 @ 62eb1ea
+  - payments.py::validate_phone_number lines 9-11 @ 62eb1ea
+Stale references in answer: none
+
+Saved trace to /home/dhub/cohere-workshops/experiments/exploratory/exp-2026-11-22-demo-agent/raw-output.jsonl
+
+[exit code 0, 6.524 s]
+
+$ cohere-agent /home/dhub/cohere-workshops/demo_repo --old v1 --new v2 --target v2 --question Which payments API version does send_payment use? --command-model command-a-03-2025 --output /home/dhub/cohere-workshops/experiments/exploratory/exp-2026-11-22-demo-agent/raw-output.jsonl
+Question: Which payments API version does send_payment use?
+Target: v2 (722f230, 2026-11-18)
+
+Command's plan: I will search for 'send_payment API version'.
+
+Search 1: "send_payment API version"
+Rank  Score   Git check  Found in  Location
+1     0.9312  valid      v2        payments.py::send_payment
+2     0.9144  REJECTED   v1        payments.py::send_payment
+3     0.3290  valid      v2        payments.py::calculate_transfer_fee
+4     0.3290  valid      v2        payments.py::normalize_phone_number
+5     0.3256  REJECTED   v1        payments.py::calculate_transfer_fee
+6     0.3256  REJECTED   v1        payments.py::validate_phone_number
+
+Answer: v2
+  - payments.py::send_payment lines 23-27 @ 722f230
+Stale references in answer: none
+
+Saved trace to /home/dhub/cohere-workshops/experiments/exploratory/exp-2026-11-22-demo-agent/raw-output.jsonl
+
+[exit code 0, 9.999 s]
+
+$ cohere-agent /home/dhub/cohere-workshops/demo_repo --old v1 --new v2 --target v1 --question Which payments API version does send_payment use? --command-model command-a-03-2025 --output /home/dhub/cohere-workshops/experiments/exploratory/exp-2026-11-22-demo-agent/raw-output.jsonl
+Question: Which payments API version does send_payment use?
+Target: v1 (62eb1ea, 2026-11-18)
+
+Command's plan: I will search for 'send_payment API version'.
+
+Search 1: "send_payment API version"
+Rank  Score   Git check  Found in  Location
+1     0.9311  REJECTED   v2        payments.py::send_payment
+2     0.9147  valid      v1        payments.py::send_payment
+3     0.3290  REJECTED   v2        payments.py::calculate_transfer_fee
+4     0.3290  REJECTED   v2        payments.py::normalize_phone_number
+5     0.3256  valid      v1        payments.py::calculate_transfer_fee
+6     0.3256  valid      v1        payments.py::validate_phone_number
+
+Answer: v1
+  - payments.py::send_payment lines 14-19 @ 62eb1ea
+Stale references in answer: none
+
+Saved trace to /home/dhub/cohere-workshops/experiments/exploratory/exp-2026-11-22-demo-agent/raw-output.jsonl
+
+[exit code 0, 5.397 s]
+
+$ cohere-agent /home/dhub/cohere-workshops/demo_repo --old v1 --new v2 --target v2 --question What fee is charged on a transfer of 500? --command-model command-a-03-2025 --output /home/dhub/cohere-workshops/experiments/exploratory/exp-2026-11-22-demo-agent/raw-output.jsonl
+Question: What fee is charged on a transfer of 500?
+Target: v2 (722f230, 2026-11-18)
+
+Command's plan: I will search for the fee charged on a transfer of 500.
+
+Search 1: "fee charged on a transfer of 500"
+Rank  Score   Git check  Found in  Location
+1     0.9058  valid      v2        payments.py::calculate_transfer_fee
+2     0.8969  REJECTED   v1        payments.py::calculate_transfer_fee
+3     0.7575  REJECTED   v1        payments.py::send_payment
+4     0.7338  valid      v2        payments.py::send_payment
+5     0.7183  valid      v2        receipts.py::format_receipt
+6     0.2827  REJECTED   v1        payments.py::validate_phone_number
+
+Answer: 0
+  - payments.py::calculate_transfer_fee lines 4-10 @ 722f230
+Stale references in answer: none
+
+Saved trace to /home/dhub/cohere-workshops/experiments/exploratory/exp-2026-11-22-demo-agent/raw-output.jsonl
+
+[exit code 0, 5.365 s]
+
+$ cohere-agent /home/dhub/cohere-workshops/demo_repo --old v1 --new v2 --target v1 --question What fee is charged on a transfer of 500? --command-model command-a-03-2025 --output /home/dhub/cohere-workshops/experiments/exploratory/exp-2026-11-22-demo-agent/raw-output.jsonl
+Question: What fee is charged on a transfer of 500?
+Target: v1 (62eb1ea, 2026-11-18)
+
+Command's plan: I will search for the fee charged on a transfer of 500.
+
+Search 1: "fee charged on a transfer of 500"
+Rank  Score   Git check  Found in  Location
+1     0.9058  REJECTED   v2        payments.py::calculate_transfer_fee
+2     0.8969  valid      v1        payments.py::calculate_transfer_fee
+3     0.7575  valid      v1        payments.py::send_payment
+4     0.7338  REJECTED   v2        payments.py::send_payment
+5     0.7183  valid      v2        receipts.py::format_receipt
+6     0.2827  valid      v1        payments.py::validate_phone_number
+
+Answer: 10.00
+  - payments.py::calculate_transfer_fee lines 4-6 @ 62eb1ea
+Stale references in answer: none
+
+Saved trace to /home/dhub/cohere-workshops/experiments/exploratory/exp-2026-11-22-demo-agent/raw-output.jsonl
+
+[exit code 0, 22.564 s]
+

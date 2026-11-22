@@ -1,0 +1,186 @@
+{
+  "answer_key": "experiments/answer-keys/demo-repo-agent.json",
+  "answer_key_id": "demo-repo-agent-v1",
+  "api_usage": "not_recorded",
+  "application_commit": "f7475697bd62f7823000f68950046998e7811d3d",
+  "cohere_sdk_version": "5.21.1",
+  "commands": [
+    [
+      "cohere-agent",
+      "/home/dhub/cohere-workshops/demo_repo",
+      "--old",
+      "v1",
+      "--new",
+      "v2",
+      "--target",
+      "v2",
+      "--question",
+      "How is the transfer fee calculated?",
+      "--command-model",
+      "command-a-03-2025",
+      "--output",
+      "/home/dhub/cohere-workshops/experiments/exploratory/exp-2026-11-22-demo-agent/raw-output.jsonl"
+    ],
+    [
+      "cohere-agent",
+      "/home/dhub/cohere-workshops/demo_repo",
+      "--old",
+      "v1",
+      "--new",
+      "v2",
+      "--target",
+      "v1",
+      "--question",
+      "How is the transfer fee calculated?",
+      "--command-model",
+      "command-a-03-2025",
+      "--output",
+      "/home/dhub/cohere-workshops/experiments/exploratory/exp-2026-11-22-demo-agent/raw-output.jsonl"
+    ],
+    [
+      "cohere-agent",
+      "/home/dhub/cohere-workshops/demo_repo",
+      "--old",
+      "v1",
+      "--new",
+      "v2",
+      "--target",
+      "v2",
+      "--question",
+      "How is a phone number checked before sending money?",
+      "--command-model",
+      "command-a-03-2025",
+      "--output",
+      "/home/dhub/cohere-workshops/experiments/exploratory/exp-2026-11-22-demo-agent/raw-output.jsonl"
+    ],
+    [
+      "cohere-agent",
+      "/home/dhub/cohere-workshops/demo_repo",
+      "--old",
+      "v1",
+      "--new",
+      "v2",
+      "--target",
+      "v1",
+      "--question",
+      "How is a phone number checked before sending money?",
+      "--command-model",
+      "command-a-03-2025",
+      "--output",
+      "/home/dhub/cohere-workshops/experiments/exploratory/exp-2026-11-22-demo-agent/raw-output.jsonl"
+    ],
+    [
+      "cohere-agent",
+      "/home/dhub/cohere-workshops/demo_repo",
+      "--old",
+      "v1",
+      "--new",
+      "v2",
+      "--target",
+      "v2",
+      "--question",
+      "Which payments API version does send_payment use?",
+      "--command-model",
+      "command-a-03-2025",
+      "--output",
+      "/home/dhub/cohere-workshops/experiments/exploratory/exp-2026-11-22-demo-agent/raw-output.jsonl"
+    ],
+    [
+      "cohere-agent",
+      "/home/dhub/cohere-workshops/demo_repo",
+      "--old",
+      "v1",
+      "--new",
+      "v2",
+      "--target",
+      "v1",
+      "--question",
+      "Which payments API version does send_payment use?",
+      "--command-model",
+      "command-a-03-2025",
+      "--output",
+      "/home/dhub/cohere-workshops/experiments/exploratory/exp-2026-11-22-demo-agent/raw-output.jsonl"
+    ],
+    [
+      "cohere-agent",
+      "/home/dhub/cohere-workshops/demo_repo",
+      "--old",
+      "v1",
+      "--new",
+      "v2",
+      "--target",
+      "v2",
+      "--question",
+      "What fee is charged on a transfer of 500?",
+      "--command-model",
+      "command-a-03-2025",
+      "--output",
+      "/home/dhub/cohere-workshops/experiments/exploratory/exp-2026-11-22-demo-agent/raw-output.jsonl"
+    ],
+    [
+      "cohere-agent",
+      "/home/dhub/cohere-workshops/demo_repo",
+      "--old",
+      "v1",
+      "--new",
+      "v2",
+      "--target",
+      "v1",
+      "--question",
+      "What fee is charged on a transfer of 500?",
+      "--command-model",
+      "command-a-03-2025",
+      "--output",
+      "/home/dhub/cohere-workshops/experiments/exploratory/exp-2026-11-22-demo-agent/raw-output.jsonl"
+    ]
+  ],
+  "date": "2026-11-22",
+  "demo_tags": {
+    "v1": {
+      "commit": "62eb1ea964097b6d68e84cda7fbf7fb6e93f8e09",
+      "tree": "f6a8ff8f004417e63907a3a0431c410ee60b983c"
+    },
+    "v2": {
+      "commit": "722f23082d80d8088b976f77d10579e18fb4b2a1",
+      "tree": "3b5d0336e767fcd82adabc76fb2844c363f21aee"
+    }
+  },
+  "experiment_id": "exp-2026-11-22-demo-agent",
+  "final_evaluation_eligible": false,
+  "latency_seconds": {
+    "q1@v1": 5.784,
+    "q1@v2": 8.248,
+    "q2@v1": 6.524,
+    "q2@v2": 10.769,
+    "q3@v1": 5.397,
+    "q3@v2": 9.999,
+    "q4@v1": 22.564,
+    "q4@v2": 5.365
+  },
+  "models": {
+    "command": "command-a-03-2025",
+    "embed": "embed-v4.0",
+    "rerank": "rerank-v4.0-pro"
+  },
+  "notes": [
+    "Rerun of the exploratory findings stated in README.md.",
+    "The original runs behind those findings were not preserved in the repository."
+  ],
+  "python_version": "3.14.4",
+  "repository": "demo_repo (created by cohere-demo-repo)",
+  "researcher": "Fatuma Yattani",
+  "revisions": {
+    "new": "v2",
+    "old": "v1"
+  },
+  "scoring": "not_yet_scored",
+  "settings": {
+    "candidates": 10,
+    "keep": 4,
+    "max_tool_calls": 3,
+    "temperature": 0
+  },
+  "stage": "agent",
+  "status": "exploratory",
+  "working_tree_clean": true
+}

@@ -1,0 +1,52 @@
+{
+  "api_usage": "not_recorded",
+  "application_commit": "f7475697bd62f7823000f68950046998e7811d3d",
+  "cohere_sdk_version": "5.21.1",
+  "command": [
+    "cohere-versions",
+    "/home/dhub/cohere-workshops/demo_repo",
+    "--old",
+    "v1",
+    "--new",
+    "v2",
+    "--output",
+    "/home/dhub/cohere-workshops/experiments/exploratory/exp-2026-11-22-demo-embed/raw-output.jsonl"
+  ],
+  "date": "2026-11-22",
+  "demo_tags": {
+    "v1": {
+      "commit": "62eb1ea964097b6d68e84cda7fbf7fb6e93f8e09",
+      "tree": "f6a8ff8f004417e63907a3a0431c410ee60b983c"
+    },
+    "v2": {
+      "commit": "722f23082d80d8088b976f77d10579e18fb4b2a1",
+      "tree": "3b5d0336e767fcd82adabc76fb2844c363f21aee"
+    }
+  },
+  "experiment_id": "exp-2026-11-22-demo-embed",
+  "final_evaluation_eligible": false,
+  "latency_seconds": {
+    "total": 3.599
+  },
+  "models": {
+    "embed": "embed-v4.0"
+  },
+  "notes": [
+    "Rerun of the exploratory findings stated in README.md.",
+    "The original runs behind those findings were not preserved in the repository."
+  ],
+  "python_version": "3.14.4",
+  "repository": "demo_repo (created by cohere-demo-repo)",
+  "researcher": "Fatuma Yattani",
+  "revisions": {
+    "new": "v2",
+    "old": "v1"
+  },
+  "settings": {
+    "level": "symbol",
+    "top_k": 5
+  },
+  "stage": "embed",
+  "status": "exploratory",
+  "working_tree_clean": true
+}
