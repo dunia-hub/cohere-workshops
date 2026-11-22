@@ -12,8 +12,7 @@ Dunia Hub's open source workshop series and research project on version-aware co
 
 | Workshop | Topic | What it adds | Command |
 | --- | --- | --- | --- |
-| 1 | Cohere Fundamentals: Models, Prompts, Embeddings and Grounding | Introduction |
-`cohere-fundamentals`
+| 1 | Cohere Fundamentals: Models, Prompts, Embeddings and Grounding | Introduction and a first Cohere request | `python -m cohere_workshops.hello_cohere` |
 | 2 | Cohere Embed: Searching Code Across Repository Versions | Semantic search across two Git versions | `cohere-versions` |
 | 3 | Cohere Rerank: Choosing Current Code Over Stale Context | Reranking plus a Git validity check | `cohere-rerank` |
 | 4 | Cohere Command: Building a Version Aware Code Agent | A read-only agent that answers from validated code | `cohere-agent` |
@@ -112,12 +111,19 @@ Runs are saved as JSON Lines in `results/`. Records store paths, commit hashes, 
 | `cohere-versions` | Searches two versions with Cohere Embed and reports which version ranks first |
 | `cohere-rerank` | Reranks candidates with Cohere Rerank, checks them against Git and filters old code |
 | `cohere-agent` | Read-only agent: Cohere Command calls a search tool, Git validates evidence, Command answers |
-| `cohere-workshops` | Builds a JSON map of a repository: files, symbols, imports, exclusions |
-| `cohere-search` | Change-impact search and grounded prediction for a proposed change |
-| `cohere-case` | Builds an evaluation case from a Git commit range |
-| `cohere-dataset` | Validates an evaluation dataset manifest against Git |
 
 Run any command with `--help` for its options.
+
+### Earlier change-impact tools
+
+The project started as a change-impact study (predicting which files a pull request changes). These commands come from that design and are not part of the current study ([D017](docs/engineering/decisions.md)):
+
+| Command | What it does |
+| --- | --- |
+| `cohere-workshops` | Builds a JSON map of a repository: files, symbols, imports, exclusions |
+| `cohere-search` | Change-impact search and grounded prediction for a proposed change |
+| `cohere-case` | Builds a change-impact evaluation case from a Git commit range |
+| `cohere-dataset` | Validates a pull-request dataset manifest against Git |
 
 ## How it works
 
@@ -141,15 +147,21 @@ Before any content is sent to Cohere, the pipeline applies Git ignore rules, sen
 
 ## Research configurations
 
-1. BM25 keyword retrieval
-2. Cohere Embed retrieval
-3. Cohere Embed with Cohere Rerank
-4. Structural and semantic retrieval
-5. Ungrounded Cohere Command baseline
-6. Evidence-grounded Cohere Command prediction with abstention
-7. Version-aware retrieval, reranking and agent with Git validation
+Retrieval:
 
-Development cases stay separate from the final evaluation dataset.
+1. BM25 keyword retrieval over both versions (planned)
+2. Cohere Embed
+3. Cohere Embed and Rerank, code text only
+4. Cohere Embed and Rerank, code text with commit details
+5. Cohere Embed, Rerank and the Git validity check
+
+Answering:
+
+6. Cohere Command without retrieval (planned)
+7. The agent without the Git validity check (planned)
+8. The agent with the Git validity check
+
+Every configuration is tested at both the older and the newer commit. Development cases stay separate from the final evaluation dataset. See the [evaluation plan](docs/research/evaluation-plan.md).
 
 ## Documentation
 
@@ -174,8 +186,9 @@ Development cases stay separate from the final evaluation dataset.
 
 - Structural parsing supports Python only.
 - Embeddings are not cached between runs.
-- No final evaluation dataset has been built yet. The `cohere-case` and `cohere-dataset` commands are ready for it.
-- The aggregate benchmark runner is not implemented.
+- No final evaluation dataset has been built yet: the commit-pair manifest, queries and answer keys are still to come.
+- Configurations 1, 6 and 7 and the aggregate benchmark runner are not implemented.
+- The Git check in `cohere-rerank` always treats the newer commit as valid; the agent already checks against any target.
 - Dependency locking and continuous integration are not configured.
 - All experiment records so far are exploratory, not final results.
 
