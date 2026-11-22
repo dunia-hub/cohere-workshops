@@ -50,6 +50,7 @@ A location must be excluded when:
 - the change is whitespace, formatting, comments or docstrings only;
 - the change is to type annotations only;
 - the file is generated, vendored or a test file;
+- the file is documentation or example code (`docs/`, `docs_src/`, `examples/`);
 - the change is a pure rename or move with no change in behaviour;
 - the location is ambiguous: more than one chunk shares its path and symbol at either commit, for example `typing.overload` definitions;
 - the location is a class or function whose change lies inside a changed nested symbol, which is a case of its own;
@@ -57,7 +58,7 @@ A location must be excluded when:
 - review finds the change is not behavioural;
 - a fair query cannot be written without revealing the symbol or path.
 
-Every exclusion and its reason must be recorded. `cohere-candidates` applies the first six automatically; the last three are review decisions.
+Every exclusion and its reason must be recorded. `cohere-candidates` applies the first seven automatically; the last three are review decisions. Vendored code under a package-private name (such as `typer/_click`) is not detected by path, so repositories that vendor other projects are not used.
 
 ## Ground truth
 

@@ -19,6 +19,7 @@ import ast
 import difflib
 import random
 import textwrap
+import warnings
 from collections import Counter
 from dataclasses import dataclass
 from pathlib import Path, PurePosixPath
@@ -43,6 +44,9 @@ GENERATED_PARTS = frozenset(
     {"vendor", "vendored", "_vendor", "third_party", "thirdparty", "generated", "migrations"}
 )
 GENERATED_SUFFIXES = ("_pb2.py", "_pb2_grpc.py")
+
+# Directories holding documentation and example code rather than library code.
+DOCS_PARTS = frozenset({"docs", "doc", "docs_src", "examples", "example"})
 
 
 @dataclass(frozen=True)
@@ -143,6 +147,11 @@ def is_generated_path(path: str) -> bool:
     )
 
 
+def is_docs_or_examples_path(path: str) -> bool:
+    """Documentation or example code, by directory name."""
+    return bool(DOCS_PARTS & set(PurePosixPath(path).parts[:-1]))
+
+
 def _lines_changed(old: str, new: str) -> int:
     diff = difflib.unified_diff(old.splitlines(), new.splitlines(), lineterm="", n=0)
     return sum(
@@ -210,6 +219,8 @@ def list_candidates(
             reason = "test_file"
         elif is_generated_path(chunk.path):
             reason = "generated_or_vendored"
+        elif is_docs_or_examples_path(chunk.path):
+            reason = "docs_or_examples"
         elif location_key(chunk) in ambiguous:
             reason = "ambiguous_location"
         elif _nested_in_changed(item, changed_symbols):
@@ -261,9 +272,15 @@ def build_candidate_list(
     sample_size: int = DEFAULT_SAMPLE,
     seed: int = DEFAULT_SEED,
 ) -> CandidateList:
-    """Load two revisions and list their candidates."""
-    corpus = build_versioned_corpus(repository, old, new)
-    return list_candidates(corpus, sample_size=sample_size, seed=seed)
+    """Load two revisions and list their candidates.
+
+    Parsing old source can raise SyntaxWarning (for example, for old escape
+    sequences). The warnings say nothing about the change, so they are silenced.
+    """
+    with warnings.catch_warnings():
+        warnings.simplefilter("ignore", SyntaxWarning)
+        corpus = build_versioned_corpus(repository, old, new)
+        return list_candidates(corpus, sample_size=sample_size, seed=seed)
 
 
 def _chunk_record(item: VersionedChunk) -> dict[str, object]:

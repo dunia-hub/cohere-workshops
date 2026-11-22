@@ -112,14 +112,26 @@ def repo(tmp_path: Path) -> Path:
     test_new = "def test_one():\n    assert 2\n"
     vendored_old = "def helper():\n    return 1\n"
     vendored_new = "def helper():\n    return 2\n"
+    example_old = "def demo():\n    return 'a'\n"
+    example_new = "def demo():\n    return 'b'\n"
     commit(
         repo,
-        {"lib.py": OLD_LIB, "tests/test_lib.py": test_old, "vendor/dep.py": vendored_old},
+        {
+            "lib.py": OLD_LIB,
+            "tests/test_lib.py": test_old,
+            "vendor/dep.py": vendored_old,
+            "docs_src/example.py": example_old,
+        },
         "v1",
     )
     commit(
         repo,
-        {"lib.py": NEW_LIB, "tests/test_lib.py": test_new, "vendor/dep.py": vendored_new},
+        {
+            "lib.py": NEW_LIB,
+            "tests/test_lib.py": test_new,
+            "vendor/dep.py": vendored_new,
+            "docs_src/example.py": example_new,
+        },
         "v2",
     )
     return repo
@@ -143,6 +155,7 @@ def test_filters_follow_the_evaluation_plan(repo: Path) -> None:
     assert found["pick"] == "ambiguous_location"
     assert found["test_one"] == "test_file"
     assert found["helper"] == "generated_or_vendored"
+    assert found["demo"] == "docs_or_examples"
 
 
 def test_sampling_is_reproducible_and_orders_every_included_candidate(repo: Path) -> None:
@@ -217,3 +230,19 @@ def test_cli_writes_the_list_and_refuses_to_overwrite(
 def test_rejects_bad_sample_size(repo: Path) -> None:
     with pytest.raises(ValueError, match="sample_size"):
         build_candidate_list(repo, "v1", "v2", sample_size=0)
+
+
+def test_old_escape_sequences_do_not_print_warnings(
+    tmp_path: Path,
+    recwarn: pytest.WarningsRecorder,
+) -> None:
+    repo = tmp_path / "escapes"
+    repo.mkdir()
+    git(repo, "init", "-q")
+    commit(repo, {"lib.py": 'def f():\n    return "\\d"\n'}, "v1")
+    commit(repo, {"lib.py": 'def f():\n    return "\\d+"\n'}, "v2")
+
+    result = build_candidate_list(repo, "v1", "v2")
+
+    assert [c.item.chunk.symbol for c in result.candidates] == ["f"]
+    assert not [w for w in recwarn if issubclass(w.category, SyntaxWarning)]
