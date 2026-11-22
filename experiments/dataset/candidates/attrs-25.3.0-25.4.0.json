@@ -1,0 +1,3653 @@
+{
+  "repository_url": "https://github.com/python-attrs/attrs",
+  "old": {
+    "revision": "25.3.0",
+    "commit": "3dca08ce5bbe673d7df25f44f3dda92505d1043d"
+  },
+  "new": {
+    "revision": "25.4.0",
+    "commit": "9a98e00a7c078360add417c5d62db820d4645ab1"
+  },
+  "seed": 2026,
+  "sample_size": 20,
+  "counts": {
+    "candidates": 120,
+    "included": 18,
+    "sampled": 18,
+    "excluded_by_reason": {
+      "ambiguous_location": 3,
+      "contains_changed_symbol": 7,
+      "formatting_or_docstring_only": 1,
+      "renamed_or_moved": 3,
+      "test_file": 88
+    }
+  },
+  "scanner_exclusions": {
+    "25.3.0": [],
+    "25.4.0": []
+  },
+  "candidates": [
+    {
+      "path": "conftest.py",
+      "kind": "function",
+      "symbol": "_frozen",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "removed",
+      "old": {
+        "revision": "25.3.0",
+        "commit": "3dca08ce5bbe673d7df25f44f3dda92505d1043d",
+        "lines": [
+          18,
+          19
+        ],
+        "content_hash": "394e85b8321086165636d450f46dfae2622845c708a5aa8237c3272a4f6f5eb4"
+      },
+      "new": null,
+      "lines_changed": 2,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "renamed_or_moved",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "conftest.py",
+      "kind": "function",
+      "symbol": "_slots",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "removed",
+      "old": {
+        "revision": "25.3.0",
+        "commit": "3dca08ce5bbe673d7df25f44f3dda92505d1043d",
+        "lines": [
+          13,
+          14
+        ],
+        "content_hash": "40c300d6d7f49b62ea671f4557ce7b0c9928f7fba51dd31a07e6ed9e6299c6b4"
+      },
+      "new": null,
+      "lines_changed": 2,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "renamed_or_moved",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "conftest.py",
+      "kind": "function",
+      "symbol": "pytest_configure",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "removed",
+      "old": {
+        "revision": "25.3.0",
+        "commit": "3dca08ce5bbe673d7df25f44f3dda92505d1043d",
+        "lines": [
+          22,
+          31
+        ],
+        "content_hash": "4bc8d7305dffbb86c35c6a9c672eee035cff3917174ce3c35a5462c98c10b35d"
+      },
+      "new": null,
+      "lines_changed": 10,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "renamed_or_moved",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "src/attr/_funcs.py",
+      "kind": "function",
+      "symbol": "_asdict_anything",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "25.3.0",
+        "commit": "3dca08ce5bbe673d7df25f44f3dda92505d1043d",
+        "lines": [
+          134,
+          204
+        ],
+        "content_hash": "2f22e01f450fc5df23ccbdecd581c50b7fdf783f2f79d29433630103e9544cac"
+      },
+      "new": {
+        "revision": "25.4.0",
+        "commit": "9a98e00a7c078360add417c5d62db820d4645ab1",
+        "lines": [
+          154,
+          229
+        ],
+        "content_hash": "725a71b08a53e21c4315d211fc1fdc3008b45a2947aa8dfaa3571b7db26e38b7"
+      },
+      "lines_changed": 11,
+      "normalized": true,
+      "included": true,
+      "exclusion_reason": null,
+      "sample_order": 16,
+      "sampled": true,
+      "review": {
+        "decision": null,
+        "reason": null
+      }
+    },
+    {
+      "path": "src/attr/_funcs.py",
+      "kind": "function",
+      "symbol": "asdict",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "25.3.0",
+        "commit": "3dca08ce5bbe673d7df25f44f3dda92505d1043d",
+        "lines": [
+          11,
+          131
+        ],
+        "content_hash": "962334e8620680a50ddeeb3932d72f3da3096d0c5d6ffbae4a0836ff915601cf"
+      },
+      "new": {
+        "revision": "25.4.0",
+        "commit": "9a98e00a7c078360add417c5d62db820d4645ab1",
+        "lines": [
+          28,
+          151
+        ],
+        "content_hash": "7320e3823639c60b78bc60c72629257cd9677797e74aeb178da88908a746a5da"
+      },
+      "lines_changed": 11,
+      "normalized": true,
+      "included": true,
+      "exclusion_reason": null,
+      "sample_order": 15,
+      "sampled": true,
+      "review": {
+        "decision": null,
+        "reason": null
+      }
+    },
+    {
+      "path": "src/attr/_funcs.py",
+      "kind": "function",
+      "symbol": "astuple",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "25.3.0",
+        "commit": "3dca08ce5bbe673d7df25f44f3dda92505d1043d",
+        "lines": [
+          207,
+          323
+        ],
+        "content_hash": "c5a8aa42ed1e7830816b051938ca2aac42ab7ca87cd7350e417474f4077af3a5"
+      },
+      "new": {
+        "revision": "25.4.0",
+        "commit": "9a98e00a7c078360add417c5d62db820d4645ab1",
+        "lines": [
+          232,
+          351
+        ],
+        "content_hash": "2637f0b035282753d7703029a108c44923a829466301c9d59448ab2437d094d1"
+      },
+      "lines_changed": 11,
+      "normalized": true,
+      "included": true,
+      "exclusion_reason": null,
+      "sample_order": 17,
+      "sampled": true,
+      "review": {
+        "decision": null,
+        "reason": null
+      }
+    },
+    {
+      "path": "src/attr/_funcs.py",
+      "kind": "function",
+      "symbol": "resolve_types",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "25.3.0",
+        "commit": "3dca08ce5bbe673d7df25f44f3dda92505d1043d",
+        "lines": [
+          397,
+          468
+        ],
+        "content_hash": "6a50290610faa1eca1092507094a3175a1baa6ea92fa969f9d6a3d5eee0e214f"
+      },
+      "new": {
+        "revision": "25.4.0",
+        "commit": "9a98e00a7c078360add417c5d62db820d4645ab1",
+        "lines": [
+          425,
+          497
+        ],
+        "content_hash": "d282474e9476b9acdd23ab2f37845e5fe6534da1ff520897c71d12ce38a685f5"
+      },
+      "lines_changed": 9,
+      "normalized": true,
+      "included": true,
+      "exclusion_reason": null,
+      "sample_order": 1,
+      "sampled": true,
+      "review": {
+        "decision": null,
+        "reason": null
+      }
+    },
+    {
+      "path": "src/attr/_make.py",
+      "kind": "class",
+      "symbol": "Attribute",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "25.3.0",
+        "commit": "3dca08ce5bbe673d7df25f44f3dda92505d1043d",
+        "lines": [
+          2365,
+          2564
+        ],
+        "content_hash": "a11b3ce0d2e51b571b5838baf1e9111eccff07af060ed25ee1f2eb09564d4c3f"
+      },
+      "new": {
+        "revision": "25.4.0",
+        "commit": "9a98e00a7c078360add417c5d62db820d4645ab1",
+        "lines": [
+          2418,
+          2621
+        ],
+        "content_hash": "a2bc82aafe7ef750cb4015ba74110f216f2a7044e74abc8868560ce4d593470b"
+      },
+      "lines_changed": 8,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "contains_changed_symbol",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "src/attr/_make.py",
+      "kind": "class",
+      "symbol": "_ClassBuilder",
+      "part_index": 1,
+      "part_count": 2,
+      "status": "superseded",
+      "old": {
+        "revision": "25.3.0",
+        "commit": "3dca08ce5bbe673d7df25f44f3dda92505d1043d",
+        "lines": [
+          621,
+          953
+        ],
+        "content_hash": "5d5549048eb712d8808223f1b53748b49e5b77fb795436abdd1612609e14406c"
+      },
+      "new": {
+        "revision": "25.4.0",
+        "commit": "9a98e00a7c078360add417c5d62db820d4645ab1",
+        "lines": [
+          637,
+          963
+        ],
+        "content_hash": "0944762377bde90437304ca83e50672c008cad51eb9eb16bf7c48159613b96d0"
+      },
+      "lines_changed": 62,
+      "normalized": false,
+      "included": false,
+      "exclusion_reason": "contains_changed_symbol",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "src/attr/_make.py",
+      "kind": "class",
+      "symbol": "_ClassBuilder",
+      "part_index": 2,
+      "part_count": 2,
+      "status": "superseded",
+      "old": {
+        "revision": "25.3.0",
+        "commit": "3dca08ce5bbe673d7df25f44f3dda92505d1043d",
+        "lines": [
+          954,
+          1204
+        ],
+        "content_hash": "969d2e20135f46fce6e85c38826760804f7ec383c3d396b6f0de0b9abf8e281c"
+      },
+      "new": {
+        "revision": "25.4.0",
+        "commit": "9a98e00a7c078360add417c5d62db820d4645ab1",
+        "lines": [
+          964,
+          1219
+        ],
+        "content_hash": "972d60dbc3c213f9ddf8475ecca899c74294ead2ed6b27fb6907e75fd46968aa"
+      },
+      "lines_changed": 5,
+      "normalized": false,
+      "included": false,
+      "exclusion_reason": "contains_changed_symbol",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "src/attr/_make.py",
+      "kind": "function",
+      "symbol": "_attrs_to_init_script",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "25.3.0",
+        "commit": "3dca08ce5bbe673d7df25f44f3dda92505d1043d",
+        "lines": [
+          2094,
+          2351
+        ],
+        "content_hash": "306215ab3637254e1aad9d319c0b2bca1eed5e6e5704608845da80d37c802eec"
+      },
+      "new": {
+        "revision": "25.4.0",
+        "commit": "9a98e00a7c078360add417c5d62db820d4645ab1",
+        "lines": [
+          2143,
+          2404
+        ],
+        "content_hash": "918e615c736a2fbf6ccd4654a72c7c4868c059a3bd17d6b680a736dda8e7a1d5"
+      },
+      "lines_changed": 12,
+      "normalized": true,
+      "included": true,
+      "exclusion_reason": null,
+      "sample_order": 13,
+      "sampled": true,
+      "review": {
+        "decision": null,
+        "reason": null
+      }
+    },
+    {
+      "path": "src/attr/_make.py",
+      "kind": "function",
+      "symbol": "_transform_attrs",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "25.3.0",
+        "commit": "3dca08ce5bbe673d7df25f44f3dda92505d1043d",
+        "lines": [
+          375,
+          480
+        ],
+        "content_hash": "58c6e83c50849663a7d6bbeaf60a9050d514f6147b21519752f215154e652178"
+      },
+      "new": {
+        "revision": "25.4.0",
+        "commit": "9a98e00a7c078360add417c5d62db820d4645ab1",
+        "lines": [
+          379,
+          496
+        ],
+        "content_hash": "34ddf730c61863286e27d94db7d953b5cd4948529d5b6c43e97fd4738a490c14"
+      },
+      "lines_changed": 18,
+      "normalized": true,
+      "included": true,
+      "exclusion_reason": null,
+      "sample_order": 18,
+      "sampled": true,
+      "review": {
+        "decision": null,
+        "reason": null
+      }
+    },
+    {
+      "path": "src/attr/_make.py",
+      "kind": "function",
+      "symbol": "attrib",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "25.3.0",
+        "commit": "3dca08ce5bbe673d7df25f44f3dda92505d1043d",
+        "lines": [
+          105,
+          209
+        ],
+        "content_hash": "7d3488a7a746df2e171bf49d3ec7d49c0973e1a0ca9935b6ff7f094d664b2f20"
+      },
+      "new": {
+        "revision": "25.4.0",
+        "commit": "9a98e00a7c078360add417c5d62db820d4645ab1",
+        "lines": [
+          106,
+          213
+        ],
+        "content_hash": "66ac58a238c605719414b320b29f999b16575e8e09b7f9f73ebee908eaf8b755"
+      },
+      "lines_changed": 5,
+      "normalized": true,
+      "included": true,
+      "exclusion_reason": null,
+      "sample_order": 9,
+      "sampled": true,
+      "review": {
+        "decision": null,
+        "reason": null
+      }
+    },
+    {
+      "path": "src/attr/_make.py",
+      "kind": "function",
+      "symbol": "attrs",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "25.3.0",
+        "commit": "3dca08ce5bbe673d7df25f44f3dda92505d1043d",
+        "lines": [
+          1304,
+          1528
+        ],
+        "content_hash": "b92ffa24aea1f58e29bdca0cdee66cd331774545b7be5ddfb40f978d66728933"
+      },
+      "new": {
+        "revision": "25.4.0",
+        "commit": "9a98e00a7c078360add417c5d62db820d4645ab1",
+        "lines": [
+          1319,
+          1577
+        ],
+        "content_hash": "5ab1ad8c7ff1118bc1c443249432548d5434e617fcf12f6c4d4789356e05b711"
+      },
+      "lines_changed": 152,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "contains_changed_symbol",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "src/attr/_make.py",
+      "kind": "function",
+      "symbol": "attrs.wrap",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "25.3.0",
+        "commit": "3dca08ce5bbe673d7df25f44f3dda92505d1043d",
+        "lines": [
+          1415,
+          1521
+        ],
+        "content_hash": "0afbe57052aa62a78ff866d9180ac522b1e77a87919ea11293007ccdb9c37d9f"
+      },
+      "new": {
+        "revision": "25.4.0",
+        "commit": "9a98e00a7c078360add417c5d62db820d4645ab1",
+        "lines": [
+          1435,
+          1570
+        ],
+        "content_hash": "75ec230b15e921c93341f69d1088b7f723456780075e2b242c79aa4ff175b926"
+      },
+      "lines_changed": 143,
+      "normalized": true,
+      "included": true,
+      "exclusion_reason": null,
+      "sample_order": 11,
+      "sampled": true,
+      "review": {
+        "decision": null,
+        "reason": null
+      }
+    },
+    {
+      "path": "src/attr/_make.py",
+      "kind": "function",
+      "symbol": "pipe.pipe_converter",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "25.3.0",
+        "commit": "3dca08ce5bbe673d7df25f44f3dda92505d1043d",
+        "lines": [
+          3086,
+          3092
+        ],
+        "content_hash": "262ddf46f0b6efbbbfa1dcb2c87b608bf29323158dd2613378d766e9c10097b8"
+      },
+      "new": {
+        "revision": "25.4.0",
+        "commit": "9a98e00a7c078360add417c5d62db820d4645ab1",
+        "lines": [
+          3335,
+          3339
+        ],
+        "content_hash": "0bb20f27fc06f5776121ee1b58ac0c9fc660d49427d895412e1911abc65b3bfa"
+      },
+      "lines_changed": 6,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "ambiguous_location",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "src/attr/_make.py",
+      "kind": "method",
+      "symbol": "Attribute.from_counting_attr",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "25.3.0",
+        "commit": "3dca08ce5bbe673d7df25f44f3dda92505d1043d",
+        "lines": [
+          2489,
+          2515
+        ],
+        "content_hash": "25b662a95502a87c1c8d508b0d3163b1422f1e9235e4aeb923969cc533a4ad12"
+      },
+      "new": {
+        "revision": "25.4.0",
+        "commit": "9a98e00a7c078360add417c5d62db820d4645ab1",
+        "lines": [
+          2542,
+          2572
+        ],
+        "content_hash": "8131f750b1d30212f224072225347008ec84f7bdf754deaac486cc4f08b74b79"
+      },
+      "lines_changed": 8,
+      "normalized": true,
+      "included": true,
+      "exclusion_reason": null,
+      "sample_order": 8,
+      "sampled": true,
+      "review": {
+        "decision": null,
+        "reason": null
+      }
+    },
+    {
+      "path": "src/attr/_make.py",
+      "kind": "method",
+      "symbol": "_ClassBuilder.__init__",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "25.3.0",
+        "commit": "3dca08ce5bbe673d7df25f44f3dda92505d1043d",
+        "lines": [
+          650,
+          755
+        ],
+        "content_hash": "763c12401c71d242d6fb98fa0fa4ba4fa26a368decab5316ff5e33cec04dd427"
+      },
+      "new": {
+        "revision": "25.4.0",
+        "commit": "9a98e00a7c078360add417c5d62db820d4645ab1",
+        "lines": [
+          666,
+          765
+        ],
+        "content_hash": "1122ed22af709e5c3c6bfb3151edb5d4c50b70840cdba07719877019351b5773"
+      },
+      "lines_changed": 50,
+      "normalized": true,
+      "included": true,
+      "exclusion_reason": null,
+      "sample_order": 6,
+      "sampled": true,
+      "review": {
+        "decision": null,
+        "reason": null
+      }
+    },
+    {
+      "path": "src/attr/_make.py",
+      "kind": "method",
+      "symbol": "_ClassBuilder._create_slots_class",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "25.3.0",
+        "commit": "3dca08ce5bbe673d7df25f44f3dda92505d1043d",
+        "lines": [
+          838,
+          975
+        ],
+        "content_hash": "5d4df7dc774a885a1d4dda03b566ba82fda362d896378150900c271f022d380c"
+      },
+      "new": {
+        "revision": "25.4.0",
+        "commit": "9a98e00a7c078360add417c5d62db820d4645ab1",
+        "lines": [
+          849,
+          990
+        ],
+        "content_hash": "f0bd4a5520bef587c23c3cfafe1ec357a8b62fd992a21cbb7fa1cb8f7db22423"
+      },
+      "lines_changed": 4,
+      "normalized": true,
+      "included": true,
+      "exclusion_reason": null,
+      "sample_order": 2,
+      "sampled": true,
+      "review": {
+        "decision": null,
+        "reason": null
+      }
+    },
+    {
+      "path": "src/attr/_make.py",
+      "kind": "method",
+      "symbol": "_ClassBuilder.build_class",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "25.3.0",
+        "commit": "3dca08ce5bbe673d7df25f44f3dda92505d1043d",
+        "lines": [
+          778,
+          800
+        ],
+        "content_hash": "2cedc29a120dcc0d2eb03cea559cf7ad594cd81ec7bebbd5d793d6235447914e"
+      },
+      "new": {
+        "revision": "25.4.0",
+        "commit": "9a98e00a7c078360add417c5d62db820d4645ab1",
+        "lines": [
+          788,
+          811
+        ],
+        "content_hash": "4e3bc8d95f2f427901f71e5c455fb50de39b93e2388cad818fff2e33ce2aac04"
+      },
+      "lines_changed": 1,
+      "normalized": true,
+      "included": true,
+      "exclusion_reason": null,
+      "sample_order": 12,
+      "sampled": true,
+      "review": {
+        "decision": null,
+        "reason": null
+      }
+    },
+    {
+      "path": "src/attr/_next_gen.py",
+      "kind": "function",
+      "symbol": "define",
+      "part_index": 1,
+      "part_count": 2,
+      "status": "superseded",
+      "old": {
+        "revision": "25.3.0",
+        "commit": "3dca08ce5bbe673d7df25f44f3dda92505d1043d",
+        "lines": [
+          23,
+          293
+        ],
+        "content_hash": "d10b9cdce47ff9e355d75e811011dc98a028dd554f531b46b23a9e39f5963d09"
+      },
+      "new": {
+        "revision": "25.4.0",
+        "commit": "9a98e00a7c078360add417c5d62db820d4645ab1",
+        "lines": [
+          23,
+          293
+        ],
+        "content_hash": "ae285ac25280883ed80f27625e39d3ae4742d6a7741ac9975842d82b2dfe4a55"
+      },
+      "lines_changed": 34,
+      "normalized": false,
+      "included": false,
+      "exclusion_reason": "contains_changed_symbol",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "src/attr/_next_gen.py",
+      "kind": "function",
+      "symbol": "define",
+      "part_index": 2,
+      "part_count": 2,
+      "status": "superseded",
+      "old": {
+        "revision": "25.3.0",
+        "commit": "3dca08ce5bbe673d7df25f44f3dda92505d1043d",
+        "lines": [
+          294,
+          409
+        ],
+        "content_hash": "9f499d83af561904a8095b85f66ff2b67041bcfb558e9ba930d6e83bbbfcba16"
+      },
+      "new": {
+        "revision": "25.4.0",
+        "commit": "9a98e00a7c078360add417c5d62db820d4645ab1",
+        "lines": [
+          294,
+          430
+        ],
+        "content_hash": "1cc28a642ad4aec8851e59731c56f86e5af2895394aba98239dc4a4ec66811ea"
+      },
+      "lines_changed": 21,
+      "normalized": false,
+      "included": false,
+      "exclusion_reason": "contains_changed_symbol",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "src/attr/_next_gen.py",
+      "kind": "function",
+      "symbol": "define.do_it",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "25.3.0",
+        "commit": "3dca08ce5bbe673d7df25f44f3dda92505d1043d",
+        "lines": [
+          345,
+          369
+        ],
+        "content_hash": "d9e18a0dc3996f234ec78d61b56f450e401f3f4f0b2405ac2c6bfd45aeb86241"
+      },
+      "new": {
+        "revision": "25.4.0",
+        "commit": "9a98e00a7c078360add417c5d62db820d4645ab1",
+        "lines": [
+          365,
+          390
+        ],
+        "content_hash": "c56338bcb7f7d6046f86ee4d3f6d0f16d439a3959a00f8a404d323f94c4a8c29"
+      },
+      "lines_changed": 1,
+      "normalized": true,
+      "included": true,
+      "exclusion_reason": null,
+      "sample_order": 7,
+      "sampled": true,
+      "review": {
+        "decision": null,
+        "reason": null
+      }
+    },
+    {
+      "path": "src/attr/_next_gen.py",
+      "kind": "function",
+      "symbol": "field",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "25.3.0",
+        "commit": "3dca08ce5bbe673d7df25f44f3dda92505d1043d",
+        "lines": [
+          416,
+          595
+        ],
+        "content_hash": "ee7fb34d5ddab8b92fe30210900354fa35f9e489412616ef1e5235aaecbb1ee6"
+      },
+      "new": {
+        "revision": "25.4.0",
+        "commit": "9a98e00a7c078360add417c5d62db820d4645ab1",
+        "lines": [
+          437,
+          620
+        ],
+        "content_hash": "4a0b188f9faa1700ed18016aa5465c8eb5d58ca201cd0b205837408ce7bb15ec"
+      },
+      "lines_changed": 10,
+      "normalized": true,
+      "included": true,
+      "exclusion_reason": null,
+      "sample_order": 14,
+      "sampled": true,
+      "review": {
+        "decision": null,
+        "reason": null
+      }
+    },
+    {
+      "path": "src/attr/_version_info.py",
+      "kind": "class",
+      "symbol": "VersionInfo",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "25.3.0",
+        "commit": "3dca08ce5bbe673d7df25f44f3dda92505d1043d",
+        "lines": [
+          12,
+          86
+        ],
+        "content_hash": "1743c038d3de1560a4f819397e8c90cdbba151750c220bdfa240997e95feec27"
+      },
+      "new": {
+        "revision": "25.4.0",
+        "commit": "9a98e00a7c078360add417c5d62db820d4645ab1",
+        "lines": [
+          12,
+          89
+        ],
+        "content_hash": "26bb7b2b36b854d0926a12f39c29fc1e643ae6c613e482a3681ffbf2eb5a5fb7"
+      },
+      "lines_changed": 3,
+      "normalized": true,
+      "included": true,
+      "exclusion_reason": null,
+      "sample_order": 4,
+      "sampled": true,
+      "review": {
+        "decision": null,
+        "reason": null
+      }
+    },
+    {
+      "path": "src/attr/converters.py",
+      "kind": "function",
+      "symbol": "default_if_none.default_if_none_converter",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "25.3.0",
+        "commit": "3dca08ce5bbe673d7df25f44f3dda92505d1043d",
+        "lines": [
+          108,
+          112
+        ],
+        "content_hash": "5f34ab29f4fc2ebd7766d641a1b74161ad1de03c90b8a7ee021a65d9a812b1d4"
+      },
+      "new": {
+        "revision": "25.4.0",
+        "commit": "9a98e00a7c078360add417c5d62db820d4645ab1",
+        "lines": [
+          116,
+          120
+        ],
+        "content_hash": "82d2c59fffa8fd9d1138dca05f3af407e08607d1ecead59b75547d096fcf7257"
+      },
+      "lines_changed": 2,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "ambiguous_location",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "src/attr/converters.py",
+      "kind": "function",
+      "symbol": "optional.optional_converter",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "25.3.0",
+        "commit": "3dca08ce5bbe673d7df25f44f3dda92505d1043d",
+        "lines": [
+          38,
+          41
+        ],
+        "content_hash": "ab78ac9b14fec1864c91636568327f1136163d1e2efa56e1d62eaa0db5b080ef"
+      },
+      "new": {
+        "revision": "25.4.0",
+        "commit": "9a98e00a7c078360add417c5d62db820d4645ab1",
+        "lines": [
+          45,
+          48
+        ],
+        "content_hash": "160b9167d92656738ea62a2ad11e1b39b30e986f22dbd47e55446b2a72ef6a1d"
+      },
+      "lines_changed": 4,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "ambiguous_location",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "src/attr/validators.py",
+      "kind": "class",
+      "symbol": "_DeepMapping",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "25.3.0",
+        "commit": "3dca08ce5bbe673d7df25f44f3dda92505d1043d",
+        "lines": [
+          380,
+          397
+        ],
+        "content_hash": "30a860ff963d44fb27d8ac3586a75cb8551171d082035e813bf114a8893a7bc7"
+      },
+      "new": {
+        "revision": "25.4.0",
+        "commit": "9a98e00a7c078360add417c5d62db820d4645ab1",
+        "lines": [
+          386,
+          405
+        ],
+        "content_hash": "be080be6722cec90f7a03190e5ca070e2aa8c36334881c48b092a2261a1c3e74"
+      },
+      "lines_changed": 12,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "contains_changed_symbol",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "src/attr/validators.py",
+      "kind": "function",
+      "symbol": "deep_iterable",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "25.3.0",
+        "commit": "3dca08ce5bbe673d7df25f44f3dda92505d1043d",
+        "lines": [
+          359,
+          376
+        ],
+        "content_hash": "a4fed8d97cf95f0ee5f2bf42e96b66b3a9a0e5a8e4a119258a0cba7621960eba"
+      },
+      "new": {
+        "revision": "25.4.0",
+        "commit": "9a98e00a7c078360add417c5d62db820d4645ab1",
+        "lines": [
+          359,
+          382
+        ],
+        "content_hash": "47e093b623cdd003d1e3b2052c3e9b24e4d175d392bbc9ddbb10817be25e51f6"
+      },
+      "lines_changed": 10,
+      "normalized": true,
+      "included": true,
+      "exclusion_reason": null,
+      "sample_order": 5,
+      "sampled": true,
+      "review": {
+        "decision": null,
+        "reason": null
+      }
+    },
+    {
+      "path": "src/attr/validators.py",
+      "kind": "function",
+      "symbol": "deep_mapping",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "25.3.0",
+        "commit": "3dca08ce5bbe673d7df25f44f3dda92505d1043d",
+        "lines": [
+          400,
+          417
+        ],
+        "content_hash": "9ca9687fb62501b0b2536a9467ed297eee4dc29e249cefe22ab7df0f9bbab84f"
+      },
+      "new": {
+        "revision": "25.4.0",
+        "commit": "9a98e00a7c078360add417c5d62db820d4645ab1",
+        "lines": [
+          408,
+          455
+        ],
+        "content_hash": "dc303924a45f48096e8681fdb5a52f55c7e864f8bb2096de33ef248dd30d4c6a"
+      },
+      "lines_changed": 40,
+      "normalized": true,
+      "included": true,
+      "exclusion_reason": null,
+      "sample_order": 10,
+      "sampled": true,
+      "review": {
+        "decision": null,
+        "reason": null
+      }
+    },
+    {
+      "path": "src/attr/validators.py",
+      "kind": "function",
+      "symbol": "gt",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "25.3.0",
+        "commit": "3dca08ce5bbe673d7df25f44f3dda92505d1043d",
+        "lines": [
+          483,
+          495
+        ],
+        "content_hash": "09ea77e6fc6e11b69b23ab67c942940e3c7e1419ba0981f91cd32057575868d1"
+      },
+      "new": {
+        "revision": "25.4.0",
+        "commit": "9a98e00a7c078360add417c5d62db820d4645ab1",
+        "lines": [
+          521,
+          533
+        ],
+        "content_hash": "13be65a30e6189d090e7182c11bd42ea28acd193ff6146ad6ea2ca1f3a08d785"
+      },
+      "lines_changed": 2,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "formatting_or_docstring_only",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "src/attr/validators.py",
+      "kind": "method",
+      "symbol": "_DeepMapping.__call__",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "25.3.0",
+        "commit": "3dca08ce5bbe673d7df25f44f3dda92505d1043d",
+        "lines": [
+          385,
+          394
+        ],
+        "content_hash": "3eb23f5975df7a15dd0140e8268aad0773aa59cefac13a022d62d189f8b86c69"
+      },
+      "new": {
+        "revision": "25.4.0",
+        "commit": "9a98e00a7c078360add417c5d62db820d4645ab1",
+        "lines": [
+          391,
+          402
+        ],
+        "content_hash": "789c49b8f7a0fa9f4b518200fbf848bc93e6638b401115296642674ea19785cd"
+      },
+      "lines_changed": 6,
+      "normalized": true,
+      "included": true,
+      "exclusion_reason": null,
+      "sample_order": 3,
+      "sampled": true,
+      "review": {
+        "decision": null,
+        "reason": null
+      }
+    },
+    {
+      "path": "tests/test_annotations.py",
+      "kind": "class",
+      "symbol": "TestAnnotations",
+      "part_index": 2,
+      "part_count": 2,
+      "status": "superseded",
+      "old": {
+        "revision": "25.3.0",
+        "commit": "3dca08ce5bbe673d7df25f44f3dda92505d1043d",
+        "lines": [
+          485,
+          689
+        ],
+        "content_hash": "c6137efeb04d082de15a8f947ecf7b28467c386a70dba7ed738c6be69810b6b0"
+      },
+      "new": {
+        "revision": "25.4.0",
+        "commit": "9a98e00a7c078360add417c5d62db820d4645ab1",
+        "lines": [
+          484,
+          684
+        ],
+        "content_hash": "06de9748ed0334a6fde718c2cc735749813a53d73b5156993e70cf9a98cfce06"
+      },
+      "lines_changed": 4,
+      "normalized": false,
+      "included": false,
+      "exclusion_reason": "test_file",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "tests/test_annotations.py",
+      "kind": "class",
+      "symbol": "TestAnnotations.test_converter_annotations.A",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "25.3.0",
+        "commit": "3dca08ce5bbe673d7df25f44f3dda92505d1043d",
+        "lines": [
+          214,
+          215
+        ],
+        "content_hash": "be24c839fa94ac5e7d78dbf918ed8ad91b6b0932c7249246b3a0bb287f1e3fde"
+      },
+      "new": {
+        "revision": "25.4.0",
+        "commit": "9a98e00a7c078360add417c5d62db820d4645ab1",
+        "lines": [
+          222,
+          223
+        ],
+        "content_hash": "ea90ac1e790a5a853efcc97865ae94e45f3ba637185a04fb3a9b8afdf7f06107"
+      },
+      "lines_changed": 2,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "test_file",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "tests/test_annotations.py",
+      "kind": "method",
+      "symbol": "TestAnnotations.test_forward_reference",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "25.3.0",
+        "commit": "3dca08ce5bbe673d7df25f44f3dda92505d1043d",
+        "lines": [
+          604,
+          626
+        ],
+        "content_hash": "1973305e5b29f28d3b7b6f07ac62a02a626019373653682cd56bf412a8ab40d2"
+      },
+      "new": {
+        "revision": "25.4.0",
+        "commit": "9a98e00a7c078360add417c5d62db820d4645ab1",
+        "lines": [
+          601,
+          621
+        ],
+        "content_hash": "73d2c2538a381388a7f67c323c0eccb32c209eb20fc36cafd4ef0cf63d97e3eb"
+      },
+      "lines_changed": 2,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "test_file",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "tests/test_annotations.py",
+      "kind": "method",
+      "symbol": "TestAnnotations.test_self_reference",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "25.3.0",
+        "commit": "3dca08ce5bbe673d7df25f44f3dda92505d1043d",
+        "lines": [
+          587,
+          602
+        ],
+        "content_hash": "2b5535bf82c288abc13bce113b7af9ef543d4cee9078cb5022cb9965cdc6121c"
+      },
+      "new": {
+        "revision": "25.4.0",
+        "commit": "9a98e00a7c078360add417c5d62db820d4645ab1",
+        "lines": [
+          586,
+          599
+        ],
+        "content_hash": "a91f2e091aa6437bc26cf73e836b9fc651c36b4ef366fee15c5efcdcaf3d1478"
+      },
+      "lines_changed": 2,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "test_file",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "tests/test_dunders.py",
+      "kind": "class",
+      "symbol": "C",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "25.3.0",
+        "commit": "3dca08ce5bbe673d7df25f44f3dda92505d1043d",
+        "lines": [
+          977,
+          978
+        ],
+        "content_hash": "b4cca9e87cf330ccc9adb7a82823125c03d70aca1793591d3d6d5cac0a5acb35"
+      },
+      "new": {
+        "revision": "25.4.0",
+        "commit": "9a98e00a7c078360add417c5d62db820d4645ab1",
+        "lines": [
+          994,
+          999
+        ],
+        "content_hash": "eda141eee93e54b9a15346702dd22e8c7a9db0b382d8dc4d188f301c45c206c0"
+      },
+      "lines_changed": 6,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "test_file",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "tests/test_dunders.py",
+      "kind": "class",
+      "symbol": "C",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "25.3.0",
+        "commit": "3dca08ce5bbe673d7df25f44f3dda92505d1043d",
+        "lines": [
+          986,
+          987
+        ],
+        "content_hash": "b4cca9e87cf330ccc9adb7a82823125c03d70aca1793591d3d6d5cac0a5acb35"
+      },
+      "new": {
+        "revision": "25.4.0",
+        "commit": "9a98e00a7c078360add417c5d62db820d4645ab1",
+        "lines": [
+          994,
+          999
+        ],
+        "content_hash": "eda141eee93e54b9a15346702dd22e8c7a9db0b382d8dc4d188f301c45c206c0"
+      },
+      "lines_changed": 6,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "test_file",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "tests/test_funcs.py",
+      "kind": "class",
+      "symbol": "TestAsDict",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "25.3.0",
+        "commit": "3dca08ce5bbe673d7df25f44f3dda92505d1043d",
+        "lines": [
+          46,
+          280
+        ],
+        "content_hash": "23c62c4726d5fddd8415d36944e3fd8b5922132ba8b27073ee51c77647ccc488"
+      },
+      "new": {
+        "revision": "25.4.0",
+        "commit": "9a98e00a7c078360add417c5d62db820d4645ab1",
+        "lines": [
+          46,
+          296
+        ],
+        "content_hash": "5804971f3ef8d3435fc8946360a52bcc94a579de8e4e9b751bdbea6dd527d3ca"
+      },
+      "lines_changed": 16,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "test_file",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "tests/test_funcs.py",
+      "kind": "class",
+      "symbol": "TestAsTuple",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "25.3.0",
+        "commit": "3dca08ce5bbe673d7df25f44f3dda92505d1043d",
+        "lines": [
+          283,
+          484
+        ],
+        "content_hash": "c6cf37d49a0aa479d8e4457a64786a3bf75411bba367a42ca72525781b4e2f15"
+      },
+      "new": {
+        "revision": "25.4.0",
+        "commit": "9a98e00a7c078360add417c5d62db820d4645ab1",
+        "lines": [
+          299,
+          517
+        ],
+        "content_hash": "5994cbda3db1f6dca9542dfa1f1979f53026fe4d1736520ebb7ed7fc667a7c0b"
+      },
+      "lines_changed": 17,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "test_file",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "tests/test_make.py",
+      "kind": "class",
+      "symbol": "TestAttributes",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "25.3.0",
+        "commit": "3dca08ce5bbe673d7df25f44f3dda92505d1043d",
+        "lines": [
+          472,
+          834
+        ],
+        "content_hash": "c8aaefd95392ead81e9d85ec7faab1c7d50a4d5a4a0f2687d5a51191fcbfe53c"
+      },
+      "new": {
+        "revision": "25.4.0",
+        "commit": "9a98e00a7c078360add417c5d62db820d4645ab1",
+        "lines": [
+          495,
+          935
+        ],
+        "content_hash": "a1dc797edb3a599772a91eeffe03147f657e9dc84e55a54cd01382e4d84eb10c"
+      },
+      "lines_changed": 150,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "test_file",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "tests/test_make.py",
+      "kind": "class",
+      "symbol": "TestAutoDetect.test_detects_setstate_getstate.C",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "25.3.0",
+        "commit": "3dca08ce5bbe673d7df25f44f3dda92505d1043d",
+        "lines": [
+          2594,
+          2596
+        ],
+        "content_hash": "4ea456f709518f589d0ee3604fb4eba344a751913da76de782e2ce060de806b3"
+      },
+      "new": {
+        "revision": "25.4.0",
+        "commit": "9a98e00a7c078360add417c5d62db820d4645ab1",
+        "lines": [
+          2912,
+          2916
+        ],
+        "content_hash": "3c4f1a334e5a5f4de0a4810bfdbdf8df58a82f3ac15a047863e689abf454ea5f"
+      },
+      "lines_changed": 6,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "test_file",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "tests/test_make.py",
+      "kind": "class",
+      "symbol": "TestClassBuilder",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "25.3.0",
+        "commit": "3dca08ce5bbe673d7df25f44f3dda92505d1043d",
+        "lines": [
+          1691,
+          1980
+        ],
+        "content_hash": "9f3fd7f592b6e5da012be0b354767bf20dd8010b7d235d3aef770571ce564837"
+      },
+      "new": {
+        "revision": "25.4.0",
+        "commit": "9a98e00a7c078360add417c5d62db820d4645ab1",
+        "lines": [
+          1977,
+          2289
+        ],
+        "content_hash": "68eb230cba971d80bbd8e457ec3c943b5c8342316ba18fd79d6aed42c25dfeed"
+      },
+      "lines_changed": 89,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "test_file",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "tests/test_make.py",
+      "kind": "class",
+      "symbol": "TestDetermineAttribEqOrder",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "25.3.0",
+        "commit": "3dca08ce5bbe673d7df25f44f3dda92505d1043d",
+        "lines": [
+          2169,
+          2233
+        ],
+        "content_hash": "28a31d3f26f19764e2453781446e3a0ce7a304552f1146d78801b2722a010a29"
+      },
+      "new": {
+        "revision": "25.4.0",
+        "commit": "9a98e00a7c078360add417c5d62db820d4645ab1",
+        "lines": [
+          2478,
+          2542
+        ],
+        "content_hash": "dff1cf33d9fdfc41dc77003a8cfd4a3f922fa24f7b2d42515dca68a069451ee2"
+      },
+      "lines_changed": 4,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "test_file",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "tests/test_make.py",
+      "kind": "class",
+      "symbol": "TestDetermineAttrsEqOrder",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "25.3.0",
+        "commit": "3dca08ce5bbe673d7df25f44f3dda92505d1043d",
+        "lines": [
+          2133,
+          2166
+        ],
+        "content_hash": "a5efdab81d824b0cf9be878e0a0f834664d918cd031daa081f072f8f7d41a7ab"
+      },
+      "new": {
+        "revision": "25.4.0",
+        "commit": "9a98e00a7c078360add417c5d62db820d4645ab1",
+        "lines": [
+          2442,
+          2475
+        ],
+        "content_hash": "9d76b8ac31b9210aba502d2269e3ec1d2ee6dd85f42c8095da18651232005516"
+      },
+      "lines_changed": 4,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "test_file",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "tests/test_make.py",
+      "kind": "class",
+      "symbol": "TestKeywordOnlyAttributes",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "25.3.0",
+        "commit": "3dca08ce5bbe673d7df25f44f3dda92505d1043d",
+        "lines": [
+          837,
+          1052
+        ],
+        "content_hash": "5f9b4ebfe40934b519348c1281b514b81d909ca2953aab785c335bb7138f8f3e"
+      },
+      "new": {
+        "revision": "25.4.0",
+        "commit": "9a98e00a7c078360add417c5d62db820d4645ab1",
+        "lines": [
+          974,
+          1338
+        ],
+        "content_hash": "b8ce4a678e8641ebcea1357166696d7414f4b02b7fbd03c9d927f1aba755e9e6"
+      },
+      "lines_changed": 153,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "test_file",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "tests/test_make.py",
+      "kind": "class",
+      "symbol": "TestMatchArgs.test_match_args_kw_only.C",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "25.3.0",
+        "commit": "3dca08ce5bbe673d7df25f44f3dda92505d1043d",
+        "lines": [
+          2688,
+          2690
+        ],
+        "content_hash": "a11940dbca6e15c2bacefe47b40d7089b581fe08e20c036b91898aba97fbb245"
+      },
+      "new": {
+        "revision": "25.4.0",
+        "commit": "9a98e00a7c078360add417c5d62db820d4645ab1",
+        "lines": [
+          3004,
+          3006
+        ],
+        "content_hash": "a40d3ced2a1e91e752194099e46f520d4ff7417a429048adab706accf75de1a0"
+      },
+      "lines_changed": 2,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "test_file",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "tests/test_make.py",
+      "kind": "class",
+      "symbol": "TestTransformAttrs",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "25.3.0",
+        "commit": "3dca08ce5bbe673d7df25f44f3dda92505d1043d",
+        "lines": [
+          172,
+          469
+        ],
+        "content_hash": "e29532ebf3af0ce67d6f7269199321a9d19a15a3b901a03de7b4cd534bb53a27"
+      },
+      "new": {
+        "revision": "25.4.0",
+        "commit": "9a98e00a7c078360add417c5d62db820d4645ab1",
+        "lines": [
+          176,
+          492
+        ],
+        "content_hash": "4ea805d17d0662f77158e56d178bfa92fdde462162b8324b91297eb20f7bc833"
+      },
+      "lines_changed": 43,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "test_file",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "tests/test_make.py",
+      "kind": "method",
+      "symbol": "TestClassBuilder.test_handles_missing_meta_on_class",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "25.3.0",
+        "commit": "3dca08ce5bbe673d7df25f44f3dda92505d1043d",
+        "lines": [
+          1812,
+          1864
+        ],
+        "content_hash": "cf77145cc438267f545f96a9806780b1257eb03a177155e9c7ff9986f7406e9e"
+      },
+      "new": {
+        "revision": "25.4.0",
+        "commit": "9a98e00a7c078360add417c5d62db820d4645ab1",
+        "lines": [
+          2114,
+          2174
+        ],
+        "content_hash": "bf1bf0f531ebfac244d13752e24b727f59deac74c0d9ec17bf42e970e5931730"
+      },
+      "lines_changed": 28,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "test_file",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "tests/test_make.py",
+      "kind": "method",
+      "symbol": "TestClassBuilder.test_repr",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "25.3.0",
+        "commit": "3dca08ce5bbe673d7df25f44f3dda92505d1043d",
+        "lines": [
+          1708,
+          1733
+        ],
+        "content_hash": "5be7040adfa9dc75cc9bc186deb560f1e865dc15bb7ba1fa10962165d6023738"
+      },
+      "new": {
+        "revision": "25.4.0",
+        "commit": "9a98e00a7c078360add417c5d62db820d4645ab1",
+        "lines": [
+          1994,
+          2027
+        ],
+        "content_hash": "6dab4d181d8e9ae8c490f7c7d7cf22db96b617adc3a75058b475d3063ffc71d7"
+      },
+      "lines_changed": 30,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "test_file",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "tests/test_make.py",
+      "kind": "method",
+      "symbol": "TestClassBuilder.test_returns_self",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "25.3.0",
+        "commit": "3dca08ce5bbe673d7df25f44f3dda92505d1043d",
+        "lines": [
+          1735,
+          1771
+        ],
+        "content_hash": "13fb2bf07736ff8d23679f9e6bf090ca468c10f3162c79b6eb6e8f154e26e8bc"
+      },
+      "new": {
+        "revision": "25.4.0",
+        "commit": "9a98e00a7c078360add417c5d62db820d4645ab1",
+        "lines": [
+          2029,
+          2073
+        ],
+        "content_hash": "83c8396ac0a2822b5a714c553680453c2126d0f07e290585e18be9be316c94da"
+      },
+      "lines_changed": 30,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "test_file",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "tests/test_make.py",
+      "kind": "method",
+      "symbol": "TestDetermineAttribEqOrder.test_mix",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "25.3.0",
+        "commit": "3dca08ce5bbe673d7df25f44f3dda92505d1043d",
+        "lines": [
+          2224,
+          2233
+        ],
+        "content_hash": "c7ace698bf0b2367cf133d022ad0e4cb5ee88473c299fdf3da096760d467afba"
+      },
+      "new": {
+        "revision": "25.4.0",
+        "commit": "9a98e00a7c078360add417c5d62db820d4645ab1",
+        "lines": [
+          2533,
+          2542
+        ],
+        "content_hash": "6f6e181c09bcc2b9235ee3a1ac9b5695aadf403e8ded9297298b30584b060e27"
+      },
+      "lines_changed": 2,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "test_file",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "tests/test_make.py",
+      "kind": "method",
+      "symbol": "TestDetermineAttribEqOrder.test_order_without_eq",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "25.3.0",
+        "commit": "3dca08ce5bbe673d7df25f44f3dda92505d1043d",
+        "lines": [
+          2214,
+          2221
+        ],
+        "content_hash": "9536ee9ad84d1b9f280f4c53c64157abe463f41921cb3c525e543f5a9478e5ca"
+      },
+      "new": {
+        "revision": "25.4.0",
+        "commit": "9a98e00a7c078360add417c5d62db820d4645ab1",
+        "lines": [
+          2523,
+          2530
+        ],
+        "content_hash": "d669dd2c5e8940be5d1aede895953fa904bc1413beb4b1373ec8bbc627af7c66"
+      },
+      "lines_changed": 2,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "test_file",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "tests/test_make.py",
+      "kind": "method",
+      "symbol": "TestDetermineAttrsEqOrder.test_mix",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "25.3.0",
+        "commit": "3dca08ce5bbe673d7df25f44f3dda92505d1043d",
+        "lines": [
+          2157,
+          2166
+        ],
+        "content_hash": "703cb6f5497681b07b707ae15883d0e4528a51d2cf052175694853bdcdc90d82"
+      },
+      "new": {
+        "revision": "25.4.0",
+        "commit": "9a98e00a7c078360add417c5d62db820d4645ab1",
+        "lines": [
+          2466,
+          2475
+        ],
+        "content_hash": "3436f99334c385b1c42393fe5e4ecdfcead63e836116da0b3bb49fbd6bb71ebf"
+      },
+      "lines_changed": 2,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "test_file",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "tests/test_make.py",
+      "kind": "method",
+      "symbol": "TestDetermineAttrsEqOrder.test_order_without_eq",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "25.3.0",
+        "commit": "3dca08ce5bbe673d7df25f44f3dda92505d1043d",
+        "lines": [
+          2147,
+          2154
+        ],
+        "content_hash": "b3b455c8bfce4e1fa276cdd495ed2bc0bfd2b401b0d9e16f06853632cfe97100"
+      },
+      "new": {
+        "revision": "25.4.0",
+        "commit": "9a98e00a7c078360add417c5d62db820d4645ab1",
+        "lines": [
+          2456,
+          2463
+        ],
+        "content_hash": "5147f8f84b1cc8ba2f63b8f845c92dc0f4a1884e0f07689910252d41bb9d99f5"
+      },
+      "lines_changed": 2,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "test_file",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "tests/test_make.py",
+      "kind": "method",
+      "symbol": "TestKeywordOnlyAttributes.test_keyword_only_class_level_subclassing",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "25.3.0",
+        "commit": "3dca08ce5bbe673d7df25f44f3dda92505d1043d",
+        "lines": [
+          976,
+          996
+        ],
+        "content_hash": "2ae3a1f8b60a2ae84cf011d48a0609aa4e0d57a664f80617f8581404deab77d9"
+      },
+      "new": {
+        "revision": "25.4.0",
+        "commit": "9a98e00a7c078360add417c5d62db820d4645ab1",
+        "lines": [
+          1113,
+          1144
+        ],
+        "content_hash": "abd356fb3ab77a96a2bd12ffd86027a70874f39ef8c0677d9ed6a53857e06447"
+      },
+      "lines_changed": 15,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "test_file",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "tests/test_make.py",
+      "kind": "method",
+      "symbol": "TestTransformAttrs.test_conflicting_defaults",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "25.3.0",
+        "commit": "3dca08ce5bbe673d7df25f44f3dda92505d1043d",
+        "lines": [
+          221,
+          241
+        ],
+        "content_hash": "936f1e0bb34f60a7cdcc2350fc7314e59f766f180a39f98e469727eee7e2dfc4"
+      },
+      "new": {
+        "revision": "25.4.0",
+        "commit": "9a98e00a7c078360add417c5d62db820d4645ab1",
+        "lines": [
+          227,
+          249
+        ],
+        "content_hash": "ffe641b10424cfc4d7364034a811fb5f46f9c3a3285737512e6c076cf1ec253b"
+      },
+      "lines_changed": 4,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "test_file",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "tests/test_make.py",
+      "kind": "method",
+      "symbol": "TestTransformAttrs.test_empty",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "25.3.0",
+        "commit": "3dca08ce5bbe673d7df25f44f3dda92505d1043d",
+        "lines": [
+          195,
+          206
+        ],
+        "content_hash": "e1a2ae1b006c28ceb51593bfb5aecfed57a0922187331d7b0dcd44a06483d656"
+      },
+      "new": {
+        "revision": "25.4.0",
+        "commit": "9a98e00a7c078360add417c5d62db820d4645ab1",
+        "lines": [
+          201,
+          212
+        ],
+        "content_hash": "35f2104914eed8087689701d78bcb33580ecf768cf7e9952902ff20d0783a9f2"
+      },
+      "lines_changed": 2,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "test_file",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "tests/test_make.py",
+      "kind": "method",
+      "symbol": "TestTransformAttrs.test_kw_only",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "25.3.0",
+        "commit": "3dca08ce5bbe673d7df25f44f3dda92505d1043d",
+        "lines": [
+          243,
+          274
+        ],
+        "content_hash": "e5366a6ca0a0d286371693156b580c5b88fa16a413794f879ce3e3ea2c1b5875"
+      },
+      "new": {
+        "revision": "25.4.0",
+        "commit": "9a98e00a7c078360add417c5d62db820d4645ab1",
+        "lines": [
+          251,
+          297
+        ],
+        "content_hash": "25685cf349fae2133fe4661034439a2f93df7a3a7f4b53297d76a63432c08c46"
+      },
+      "lines_changed": 27,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "test_file",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "tests/test_make.py",
+      "kind": "method",
+      "symbol": "TestTransformAttrs.test_no_modifications",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "25.3.0",
+        "commit": "3dca08ce5bbe673d7df25f44f3dda92505d1043d",
+        "lines": [
+          177,
+          184
+        ],
+        "content_hash": "a57ddb13582c9f9e448b8ce8c82c86a48476b5af891294a584ab0a79e037202c"
+      },
+      "new": {
+        "revision": "25.4.0",
+        "commit": "9a98e00a7c078360add417c5d62db820d4645ab1",
+        "lines": [
+          181,
+          188
+        ],
+        "content_hash": "30558cd6d936e77a3ccb168593ec95e07315a03ed41b5f9c7f0a1061cf9b7796"
+      },
+      "lines_changed": 2,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "test_file",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "tests/test_make.py",
+      "kind": "method",
+      "symbol": "TestTransformAttrs.test_normal",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "25.3.0",
+        "commit": "3dca08ce5bbe673d7df25f44f3dda92505d1043d",
+        "lines": [
+          186,
+          193
+        ],
+        "content_hash": "d24b67af54f51be9dbd4ee2311c38015051ad0eb698a54851fabff8e952ad32f"
+      },
+      "new": {
+        "revision": "25.4.0",
+        "commit": "9a98e00a7c078360add417c5d62db820d4645ab1",
+        "lines": [
+          190,
+          199
+        ],
+        "content_hash": "caa00400ff5649bb53bebabe0688fb94895eaee3467a43bd2f855e3ba482c576"
+      },
+      "lines_changed": 4,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "test_file",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "tests/test_make.py",
+      "kind": "method",
+      "symbol": "TestTransformAttrs.test_these",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "25.3.0",
+        "commit": "3dca08ce5bbe673d7df25f44f3dda92505d1043d",
+        "lines": [
+          276,
+          292
+        ],
+        "content_hash": "0036b5b6fe2168d0a98657d44f8ece72fa42a2879c6929ad8af7e93d315b7ff3"
+      },
+      "new": {
+        "revision": "25.4.0",
+        "commit": "9a98e00a7c078360add417c5d62db820d4645ab1",
+        "lines": [
+          299,
+          315
+        ],
+        "content_hash": "81bfee720d0e03169d54d782f9c62736a7ca15e7d0271e83bf06f6ad05178f78"
+      },
+      "lines_changed": 2,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "test_file",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "tests/test_make.py",
+      "kind": "method",
+      "symbol": "TestTransformAttrs.test_transforms_to_attribute",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "25.3.0",
+        "commit": "3dca08ce5bbe673d7df25f44f3dda92505d1043d",
+        "lines": [
+          208,
+          219
+        ],
+        "content_hash": "1e502a053d816db5197a4a44342bf1bba61a2ba76858b177116bc12ec5d32689"
+      },
+      "new": {
+        "revision": "25.4.0",
+        "commit": "9a98e00a7c078360add417c5d62db820d4645ab1",
+        "lines": [
+          214,
+          225
+        ],
+        "content_hash": "0ac56b6a052fd2e447739be6595af18dfc339179e9c9fc5b09f5ad0292d42df3"
+      },
+      "lines_changed": 2,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "test_file",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "tests/test_next_gen.py",
+      "kind": "class",
+      "symbol": "TestNextGen",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "25.3.0",
+        "commit": "3dca08ce5bbe673d7df25f44f3dda92505d1043d",
+        "lines": [
+          26,
+          426
+        ],
+        "content_hash": "ce2b3edf633df7b1bbc4fd07a944defc61896993b410ab9cfd42a66e90cad374"
+      },
+      "new": {
+        "revision": "25.4.0",
+        "commit": "9a98e00a7c078360add417c5d62db820d4645ab1",
+        "lines": [
+          27,
+          427
+        ],
+        "content_hash": "771f31eb19bece8794b2d3c3695408f8fb859420d1ec753ff8907d4bceeddfc5"
+      },
+      "lines_changed": 2,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "test_file",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "tests/test_next_gen.py",
+      "kind": "method",
+      "symbol": "TestNextGen.test_catches_frozen_on_setattr",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "25.3.0",
+        "commit": "3dca08ce5bbe673d7df25f44f3dda92505d1043d",
+        "lines": [
+          269,
+          297
+        ],
+        "content_hash": "f67d60e45de767fcba3f314c6c9f15b24ae543807b3cb9fee6174eca91eae82f"
+      },
+      "new": {
+        "revision": "25.4.0",
+        "commit": "9a98e00a7c078360add417c5d62db820d4645ab1",
+        "lines": [
+          270,
+          298
+        ],
+        "content_hash": "2663f39f34493c4d141416802913848ec0557a2e546d252ba61611d62822a7c2"
+      },
+      "lines_changed": 2,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "test_file",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "tests/test_pattern_matching.py",
+      "kind": "class",
+      "symbol": "TestPatternMatching.test_match_args_kw_only.C",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "25.3.0",
+        "commit": "3dca08ce5bbe673d7df25f44f3dda92505d1043d",
+        "lines": [
+          62,
+          64
+        ],
+        "content_hash": "a11940dbca6e15c2bacefe47b40d7089b581fe08e20c036b91898aba97fbb245"
+      },
+      "new": {
+        "revision": "25.4.0",
+        "commit": "9a98e00a7c078360add417c5d62db820d4645ab1",
+        "lines": [
+          83,
+          85
+        ],
+        "content_hash": "a40d3ced2a1e91e752194099e46f520d4ff7417a429048adab706accf75de1a0"
+      },
+      "lines_changed": 2,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "test_file",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "tests/test_setattr.py",
+      "kind": "class",
+      "symbol": "TestSetAttr",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "25.3.0",
+        "commit": "3dca08ce5bbe673d7df25f44f3dda92505d1043d",
+        "lines": [
+          25,
+          453
+        ],
+        "content_hash": "446f28a808a082f96ddfe8eef11246849482a9e2d4dd727cbf5fb40074e4fd0d"
+      },
+      "new": {
+        "revision": "25.4.0",
+        "commit": "9a98e00a7c078360add417c5d62db820d4645ab1",
+        "lines": [
+          25,
+          453
+        ],
+        "content_hash": "fb15995fa63256a2b075c55812da266a4c3a99a7badfa6215c01c6c91be7264b"
+      },
+      "lines_changed": 4,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "test_file",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "tests/test_setattr.py",
+      "kind": "method",
+      "symbol": "TestSetAttr.test_setattr_auto_detect_frozen",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "25.3.0",
+        "commit": "3dca08ce5bbe673d7df25f44f3dda92505d1043d",
+        "lines": [
+          364,
+          375
+        ],
+        "content_hash": "e20e47ec44937b174c471d200b9be77a6eedc55be2ce06271d646583475edcf5"
+      },
+      "new": {
+        "revision": "25.4.0",
+        "commit": "9a98e00a7c078360add417c5d62db820d4645ab1",
+        "lines": [
+          364,
+          375
+        ],
+        "content_hash": "70022d2b37ffbbd4b63ab834389a8d04c7c7c195d646c56db938374d43febe6f"
+      },
+      "lines_changed": 2,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "test_file",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "tests/test_setattr.py",
+      "kind": "method",
+      "symbol": "TestSetAttr.test_setattr_auto_detect_on_setattr",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "25.3.0",
+        "commit": "3dca08ce5bbe673d7df25f44f3dda92505d1043d",
+        "lines": [
+          377,
+          392
+        ],
+        "content_hash": "dbf941cc3dc4e71e353713928402c8ce958789d91c54ed457b83534dbb482938"
+      },
+      "new": {
+        "revision": "25.4.0",
+        "commit": "9a98e00a7c078360add417c5d62db820d4645ab1",
+        "lines": [
+          377,
+          392
+        ],
+        "content_hash": "23fd0b3e5eb74e73fddd8f31e955e36fe0853b2db65c6415d7d7945c90bb9e5a"
+      },
+      "lines_changed": 2,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "test_file",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "tests/test_slots.py",
+      "kind": "class",
+      "symbol": "test_slots_cached_property_works_on_frozen_isntances.A",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "removed",
+      "old": {
+        "revision": "25.3.0",
+        "commit": "3dca08ce5bbe673d7df25f44f3dda92505d1043d",
+        "lines": [
+          764,
+          769
+        ],
+        "content_hash": "8263987feb119872601d52533f02854882982d5c5cfa5dfaf06993d968aabe1b"
+      },
+      "new": null,
+      "lines_changed": 6,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "test_file",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "tests/test_slots.py",
+      "kind": "function",
+      "symbol": "test_slots_cached_property_infers_type",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "25.3.0",
+        "commit": "3dca08ce5bbe673d7df25f44f3dda92505d1043d",
+        "lines": [
+          777,
+          790
+        ],
+        "content_hash": "20a431b82d0ae91a139baaefd1c0e2e1d84f6a4c8b62f4fd130f50f962899518"
+      },
+      "new": {
+        "revision": "25.4.0",
+        "commit": "9a98e00a7c078360add417c5d62db820d4645ab1",
+        "lines": [
+          791,
+          806
+        ],
+        "content_hash": "d5c8a36e98a51b9b7c4db86bd04be548405fca1b6e27846f88045c637011b1e2"
+      },
+      "lines_changed": 4,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "test_file",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "tests/test_slots.py",
+      "kind": "function",
+      "symbol": "test_slots_cached_property_works_on_frozen_isntances",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "removed",
+      "old": {
+        "revision": "25.3.0",
+        "commit": "3dca08ce5bbe673d7df25f44f3dda92505d1043d",
+        "lines": [
+          758,
+          771
+        ],
+        "content_hash": "954425bd82e2872ba79cadef52b5ed1a57c037fb8c4e424e8657e0d940a9e137"
+      },
+      "new": null,
+      "lines_changed": 14,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "test_file",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "tests/test_slots.py",
+      "kind": "method",
+      "symbol": "test_slots_cached_property_works_on_frozen_isntances.A.f",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "removed",
+      "old": {
+        "revision": "25.3.0",
+        "commit": "3dca08ce5bbe673d7df25f44f3dda92505d1043d",
+        "lines": [
+          768,
+          769
+        ],
+        "content_hash": "6d8c7fa20d9c30b085dd146021964297e7176eca804f0771adaa4b9d0911f1dc"
+      },
+      "new": null,
+      "lines_changed": 2,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "test_file",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "tests/test_validators.py",
+      "kind": "class",
+      "symbol": "TestDeepIterable",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "25.3.0",
+        "commit": "3dca08ce5bbe673d7df25f44f3dda92505d1043d",
+        "lines": [
+          468,
+          622
+        ],
+        "content_hash": "d68050dbb1f1f67979e9044cfbbc213424ce8189d4997ca6bcd3ab7c1f608c3b"
+      },
+      "new": {
+        "revision": "25.4.0",
+        "commit": "9a98e00a7c078360add417c5d62db820d4645ab1",
+        "lines": [
+          468,
+          635
+        ],
+        "content_hash": "a8efcb57fdb29760237acd6a90147229ad630601eee7d0ef86b64bd37b741a91"
+      },
+      "lines_changed": 13,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "test_file",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "tests/test_validators.py",
+      "kind": "class",
+      "symbol": "TestDeepMapping",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "25.3.0",
+        "commit": "3dca08ce5bbe673d7df25f44f3dda92505d1043d",
+        "lines": [
+          625,
+          722
+        ],
+        "content_hash": "b19efba02899a370b9e0c77a76171ebcbf180371748b8a6c09ee586269817ec4"
+      },
+      "new": {
+        "revision": "25.4.0",
+        "commit": "9a98e00a7c078360add417c5d62db820d4645ab1",
+        "lines": [
+          638,
+          788
+        ],
+        "content_hash": "23c4a817c0d21dff3b6ee4d5fc6cec38df746e89beab821508bc3389d40a3fac"
+      },
+      "lines_changed": 53,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "test_file",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "tests/test_validators.py",
+      "kind": "method",
+      "symbol": "TestDeepMapping.test_repr",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "25.3.0",
+        "commit": "3dca08ce5bbe673d7df25f44f3dda92505d1043d",
+        "lines": [
+          709,
+          722
+        ],
+        "content_hash": "201aec0512a65711c438e33fdc2e263d4e47a9bcea22e08b67b025dd4a4fa682"
+      },
+      "new": {
+        "revision": "25.4.0",
+        "commit": "9a98e00a7c078360add417c5d62db820d4645ab1",
+        "lines": [
+          724,
+          738
+        ],
+        "content_hash": "32e23823d812007a61f2e225ae7351cd35fe6c319a3249c71361441ee6f78581"
+      },
+      "lines_changed": 1,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "test_file",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "tests/test_version_info.py",
+      "kind": "class",
+      "symbol": "TestVersionInfo",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "25.3.0",
+        "commit": "3dca08ce5bbe673d7df25f44f3dda92505d1043d",
+        "lines": [
+          14,
+          57
+        ],
+        "content_hash": "28b5113a35b0fd5488b5c141cfcb9da6fe244c2035b3ba3383b2c4b17073b397"
+      },
+      "new": {
+        "revision": "25.4.0",
+        "commit": "9a98e00a7c078360add417c5d62db820d4645ab1",
+        "lines": [
+          14,
+          63
+        ],
+        "content_hash": "e9483712472b46d1975faea434038e4ad5354476db3ebf2448e93a8506355baa"
+      },
+      "lines_changed": 6,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "test_file",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "tests/test_version_info.py",
+      "kind": "function",
+      "symbol": "fixture_vi",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "removed",
+      "old": {
+        "revision": "25.3.0",
+        "commit": "3dca08ce5bbe673d7df25f44f3dda92505d1043d",
+        "lines": [
+          10,
+          11
+        ],
+        "content_hash": "9eaeb40fe92a64ccd0c0b6699043797ccfacd51e7d08967389e6eb49010c28c0"
+      },
+      "new": null,
+      "lines_changed": 2,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "test_file",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "tests/typing_example.py",
+      "kind": "class",
+      "symbol": "AliasExample",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "removed",
+      "old": {
+        "revision": "25.3.0",
+        "commit": "3dca08ce5bbe673d7df25f44f3dda92505d1043d",
+        "lines": [
+          128,
+          130
+        ],
+        "content_hash": "d0f68fb8a2a3dfad6e2f5f1d2edc28315ef0f8368e2fdd3a6e177816612dcee1"
+      },
+      "new": null,
+      "lines_changed": 3,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "test_file",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "tests/typing_example.py",
+      "kind": "class",
+      "symbol": "AutoDetect",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "removed",
+      "old": {
+        "revision": "25.3.0",
+        "commit": "3dca08ce5bbe673d7df25f44f3dda92505d1043d",
+        "lines": [
+          365,
+          369
+        ],
+        "content_hash": "d58948ab2717a3d300792097ae4f30f31c7e2c6775ab54c7a75b42d91a45692d"
+      },
+      "new": null,
+      "lines_changed": 5,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "test_file",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "tests/typing_example.py",
+      "kind": "class",
+      "symbol": "C",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "removed",
+      "old": {
+        "revision": "25.3.0",
+        "commit": "3dca08ce5bbe673d7df25f44f3dda92505d1043d",
+        "lines": [
+          17,
+          18
+        ],
+        "content_hash": "0fcebb3b40d8ad629e93934ef1417c8c137d836365a966d5e4b5bb91118413f5"
+      },
+      "new": null,
+      "lines_changed": 2,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "test_file",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "tests/typing_example.py",
+      "kind": "class",
+      "symbol": "CC",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "removed",
+      "old": {
+        "revision": "25.3.0",
+        "commit": "3dca08ce5bbe673d7df25f44f3dda92505d1043d",
+        "lines": [
+          44,
+          45
+        ],
+        "content_hash": "cef34baa3ac449c2bdef70dec02becbe669097ec463452b071ab828edb686e14"
+      },
+      "new": null,
+      "lines_changed": 2,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "test_file",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "tests/typing_example.py",
+      "kind": "class",
+      "symbol": "ConvCOptional",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "removed",
+      "old": {
+        "revision": "25.3.0",
+        "commit": "3dca08ce5bbe673d7df25f44f3dda92505d1043d",
+        "lines": [
+          141,
+          142
+        ],
+        "content_hash": "7fff8973c15f1c8721822cb54b9a79ea6fd7e0621cced49d8a4d78552f65e01f"
+      },
+      "new": null,
+      "lines_changed": 2,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "test_file",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "tests/typing_example.py",
+      "kind": "class",
+      "symbol": "ConvCToBool",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "removed",
+      "old": {
+        "revision": "25.3.0",
+        "commit": "3dca08ce5bbe673d7df25f44f3dda92505d1043d",
+        "lines": [
+          171,
+          172
+        ],
+        "content_hash": "66bb1a62e7610c86d60bc0fc9e16e9a5020c075d74314459efdcf6dc48750e97"
+      },
+      "new": null,
+      "lines_changed": 2,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "test_file",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "tests/typing_example.py",
+      "kind": "class",
+      "symbol": "D",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "removed",
+      "old": {
+        "revision": "25.3.0",
+        "commit": "3dca08ce5bbe673d7df25f44f3dda92505d1043d",
+        "lines": [
+          26,
+          27
+        ],
+        "content_hash": "842e8ceb0c049daf5d89cb69445e89edc95245ba5d37c5012c4c0a8146bd37b3"
+      },
+      "new": null,
+      "lines_changed": 2,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "test_file",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "tests/typing_example.py",
+      "kind": "class",
+      "symbol": "DD",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "removed",
+      "old": {
+        "revision": "25.3.0",
+        "commit": "3dca08ce5bbe673d7df25f44f3dda92505d1043d",
+        "lines": [
+          53,
+          54
+        ],
+        "content_hash": "784c8a8ea74188a1e422640b4cd7e97ae17c27a894d2e82a03f06e623e86d74a"
+      },
+      "new": null,
+      "lines_changed": 2,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "test_file",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "tests/typing_example.py",
+      "kind": "class",
+      "symbol": "E",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "removed",
+      "old": {
+        "revision": "25.3.0",
+        "commit": "3dca08ce5bbe673d7df25f44f3dda92505d1043d",
+        "lines": [
+          31,
+          32
+        ],
+        "content_hash": "36cde4d76c57e3d0d81495f0bd404ece86fdd9ecb31998cc03bb020b5a3281a7"
+      },
+      "new": null,
+      "lines_changed": 2,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "test_file",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "tests/typing_example.py",
+      "kind": "class",
+      "symbol": "EE",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "removed",
+      "old": {
+        "revision": "25.3.0",
+        "commit": "3dca08ce5bbe673d7df25f44f3dda92505d1043d",
+        "lines": [
+          58,
+          59
+        ],
+        "content_hash": "69b425e80b0707f7469bf57defba2cc266fa1a6cfae65c649127ab1aba7383a4"
+      },
+      "new": null,
+      "lines_changed": 2,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "test_file",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "tests/typing_example.py",
+      "kind": "class",
+      "symbol": "Error",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "removed",
+      "old": {
+        "revision": "25.3.0",
+        "commit": "3dca08ce5bbe673d7df25f44f3dda92505d1043d",
+        "lines": [
+          100,
+          101
+        ],
+        "content_hash": "164c57edbb94ba2a44753d21bebfa7fa66006de02524f2e3ed8b3d75b89441be"
+      },
+      "new": null,
+      "lines_changed": 2,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "test_file",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "tests/typing_example.py",
+      "kind": "class",
+      "symbol": "Error2",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "removed",
+      "old": {
+        "revision": "25.3.0",
+        "commit": "3dca08ce5bbe673d7df25f44f3dda92505d1043d",
+        "lines": [
+          113,
+          114
+        ],
+        "content_hash": "1bc932afaa6f4cbe1daa9ec66b366fc9dc54e7bca5908ef2f9012a959429e95f"
+      },
+      "new": null,
+      "lines_changed": 2,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "test_file",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "tests/typing_example.py",
+      "kind": "class",
+      "symbol": "F",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "removed",
+      "old": {
+        "revision": "25.3.0",
+        "commit": "3dca08ce5bbe673d7df25f44f3dda92505d1043d",
+        "lines": [
+          36,
+          37
+        ],
+        "content_hash": "f5f97734d1036c006c16d568e18efef523caf68bdb552cac58013257e54d1355"
+      },
+      "new": null,
+      "lines_changed": 2,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "test_file",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "tests/typing_example.py",
+      "kind": "class",
+      "symbol": "FF",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "removed",
+      "old": {
+        "revision": "25.3.0",
+        "commit": "3dca08ce5bbe673d7df25f44f3dda92505d1043d",
+        "lines": [
+          63,
+          64
+        ],
+        "content_hash": "d0e10588093cbaa0d66ea0d9cb325ec971bf0bf1db8a4923f65428c672c30330"
+      },
+      "new": null,
+      "lines_changed": 2,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "test_file",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "tests/typing_example.py",
+      "kind": "class",
+      "symbol": "FFF",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "removed",
+      "old": {
+        "revision": "25.3.0",
+        "commit": "3dca08ce5bbe673d7df25f44f3dda92505d1043d",
+        "lines": [
+          68,
+          69
+        ],
+        "content_hash": "dc9e14ecdc3002f2d7bb33c94397d0e36853ff5d3369b74eef66f2b028080d95"
+      },
+      "new": null,
+      "lines_changed": 2,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "test_file",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "tests/typing_example.py",
+      "kind": "class",
+      "symbol": "FactoryTest",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "removed",
+      "old": {
+        "revision": "25.3.0",
+        "commit": "3dca08ce5bbe673d7df25f44f3dda92505d1043d",
+        "lines": [
+          412,
+          415
+        ],
+        "content_hash": "0144968788b372d74b77d848b88f79703129c086bca4a697c2caf02e532466e2"
+      },
+      "new": null,
+      "lines_changed": 4,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "test_file",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "tests/typing_example.py",
+      "kind": "class",
+      "symbol": "FactoryTest2",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "removed",
+      "old": {
+        "revision": "25.3.0",
+        "commit": "3dca08ce5bbe673d7df25f44f3dda92505d1043d",
+        "lines": [
+          419,
+          422
+        ],
+        "content_hash": "23286aeee794efaa13d2411c0df0cdf3544b23e9af5455922eb288a0e57d2bf5"
+      },
+      "new": null,
+      "lines_changed": 4,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "test_file",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "tests/typing_example.py",
+      "kind": "class",
+      "symbol": "GG",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "removed",
+      "old": {
+        "revision": "25.3.0",
+        "commit": "3dca08ce5bbe673d7df25f44f3dda92505d1043d",
+        "lines": [
+          79,
+          80
+        ],
+        "content_hash": "092037966bcc1d36ac21047e29c4546daec28981d202bb642357db9efbad7e2c"
+      },
+      "new": null,
+      "lines_changed": 2,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "test_file",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "tests/typing_example.py",
+      "kind": "class",
+      "symbol": "HH",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "removed",
+      "old": {
+        "revision": "25.3.0",
+        "commit": "3dca08ce5bbe673d7df25f44f3dda92505d1043d",
+        "lines": [
+          87,
+          88
+        ],
+        "content_hash": "d55744341b38ac4e536600d2ab88f357ea05d0841b89cac5ce1bc31b43e07310"
+      },
+      "new": null,
+      "lines_changed": 2,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "test_file",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "tests/typing_example.py",
+      "kind": "class",
+      "symbol": "Hashable",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "removed",
+      "old": {
+        "revision": "25.3.0",
+        "commit": "3dca08ce5bbe673d7df25f44f3dda92505d1043d",
+        "lines": [
+          484,
+          485
+        ],
+        "content_hash": "5aae137f85a00acc0f94372d09d8ce11a4b1a004f143b67798fe82c4cd59a5b6"
+      },
+      "new": null,
+      "lines_changed": 2,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "test_file",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "tests/typing_example.py",
+      "kind": "class",
+      "symbol": "MRO",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "removed",
+      "old": {
+        "revision": "25.3.0",
+        "commit": "3dca08ce5bbe673d7df25f44f3dda92505d1043d",
+        "lines": [
+          407,
+          408
+        ],
+        "content_hash": "8f56c527c7d06f7aa0b343f678e6b5be6dc6b24f2c6d8a044ecefb8dd3c8a699"
+      },
+      "new": null,
+      "lines_changed": 2,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "test_file",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "tests/typing_example.py",
+      "kind": "class",
+      "symbol": "MatchArgs",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "removed",
+      "old": {
+        "revision": "25.3.0",
+        "commit": "3dca08ce5bbe673d7df25f44f3dda92505d1043d",
+        "lines": [
+          431,
+          433
+        ],
+        "content_hash": "2d58ebc16a307ac9a09fe30afb8e1e69c7850faf3c6e3f5f4842112e18db9e8e"
+      },
+      "new": null,
+      "lines_changed": 3,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "test_file",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "tests/typing_example.py",
+      "kind": "class",
+      "symbol": "MatchArgs2",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "removed",
+      "old": {
+        "revision": "25.3.0",
+        "commit": "3dca08ce5bbe673d7df25f44f3dda92505d1043d",
+        "lines": [
+          442,
+          444
+        ],
+        "content_hash": "06306299d3e4846b256e9a47cbd0aacb1b7f1c58215862d668a8a6151cdd8b3d"
+      },
+      "new": null,
+      "lines_changed": 3,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "test_file",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "tests/typing_example.py",
+      "kind": "class",
+      "symbol": "NGClass",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "removed",
+      "old": {
+        "revision": "25.3.0",
+        "commit": "3dca08ce5bbe673d7df25f44f3dda92505d1043d",
+        "lines": [
+          374,
+          375
+        ],
+        "content_hash": "8b7fdbf00c29cd8398cd788175275680c971d1d6f09973a0d7eb706793631732"
+      },
+      "new": null,
+      "lines_changed": 2,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "test_file",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "tests/typing_example.py",
+      "kind": "class",
+      "symbol": "NGClass2",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "removed",
+      "old": {
+        "revision": "25.3.0",
+        "commit": "3dca08ce5bbe673d7df25f44f3dda92505d1043d",
+        "lines": [
+          382,
+          383
+        ],
+        "content_hash": "9844fbfacfa7dd97e63e714709b389b767fb212c31591d6bf8b6d79ea416ad7a"
+      },
+      "new": null,
+      "lines_changed": 2,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "test_file",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "tests/typing_example.py",
+      "kind": "class",
+      "symbol": "NGFrozen",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "removed",
+      "old": {
+        "revision": "25.3.0",
+        "commit": "3dca08ce5bbe673d7df25f44f3dda92505d1043d",
+        "lines": [
+          390,
+          391
+        ],
+        "content_hash": "866c01d8433225a684998d1b7d898557a9edebeac26514f2afd4466f5f106ba9"
+      },
+      "new": null,
+      "lines_changed": 2,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "test_file",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "tests/typing_example.py",
+      "kind": "class",
+      "symbol": "OrderFlags",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "removed",
+      "old": {
+        "revision": "25.3.0",
+        "commit": "3dca08ce5bbe673d7df25f44f3dda92505d1043d",
+        "lines": [
+          307,
+          309
+        ],
+        "content_hash": "ecb7509e53c5b68896e67a5605a7bf69311e1d4fb6027d52c745e0a2fbf15597"
+      },
+      "new": null,
+      "lines_changed": 3,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "test_file",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "tests/typing_example.py",
+      "kind": "class",
+      "symbol": "TransformedAttrs",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "removed",
+      "old": {
+        "revision": "25.3.0",
+        "commit": "3dca08ce5bbe673d7df25f44f3dda92505d1043d",
+        "lines": [
+          354,
+          355
+        ],
+        "content_hash": "dd7cb6c16857e8d679f46db69e20ee69264a776cbf0c9143e023069570d9f8ce"
+      },
+      "new": null,
+      "lines_changed": 2,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "test_file",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "tests/typing_example.py",
+      "kind": "class",
+      "symbol": "TransformedAttrs2",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "removed",
+      "old": {
+        "revision": "25.3.0",
+        "commit": "3dca08ce5bbe673d7df25f44f3dda92505d1043d",
+        "lines": [
+          359,
+          360
+        ],
+        "content_hash": "a90c9f67a8898867382241ee5e1e463ec9b8cfd6c70cb84f9e52b7074f8f994a"
+      },
+      "new": null,
+      "lines_changed": 2,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "test_file",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "tests/typing_example.py",
+      "kind": "class",
+      "symbol": "Validated",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "removed",
+      "old": {
+        "revision": "25.3.0",
+        "commit": "3dca08ce5bbe673d7df25f44f3dda92505d1043d",
+        "lines": [
+          186,
+          262
+        ],
+        "content_hash": "b06c0054e7c04be852e3de7c828b1ae47eedb32842f1c1d82e7a8c3ee050e530"
+      },
+      "new": null,
+      "lines_changed": 77,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "test_file",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "tests/typing_example.py",
+      "kind": "class",
+      "symbol": "Validated2",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "removed",
+      "old": {
+        "revision": "25.3.0",
+        "commit": "3dca08ce5bbe673d7df25f44f3dda92505d1043d",
+        "lines": [
+          266,
+          267
+        ],
+        "content_hash": "47b90f6e3fbc6dcf6f05dc73ee58dada47dacd2a1401a7f494fe4203ed794546"
+      },
+      "new": null,
+      "lines_changed": 2,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "test_file",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "tests/typing_example.py",
+      "kind": "class",
+      "symbol": "Validated3",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "removed",
+      "old": {
+        "revision": "25.3.0",
+        "commit": "3dca08ce5bbe673d7df25f44f3dda92505d1043d",
+        "lines": [
+          271,
+          272
+        ],
+        "content_hash": "fa14535bb23e6f5b96295966d27d127cef59b8dc524008c01d4f1707ffa6d907"
+      },
+      "new": null,
+      "lines_changed": 2,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "test_file",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "tests/typing_example.py",
+      "kind": "class",
+      "symbol": "ValidatedSetter",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "removed",
+      "old": {
+        "revision": "25.3.0",
+        "commit": "3dca08ce5bbe673d7df25f44f3dda92505d1043d",
+        "lines": [
+          314,
+          323
+        ],
+        "content_hash": "9e60e26234d9082600fc64be5b0443d34e04896f4ddef06d034948230ae59984"
+      },
+      "new": null,
+      "lines_changed": 10,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "test_file",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "tests/typing_example.py",
+      "kind": "class",
+      "symbol": "ValidatedSetter2",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "removed",
+      "old": {
+        "revision": "25.3.0",
+        "commit": "3dca08ce5bbe673d7df25f44f3dda92505d1043d",
+        "lines": [
+          327,
+          338
+        ],
+        "content_hash": "b872ff4937afab81b21ad74230371a91806c7488a4f3e8f9b5498ddb6a846041"
+      },
+      "new": null,
+      "lines_changed": 12,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "test_file",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "tests/typing_example.py",
+      "kind": "class",
+      "symbol": "WithCustomRepr",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "removed",
+      "old": {
+        "revision": "25.3.0",
+        "commit": "3dca08ce5bbe673d7df25f44f3dda92505d1043d",
+        "lines": [
+          290,
+          294
+        ],
+        "content_hash": "927aa7651df46972f58346f910c8ff2ba52594671adb122e4194be6a50a46130"
+      },
+      "new": null,
+      "lines_changed": 5,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "test_file",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "tests/typing_example.py",
+      "kind": "class",
+      "symbol": "WithCustomRepr2",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "removed",
+      "old": {
+        "revision": "25.3.0",
+        "commit": "3dca08ce5bbe673d7df25f44f3dda92505d1043d",
+        "lines": [
+          298,
+          302
+        ],
+        "content_hash": "2fdbc57116baa2a3234058af0a8150a378d0c84afcf95dd84b7f98ae22d7b29d"
+      },
+      "new": null,
+      "lines_changed": 5,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "test_file",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "tests/typing_example.py",
+      "kind": "function",
+      "symbol": "accessing_from_attr",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "removed",
+      "old": {
+        "revision": "25.3.0",
+        "commit": "3dca08ce5bbe673d7df25f44f3dda92505d1043d",
+        "lines": [
+          452,
+          462
+        ],
+        "content_hash": "b1fcb393587c6e20394d8b73fe87d6b7af7d77cce1ab3aa3673bcef595d5a671"
+      },
+      "new": null,
+      "lines_changed": 11,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "test_file",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "tests/typing_example.py",
+      "kind": "function",
+      "symbol": "accessing_from_attrs",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "removed",
+      "old": {
+        "revision": "25.3.0",
+        "commit": "3dca08ce5bbe673d7df25f44f3dda92505d1043d",
+        "lines": [
+          465,
+          475
+        ],
+        "content_hash": "f66ea72e11dccfab223553dd2902aa48baaf2cb9bc7198b6ef34e020919b1da6"
+      },
+      "new": null,
+      "lines_changed": 11,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "test_file",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "tests/typing_example.py",
+      "kind": "function",
+      "symbol": "ft_hook",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "removed",
+      "old": {
+        "revision": "25.3.0",
+        "commit": "3dca08ce5bbe673d7df25f44f3dda92505d1043d",
+        "lines": [
+          342,
+          343
+        ],
+        "content_hash": "4351c2b22c8aad8b9c305e8351433c6723bab557b6dc39679e406d21a53c81bd"
+      },
+      "new": null,
+      "lines_changed": 2,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "test_file",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "tests/typing_example.py",
+      "kind": "function",
+      "symbol": "ft_hook2",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "removed",
+      "old": {
+        "revision": "25.3.0",
+        "commit": "3dca08ce5bbe673d7df25f44f3dda92505d1043d",
+        "lines": [
+          347,
+          350
+        ],
+        "content_hash": "3d3d1bd58cd489f14132ce846183784a84ef26bbacf4e5fe4883bbf307a48c60"
+      },
+      "new": null,
+      "lines_changed": 4,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "test_file",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "tests/typing_example.py",
+      "kind": "function",
+      "symbol": "test",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "removed",
+      "old": {
+        "revision": "25.3.0",
+        "commit": "3dca08ce5bbe673d7df25f44f3dda92505d1043d",
+        "lines": [
+          488,
+          490
+        ],
+        "content_hash": "e06c337e8963637c1c274fbdf900f6417342c5bade1b8682f0127582d044bf96"
+      },
+      "new": null,
+      "lines_changed": 3,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "test_file",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "tests/typing_example.py",
+      "kind": "method",
+      "symbol": "AutoDetect.__init__",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "removed",
+      "old": {
+        "revision": "25.3.0",
+        "commit": "3dca08ce5bbe673d7df25f44f3dda92505d1043d",
+        "lines": [
+          368,
+          369
+        ],
+        "content_hash": "26e96cf020afc05566ead43883f865a4251e40af1c80aca6b35b556329bc29f3"
+      },
+      "new": null,
+      "lines_changed": 2,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "test_file",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    }
+  ]
+}

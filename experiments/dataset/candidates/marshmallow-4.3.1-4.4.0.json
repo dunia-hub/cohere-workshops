@@ -1,0 +1,2008 @@
+{
+  "repository_url": "https://github.com/marshmallow-code/marshmallow",
+  "old": {
+    "revision": "4.3.1",
+    "commit": "c7b559a1fa3aba57ca6dba0ab336841c5038a782"
+  },
+  "new": {
+    "revision": "4.4.0",
+    "commit": "a38b7f6842042e65fd1a485ed152ca99f87880c0"
+  },
+  "seed": 2026,
+  "sample_size": 20,
+  "counts": {
+    "candidates": 60,
+    "included": 7,
+    "sampled": 7,
+    "excluded_by_reason": {
+      "ambiguous_location": 6,
+      "contains_changed_symbol": 7,
+      "docs_or_examples": 2,
+      "formatting_or_docstring_only": 21,
+      "test_file": 17
+    }
+  },
+  "scanner_exclusions": {
+    "4.3.1": [],
+    "4.4.0": []
+  },
+  "candidates": [
+    {
+      "path": "examples/flask_example.py",
+      "kind": "class",
+      "symbol": "Quote",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "4.3.1",
+        "commit": "c7b559a1fa3aba57ca6dba0ab336841c5038a782",
+        "lines": [
+          40,
+          45
+        ],
+        "content_hash": "769772cb520a57b5dd128b9588790aa8cb7329ba367aec328e8fbaa4ca2ddf95"
+      },
+      "new": {
+        "revision": "4.4.0",
+        "commit": "a38b7f6842042e65fd1a485ed152ca99f87880c0",
+        "lines": [
+          40,
+          45
+        ],
+        "content_hash": "e59dc9c8e94fcfa64c5ce8cba4497d518cf01117f5fabeea378e661a99b6a331"
+      },
+      "lines_changed": 2,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "docs_or_examples",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "examples/flask_example.py",
+      "kind": "function",
+      "symbol": "new_quote",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "4.3.1",
+        "commit": "c7b559a1fa3aba57ca6dba0ab336841c5038a782",
+        "lines": [
+          132,
+          156
+        ],
+        "content_hash": "aaea59c02129d3343d5282aa3f7ff5e5477ec101810028a605da6dba15821fbb"
+      },
+      "new": {
+        "revision": "4.4.0",
+        "commit": "a38b7f6842042e65fd1a485ed152ca99f87880c0",
+        "lines": [
+          132,
+          156
+        ],
+        "content_hash": "601b6e24ed252359e24606df703fc32e9951da0fde614f4495c7bc91c8702db7"
+      },
+      "lines_changed": 2,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "docs_or_examples",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "performance/benchmark.py",
+      "kind": "function",
+      "symbol": "main",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "4.3.1",
+        "commit": "c7b559a1fa3aba57ca6dba0ab336841c5038a782",
+        "lines": [
+          107,
+          148
+        ],
+        "content_hash": "03e1304d6b0fe5fc3251d16878fe4a4ce3b774f5e5f72a4f46ee07daa0170c7d"
+      },
+      "new": {
+        "revision": "4.4.0",
+        "commit": "a38b7f6842042e65fd1a485ed152ca99f87880c0",
+        "lines": [
+          107,
+          148
+        ],
+        "content_hash": "a8dc9337efa589ca5429a9d1a3b726e493b7ca38c10ed61ab80491411038d520"
+      },
+      "lines_changed": 2,
+      "normalized": true,
+      "included": true,
+      "exclusion_reason": null,
+      "sample_order": 1,
+      "sampled": true,
+      "review": {
+        "decision": null,
+        "reason": null
+      }
+    },
+    {
+      "path": "src/marshmallow/class_registry.py",
+      "kind": "function",
+      "symbol": "get_class",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "4.3.1",
+        "commit": "c7b559a1fa3aba57ca6dba0ab336841c5038a782",
+        "lines": [
+          73,
+          73
+        ],
+        "content_hash": "5545843a9506976fcf0d97b48cc07a33a839a379ac773ce1d5888d79768009d4"
+      },
+      "new": {
+        "revision": "4.4.0",
+        "commit": "a38b7f6842042e65fd1a485ed152ca99f87880c0",
+        "lines": [
+          82,
+          103
+        ],
+        "content_hash": "294d9a1840f200abad7848c8c0dcc0326ebac4082b92f55b3104061e7756c7ee"
+      },
+      "lines_changed": 23,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "ambiguous_location",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "src/marshmallow/class_registry.py",
+      "kind": "function",
+      "symbol": "get_class",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "4.3.1",
+        "commit": "c7b559a1fa3aba57ca6dba0ab336841c5038a782",
+        "lines": [
+          77,
+          79
+        ],
+        "content_hash": "cde5504f66af307fa7f314b16ec3a6f4cfe23ed58d289ce9daadab15f6cdbe69"
+      },
+      "new": {
+        "revision": "4.4.0",
+        "commit": "a38b7f6842042e65fd1a485ed152ca99f87880c0",
+        "lines": [
+          82,
+          103
+        ],
+        "content_hash": "294d9a1840f200abad7848c8c0dcc0326ebac4082b92f55b3104061e7756c7ee"
+      },
+      "lines_changed": 25,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "ambiguous_location",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "src/marshmallow/decorators.py",
+      "kind": "function",
+      "symbol": "post_dump",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "4.3.1",
+        "commit": "c7b559a1fa3aba57ca6dba0ab336841c5038a782",
+        "lines": [
+          152,
+          172
+        ],
+        "content_hash": "1d5f037525315ad6dd18b9efb89b45a0e7989098fdb9c8a87a0f82692a4f5e11"
+      },
+      "new": {
+        "revision": "4.4.0",
+        "commit": "a38b7f6842042e65fd1a485ed152ca99f87880c0",
+        "lines": [
+          152,
+          172
+        ],
+        "content_hash": "3a2a5457ffaae84e80178525d9df8b066de40c693e027ebc4fe1b70909569088"
+      },
+      "lines_changed": 2,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "formatting_or_docstring_only",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "src/marshmallow/decorators.py",
+      "kind": "function",
+      "symbol": "pre_dump",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "4.3.1",
+        "commit": "c7b559a1fa3aba57ca6dba0ab336841c5038a782",
+        "lines": [
+          133,
+          149
+        ],
+        "content_hash": "c32f7bbca1ca813771c77a6d4abbed8c9dfffc897cb8a165accdf7c55e08329f"
+      },
+      "new": {
+        "revision": "4.4.0",
+        "commit": "a38b7f6842042e65fd1a485ed152ca99f87880c0",
+        "lines": [
+          133,
+          149
+        ],
+        "content_hash": "16c12f816803a6b676b2304dd767e44831fb4bd55a4c61e01f01e289e21c76dc"
+      },
+      "lines_changed": 2,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "formatting_or_docstring_only",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "src/marshmallow/fields.py",
+      "kind": "class",
+      "symbol": "AwareDateTime",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "4.3.1",
+        "commit": "c7b559a1fa3aba57ca6dba0ab336841c5038a782",
+        "lines": [
+          1393,
+          1427
+        ],
+        "content_hash": "06460faf8883c9ae2abe626ab3f6895f49957dcff7c0b16fd9283f5099c1e35a"
+      },
+      "new": {
+        "revision": "4.4.0",
+        "commit": "a38b7f6842042e65fd1a485ed152ca99f87880c0",
+        "lines": [
+          1383,
+          1417
+        ],
+        "content_hash": "110ec2d950dc5be2682d42090cbbb51622048f6b0c52786944f0ce4f2e409266"
+      },
+      "lines_changed": 2,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "formatting_or_docstring_only",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "src/marshmallow/fields.py",
+      "kind": "class",
+      "symbol": "Field",
+      "part_index": 1,
+      "part_count": 2,
+      "status": "superseded",
+      "old": {
+        "revision": "4.3.1",
+        "commit": "c7b559a1fa3aba57ca6dba0ab336841c5038a782",
+        "lines": [
+          121,
+          397
+        ],
+        "content_hash": "0cb4de309d89fad8d917f2c96fe4f393105f890bcce0062ab72d974a3062b6fa"
+      },
+      "new": {
+        "revision": "4.4.0",
+        "commit": "a38b7f6842042e65fd1a485ed152ca99f87880c0",
+        "lines": [
+          109,
+          385
+        ],
+        "content_hash": "e8c315584f2cb295696df676b8561ce8e7da2ecca728255c09c29263e4f5f023"
+      },
+      "lines_changed": 2,
+      "normalized": false,
+      "included": false,
+      "exclusion_reason": "contains_changed_symbol",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "src/marshmallow/fields.py",
+      "kind": "class",
+      "symbol": "Field",
+      "part_index": 2,
+      "part_count": 2,
+      "status": "superseded",
+      "old": {
+        "revision": "4.3.1",
+        "commit": "c7b559a1fa3aba57ca6dba0ab336841c5038a782",
+        "lines": [
+          398,
+          473
+        ],
+        "content_hash": "74a701c911c46bf03edd6ace1a95213d10146cf29a8df2cf47c3094be9b47c03"
+      },
+      "new": {
+        "revision": "4.4.0",
+        "commit": "a38b7f6842042e65fd1a485ed152ca99f87880c0",
+        "lines": [
+          386,
+          461
+        ],
+        "content_hash": "0a8245bdb675a8373572339908599a3c9f893713183b95ead3411eb480965adb"
+      },
+      "lines_changed": 2,
+      "normalized": false,
+      "included": false,
+      "exclusion_reason": "contains_changed_symbol",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "src/marshmallow/fields.py",
+      "kind": "class",
+      "symbol": "Function",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "4.3.1",
+        "commit": "c7b559a1fa3aba57ca6dba0ab336841c5038a782",
+        "lines": [
+          2057,
+          2107
+        ],
+        "content_hash": "7f5c088fdacbb86003b19853b9922f8098fee58f6e33f7ccdb255bca2d9bebba"
+      },
+      "new": {
+        "revision": "4.4.0",
+        "commit": "a38b7f6842042e65fd1a485ed152ca99f87880c0",
+        "lines": [
+          2049,
+          2099
+        ],
+        "content_hash": "f06066ace5e101ffaa87031fcc2a8ba26c644c0c8a2453efacd9e81ae019fa40"
+      },
+      "lines_changed": 4,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "formatting_or_docstring_only",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "src/marshmallow/fields.py",
+      "kind": "class",
+      "symbol": "IP",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "4.3.1",
+        "commit": "c7b559a1fa3aba57ca6dba0ab336841c5038a782",
+        "lines": [
+          1805,
+          1837
+        ],
+        "content_hash": "7310c9290cf13cb925146e18c167ecf63ed0bbc4965d63d1e82f55b1ba6988b4"
+      },
+      "new": {
+        "revision": "4.4.0",
+        "commit": "a38b7f6842042e65fd1a485ed152ca99f87880c0",
+        "lines": [
+          1797,
+          1829
+        ],
+        "content_hash": "66ac8828660bc9e36555145c3388fa8699a555458bedf00219cd2cb3e3e316c3"
+      },
+      "lines_changed": 2,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "formatting_or_docstring_only",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "src/marshmallow/fields.py",
+      "kind": "class",
+      "symbol": "IPInterface",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "4.3.1",
+        "commit": "c7b559a1fa3aba57ca6dba0ab336841c5038a782",
+        "lines": [
+          1862,
+          1899
+        ],
+        "content_hash": "5179b1eeef883b58251d29eda8801a7a975551990765cb4ad2ef32d2b830fcd4"
+      },
+      "new": {
+        "revision": "4.4.0",
+        "commit": "a38b7f6842042e65fd1a485ed152ca99f87880c0",
+        "lines": [
+          1854,
+          1891
+        ],
+        "content_hash": "0e6d4504c345172bcf5cf8811f836de13df2552612d13b16a875816eef736f19"
+      },
+      "lines_changed": 2,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "formatting_or_docstring_only",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "src/marshmallow/fields.py",
+      "kind": "class",
+      "symbol": "IPv4",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "4.3.1",
+        "commit": "c7b559a1fa3aba57ca6dba0ab336841c5038a782",
+        "lines": [
+          1840,
+          1848
+        ],
+        "content_hash": "ea0a64dab2d0cacf5fccb4d4d0c5202003abeb0be9b38476099ae84fb1864610"
+      },
+      "new": {
+        "revision": "4.4.0",
+        "commit": "a38b7f6842042e65fd1a485ed152ca99f87880c0",
+        "lines": [
+          1832,
+          1840
+        ],
+        "content_hash": "8628991295ebb5baccb3bb35e8e050145ff2aab3e689b8ed4be18adb6b0e11f0"
+      },
+      "lines_changed": 2,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "formatting_or_docstring_only",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "src/marshmallow/fields.py",
+      "kind": "class",
+      "symbol": "IPv4Interface",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "4.3.1",
+        "commit": "c7b559a1fa3aba57ca6dba0ab336841c5038a782",
+        "lines": [
+          1902,
+          1907
+        ],
+        "content_hash": "67aa833e7da3528c59bb0e99231870487ba849a9acf6a2ce080c1117578fc945"
+      },
+      "new": {
+        "revision": "4.4.0",
+        "commit": "a38b7f6842042e65fd1a485ed152ca99f87880c0",
+        "lines": [
+          1894,
+          1899
+        ],
+        "content_hash": "d1f9949e9ac5d7f2c44c1f81eb05d63303725dc3d33909996f52e7b58c7fa45b"
+      },
+      "lines_changed": 2,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "formatting_or_docstring_only",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "src/marshmallow/fields.py",
+      "kind": "class",
+      "symbol": "IPv6",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "4.3.1",
+        "commit": "c7b559a1fa3aba57ca6dba0ab336841c5038a782",
+        "lines": [
+          1851,
+          1859
+        ],
+        "content_hash": "2e2d05b644b893554aa31487a2206fd39a6cc1f0c61bb03f14a7668df59c4477"
+      },
+      "new": {
+        "revision": "4.4.0",
+        "commit": "a38b7f6842042e65fd1a485ed152ca99f87880c0",
+        "lines": [
+          1843,
+          1851
+        ],
+        "content_hash": "01c195b15091f242597d83620d41b1d453507cbd7828bf7c6c41f572bb053d9a"
+      },
+      "lines_changed": 2,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "formatting_or_docstring_only",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "src/marshmallow/fields.py",
+      "kind": "class",
+      "symbol": "IPv6Interface",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "4.3.1",
+        "commit": "c7b559a1fa3aba57ca6dba0ab336841c5038a782",
+        "lines": [
+          1910,
+          1915
+        ],
+        "content_hash": "900864907d4c159116f50c3bf7c962ec1c854cde89ca95617e4882b7b7a8707e"
+      },
+      "new": {
+        "revision": "4.4.0",
+        "commit": "a38b7f6842042e65fd1a485ed152ca99f87880c0",
+        "lines": [
+          1902,
+          1907
+        ],
+        "content_hash": "e5c2e8e99652577e22e506ea6c598133a49535dc427f0f9652b2301668eb6a57"
+      },
+      "lines_changed": 2,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "formatting_or_docstring_only",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "src/marshmallow/fields.py",
+      "kind": "class",
+      "symbol": "Method",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "4.3.1",
+        "commit": "c7b559a1fa3aba57ca6dba0ab336841c5038a782",
+        "lines": [
+          2002,
+          2054
+        ],
+        "content_hash": "137316a0f8e6e0d8f9b7a28f08567c0334e3686b8d72227e205cef405f39ab9d"
+      },
+      "new": {
+        "revision": "4.4.0",
+        "commit": "a38b7f6842042e65fd1a485ed152ca99f87880c0",
+        "lines": [
+          1994,
+          2046
+        ],
+        "content_hash": "08794cb275ba61a187c4466aec6faddc15d6f5b76bc3f2a6588c9a95b4ce9aa6"
+      },
+      "lines_changed": 2,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "formatting_or_docstring_only",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "src/marshmallow/fields.py",
+      "kind": "class",
+      "symbol": "Nested",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "4.3.1",
+        "commit": "c7b559a1fa3aba57ca6dba0ab336841c5038a782",
+        "lines": [
+          480,
+          667
+        ],
+        "content_hash": "0e7d44799889d9cedbd221415227e20573f5cc97780d7ec9f87df58f65d084e6"
+      },
+      "new": {
+        "revision": "4.4.0",
+        "commit": "a38b7f6842042e65fd1a485ed152ca99f87880c0",
+        "lines": [
+          468,
+          655
+        ],
+        "content_hash": "52a6bc6d9fbc803039705b70b8e10b6847540b26d5de0d7fc7861b37574c5b5d"
+      },
+      "lines_changed": 2,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "formatting_or_docstring_only",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "src/marshmallow/fields.py",
+      "kind": "class",
+      "symbol": "Pluck",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "4.3.1",
+        "commit": "c7b559a1fa3aba57ca6dba0ab336841c5038a782",
+        "lines": [
+          670,
+          729
+        ],
+        "content_hash": "74e70d0e0ed9752a6bf3298602e372b58381e7acc01e280de31ecc866f0b3c7c"
+      },
+      "new": {
+        "revision": "4.4.0",
+        "commit": "a38b7f6842042e65fd1a485ed152ca99f87880c0",
+        "lines": [
+          658,
+          719
+        ],
+        "content_hash": "9a147955eabf24317c6464580a920b325c6bb1571c7053e39488d89d7f1f2fa3"
+      },
+      "lines_changed": 4,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "contains_changed_symbol",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "src/marshmallow/fields.py",
+      "kind": "class",
+      "symbol": "TimeDelta",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "4.3.1",
+        "commit": "c7b559a1fa3aba57ca6dba0ab336841c5038a782",
+        "lines": [
+          1496,
+          1585
+        ],
+        "content_hash": "e7a899011e31eea6c0f9d6a00d0cfdcd4f0e999f38782426a69d2bb0361a61c3"
+      },
+      "new": {
+        "revision": "4.4.0",
+        "commit": "a38b7f6842042e65fd1a485ed152ca99f87880c0",
+        "lines": [
+          1486,
+          1577
+        ],
+        "content_hash": "7b1f66454b215819c71b3da013b38f258609d37e1632367552d8e0979a184a40"
+      },
+      "lines_changed": 6,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "contains_changed_symbol",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "src/marshmallow/fields.py",
+      "kind": "class",
+      "symbol": "Tuple",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "4.3.1",
+        "commit": "c7b559a1fa3aba57ca6dba0ab336841c5038a782",
+        "lines": [
+          798,
+          891
+        ],
+        "content_hash": "c1bd223acf6533c69406cad24a1ff5ce0cd128e7c40adf7c07ee5d7ef18ed858"
+      },
+      "new": {
+        "revision": "4.4.0",
+        "commit": "a38b7f6842042e65fd1a485ed152ca99f87880c0",
+        "lines": [
+          788,
+          881
+        ],
+        "content_hash": "27e405987d2aaf572b2882312b7f953e0a55833ff8c130fd9b3115872e88026d"
+      },
+      "lines_changed": 2,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "formatting_or_docstring_only",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "src/marshmallow/fields.py",
+      "kind": "method",
+      "symbol": "Field._bind_to_schema",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "4.3.1",
+        "commit": "c7b559a1fa3aba57ca6dba0ab336841c5038a782",
+        "lines": [
+          403,
+          414
+        ],
+        "content_hash": "f0aaf31eea85a43949740bd9207f94fe8cbe6d0a0680a6906117a021f29f8abb"
+      },
+      "new": {
+        "revision": "4.4.0",
+        "commit": "a38b7f6842042e65fd1a485ed152ca99f87880c0",
+        "lines": [
+          391,
+          402
+        ],
+        "content_hash": "3035badbb443a7a2670240da8175d1606c126390029cec1903f207edaff3917d"
+      },
+      "lines_changed": 2,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "formatting_or_docstring_only",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "src/marshmallow/fields.py",
+      "kind": "method",
+      "symbol": "Field.deserialize",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "4.3.1",
+        "commit": "c7b559a1fa3aba57ca6dba0ab336841c5038a782",
+        "lines": [
+          344,
+          350
+        ],
+        "content_hash": "d2a0c7e8267b17e75e6cbf14fe91c876144bade61b56550769e97c86a4187b63"
+      },
+      "new": {
+        "revision": "4.4.0",
+        "commit": "a38b7f6842042e65fd1a485ed152ca99f87880c0",
+        "lines": [
+          350,
+          387
+        ],
+        "content_hash": "9c693a134c082bdb44401e8e4ed94cf4153d7866fe846d1aa7c01fac4f4d228d"
+      },
+      "lines_changed": 35,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "ambiguous_location",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "src/marshmallow/fields.py",
+      "kind": "method",
+      "symbol": "Field.deserialize",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "4.3.1",
+        "commit": "c7b559a1fa3aba57ca6dba0ab336841c5038a782",
+        "lines": [
+          354,
+          360
+        ],
+        "content_hash": "24d614153354a72d3059475212fddb37bf4ec4a1712057cbbea2a1938a2a8a63"
+      },
+      "new": {
+        "revision": "4.4.0",
+        "commit": "a38b7f6842042e65fd1a485ed152ca99f87880c0",
+        "lines": [
+          350,
+          387
+        ],
+        "content_hash": "9c693a134c082bdb44401e8e4ed94cf4153d7866fe846d1aa7c01fac4f4d228d"
+      },
+      "lines_changed": 33,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "ambiguous_location",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "src/marshmallow/fields.py",
+      "kind": "method",
+      "symbol": "Pluck._field_data_key",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "4.3.1",
+        "commit": "c7b559a1fa3aba57ca6dba0ab336841c5038a782",
+        "lines": [
+          711,
+          713
+        ],
+        "content_hash": "ec1707de879f5f45eb60c30fd92f8b93d8f4fba2f67aa7fde307b2aa382d80f0"
+      },
+      "new": {
+        "revision": "4.4.0",
+        "commit": "a38b7f6842042e65fd1a485ed152ca99f87880c0",
+        "lines": [
+          699,
+          703
+        ],
+        "content_hash": "1e0c59c54b4e8d92eb081244564ae94fd52a2b1083eda3333f5c2edaf166c50e"
+      },
+      "lines_changed": 4,
+      "normalized": true,
+      "included": true,
+      "exclusion_reason": null,
+      "sample_order": 6,
+      "sampled": true,
+      "review": {
+        "decision": null,
+        "reason": null
+      }
+    },
+    {
+      "path": "src/marshmallow/fields.py",
+      "kind": "method",
+      "symbol": "TimeDelta._deserialize",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "4.3.1",
+        "commit": "c7b559a1fa3aba57ca6dba0ab336841c5038a782",
+        "lines": [
+          1572,
+          1585
+        ],
+        "content_hash": "5bcda5c8c967203ae8049d71569dac557a34de483547d041795d11c61742b812"
+      },
+      "new": {
+        "revision": "4.4.0",
+        "commit": "a38b7f6842042e65fd1a485ed152ca99f87880c0",
+        "lines": [
+          1562,
+          1577
+        ],
+        "content_hash": "d10b62f4b35c3079a69bb561eb8887834a0e36b7024f68125eda428f5f8a91db"
+      },
+      "lines_changed": 4,
+      "normalized": true,
+      "included": true,
+      "exclusion_reason": null,
+      "sample_order": 2,
+      "sampled": true,
+      "review": {
+        "decision": null,
+        "reason": null
+      }
+    },
+    {
+      "path": "src/marshmallow/schema.py",
+      "kind": "class",
+      "symbol": "Schema",
+      "part_index": 2,
+      "part_count": 4,
+      "status": "superseded",
+      "old": {
+        "revision": "4.3.1",
+        "commit": "c7b559a1fa3aba57ca6dba0ab336841c5038a782",
+        "lines": [
+          525,
+          805
+        ],
+        "content_hash": "ae4f4e8388efb02a2704975247281a4c97443681d00ffec64663205a3be5c53c"
+      },
+      "new": {
+        "revision": "4.4.0",
+        "commit": "a38b7f6842042e65fd1a485ed152ca99f87880c0",
+        "lines": [
+          525,
+          805
+        ],
+        "content_hash": "615d676cd2d07251eeebca66a1583e4c202d47b499841fc503f234bf19160079"
+      },
+      "lines_changed": 6,
+      "normalized": false,
+      "included": false,
+      "exclusion_reason": "contains_changed_symbol",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "src/marshmallow/schema.py",
+      "kind": "class",
+      "symbol": "Schema",
+      "part_index": 3,
+      "part_count": 4,
+      "status": "superseded",
+      "old": {
+        "revision": "4.3.1",
+        "commit": "c7b559a1fa3aba57ca6dba0ab336841c5038a782",
+        "lines": [
+          806,
+          1089
+        ],
+        "content_hash": "321d674606d6b267f3a09177c2b07ed780ed96fc9c293be54a4c774b6d78d300"
+      },
+      "new": {
+        "revision": "4.4.0",
+        "commit": "a38b7f6842042e65fd1a485ed152ca99f87880c0",
+        "lines": [
+          806,
+          1089
+        ],
+        "content_hash": "1e3a8942fdafbca31de3cffc710256ecefc7de2f80afb84d88f25ca8ba80a997"
+      },
+      "lines_changed": 6,
+      "normalized": false,
+      "included": false,
+      "exclusion_reason": "contains_changed_symbol",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "src/marshmallow/schema.py",
+      "kind": "class",
+      "symbol": "SchemaMeta",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "4.3.1",
+        "commit": "c7b559a1fa3aba57ca6dba0ab336841c5038a782",
+        "lines": [
+          89,
+          199
+        ],
+        "content_hash": "0aad51c1294ea1717cb7193b37ee9c4950664b3c6f683192f925e76d582c076d"
+      },
+      "new": {
+        "revision": "4.4.0",
+        "commit": "a38b7f6842042e65fd1a485ed152ca99f87880c0",
+        "lines": [
+          89,
+          199
+        ],
+        "content_hash": "b52db94c817fb9f7e7f9534521ba2193002a1a28946d63f0f19e966212548b8e"
+      },
+      "lines_changed": 2,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "contains_changed_symbol",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "src/marshmallow/schema.py",
+      "kind": "method",
+      "symbol": "Schema._deserialize",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "4.3.1",
+        "commit": "c7b559a1fa3aba57ca6dba0ab336841c5038a782",
+        "lines": [
+          597,
+          705
+        ],
+        "content_hash": "fb1a0faa32648bc1d4b62de57625b3570cc696bde1c9f1825f438ba043be8619"
+      },
+      "new": {
+        "revision": "4.4.0",
+        "commit": "a38b7f6842042e65fd1a485ed152ca99f87880c0",
+        "lines": [
+          597,
+          705
+        ],
+        "content_hash": "4e0d764cb266da99eb4c4e27e934eb6fe5db84317932bb94e0918676ff8b551f"
+      },
+      "lines_changed": 4,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "formatting_or_docstring_only",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "src/marshmallow/schema.py",
+      "kind": "method",
+      "symbol": "Schema._do_load",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "4.3.1",
+        "commit": "c7b559a1fa3aba57ca6dba0ab336841c5038a782",
+        "lines": [
+          842,
+          944
+        ],
+        "content_hash": "33870b44c83d783690f555081946ea2dd0d3e581a4ce32947bb98fedc6a1ea91"
+      },
+      "new": {
+        "revision": "4.4.0",
+        "commit": "a38b7f6842042e65fd1a485ed152ca99f87880c0",
+        "lines": [
+          842,
+          944
+        ],
+        "content_hash": "85fa0007429d23125f90bf0845ad407b60eb1ded737dbe70f7380ba25cd80574"
+      },
+      "lines_changed": 6,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "formatting_or_docstring_only",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "src/marshmallow/schema.py",
+      "kind": "method",
+      "symbol": "Schema._serialize",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "4.3.1",
+        "commit": "c7b559a1fa3aba57ca6dba0ab336841c5038a782",
+        "lines": [
+          530,
+          546
+        ],
+        "content_hash": "227288f5a907211098c7e72eb65164cd9da15747a0da9b57aa70538ba6aea427"
+      },
+      "new": {
+        "revision": "4.4.0",
+        "commit": "a38b7f6842042e65fd1a485ed152ca99f87880c0",
+        "lines": [
+          530,
+          546
+        ],
+        "content_hash": "a7f7cb3e7de3bc416cbda5efdc935f348a6fe231fcb60fdd2e86e8c355e76b55"
+      },
+      "lines_changed": 2,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "formatting_or_docstring_only",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "src/marshmallow/schema.py",
+      "kind": "method",
+      "symbol": "SchemaMeta.get_declared_fields",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "4.3.1",
+        "commit": "c7b559a1fa3aba57ca6dba0ab336841c5038a782",
+        "lines": [
+          133,
+          150
+        ],
+        "content_hash": "1b468f922ffd7040d01e99c8bcf1a8d30f338d161feca0d33b5d5da10e59e3a2"
+      },
+      "new": {
+        "revision": "4.4.0",
+        "commit": "a38b7f6842042e65fd1a485ed152ca99f87880c0",
+        "lines": [
+          133,
+          150
+        ],
+        "content_hash": "d5a07bb37157e74b6ec657d6ce76cbcfe315b02ae1eb4ab8ec33b7a8affe1abe"
+      },
+      "lines_changed": 2,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "formatting_or_docstring_only",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "src/marshmallow/utils.py",
+      "kind": "function",
+      "symbol": "_get_value_for_keys",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "removed",
+      "old": {
+        "revision": "4.3.1",
+        "commit": "c7b559a1fa3aba57ca6dba0ab336841c5038a782",
+        "lines": [
+          113,
+          118
+        ],
+        "content_hash": "287b77ce000acdfc59d4a994086318e01f77169b9bf74cf452eb3f3ea6b1cd20"
+      },
+      "new": null,
+      "lines_changed": 6,
+      "normalized": true,
+      "included": true,
+      "exclusion_reason": null,
+      "sample_order": 5,
+      "sampled": true,
+      "review": {
+        "decision": null,
+        "reason": null
+      }
+    },
+    {
+      "path": "src/marshmallow/utils.py",
+      "kind": "function",
+      "symbol": "from_timestamp",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "4.3.1",
+        "commit": "c7b559a1fa3aba57ca6dba0ab336841c5038a782",
+        "lines": [
+          40,
+          54
+        ],
+        "content_hash": "36cb5a12e57490aa30f1e9e094ff7d98ea252640d9f8d8e400135063194cd21d"
+      },
+      "new": {
+        "revision": "4.4.0",
+        "commit": "a38b7f6842042e65fd1a485ed152ca99f87880c0",
+        "lines": [
+          40,
+          54
+        ],
+        "content_hash": "205758f58a4d43d884e57180b1a31eda50f50e79a860895254a8942942f8c816"
+      },
+      "lines_changed": 2,
+      "normalized": true,
+      "included": true,
+      "exclusion_reason": null,
+      "sample_order": 3,
+      "sampled": true,
+      "review": {
+        "decision": null,
+        "reason": null
+      }
+    },
+    {
+      "path": "src/marshmallow/utils.py",
+      "kind": "function",
+      "symbol": "get_value",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "4.3.1",
+        "commit": "c7b559a1fa3aba57ca6dba0ab336841c5038a782",
+        "lines": [
+          97,
+          110
+        ],
+        "content_hash": "9495cecf09d1912d9b532bd45cc05ec75bffc0abaf57477e410611c843baa0a4"
+      },
+      "new": {
+        "revision": "4.4.0",
+        "commit": "a38b7f6842042e65fd1a485ed152ca99f87880c0",
+        "lines": [
+          97,
+          113
+        ],
+        "content_hash": "d1fefa9585b256edb6c720b521dcca04552f2697201f567beca9161369367e8c"
+      },
+      "lines_changed": 11,
+      "normalized": true,
+      "included": true,
+      "exclusion_reason": null,
+      "sample_order": 7,
+      "sampled": true,
+      "review": {
+        "decision": null,
+        "reason": null
+      }
+    },
+    {
+      "path": "src/marshmallow/utils.py",
+      "kind": "function",
+      "symbol": "is_collection",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "4.3.1",
+        "commit": "c7b559a1fa3aba57ca6dba0ab336841c5038a782",
+        "lines": [
+          28,
+          30
+        ],
+        "content_hash": "e658c685a76a03730ecbbe0ca858c3df9b04f57341c8f00620a62b38ecff7c43"
+      },
+      "new": {
+        "revision": "4.4.0",
+        "commit": "a38b7f6842042e65fd1a485ed152ca99f87880c0",
+        "lines": [
+          28,
+          30
+        ],
+        "content_hash": "dbb909cd20cce6cfe839cae2460633baaba3a9c93a5efa1734772a377e0242c8"
+      },
+      "lines_changed": 2,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "formatting_or_docstring_only",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "src/marshmallow/utils.py",
+      "kind": "function",
+      "symbol": "is_generator",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "4.3.1",
+        "commit": "c7b559a1fa3aba57ca6dba0ab336841c5038a782",
+        "lines": [
+          13,
+          15
+        ],
+        "content_hash": "8a14ce0532a2c1d920f276656f1c1c8dc09c1fd61ee41a0a644a4b0014395e1b"
+      },
+      "new": {
+        "revision": "4.4.0",
+        "commit": "a38b7f6842042e65fd1a485ed152ca99f87880c0",
+        "lines": [
+          13,
+          15
+        ],
+        "content_hash": "c23214fed0c0b840852bbb38535a08dcbeb7e363dae18a3ce5906d1f99181c87"
+      },
+      "lines_changed": 2,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "formatting_or_docstring_only",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "src/marshmallow/utils.py",
+      "kind": "function",
+      "symbol": "set_value",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "4.3.1",
+        "commit": "c7b559a1fa3aba57ca6dba0ab336841c5038a782",
+        "lines": [
+          131,
+          151
+        ],
+        "content_hash": "104de9363dd4289934dfbfda73b028bc037ba21878dc7d75551178061c8c6baa"
+      },
+      "new": {
+        "revision": "4.4.0",
+        "commit": "a38b7f6842042e65fd1a485ed152ca99f87880c0",
+        "lines": [
+          126,
+          146
+        ],
+        "content_hash": "34f30e1b81fb2d47ee745f003515d57a885b3f5f81f0feed1a83f03fcf6cbf9d"
+      },
+      "lines_changed": 2,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "formatting_or_docstring_only",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "src/marshmallow/utils.py",
+      "kind": "function",
+      "symbol": "timestamp",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "4.3.1",
+        "commit": "c7b559a1fa3aba57ca6dba0ab336841c5038a782",
+        "lines": [
+          64,
+          70
+        ],
+        "content_hash": "592c5e45f09be9f071ac8070294012e62b5cc0ff9e954b815c551c96e615255b"
+      },
+      "new": {
+        "revision": "4.4.0",
+        "commit": "a38b7f6842042e65fd1a485ed152ca99f87880c0",
+        "lines": [
+          64,
+          70
+        ],
+        "content_hash": "db6c5a0f87d94bae7f996da8edff8a16cbd46b3e21edddd9716bf3ebd73f1919"
+      },
+      "lines_changed": 2,
+      "normalized": true,
+      "included": true,
+      "exclusion_reason": null,
+      "sample_order": 4,
+      "sampled": true,
+      "review": {
+        "decision": null,
+        "reason": null
+      }
+    },
+    {
+      "path": "src/marshmallow/validate.py",
+      "kind": "method",
+      "symbol": "Regexp.__call__",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "4.3.1",
+        "commit": "c7b559a1fa3aba57ca6dba0ab336841c5038a782",
+        "lines": [
+          512,
+          512
+        ],
+        "content_hash": "8f9c17061fd5aadfe819d15897a45a9df7ec1a931b3b4c902391260d443b35e2"
+      },
+      "new": {
+        "revision": "4.4.0",
+        "commit": "a38b7f6842042e65fd1a485ed152ca99f87880c0",
+        "lines": [
+          517,
+          521
+        ],
+        "content_hash": "36fcc3634f7bbae0b281e1121f4ed93bca6df294553b56a1c3072a2b5491351f"
+      },
+      "lines_changed": 6,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "ambiguous_location",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "src/marshmallow/validate.py",
+      "kind": "method",
+      "symbol": "Regexp.__call__",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "4.3.1",
+        "commit": "c7b559a1fa3aba57ca6dba0ab336841c5038a782",
+        "lines": [
+          515,
+          515
+        ],
+        "content_hash": "2a2a14a1e1b8de0ab7fad325ca6430379324a74ecf14d641212ef51c882967d4"
+      },
+      "new": {
+        "revision": "4.4.0",
+        "commit": "a38b7f6842042e65fd1a485ed152ca99f87880c0",
+        "lines": [
+          517,
+          521
+        ],
+        "content_hash": "36fcc3634f7bbae0b281e1121f4ed93bca6df294553b56a1c3072a2b5491351f"
+      },
+      "lines_changed": 6,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "ambiguous_location",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "tests/test_deserialization.py",
+      "kind": "class",
+      "symbol": "TestFieldDeserialization",
+      "part_index": 2,
+      "part_count": 5,
+      "status": "superseded",
+      "old": {
+        "revision": "4.3.1",
+        "commit": "c7b559a1fa3aba57ca6dba0ab336841c5038a782",
+        "lines": [
+          398,
+          695
+        ],
+        "content_hash": "e699a7697505dd508ec6bf12a9e63b9772b59025000654644c2a460c3fb126d7"
+      },
+      "new": {
+        "revision": "4.4.0",
+        "commit": "a38b7f6842042e65fd1a485ed152ca99f87880c0",
+        "lines": [
+          398,
+          696
+        ],
+        "content_hash": "d53701cbe8ad393c1ea76171b237aa8220ca071086228f851f32bd589a30964f"
+      },
+      "lines_changed": 15,
+      "normalized": false,
+      "included": false,
+      "exclusion_reason": "test_file",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "tests/test_deserialization.py",
+      "kind": "class",
+      "symbol": "TestFieldDeserialization",
+      "part_index": 3,
+      "part_count": 5,
+      "status": "superseded",
+      "old": {
+        "revision": "4.3.1",
+        "commit": "c7b559a1fa3aba57ca6dba0ab336841c5038a782",
+        "lines": [
+          696,
+          979
+        ],
+        "content_hash": "08d844b1bb12187348a89aa20c4b9da777178eb63331173ee1c9b1631595cfe0"
+      },
+      "new": {
+        "revision": "4.4.0",
+        "commit": "a38b7f6842042e65fd1a485ed152ca99f87880c0",
+        "lines": [
+          697,
+          983
+        ],
+        "content_hash": "0e136ad969b0b6b4b887f753d8ee1844839e0065098639f4656e2931ba0c93ac"
+      },
+      "lines_changed": 7,
+      "normalized": false,
+      "included": false,
+      "exclusion_reason": "test_file",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "tests/test_deserialization.py",
+      "kind": "class",
+      "symbol": "TestFieldDeserialization",
+      "part_index": 4,
+      "part_count": 5,
+      "status": "superseded",
+      "old": {
+        "revision": "4.3.1",
+        "commit": "c7b559a1fa3aba57ca6dba0ab336841c5038a782",
+        "lines": [
+          980,
+          1282
+        ],
+        "content_hash": "a35423af7ec345d0410ce078a73add9988e35d27653ae4b8c1fbb238413a7aa8"
+      },
+      "new": {
+        "revision": "4.4.0",
+        "commit": "a38b7f6842042e65fd1a485ed152ca99f87880c0",
+        "lines": [
+          984,
+          1286
+        ],
+        "content_hash": "b3a0d43b31cb68c8ebaeaf3ef407dea41c58ac3e4a609196a680c524c21da2fb"
+      },
+      "lines_changed": 4,
+      "normalized": false,
+      "included": false,
+      "exclusion_reason": "test_file",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "tests/test_deserialization.py",
+      "kind": "class",
+      "symbol": "TestFieldDeserialization",
+      "part_index": 5,
+      "part_count": 5,
+      "status": "superseded",
+      "old": {
+        "revision": "4.3.1",
+        "commit": "c7b559a1fa3aba57ca6dba0ab336841c5038a782",
+        "lines": [
+          1283,
+          1548
+        ],
+        "content_hash": "f8632ff8d985b5134463b901f51d30b2e02ec1389ff0e70f628de9696c94b964"
+      },
+      "new": {
+        "revision": "4.4.0",
+        "commit": "a38b7f6842042e65fd1a485ed152ca99f87880c0",
+        "lines": [
+          1287,
+          1550
+        ],
+        "content_hash": "fd833a68bccacd215ff9f53fb336a85f5612991b2f3582b4dd6703e8e7f54840"
+      },
+      "lines_changed": 4,
+      "normalized": false,
+      "included": false,
+      "exclusion_reason": "test_file",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "tests/test_deserialization.py",
+      "kind": "method",
+      "symbol": "TestFieldDeserialization.test_datetime_list_field_deserialization",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "4.3.1",
+        "commit": "c7b559a1fa3aba57ca6dba0ab336841c5038a782",
+        "lines": [
+          1332,
+          1339
+        ],
+        "content_hash": "5b4d36c4e017949ccb206df84aa05f903fbdb5603bc10a03369178cf5bec02eb"
+      },
+      "new": {
+        "revision": "4.4.0",
+        "commit": "a38b7f6842042e65fd1a485ed152ca99f87880c0",
+        "lines": [
+          1334,
+          1341
+        ],
+        "content_hash": "949f455bf993d770bcbcc96a1e61de12b68860364e6107fc6aaadba05dcbed01"
+      },
+      "lines_changed": 2,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "test_file",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "tests/test_schema.py",
+      "kind": "function",
+      "symbol": "test_load_validation_error_stores_input_data_and_valid_data",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "4.3.1",
+        "commit": "c7b559a1fa3aba57ca6dba0ab336841c5038a782",
+        "lines": [
+          75,
+          98
+        ],
+        "content_hash": "ececcc60842fecd108cdda024b84d9e1d814c8faeddd032ee35f674e00d8ca1d"
+      },
+      "new": {
+        "revision": "4.4.0",
+        "commit": "a38b7f6842042e65fd1a485ed152ca99f87880c0",
+        "lines": [
+          75,
+          98
+        ],
+        "content_hash": "9e94ec4de5ac7de298ebcb78940a00bef35c35c6da96dd81f57f03d3b33c6244"
+      },
+      "lines_changed": 2,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "test_file",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "tests/test_serialization.py",
+      "kind": "class",
+      "symbol": "TestFieldSerialization",
+      "part_index": 2,
+      "part_count": 3,
+      "status": "superseded",
+      "old": {
+        "revision": "4.3.1",
+        "commit": "c7b559a1fa3aba57ca6dba0ab336841c5038a782",
+        "lines": [
+          316,
+          655
+        ],
+        "content_hash": "4ec0b797a8bc596023e140a4572b4bbf3a4f5146bf20d5c5aa79023d2f370325"
+      },
+      "new": {
+        "revision": "4.4.0",
+        "commit": "a38b7f6842042e65fd1a485ed152ca99f87880c0",
+        "lines": [
+          316,
+          655
+        ],
+        "content_hash": "a698acbb12b2780000d416284987026f430056af95991ac82239af33aa38771f"
+      },
+      "lines_changed": 10,
+      "normalized": false,
+      "included": false,
+      "exclusion_reason": "test_file",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "tests/test_serialization.py",
+      "kind": "class",
+      "symbol": "TestFieldSerialization",
+      "part_index": 3,
+      "part_count": 3,
+      "status": "superseded",
+      "old": {
+        "revision": "4.3.1",
+        "commit": "c7b559a1fa3aba57ca6dba0ab336841c5038a782",
+        "lines": [
+          656,
+          931
+        ],
+        "content_hash": "b45eb071aeec36695e7b5b95697f0599debddaf9b0e310098758ecada39cdecf"
+      },
+      "new": {
+        "revision": "4.4.0",
+        "commit": "a38b7f6842042e65fd1a485ed152ca99f87880c0",
+        "lines": [
+          656,
+          931
+        ],
+        "content_hash": "d4009412a49c931df08333bb1964d75662ccfdfead993ce936eb3a3e61dc7775"
+      },
+      "lines_changed": 8,
+      "normalized": false,
+      "included": false,
+      "exclusion_reason": "test_file",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "tests/test_serialization.py",
+      "kind": "function",
+      "symbol": "TestFieldSerialization.test_list_field_work_with_generator_single_value.custom_generator",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "4.3.1",
+        "commit": "c7b559a1fa3aba57ca6dba0ab336841c5038a782",
+        "lines": [
+          805,
+          806
+        ],
+        "content_hash": "56ca3db43f5a984f740d2b462d60818038bf1bc0d1a93f294fde8f8d06719d28"
+      },
+      "new": {
+        "revision": "4.4.0",
+        "commit": "a38b7f6842042e65fd1a485ed152ca99f87880c0",
+        "lines": [
+          805,
+          806
+        ],
+        "content_hash": "5ee40fea3f1d4ee5e75a716dd04b8d222233ae73b0b4c093f94fa2c4f7182060"
+      },
+      "lines_changed": 2,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "test_file",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "tests/test_serialization.py",
+      "kind": "function",
+      "symbol": "TestFieldSerialization.test_list_field_work_with_generators_multiple_values.custom_generator",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "4.3.1",
+        "commit": "c7b559a1fa3aba57ca6dba0ab336841c5038a782",
+        "lines": [
+          814,
+          815
+        ],
+        "content_hash": "c91d94478c0bd5b4bd17bb1e0a3ce6d38206aaaab1e903d81b9080711b1389e2"
+      },
+      "new": {
+        "revision": "4.4.0",
+        "commit": "a38b7f6842042e65fd1a485ed152ca99f87880c0",
+        "lines": [
+          814,
+          815
+        ],
+        "content_hash": "c11d57c0d43c6791f4247b8485d12cdf54cb902e3870a7cf3180509cea199bc3"
+      },
+      "lines_changed": 2,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "test_file",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "tests/test_serialization.py",
+      "kind": "method",
+      "symbol": "TestFieldSerialization.test_datetime_integer_tuple_field",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "4.3.1",
+        "commit": "c7b559a1fa3aba57ca6dba0ab336841c5038a782",
+        "lines": [
+          876,
+          881
+        ],
+        "content_hash": "f389879d059f685bae7ba9decffb5f08ecc009f2f66af792e26651e3a14a8223"
+      },
+      "new": {
+        "revision": "4.4.0",
+        "commit": "a38b7f6842042e65fd1a485ed152ca99f87880c0",
+        "lines": [
+          876,
+          881
+        ],
+        "content_hash": "1159437f2648cefcd30ac2c0839eecb2efd4fa450c2c565737356bbb77f370c0"
+      },
+      "lines_changed": 2,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "test_file",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "tests/test_serialization.py",
+      "kind": "method",
+      "symbol": "TestFieldSerialization.test_datetime_list_field",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "4.3.1",
+        "commit": "c7b559a1fa3aba57ca6dba0ab336841c5038a782",
+        "lines": [
+          793,
+          797
+        ],
+        "content_hash": "6b7f1af6ee7c047d3c45a673b055d0b1a87a9d3b40b7e1d35f1b3b324d20d495"
+      },
+      "new": {
+        "revision": "4.4.0",
+        "commit": "a38b7f6842042e65fd1a485ed152ca99f87880c0",
+        "lines": [
+          793,
+          797
+        ],
+        "content_hash": "b4d8ce09f2c0ef535db0423ef0f1d0ac11853768fadb08be02b7bd34f1afa280"
+      },
+      "lines_changed": 2,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "test_file",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "tests/test_serialization.py",
+      "kind": "method",
+      "symbol": "TestFieldSerialization.test_list_field_work_with_generator_single_value",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "4.3.1",
+        "commit": "c7b559a1fa3aba57ca6dba0ab336841c5038a782",
+        "lines": [
+          804,
+          811
+        ],
+        "content_hash": "b8ff61d0cc3eff6a2458c03bb2e9ddfc2b8b241b06a33d2f353c4b26ab2040fa"
+      },
+      "new": {
+        "revision": "4.4.0",
+        "commit": "a38b7f6842042e65fd1a485ed152ca99f87880c0",
+        "lines": [
+          804,
+          811
+        ],
+        "content_hash": "cfb45c318d371d14e8b230a7dc77f661203e16e89edb0fd97b3d9d173f1bb46a"
+      },
+      "lines_changed": 2,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "test_file",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "tests/test_serialization.py",
+      "kind": "method",
+      "symbol": "TestFieldSerialization.test_list_field_work_with_generators_multiple_values",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "4.3.1",
+        "commit": "c7b559a1fa3aba57ca6dba0ab336841c5038a782",
+        "lines": [
+          813,
+          820
+        ],
+        "content_hash": "045662416747fc59221f6597887f07a87cd52ce3f36a8e5ef7c9967b0b233524"
+      },
+      "new": {
+        "revision": "4.4.0",
+        "commit": "a38b7f6842042e65fd1a485ed152ca99f87880c0",
+        "lines": [
+          813,
+          820
+        ],
+        "content_hash": "300ef3c6a75df5f9f9bf0b0c06ac94767196ac4fe37057f965b69d0a09a1a182"
+      },
+      "lines_changed": 2,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "test_file",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "tests/test_utils.py",
+      "kind": "class",
+      "symbol": "test_get_value.MyInt",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "removed",
+      "old": {
+        "revision": "4.3.1",
+        "commit": "c7b559a1fa3aba57ca6dba0ab336841c5038a782",
+        "lines": [
+          76,
+          77
+        ],
+        "content_hash": "b7b25af60895af4acfa4b9ee48ce1beb569434ecb08eb01dec50545622fd1bc0"
+      },
+      "new": null,
+      "lines_changed": 2,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "test_file",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "tests/test_utils.py",
+      "kind": "function",
+      "symbol": "test_from_timestamp_with_overflow_value",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "4.3.1",
+        "commit": "c7b559a1fa3aba57ca6dba0ab336841c5038a782",
+        "lines": [
+          125,
+          128
+        ],
+        "content_hash": "b8fed99ffc541b8c3240e5c81bb4f5a3e4d95bb6453bc90f90c798e9610a47eb"
+      },
+      "new": {
+        "revision": "4.4.0",
+        "commit": "a38b7f6842042e65fd1a485ed152ca99f87880c0",
+        "lines": [
+          115,
+          118
+        ],
+        "content_hash": "ee0cffae0fce8238b86b66ac0df4d13dafadea5985ad3d8244bfb23c196c015a"
+      },
+      "lines_changed": 2,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "test_file",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "tests/test_utils.py",
+      "kind": "function",
+      "symbol": "test_get_value",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "removed",
+      "old": {
+        "revision": "4.3.1",
+        "commit": "c7b559a1fa3aba57ca6dba0ab336841c5038a782",
+        "lines": [
+          72,
+          79
+        ],
+        "content_hash": "6966fd2c423d00facff364c759168b3d376e840ec0fa6574277a16436bf76fdf"
+      },
+      "new": null,
+      "lines_changed": 8,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "test_file",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    }
+  ]
+}
