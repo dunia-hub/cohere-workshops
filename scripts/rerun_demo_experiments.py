@@ -29,6 +29,9 @@ ROOT = Path(__file__).resolve().parents[1]
 DEMO = ROOT / "demo_repo"
 ANSWER_KEY = ROOT / "experiments" / "answer-keys" / "demo-repo-agent.json"
 TARGETS = ("v2", "v1")
+# Command A+ is capped at 1,000 calls a month even on production keys, so the
+# rerun defaults to Command A. Pass --command-model to change it.
+DEFAULT_COMMAND_MODEL = "command-a-03-2025"
 
 
 def git(repository: Path, *arguments: str) -> str:
@@ -89,6 +92,11 @@ def write_metadata(folder: Path, metadata: dict[str, object]) -> None:
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__.splitlines()[0])
     parser.add_argument("--offline", action="store_true", help="Practice run, no Cohere calls.")
+    parser.add_argument(
+        "--command-model",
+        default=DEFAULT_COMMAND_MODEL,
+        help=f"Command model for the agent stage. Default: {DEFAULT_COMMAND_MODEL}.",
+    )
     options = parser.parse_args()
 
     if not DEMO.exists():
@@ -129,7 +137,7 @@ def main() -> None:
     models = (
         {"embed": "offline-word-hashing", "rerank": "offline-word-overlap", "command": "offline"}
         if options.offline
-        else {"embed": "embed-v4.0", "rerank": "rerank-v4.0-pro", "command": "command-a-plus-05-2026"}
+        else {"embed": "embed-v4.0", "rerank": "rerank-v4.0-pro", "command": options.command_model}
     )
 
     stages = []
@@ -168,6 +176,7 @@ def main() -> None:
         for target in TARGETS:
             command = ["cohere-agent", str(DEMO), "--old", "v1", "--new", "v2",
                        "--target", target, "--question", item["question"],
+                       "--command-model", options.command_model,
                        "--output", str(folder / "raw-output.jsonl"), *offline_flag]
             latency[f"{item['id']}@{target}"] = run_stage(command, folder / "console.txt")
             commands.append(command)
