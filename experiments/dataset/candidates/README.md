@@ -58,10 +58,18 @@ overwrite an existing file.
 
 ## Review
 
-For each sampled location, read the code at both commits and fill in its `review`
-field:
+Review with `cohere-review`, one list at a time, against a clone of the same
+repository:
 
-```json
+````bash
+cohere-review experiments/dataset/candidates/marshmallow-4.3.1-4.4.0.json --repo ~/eval-repos/marshmallow
+cohere-review experiments/dataset/candidates/marshmallow-4.3.1-4.4.0.json --summary
+````
+
+It shows each sampled location's old and new code, and writes your decision into
+the `review` field after every answer, so you can stop with `q` and continue later:
+
+````json
 "review": {"decision": "accept", "reason": "fee rule changed from flat to tiered"}
 "review": {"decision": "reject", "reason": "not_behavioural: typing alias renamed"}
 ```
@@ -76,6 +84,10 @@ Two sampled locations are already known to be `not_library_code`:
 `tools/make_terminal_widths.py::make_widths_table` (rich, order 4) and
 `performance/benchmark.py::main` (marshmallow 4.3.1 → 4.4.0, order 1).
 
-For each rejection, take the next included location in `sample_order` that is not
-yet sampled, set its `sampled` to true, and review it. Never pick a replacement by
-choice.
+A rejection samples the next included location in `sample_order` and records it
+as `replaced_by_order`. Never pick a replacement by choice. Some lists have no
+spare locations (marshmallow 4.3.1 → 4.4.0 has none), so a rejection there lowers
+that list's count.
+
+Watch for changes that look like behaviour but are not: in marshmallow 4.4.0,
+`dt.timezone.utc` became `dt.UTC`, which is the same object.
