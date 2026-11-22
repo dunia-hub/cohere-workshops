@@ -123,7 +123,7 @@ cohere-agent demo_repo --old v1 --new v2 --target v1 --question "How is the tran
 
 `src/cohere_workshops/candidates.py`, `cohere-candidates`
 
-Lists every symbol-level location that was superseded or removed between two revisions and applies the automatic exclusions in the evaluation plan: not Python, test file, generated or vendored path, ambiguous location (several chunks with the same path and symbol, such as overloads), a change that lies inside a changed nested symbol, formatting or docstrings only, type annotations only, and removed code that reappears under another name. The last three compare Python syntax trees with formatting, docstrings and, where relevant, annotations or the definition's name removed.
+Lists every symbol-level location that was superseded or removed between two revisions and applies the automatic exclusions in the evaluation plan: not Python, test file, generated or vendored path, documentation or example code, ambiguous location (several chunks with the same path and symbol, such as overloads), a change that lies inside a changed nested symbol, formatting or docstrings only, type annotations only, and removed code that reappears under another name. The last three compare Python syntax trees with formatting, docstrings and, where relevant, annotations or the definition's name removed.
 
 Every included location gets a place in one seeded shuffle (`sample_order`). The first N are sampled. A location rejected during manual review is replaced by the next in order. The output records every candidate and every exclusion, with paths, line ranges and hashes but no source code. It makes no Cohere calls.
 
