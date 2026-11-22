@@ -407,8 +407,8 @@
       "sample_order": 6,
       "sampled": true,
       "review": {
-        "decision": null,
-        "reason": null
+        "decision": "accept",
+        "reason": "emoji sequences now cropped as one character instead of cut mid-sequence"
       }
     },
     {
@@ -600,8 +600,9 @@
       "sample_order": 1,
       "sampled": true,
       "review": {
-        "decision": null,
-        "reason": null
+        "decision": "reject",
+        "reason": "not_behavioural: unused function removed",
+        "replaced_by_order": 21
       }
     },
     {
@@ -951,8 +952,8 @@
       "sample_order": 7,
       "sampled": true,
       "review": {
-        "decision": null,
-        "reason": null
+        "decision": "accept",
+        "reason": "print style no longer applied to newlines"
       }
     },
     {
@@ -1530,8 +1531,9 @@
       "sample_order": 2,
       "sampled": true,
       "review": {
-        "decision": null,
-        "reason": null
+        "decision": "reject",
+        "reason": "not_behavioural: os.path.basename instead of Path.name, same result",
+        "replaced_by_order": 22
       }
     },
     {
@@ -2340,8 +2342,8 @@
       "sample_order": 11,
       "sampled": true,
       "review": {
-        "decision": null,
-        "reason": null
+        "decision": "accept",
+        "reason": "validation errors now render markup even if the console disables it"
       }
     },
     {
@@ -2680,7 +2682,7 @@
       "included": true,
       "exclusion_reason": null,
       "sample_order": 22,
-      "sampled": false,
+      "sampled": true,
       "review": {
         "decision": null,
         "reason": null
@@ -2820,8 +2822,8 @@
       "sample_order": 3,
       "sampled": true,
       "review": {
-        "decision": null,
-        "reason": null
+        "decision": "accept",
+        "reason": "link ids now sequential instead of random"
       }
     },
     {
@@ -2928,8 +2930,8 @@
       "sample_order": 10,
       "sampled": true,
       "review": {
-        "decision": null,
-        "reason": null
+        "decision": "accept",
+        "reason": "link ids now sequential instead of random"
       }
     },
     {
@@ -3597,8 +3599,8 @@
       "sample_order": 8,
       "sampled": true,
       "review": {
-        "decision": null,
-        "reason": null
+        "decision": "accept",
+        "reason": "no_wrap text with overflow ignore is no longer cropped"
       }
     },
     {
@@ -3666,8 +3668,9 @@
       "sample_order": 9,
       "sampled": true,
       "review": {
-        "decision": null,
-        "reason": null
+        "decision": "reject",
+        "reason": "not_behavioural: import moved inside function",
+        "replaced_by_order": 24
       }
     },
     {
@@ -3870,8 +3873,8 @@
       "sample_order": 5,
       "sampled": true,
       "review": {
-        "decision": null,
-        "reason": null
+        "decision": "accept",
+        "reason": "install() now passes locals_max_depth and locals_overflow to tracebacks"
       }
     },
     {
@@ -3904,7 +3907,7 @@
       "included": true,
       "exclusion_reason": null,
       "sample_order": 23,
-      "sampled": false,
+      "sampled": true,
       "review": {
         "decision": null,
         "reason": null
@@ -4009,7 +4012,7 @@
       "included": true,
       "exclusion_reason": null,
       "sample_order": 21,
-      "sampled": false,
+      "sampled": true,
       "review": {
         "decision": null,
         "reason": null
@@ -4433,7 +4436,7 @@
       "included": true,
       "exclusion_reason": null,
       "sample_order": 24,
-      "sampled": false,
+      "sampled": true,
       "review": {
         "decision": null,
         "reason": null
@@ -4463,8 +4466,9 @@
       "sample_order": 4,
       "sampled": true,
       "review": {
-        "decision": null,
-        "reason": null
+        "decision": "reject",
+        "reason": "not_library_code: build script",
+        "replaced_by_order": 23
       }
     },
     {

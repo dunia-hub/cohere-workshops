@@ -189,8 +189,9 @@
       "sample_order": 12,
       "sampled": true,
       "review": {
-        "decision": null,
-        "reason": null
+        "decision": "reject",
+        "reason": "not_behavioural: in (\"__notes__\",) became == \"__notes__\", same result",
+        "replaced_by_order": null
       }
     },
     {
@@ -225,8 +226,8 @@
       "sample_order": 1,
       "sampled": true,
       "review": {
-        "decision": null,
-        "reason": null
+        "decision": "accept",
+        "reason": "frozen classes now accept on_setattr=setters.NO_OP instead of raising ValueError"
       }
     },
     {
@@ -261,8 +262,8 @@
       "sample_order": 10,
       "sampled": true,
       "review": {
-        "decision": null,
-        "reason": null
+        "decision": "accept",
+        "reason": "field_transformer now receives attributes with default aliases already filled in"
       }
     },
     {
@@ -297,8 +298,8 @@
       "sample_order": 9,
       "sampled": true,
       "review": {
-        "decision": null,
-        "reason": null
+        "decision": "accept",
+        "reason": "fields() now accepts attrs instances, not only classes"
       }
     },
     {
@@ -366,8 +367,8 @@
       "sample_order": 7,
       "sampled": true,
       "review": {
-        "decision": null,
-        "reason": null
+        "decision": "accept",
+        "reason": "Attribute takes a new alias_is_default argument, defaulting to whether alias is None"
       }
     },
     {
@@ -402,8 +403,8 @@
       "sample_order": 2,
       "sampled": true,
       "review": {
-        "decision": null,
-        "reason": null
+        "decision": "accept",
+        "reason": "unpickling Attribute objects from older attrs now infers the new alias_is_default field"
       }
     },
     {
@@ -438,8 +439,8 @@
       "sample_order": 11,
       "sampled": true,
       "review": {
-        "decision": null,
-        "reason": null
+        "decision": "accept",
+        "reason": "Attribute.evolve(name=...) now updates an auto-generated alias; an explicit alias marks it as not default"
       }
     },
     {
@@ -474,8 +475,8 @@
       "sample_order": 6,
       "sampled": true,
       "review": {
-        "decision": null,
-        "reason": null
+        "decision": "accept",
+        "reason": "Attribute now records alias_is_default, True when no alias was given"
       }
     },
     {
@@ -510,8 +511,9 @@
       "sample_order": 3,
       "sampled": true,
       "review": {
-        "decision": null,
-        "reason": null
+        "decision": "reject",
+        "reason": "not_behavioural: lambda wrapper replaced by direct converter reference, same call result",
+        "replaced_by_order": null
       }
     },
     {
@@ -546,8 +548,8 @@
       "sample_order": 4,
       "sampled": true,
       "review": {
-        "decision": null,
-        "reason": null
+        "decision": "accept",
+        "reason": "on Python 3.13+ defining a class now overwrites attrs.evolve\u2019s qualname and doc (verified by running both releases)"
       }
     },
     {
@@ -648,8 +650,8 @@
       "sample_order": 8,
       "sampled": true,
       "review": {
-        "decision": null,
-        "reason": null
+        "decision": "accept",
+        "reason": "FrozenError now has str() and tuple args but can no longer be pickled (verified by running both releases)"
       }
     },
     {
@@ -684,8 +686,8 @@
       "sample_order": 5,
       "sampled": true,
       "review": {
-        "decision": null,
-        "reason": null
+        "decision": "accept",
+        "reason": "nested validators.disabled() now restores the previous setting instead of re-enabling validators"
       }
     },
     {

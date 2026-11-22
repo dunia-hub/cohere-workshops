@@ -125,8 +125,9 @@
       "sample_order": 1,
       "sampled": true,
       "review": {
-        "decision": null,
-        "reason": null
+        "decision": "reject",
+        "reason": "not_library_code: benchmark script",
+        "replaced_by_order": null
       }
     },
     {
@@ -887,8 +888,8 @@
       "sample_order": 6,
       "sampled": true,
       "review": {
-        "decision": null,
-        "reason": null
+        "decision": "accept",
+        "reason": "empty-string data_key is now used as the key instead of falling back to the field name"
       }
     },
     {
@@ -923,8 +924,8 @@
       "sample_order": 2,
       "sampled": true,
       "review": {
-        "decision": null,
-        "reason": null
+        "decision": "accept",
+        "reason": "NaN input now raises the field's invalid validation error instead of an uncaught ValueError"
       }
     },
     {
@@ -1182,8 +1183,9 @@
       "sample_order": 5,
       "sampled": true,
       "review": {
-        "decision": null,
-        "reason": null
+        "decision": "reject",
+        "reason": "not_behavioural: recursion replaced by a loop in get_value, same result",
+        "replaced_by_order": null
       }
     },
     {
@@ -1218,8 +1220,9 @@
       "sample_order": 3,
       "sampled": true,
       "review": {
-        "decision": null,
-        "reason": null
+        "decision": "reject",
+        "reason": "not_behavioural: datetime UTC alias, same object",
+        "replaced_by_order": null
       }
     },
     {
@@ -1254,8 +1257,8 @@
       "sample_order": 7,
       "sampled": true,
       "review": {
-        "decision": null,
-        "reason": null
+        "decision": "accept",
+        "reason": "integer keys are no longer supported and now raise TypeError; dotted keys handled by a loop"
       }
     },
     {
@@ -1389,8 +1392,9 @@
       "sample_order": 4,
       "sampled": true,
       "review": {
-        "decision": null,
-        "reason": null
+        "decision": "reject",
+        "reason": "not_behavioural: datetime UTC alias, same object",
+        "replaced_by_order": null
       }
     },
     {

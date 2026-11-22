@@ -27,6 +27,7 @@ Development checks are clearly labelled and must not be presented as research re
 | --- | --- | --- |
 | 22 November 2026 | Study changed from change-impact prediction to version-aware retrieval. Runs before this date were made under the earlier protocol and are development evidence only. | D017 |
 | 22 November 2026 | Dataset exclusions extended before any final run: type-annotation-only changes, ambiguous locations (such as overloads), and changes inside a changed nested symbol. A manual review step with seeded replacement was added. Found by running `cohere-candidates` on pallets/itsdangerous 2.1.2 to 2.2.0, where 32 of 58 changed locations were annotation-only. pallets/itsdangerous is therefore a development repository and is excluded from the final evaluation. | Evaluation plan |
+| 22 November 2026 | Pilot study defined before any final run: 41 accepted locations from six repositories (7 per list for click, httpx, rich and arrow; attrs 25.4.0 → 26.1.0 and marshmallow 4.3.1 → 4.4.0 in full), answering subset of 12. Review pre-screened by an AI assistant; every decision made by the author. | Evaluation plan |
 
 ## Entry template
 

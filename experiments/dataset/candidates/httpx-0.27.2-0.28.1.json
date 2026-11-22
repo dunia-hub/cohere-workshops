@@ -57,7 +57,7 @@
       "included": true,
       "exclusion_reason": null,
       "sample_order": 24,
-      "sampled": false,
+      "sampled": true,
       "review": {
         "decision": null,
         "reason": null
@@ -841,8 +841,8 @@
       "sample_order": 5,
       "sampled": true,
       "review": {
-        "decision": null,
-        "reason": null
+        "decision": "accept",
+        "reason": "cookie deprecation warning now points at the caller"
       }
     },
     {
@@ -913,8 +913,9 @@
       "sample_order": 1,
       "sampled": true,
       "review": {
-        "decision": null,
-        "reason": null
+        "decision": "reject",
+        "reason": "not_behavioural: helper rename only",
+        "replaced_by_order": 21
       }
     },
     {
@@ -1648,8 +1649,8 @@
       "sample_order": 11,
       "sampled": true,
       "review": {
-        "decision": null,
-        "reason": null
+        "decision": "accept",
+        "reason": "socks5h proxy URLs now accepted"
       }
     },
     {
@@ -1704,8 +1705,8 @@
       "sample_order": 6,
       "sampled": true,
       "review": {
-        "decision": null,
-        "reason": null
+        "decision": "accept",
+        "reason": "default SSL context no longer sets custom ciphers or SSLKEYLOGFILE"
       }
     },
     {
@@ -1957,8 +1958,8 @@
       "sample_order": 10,
       "sampled": true,
       "review": {
-        "decision": null,
-        "reason": null
+        "decision": "accept",
+        "reason": "empty zstd response no longer raises incomplete-data error"
       }
     },
     {
@@ -2027,7 +2028,7 @@
       "included": true,
       "exclusion_reason": null,
       "sample_order": 21,
-      "sampled": false,
+      "sampled": true,
       "review": {
         "decision": null,
         "reason": null
@@ -2098,8 +2099,9 @@
       "sample_order": 8,
       "sampled": true,
       "review": {
-        "decision": null,
-        "reason": null
+        "decision": "reject",
+        "reason": "not_behavioural: argument order only",
+        "replaced_by_order": 23
       }
     },
     {
@@ -2266,8 +2268,9 @@
       "sample_order": 9,
       "sampled": true,
       "review": {
-        "decision": null,
-        "reason": null
+        "decision": "reject",
+        "reason": "not_behavioural: same headers, code reorganised",
+        "replaced_by_order": 24
       }
     },
     {
@@ -2302,8 +2305,9 @@
       "sample_order": 2,
       "sampled": true,
       "review": {
-        "decision": null,
-        "reason": null
+        "decision": "reject",
+        "reason": "not_behavioural: helper rename only",
+        "replaced_by_order": 22
       }
     },
     {
@@ -3170,8 +3174,8 @@
       "sample_order": 7,
       "sampled": true,
       "review": {
-        "decision": null,
-        "reason": null
+        "decision": "accept",
+        "reason": "curly braces in URL paths are now percent-escaped"
       }
     },
     {
@@ -3701,7 +3705,7 @@
       "included": true,
       "exclusion_reason": null,
       "sample_order": 22,
-      "sampled": false,
+      "sampled": true,
       "review": {
         "decision": null,
         "reason": null
@@ -3731,8 +3735,8 @@
       "sample_order": 3,
       "sampled": true,
       "review": {
-        "decision": null,
-        "reason": null
+        "decision": "accept",
+        "reason": "async elapsed time now uses perf_counter, not the event loop clock"
       }
     },
     {
@@ -3759,8 +3763,8 @@
       "sample_order": 4,
       "sampled": true,
       "review": {
-        "decision": null,
-        "reason": null
+        "decision": "accept",
+        "reason": "async elapsed time now uses perf_counter, not the event loop clock"
       }
     },
     {
@@ -3841,7 +3845,7 @@
       "included": true,
       "exclusion_reason": null,
       "sample_order": 23,
-      "sampled": false,
+      "sampled": true,
       "review": {
         "decision": null,
         "reason": null

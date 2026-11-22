@@ -629,8 +629,8 @@
       "sample_order": 1,
       "sampled": true,
       "review": {
-        "decision": null,
-        "reason": null
+        "decision": "accept",
+        "reason": "ceil now accepts week_start"
       }
     },
     {
@@ -699,7 +699,7 @@
       "included": true,
       "exclusion_reason": null,
       "sample_order": 21,
-      "sampled": false,
+      "sampled": true,
       "review": {
         "decision": null,
         "reason": null
@@ -806,8 +806,8 @@
       "sample_order": 6,
       "sampled": true,
       "review": {
-        "decision": null,
-        "reason": null
+        "decision": "accept",
+        "reason": "naive datetimes now get timezone.utc, not dateutil tzutc"
       }
     },
     {
@@ -914,8 +914,8 @@
       "sample_order": 2,
       "sampled": true,
       "review": {
-        "decision": null,
-        "reason": null
+        "decision": "accept",
+        "reason": "local time zone is now a fixed offset, not dateutil tzlocal"
       }
     },
     {
@@ -1022,8 +1022,8 @@
       "sample_order": 8,
       "sampled": true,
       "review": {
-        "decision": null,
-        "reason": null
+        "decision": "accept",
+        "reason": "week_start now only validated for week spans"
       }
     },
     {
@@ -1328,8 +1328,8 @@
       "sample_order": 3,
       "sampled": true,
       "review": {
-        "decision": null,
-        "reason": null
+        "decision": "accept",
+        "reason": "local time zone is now a fixed offset, not dateutil tzlocal"
       }
     },
     {
@@ -1397,8 +1397,9 @@
       "sample_order": 7,
       "sampled": true,
       "review": {
-        "decision": null,
-        "reason": null
+        "decision": "reject",
+        "reason": "not_behavioural: same offset output",
+        "replaced_by_order": 21
       }
     },
     {
@@ -1673,8 +1674,8 @@
       "sample_order": 4,
       "sampled": true,
       "review": {
-        "decision": null,
-        "reason": null
+        "decision": "accept",
+        "reason": "Thai humanize and day names changed, weeks added"
       }
     },
     {
@@ -2372,8 +2373,8 @@
       "sample_order": 5,
       "sampled": true,
       "review": {
-        "decision": null,
-        "reason": null
+        "decision": "accept",
+        "reason": "time zone strings now parsed with zoneinfo, not dateutil"
       }
     },
     {

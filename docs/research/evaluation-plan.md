@@ -34,6 +34,19 @@ Each case must contain:
 
 At least 5 repositories and 100 locations. Each location is evaluated at both targets, giving 200 paired retrieval cases. At 100 locations, a rate near 30% has a 95% confidence interval of about ±9 percentage points, which is enough to compare configurations that differ by more than that. Answering uses a subset of at least 40 locations (80 question and target cases), because every answering case needs a hand-written answer key.
 
+### Pilot study (22 November 2026)
+
+The first run of this study is a pilot with a smaller dataset, fixed before any final run:
+
+- click, httpx, rich and arrow: reviewed in seeded order until 7 locations were accepted in each.
+- attrs 25.4.0 → 26.1.0 and marshmallow 4.3.1 → 4.4.0: fully reviewed.
+- attrs 25.3.0 → 25.4.0 and marshmallow 4.1.2 → 4.2.4: not reviewed and not used.
+- Result: 41 accepted locations, evaluated at both targets (82 retrieval cases).
+- Answering subset: the first 2 accepted locations in sample order from each repository (12 locations, 24 cases).
+- Review was pre-screened by an AI assistant, which read each diff and, where the code alone was not conclusive, ran both releases. The author made and recorded every decision.
+
+At 41 locations, a rate near 30% has a 95% confidence interval of about ±14 percentage points.
+
 ## Inclusion criteria
 
 A location may be included when:
