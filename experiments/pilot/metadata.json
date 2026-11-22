@@ -1,0 +1,101 @@
+{
+  "status": "pilot",
+  "started": "2026-11-22T15:05:11+00:00",
+  "application_commit": "a80cd2c4c4d4f913fd1aef55641ab40d26b5099e",
+  "python_version": "3.14.4",
+  "cohere_sdk_version": "5.21.1",
+  "models": {
+    "embed": "embed-v4.0",
+    "rerank": "rerank-v4.0-pro",
+    "command": "command-a-03-2025"
+  },
+  "runs": 3,
+  "candidates": 10,
+  "manifest": "experiments/dataset/pilot/cases.json",
+  "repositories": {
+    "arrow": {
+      "old": {
+        "revision": "1.3.0",
+        "commit": "87a1a774aad0505d9da18ad1d16f6e571f262503"
+      },
+      "new": {
+        "revision": "1.4.0",
+        "commit": "2c1f5185ad66bf3b1cf8c0812f4b4fe65ac46656"
+      },
+      "indexed_chunks": 1249,
+      "cases": 7,
+      "answering_cases": 2,
+      "seconds": 127.4
+    },
+    "attrs": {
+      "old": {
+        "revision": "25.4.0",
+        "commit": "9a98e00a7c078360add417c5d62db820d4645ab1"
+      },
+      "new": {
+        "revision": "26.1.0",
+        "commit": "7bfc49e9b22d5ba25b6e429524c3d49fee27cb36"
+      },
+      "indexed_chunks": 1804,
+      "cases": 10,
+      "answering_cases": 2,
+      "seconds": 165.6
+    },
+    "click": {
+      "old": {
+        "revision": "8.4.2",
+        "commit": "b2e30a175449cfda909ee4fbf4a29a6a071cad53"
+      },
+      "new": {
+        "revision": "8.5.1",
+        "commit": "cf19179e8e2fd54c601378cec9e0d21bb12b6fb1"
+      },
+      "indexed_chunks": 2314,
+      "cases": 7,
+      "answering_cases": 2,
+      "seconds": 152.9
+    },
+    "httpx": {
+      "old": {
+        "revision": "0.27.2",
+        "commit": "609df7ecc0f7cb10a1c998aa9c269bba77337c5f"
+      },
+      "new": {
+        "revision": "0.28.1",
+        "commit": "26d48e0634e6ee9cdc0533996db289ce4b430177"
+      },
+      "indexed_chunks": 1411,
+      "cases": 7,
+      "answering_cases": 2,
+      "seconds": 124.3
+    },
+    "marshmallow": {
+      "old": {
+        "revision": "4.3.1",
+        "commit": "c7b559a1fa3aba57ca6dba0ab336841c5038a782"
+      },
+      "new": {
+        "revision": "4.4.0",
+        "commit": "a38b7f6842042e65fd1a485ed152ca99f87880c0"
+      },
+      "indexed_chunks": 1746,
+      "cases": 3,
+      "answering_cases": 2,
+      "seconds": 96.4
+    },
+    "rich": {
+      "old": {
+        "revision": "v14.2.0",
+        "commit": "494f83c923ca54ecc943bf5e60c0004e65fbb54e"
+      },
+      "new": {
+        "revision": "v14.3.4",
+        "commit": "ee8378c3bbbd7c75abc2f55c6c19e83b218ae81d"
+      },
+      "indexed_chunks": 2241,
+      "cases": 7,
+      "answering_cases": 2,
+      "seconds": 151.3
+    }
+  }
+}

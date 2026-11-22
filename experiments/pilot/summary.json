@@ -1,0 +1,356 @@
+{
+  "configs": {
+    "embed@old": {
+      "wrong_version_above_valid": {
+        "mean": 0.439,
+        "ci95": [
+          0.2083,
+          0.6667
+        ],
+        "cases": 41
+      },
+      "valid_at_1": {
+        "mean": 0.4878,
+        "ci95": [
+          0.2941,
+          0.6842
+        ],
+        "cases": 41
+      },
+      "recall_at_1": {
+        "mean": 0.0976,
+        "ci95": [
+          0.0,
+          0.2308
+        ],
+        "cases": 41
+      },
+      "recall_at_5": {
+        "mean": 0.439,
+        "ci95": [
+          0.2549,
+          0.6667
+        ],
+        "cases": 41
+      },
+      "mrr": {
+        "mean": 0.2464,
+        "ci95": [
+          0.1432,
+          0.3949
+        ],
+        "cases": 41
+      }
+    },
+    "rerank_code@old": {
+      "wrong_version_above_valid": {
+        "mean": 0.5203,
+        "ci95": [
+          0.2741,
+          0.7561
+        ],
+        "cases": 41
+      },
+      "valid_at_1": {
+        "mean": 0.2927,
+        "ci95": [
+          0.122,
+          0.5333
+        ],
+        "cases": 41
+      },
+      "recall_at_1": {
+        "mean": 0.0488,
+        "ci95": [
+          0.0,
+          0.1707
+        ],
+        "cases": 41
+      },
+      "recall_at_5": {
+        "mean": 0.4146,
+        "ci95": [
+          0.2444,
+          0.5833
+        ],
+        "cases": 41
+      },
+      "mrr": {
+        "mean": 0.2045,
+        "ci95": [
+          0.1301,
+          0.307
+        ],
+        "cases": 41
+      }
+    },
+    "rerank_metadata@old": {
+      "wrong_version_above_valid": {
+        "mean": 0.5366,
+        "ci95": [
+          0.2973,
+          0.7568
+        ],
+        "cases": 41
+      },
+      "valid_at_1": {
+        "mean": 0.2683,
+        "ci95": [
+          0.1111,
+          0.4762
+        ],
+        "cases": 41
+      },
+      "recall_at_1": {
+        "mean": 0.0488,
+        "ci95": [
+          0.0,
+          0.1707
+        ],
+        "cases": 41
+      },
+      "recall_at_5": {
+        "mean": 0.4878,
+        "ci95": [
+          0.3095,
+          0.6585
+        ],
+        "cases": 41
+      },
+      "mrr": {
+        "mean": 0.2118,
+        "ci95": [
+          0.1364,
+          0.3096
+        ],
+        "cases": 41
+      }
+    },
+    "git_filter@old": {
+      "wrong_version_above_valid": {
+        "mean": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "cases": 41
+      },
+      "valid_at_1": {
+        "mean": 1.0,
+        "ci95": [
+          1.0,
+          1.0
+        ],
+        "cases": 41
+      },
+      "recall_at_1": {
+        "mean": 0.2927,
+        "ci95": [
+          0.1351,
+          0.4474
+        ],
+        "cases": 41
+      },
+      "recall_at_5": {
+        "mean": 0.561,
+        "ci95": [
+          0.3958,
+          0.7561
+        ],
+        "cases": 41
+      },
+      "mrr": {
+        "mean": 0.3905,
+        "ci95": [
+          0.2526,
+          0.5437
+        ],
+        "cases": 41
+      }
+    },
+    "embed@new": {
+      "wrong_version_above_valid": {
+        "mean": 0.1707,
+        "ci95": [
+          0.0526,
+          0.3171
+        ],
+        "cases": 41
+      },
+      "valid_at_1": {
+        "mean": 0.748,
+        "ci95": [
+          0.5405,
+          0.9286
+        ],
+        "cases": 41
+      },
+      "recall_at_1": {
+        "mean": 0.2632,
+        "ci95": [
+          0.1053,
+          0.4667
+        ],
+        "cases": 38
+      },
+      "recall_at_5": {
+        "mean": 0.5789,
+        "ci95": [
+          0.3947,
+          0.7667
+        ],
+        "cases": 38
+      },
+      "mrr": {
+        "mean": 0.3871,
+        "ci95": [
+          0.2397,
+          0.5694
+        ],
+        "cases": 38
+      }
+    },
+    "rerank_code@new": {
+      "wrong_version_above_valid": {
+        "mean": 0.1138,
+        "ci95": [
+          0.0,
+          0.2941
+        ],
+        "cases": 41
+      },
+      "valid_at_1": {
+        "mean": 0.8537,
+        "ci95": [
+          0.6667,
+          0.9778
+        ],
+        "cases": 41
+      },
+      "recall_at_1": {
+        "mean": 0.3684,
+        "ci95": [
+          0.1714,
+          0.5526
+        ],
+        "cases": 38
+      },
+      "recall_at_5": {
+        "mean": 0.6053,
+        "ci95": [
+          0.3611,
+          0.8158
+        ],
+        "cases": 38
+      },
+      "mrr": {
+        "mean": 0.4723,
+        "ci95": [
+          0.2803,
+          0.6414
+        ],
+        "cases": 38
+      }
+    },
+    "rerank_metadata@new": {
+      "wrong_version_above_valid": {
+        "mean": 0.0976,
+        "ci95": [
+          0.0,
+          0.2632
+        ],
+        "cases": 41
+      },
+      "valid_at_1": {
+        "mean": 0.8537,
+        "ci95": [
+          0.6889,
+          0.9756
+        ],
+        "cases": 41
+      },
+      "recall_at_1": {
+        "mean": 0.3684,
+        "ci95": [
+          0.1714,
+          0.5526
+        ],
+        "cases": 38
+      },
+      "recall_at_5": {
+        "mean": 0.6053,
+        "ci95": [
+          0.3611,
+          0.8158
+        ],
+        "cases": 38
+      },
+      "mrr": {
+        "mean": 0.4763,
+        "ci95": [
+          0.2875,
+          0.6439
+        ],
+        "cases": 38
+      }
+    },
+    "git_filter@new": {
+      "wrong_version_above_valid": {
+        "mean": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "cases": 41
+      },
+      "valid_at_1": {
+        "mean": 1.0,
+        "ci95": [
+          1.0,
+          1.0
+        ],
+        "cases": 41
+      },
+      "recall_at_1": {
+        "mean": 0.3947,
+        "ci95": [
+          0.2,
+          0.5946
+        ],
+        "cases": 38
+      },
+      "recall_at_5": {
+        "mean": 0.6579,
+        "ci95": [
+          0.4615,
+          0.8298
+        ],
+        "cases": 38
+      },
+      "mrr": {
+        "mean": 0.5031,
+        "ci95": [
+          0.3242,
+          0.6689
+        ],
+        "cases": 38
+      }
+    }
+  },
+  "tests": {
+    "H2 embed vs rerank_code": {
+      "only_first": 7,
+      "only_second": 8,
+      "p_value": 1.0,
+      "pairs": 82,
+      "p_holm": 1.0
+    },
+    "H3 rerank_code vs rerank_metadata": {
+      "only_first": 1,
+      "only_second": 1,
+      "p_value": 1.0,
+      "pairs": 82,
+      "p_holm": 1.0
+    }
+  }
+}

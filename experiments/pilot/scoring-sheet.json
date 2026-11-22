@@ -1,0 +1,750 @@
+[
+  {
+    "question": "How does the client measure elapsed time for async responses?",
+    "target_release": "0.27.2",
+    "facts_at_target": [
+      "event loop clock",
+      "trio.current_time() under trio",
+      "asyncio loop time otherwise"
+    ],
+    "facts_only_at_other_release": [
+      "time.perf_counter",
+      "same clock for sync and async"
+    ],
+    "answer": "The client measures elapsed time for async responses by using a `Timer` object to track the elapsed time. When the response stream is closed, the `async_elapsed` method of the `Timer` is called to get the elapsed time in seconds, which is then set as the `elapsed` attribute of the response object.",
+    "declined": false,
+    "outcome": null,
+    "answer_number": 1
+  },
+  {
+    "question": "How is the short help text built for a deprecated command?",
+    "target_release": "8.5.1",
+    "facts_at_target": [
+      "help text is not passed through gettext translation",
+      "deprecated label is appended"
+    ],
+    "facts_only_at_other_release": [
+      "help text is passed through gettext translation before the deprecated label"
+    ],
+    "answer": "The short help text for a deprecated command is built by appending the formatted deprecated label to the existing help text. If the command has `short_help`, it is cleaned and used as the base text. If not, the `help` text is shortened to a default limit. The deprecated label is then appended to this text using an f-string, ensuring the label is included in the final output.",
+    "declined": false,
+    "outcome": null,
+    "answer_number": 2
+  },
+  {
+    "question": "When rich is set as the default exception handler, which options for showing local variables does it pass on?",
+    "target_release": "v14.3.4",
+    "facts_at_target": [
+      "locals_max_depth is passed on",
+      "locals_overflow is passed on"
+    ],
+    "facts_only_at_other_release": [
+      "locals_max_depth is not passed on",
+      "locals_overflow is not passed on"
+    ],
+    "answer": "When rich is set as the default exception handler, it passes on the following options for showing local variables: `show_locals`, `locals_max_length`, `locals_max_string`, `locals_max_depth`, `locals_hide_dunder`, `locals_hide_sunder`, and `locals_overflow`.",
+    "declined": false,
+    "outcome": null,
+    "answer_number": 3
+  },
+  {
+    "question": "How does the client measure elapsed time for async responses?",
+    "target_release": "0.27.2",
+    "facts_at_target": [
+      "event loop clock",
+      "trio.current_time() under trio",
+      "asyncio loop time otherwise"
+    ],
+    "facts_only_at_other_release": [
+      "time.perf_counter",
+      "same clock for sync and async"
+    ],
+    "answer": "The client measures elapsed time for async responses by using a `Timer` object to track the start time and then calculating the difference between the current time and the start time when the response is closed. This is done in the `aclose` method of the `BoundAsyncStream` class, where the `async_elapsed` method of the `Timer` is called to get the elapsed time in seconds. The elapsed time is then set on the `response.elapsed` attribute as a `datetime.timedelta` object.",
+    "declined": false,
+    "outcome": null,
+    "answer_number": 4
+  },
+  {
+    "question": "How is the elapsed duration computed when an async response is closed?",
+    "target_release": "0.27.2",
+    "facts_at_target": [
+      "event loop clock",
+      "trio.current_time() under trio",
+      "asyncio loop time otherwise"
+    ],
+    "facts_only_at_other_release": [
+      "time.perf_counter",
+      "same clock for sync and async"
+    ],
+    "answer": "",
+    "declined": true,
+    "outcome": null,
+    "answer_number": 5
+  },
+  {
+    "question": "How are pickled attribute definitions from an older version restored?",
+    "target_release": "25.4.0",
+    "facts_at_target": [
+      "state is set directly from the pickled tuple",
+      "no alias_is_default field"
+    ],
+    "facts_only_at_other_release": [
+      "older pickles are missing alias_is_default",
+      "alias_is_default is inferred from the alias"
+    ],
+    "answer": "Pickled attribute definitions from an older version are restored by using the `pickle.loads` function, which unpickles the data. This is demonstrated in the test case `test_pickle_attributes` (evidence ID: f5f2a4b5f4cb) where `pickle.loads` is used to unpickle `Attribute` instances. Additionally, the test case `test_slots_unpickle_after_attr_removed` (evidence ID: 0ed11bb51ca7) shows how unpickling works even when attributes have been removed from the class, ensuring that only existing attributes are restored.",
+    "declined": false,
+    "outcome": null,
+    "answer_number": 6
+  },
+  {
+    "question": "Which time zone is attached to the current local time when no time zone is given?",
+    "target_release": "1.3.0",
+    "facts_at_target": [
+      "dateutil tzlocal()"
+    ],
+    "facts_only_at_other_release": [
+      "fixed-offset local time zone from datetime.now().astimezone()",
+      "standard library timezone, not dateutil"
+    ],
+    "answer": "local time",
+    "declined": false,
+    "outcome": null,
+    "answer_number": 7
+  },
+  {
+    "question": "How does the client measure elapsed time for async responses?",
+    "target_release": "0.28.1",
+    "facts_at_target": [
+      "time.perf_counter",
+      "same clock for sync and async"
+    ],
+    "facts_only_at_other_release": [
+      "event loop clock",
+      "trio.current_time() under trio",
+      "asyncio loop time otherwise"
+    ],
+    "answer": "The client measures elapsed time for async responses by calculating the difference between the current time (`time.perf_counter()`) and the start time (`self._start`) when the response is closed. This difference is then converted to a `datetime.timedelta` and assigned to `response.elapsed`.",
+    "declined": false,
+    "outcome": null,
+    "answer_number": 8
+  },
+  {
+    "question": "Which time zone is attached to the current local time when no time zone is given?",
+    "target_release": "1.3.0",
+    "facts_at_target": [
+      "dateutil tzlocal()"
+    ],
+    "facts_only_at_other_release": [
+      "fixed-offset local time zone from datetime.now().astimezone()",
+      "standard library timezone, not dateutil"
+    ],
+    "answer": "The local time zone, as returned by `dateutil_tz.tzlocal()`.",
+    "declined": false,
+    "outcome": null,
+    "answer_number": 9
+  },
+  {
+    "question": "How do you get the last moment of the week containing a date, with weeks starting on Sunday?",
+    "target_release": "1.3.0",
+    "facts_at_target": [
+      "ceil does not accept week_start",
+      "use span('week', week_start=7) and take its end"
+    ],
+    "facts_only_at_other_release": [
+      "ceil accepts week_start",
+      "ceil('week', week_start=7)"
+    ],
+    "answer": "To get the last moment of the week containing a date, with weeks starting on Sunday, you can use the `ceil` method with the `week` frame and `week_start=7`. This will return the last moment of the week (Saturday at 23:59:59.999999) for the given date.",
+    "declined": false,
+    "outcome": null,
+    "answer_number": 10
+  },
+  {
+    "question": "When rich is set as the default exception handler, which options for showing local variables does it pass on?",
+    "target_release": "v14.3.4",
+    "facts_at_target": [
+      "locals_max_depth is passed on",
+      "locals_overflow is passed on"
+    ],
+    "facts_only_at_other_release": [
+      "locals_max_depth is not passed on",
+      "locals_overflow is not passed on"
+    ],
+    "answer": "When rich is set as the default exception handler, it passes on the following options for showing local variables: `show_locals`, `locals_max_length`, `locals_max_string`, `locals_max_depth`, `locals_hide_dunder`, `locals_hide_sunder`.",
+    "declined": false,
+    "outcome": null,
+    "answer_number": 11
+  },
+  {
+    "question": "How are arguments in the PAGER environment variable handled when paging through a temporary file?",
+    "target_release": "8.4.2",
+    "facts_at_target": [
+      "only the pager command is run with the file name",
+      "PAGER arguments are dropped"
+    ],
+    "facts_only_at_other_release": [
+      "PAGER arguments are passed before the temporary file name"
+    ],
+    "answer": "Arguments in the PAGER environment variable are passed to the command when paging through a temporary file. The `shlex.split` function is used to split the PAGER environment variable into command parts, which are then passed to the `_tempfilepager` function. This function invokes the command with any parameters from `PAGER` followed by the temporary file name.",
+    "declined": false,
+    "outcome": null,
+    "answer_number": 12
+  },
+  {
+    "question": "How is the short help text built for a deprecated command?",
+    "target_release": "8.5.1",
+    "facts_at_target": [
+      "help text is not passed through gettext translation",
+      "deprecated label is appended"
+    ],
+    "facts_only_at_other_release": [
+      "help text is passed through gettext translation before the deprecated label"
+    ],
+    "answer": "The short help text for a deprecated command is built by appending the formatted deprecated label to the existing help text. This is done in the `get_short_help_str` method, where if the command is deprecated, the text is updated to include the deprecated label using the `_format_deprecated_label` function.",
+    "declined": false,
+    "outcome": null,
+    "answer_number": 13
+  },
+  {
+    "question": "How is the elapsed duration computed when an async response is closed?",
+    "target_release": "0.28.1",
+    "facts_at_target": [
+      "time.perf_counter",
+      "same clock for sync and async"
+    ],
+    "facts_only_at_other_release": [
+      "event loop clock",
+      "trio.current_time() under trio",
+      "asyncio loop time otherwise"
+    ],
+    "answer": "The elapsed duration is computed by subtracting the start time (`self._start`) from the current time obtained via `time.perf_counter()`. The result is then converted to a `datetime.timedelta` and assigned to `self._response.elapsed`.",
+    "declined": false,
+    "outcome": null,
+    "answer_number": 14
+  },
+  {
+    "question": "How are arguments in the PAGER environment variable handled when paging through a temporary file?",
+    "target_release": "8.5.1",
+    "facts_at_target": [
+      "PAGER arguments are passed before the temporary file name"
+    ],
+    "facts_only_at_other_release": [
+      "only the pager command is run with the file name",
+      "PAGER arguments are dropped"
+    ],
+    "answer": "Arguments in the PAGER environment variable are split using `shlex.split` in POSIX mode, and then passed as parameters to the command invoked by `_tempfilepager`. The command is invoked with any parameters from `PAGER` followed by the temporary file name.",
+    "declined": false,
+    "outcome": null,
+    "answer_number": 15
+  },
+  {
+    "question": "How are arguments in the PAGER environment variable handled when paging through a temporary file?",
+    "target_release": "8.4.2",
+    "facts_at_target": [
+      "only the pager command is run with the file name",
+      "PAGER arguments are dropped"
+    ],
+    "facts_only_at_other_release": [
+      "PAGER arguments are passed before the temporary file name"
+    ],
+    "answer": "Arguments in the PAGER environment variable are handled by splitting the command into the invoked CLI and its parameters using `shlex.split`. The resulting `cmd_parts` are then passed to the `_tempfilepager` function, which resolves the command to an absolute path using `shutil.which`. If the command is found, a temporary file is created, and the command is invoked with the temporary file's name as an argument. The temporary file is deleted after the command execution.",
+    "declined": false,
+    "outcome": null,
+    "answer_number": 16
+  },
+  {
+    "question": "Can a frozen class use a no-op on-setattr hook on one of its fields?",
+    "target_release": "26.1.0",
+    "facts_at_target": [
+      "allowed when on_setattr is setters.NO_OP",
+      "other on_setattr hooks still raise ValueError"
+    ],
+    "facts_only_at_other_release": [
+      "raises ValueError",
+      "Frozen classes can't use on_setattr"
+    ],
+    "answer": "Yes, a frozen class can use a no-op on-setattr hook on one of its fields.",
+    "declined": false,
+    "outcome": null,
+    "answer_number": 17
+  },
+  {
+    "question": "Can a frozen class use a no-op on-setattr hook on one of its fields?",
+    "target_release": "25.4.0",
+    "facts_at_target": [
+      "raises ValueError",
+      "Frozen classes can't use on_setattr"
+    ],
+    "facts_only_at_other_release": [
+      "allowed when on_setattr is setters.NO_OP",
+      "other on_setattr hooks still raise ValueError"
+    ],
+    "answer": "",
+    "declined": true,
+    "outcome": null,
+    "answer_number": 18
+  },
+  {
+    "question": "How are pickled attribute definitions from an older version restored?",
+    "target_release": "25.4.0",
+    "facts_at_target": [
+      "state is set directly from the pickled tuple",
+      "no alias_is_default field"
+    ],
+    "facts_only_at_other_release": [
+      "older pickles are missing alias_is_default",
+      "alias_is_default is inferred from the alias"
+    ],
+    "answer": "Pickled attribute definitions from an older version are restored by ensuring that only attributes present in the new class definition are assigned during unpickling. If an attribute has been added or removed, it is not assigned to the unpickled object. This behavior is demonstrated in the tests `test_slots_unpickle_after_attr_added` and `test_slots_unpickle_after_attr_removed`, where the unpickled object only contains attributes that match the current class definition.",
+    "declined": false,
+    "outcome": null,
+    "answer_number": 19
+  },
+  {
+    "question": "How are ids generated for hyperlinks in styles?",
+    "target_release": "v14.3.4",
+    "facts_at_target": [
+      "sequential ids from a counter"
+    ],
+    "facts_only_at_other_release": [
+      "random number from randint(0, 999999)"
+    ],
+    "answer": "Ids for hyperlinks in styles are generated using a combination of the next value from an `_id_generator` and the hash of the `_meta` attribute if a link or meta is present. If neither a link nor meta is present, the id is an empty string.",
+    "declined": false,
+    "outcome": null,
+    "answer_number": 20
+  },
+  {
+    "question": "Can a frozen class use a no-op on-setattr hook on one of its fields?",
+    "target_release": "26.1.0",
+    "facts_at_target": [
+      "allowed when on_setattr is setters.NO_OP",
+      "other on_setattr hooks still raise ValueError"
+    ],
+    "facts_only_at_other_release": [
+      "raises ValueError",
+      "Frozen classes can't use on_setattr"
+    ],
+    "answer": "Yes, a frozen class can use a no-op on-setattr hook on one of its fields.",
+    "declined": false,
+    "outcome": null,
+    "answer_number": 21
+  },
+  {
+    "question": "When rich is set as the default exception handler, which options for showing local variables does it pass on?",
+    "target_release": "v14.2.0",
+    "facts_at_target": [
+      "locals_max_depth is not passed on",
+      "locals_overflow is not passed on"
+    ],
+    "facts_only_at_other_release": [
+      "locals_max_depth is passed on",
+      "locals_overflow is passed on"
+    ],
+    "answer": "When rich is set as the default exception handler, it passes on the following options for showing local variables: `show_locals`, `locals_max_length`, `locals_max_string`, `locals_hide_dunder`, and `locals_hide_sunder`.",
+    "declined": false,
+    "outcome": null,
+    "answer_number": 22
+  },
+  {
+    "question": "How is the short help text built for a deprecated command?",
+    "target_release": "8.4.2",
+    "facts_at_target": [
+      "help text is passed through gettext translation before the deprecated label"
+    ],
+    "facts_only_at_other_release": [
+      "help text is not passed through gettext translation",
+      "deprecated label is appended"
+    ],
+    "answer": "The short help text for a deprecated command is built by appending the formatted deprecated label to the existing help text. If the command has a `short_help` attribute, it is used; otherwise, the `help` attribute is shortened to fit within a specified limit. The deprecated label is then appended to this text using the `_format_deprecated_label` function, which formats the label with the reason for deprecation if provided.",
+    "declined": false,
+    "outcome": null,
+    "answer_number": 23
+  },
+  {
+    "question": "What happens when a duration field receives NaN?",
+    "target_release": "4.4.0",
+    "facts_at_target": [
+      "NaN raises the field's invalid validation error"
+    ],
+    "facts_only_at_other_release": [
+      "NaN raises an uncaught ValueError",
+      "only OverflowError is turned into a validation error"
+    ],
+    "answer": "When a duration field receives NaN, it raises an 'invalid' error.",
+    "declined": false,
+    "outcome": null,
+    "answer_number": 24
+  },
+  {
+    "question": "How are ids generated for hyperlinks in styles?",
+    "target_release": "v14.3.4",
+    "facts_at_target": [
+      "sequential ids from a counter"
+    ],
+    "facts_only_at_other_release": [
+      "random number from randint(0, 999999)"
+    ],
+    "answer": "Ids for hyperlinks in styles are generated using a combination of the next value from an `_id_generator` and the hash of the `_meta` attribute, if a link or meta is present. If neither a link nor meta is present, the id is an empty string.",
+    "declined": false,
+    "outcome": null,
+    "answer_number": 25
+  },
+  {
+    "question": "What happens when a duration field receives NaN?",
+    "target_release": "4.3.1",
+    "facts_at_target": [
+      "NaN raises an uncaught ValueError",
+      "only OverflowError is turned into a validation error"
+    ],
+    "facts_only_at_other_release": [
+      "NaN raises the field's invalid validation error"
+    ],
+    "answer": "When a duration field receives NaN, it raises a ValidationError with the message 'Not a valid period of time.'",
+    "declined": false,
+    "outcome": null,
+    "answer_number": 26
+  },
+  {
+    "question": "When a field extracts a single value from a nested schema, which key is used if that field's data_key is an empty string?",
+    "target_release": "4.3.1",
+    "facts_at_target": [
+      "empty string falls back to the field name"
+    ],
+    "facts_only_at_other_release": [
+      "empty string is used as the key",
+      "falls back to the field name only when data_key is None"
+    ],
+    "answer": "field_name",
+    "declined": false,
+    "outcome": null,
+    "answer_number": 27
+  },
+  {
+    "question": "Can a frozen class use a no-op on-setattr hook on one of its fields?",
+    "target_release": "25.4.0",
+    "facts_at_target": [
+      "raises ValueError",
+      "Frozen classes can't use on_setattr"
+    ],
+    "facts_only_at_other_release": [
+      "allowed when on_setattr is setters.NO_OP",
+      "other on_setattr hooks still raise ValueError"
+    ],
+    "answer": "",
+    "declined": true,
+    "outcome": null,
+    "answer_number": 28
+  },
+  {
+    "question": "How do you get the last moment of the week containing a date, with weeks starting on Sunday?",
+    "target_release": "1.4.0",
+    "facts_at_target": [
+      "ceil accepts week_start",
+      "ceil('week', week_start=7)"
+    ],
+    "facts_only_at_other_release": [
+      "ceil does not accept week_start",
+      "use span('week', week_start=7) and take its end"
+    ],
+    "answer": "To get the last moment of the week containing a date, with weeks starting on Sunday, you can use the `ceil` method of the `Arrow` class with the `frame` parameter set to `'week'` and `week_start` set to `7`. This will return the last moment (23:59:59.999999) of the Saturday of the week containing the date.",
+    "declined": false,
+    "outcome": null,
+    "answer_number": 29
+  },
+  {
+    "question": "How do you get the last moment of the week containing a date, with weeks starting on Sunday?",
+    "target_release": "1.4.0",
+    "facts_at_target": [
+      "ceil accepts week_start",
+      "ceil('week', week_start=7)"
+    ],
+    "facts_only_at_other_release": [
+      "ceil does not accept week_start",
+      "use span('week', week_start=7) and take its end"
+    ],
+    "answer": "To get the last moment of the week containing a date, with weeks starting on Sunday, you can use the `ceil` method with the `week` frame and `week_start=7`. This will return the last moment of the week (Saturday at 23:59:59.999999) for the given date.",
+    "declined": false,
+    "outcome": null,
+    "answer_number": 30
+  },
+  {
+    "question": "How are arguments in the PAGER environment variable handled when paging through a temporary file?",
+    "target_release": "8.5.1",
+    "facts_at_target": [
+      "PAGER arguments are passed before the temporary file name"
+    ],
+    "facts_only_at_other_release": [
+      "only the pager command is run with the file name",
+      "PAGER arguments are dropped"
+    ],
+    "answer": "Arguments in the PAGER environment variable are passed to the command invoked for paging through a temporary file. The command is invoked with any parameters from PAGER followed by the temporary file name.",
+    "declined": false,
+    "outcome": null,
+    "answer_number": 31
+  },
+  {
+    "question": "How do you get the last moment of the week containing a date, with weeks starting on Sunday?",
+    "target_release": "1.3.0",
+    "facts_at_target": [
+      "ceil does not accept week_start",
+      "use span('week', week_start=7) and take its end"
+    ],
+    "facts_only_at_other_release": [
+      "ceil accepts week_start",
+      "ceil('week', week_start=7)"
+    ],
+    "answer": "To get the last moment of the week containing a date, with weeks starting on Sunday, you can use the `span` method with `week_start=7`. This will return a tuple where the second element is the last moment of the week (Saturday at 23:59:59.999999).",
+    "declined": false,
+    "outcome": null,
+    "answer_number": 32
+  },
+  {
+    "question": "How are pickled attribute definitions from an older version restored?",
+    "target_release": "26.1.0",
+    "facts_at_target": [
+      "older pickles are missing alias_is_default",
+      "alias_is_default is inferred from the alias"
+    ],
+    "facts_only_at_other_release": [
+      "state is set directly from the pickled tuple",
+      "no alias_is_default field"
+    ],
+    "answer": "Pickled attribute definitions from an older version are restored by using the `pickle.loads` function, which unpickles the data and reconstructs the attribute definitions. This is demonstrated in the test cases where attributes created in older versions (e.g., 25.3) are successfully unpickled and compared to the expected attribute definitions. The process ensures that attributes, including their properties like `alias`, `alias_is_default`, and others, are correctly restored.",
+    "declined": false,
+    "outcome": null,
+    "answer_number": 33
+  },
+  {
+    "question": "How is the elapsed duration computed when an async response is closed?",
+    "target_release": "0.27.2",
+    "facts_at_target": [
+      "event loop clock",
+      "trio.current_time() under trio",
+      "asyncio loop time otherwise"
+    ],
+    "facts_only_at_other_release": [
+      "time.perf_counter",
+      "same clock for sync and async"
+    ],
+    "answer": "The elapsed duration is computed by awaiting the `_timer.async_elapsed()` method, which returns the elapsed time in seconds. This value is then used to set the `elapsed` attribute of the response object to a `datetime.timedelta` instance.",
+    "declined": false,
+    "outcome": null,
+    "answer_number": 34
+  },
+  {
+    "question": "How is the elapsed duration computed when an async response is closed?",
+    "target_release": "0.28.1",
+    "facts_at_target": [
+      "time.perf_counter",
+      "same clock for sync and async"
+    ],
+    "facts_only_at_other_release": [
+      "event loop clock",
+      "trio.current_time() under trio",
+      "asyncio loop time otherwise"
+    ],
+    "answer": "The elapsed duration is computed by subtracting the start time (`self._start`) from the current time obtained via `time.perf_counter()`. The result is then converted to a `datetime.timedelta` and assigned to `self._response.elapsed`.",
+    "declined": false,
+    "outcome": null,
+    "answer_number": 35
+  },
+  {
+    "question": "How are ids generated for hyperlinks in styles?",
+    "target_release": "v14.2.0",
+    "facts_at_target": [
+      "random number from randint(0, 999999)"
+    ],
+    "facts_only_at_other_release": [
+      "sequential ids from a counter"
+    ],
+    "answer": "Ids for hyperlinks in styles are generated using a random integer between 0 and 999999, formatted as a string.",
+    "declined": false,
+    "outcome": null,
+    "answer_number": 36
+  },
+  {
+    "question": "When a field extracts a single value from a nested schema, which key is used if that field's data_key is an empty string?",
+    "target_release": "4.3.1",
+    "facts_at_target": [
+      "empty string falls back to the field name"
+    ],
+    "facts_only_at_other_release": [
+      "empty string is used as the key",
+      "falls back to the field name only when data_key is None"
+    ],
+    "answer": "If a field's `data_key` is an empty string, the key used is the field's `field_name`.",
+    "declined": false,
+    "outcome": null,
+    "answer_number": 37
+  },
+  {
+    "question": "How does the client measure elapsed time for async responses?",
+    "target_release": "0.28.1",
+    "facts_at_target": [
+      "time.perf_counter",
+      "same clock for sync and async"
+    ],
+    "facts_only_at_other_release": [
+      "event loop clock",
+      "trio.current_time() under trio",
+      "asyncio loop time otherwise"
+    ],
+    "answer": "The client measures elapsed time for async responses by calculating the difference between the current time (`time.perf_counter()`) and the start time (`self._start`) when the response stream is closed (`aclose` method). This elapsed time is then set as the `response.elapsed` attribute, which is a `datetime.timedelta` representing the time taken for the complete request/response cycle.",
+    "declined": false,
+    "outcome": null,
+    "answer_number": 38
+  },
+  {
+    "question": "What happens when a duration field receives NaN?",
+    "target_release": "4.4.0",
+    "facts_at_target": [
+      "NaN raises the field's invalid validation error"
+    ],
+    "facts_only_at_other_release": [
+      "NaN raises an uncaught ValueError",
+      "only OverflowError is turned into a validation error"
+    ],
+    "answer": "When a duration field receives NaN, it raises an 'invalid' error. This is because the `TimeDelta` field attempts to convert the input value to a float during deserialization. If the value is NaN, it triggers a `ValueError` when trying to create a `timedelta` object, which is then caught and re-raised as an 'invalid' error.",
+    "declined": false,
+    "outcome": null,
+    "answer_number": 39
+  },
+  {
+    "question": "When a field extracts a single value from a nested schema, which key is used if that field's data_key is an empty string?",
+    "target_release": "4.4.0",
+    "facts_at_target": [
+      "empty string is used as the key",
+      "falls back to the field name only when data_key is None"
+    ],
+    "facts_only_at_other_release": [
+      "empty string falls back to the field name"
+    ],
+    "answer": "field_name",
+    "declined": false,
+    "outcome": null,
+    "answer_number": 40
+  },
+  {
+    "question": "When a field extracts a single value from a nested schema, which key is used if that field's data_key is an empty string?",
+    "target_release": "4.4.0",
+    "facts_at_target": [
+      "empty string is used as the key",
+      "falls back to the field name only when data_key is None"
+    ],
+    "facts_only_at_other_release": [
+      "empty string falls back to the field name"
+    ],
+    "answer": "If a field's `data_key` is an empty string, the field's name is used as the key.",
+    "declined": false,
+    "outcome": null,
+    "answer_number": 41
+  },
+  {
+    "question": "How are pickled attribute definitions from an older version restored?",
+    "target_release": "26.1.0",
+    "facts_at_target": [
+      "older pickles are missing alias_is_default",
+      "alias_is_default is inferred from the alias"
+    ],
+    "facts_only_at_other_release": [
+      "state is set directly from the pickled tuple",
+      "no alias_is_default field"
+    ],
+    "answer": "Pickled attribute definitions from an older version are restored by inferring missing attributes heuristically. Specifically, if the pickled state lacks the `alias_is_default` attribute (which was introduced in version 26.1.0), the `__setstate__` method infers its value based on the presence and value of the `alias` attribute.",
+    "declined": false,
+    "outcome": null,
+    "answer_number": 42
+  },
+  {
+    "question": "Which time zone is attached to the current local time when no time zone is given?",
+    "target_release": "1.4.0",
+    "facts_at_target": [
+      "fixed-offset local time zone from datetime.now().astimezone()",
+      "standard library timezone, not dateutil"
+    ],
+    "facts_only_at_other_release": [
+      "dateutil tzlocal()"
+    ],
+    "answer": "local time",
+    "declined": false,
+    "outcome": null,
+    "answer_number": 43
+  },
+  {
+    "question": "How are ids generated for hyperlinks in styles?",
+    "target_release": "v14.2.0",
+    "facts_at_target": [
+      "random number from randint(0, 999999)"
+    ],
+    "facts_only_at_other_release": [
+      "sequential ids from a counter"
+    ],
+    "answer": "In the target revision v14.2.0, ids for hyperlinks in styles are generated using `randint(0, 999999)` when a link is provided, otherwise an empty string is used.",
+    "declined": false,
+    "outcome": null,
+    "answer_number": 44
+  },
+  {
+    "question": "When rich is set as the default exception handler, which options for showing local variables does it pass on?",
+    "target_release": "v14.2.0",
+    "facts_at_target": [
+      "locals_max_depth is not passed on",
+      "locals_overflow is not passed on"
+    ],
+    "facts_only_at_other_release": [
+      "locals_max_depth is passed on",
+      "locals_overflow is passed on"
+    ],
+    "answer": "When rich is set as the default exception handler, it passes on the following options for showing local variables: `show_locals`, `locals_max_length`, `locals_max_string`, `locals_hide_dunder`, and `locals_hide_sunder`.",
+    "declined": false,
+    "outcome": null,
+    "answer_number": 45
+  },
+  {
+    "question": "What happens when a duration field receives NaN?",
+    "target_release": "4.3.1",
+    "facts_at_target": [
+      "NaN raises an uncaught ValueError",
+      "only OverflowError is turned into a validation error"
+    ],
+    "facts_only_at_other_release": [
+      "NaN raises the field's invalid validation error"
+    ],
+    "answer": "When a duration field receives NaN, it depends on whether the field is configured to allow NaN values. If `allow_nan` is set to `True`, the field will accept NaN and return it as a float or decimal value, depending on the field type. If `allow_nan` is `False` or not specified (defaulting to `False`), the field will raise a `ValidationError` with the message \"Special numeric values (nan or infinity) are not permitted.\"",
+    "declined": false,
+    "outcome": null,
+    "answer_number": 46
+  },
+  {
+    "question": "How is the short help text built for a deprecated command?",
+    "target_release": "8.4.2",
+    "facts_at_target": [
+      "help text is passed through gettext translation before the deprecated label"
+    ],
+    "facts_only_at_other_release": [
+      "help text is not passed through gettext translation",
+      "deprecated label is appended"
+    ],
+    "answer": "The short help text for a deprecated command is built by appending the formatted deprecation label to the existing help text. If the command has `short_help` defined, it is cleaned and used as the base text. If not, the `help` text is shortened to a default limit. The deprecation label is then formatted and appended to this text.",
+    "declined": false,
+    "outcome": null,
+    "answer_number": 47
+  },
+  {
+    "question": "Which time zone is attached to the current local time when no time zone is given?",
+    "target_release": "1.4.0",
+    "facts_at_target": [
+      "fixed-offset local time zone from datetime.now().astimezone()",
+      "standard library timezone, not dateutil"
+    ],
+    "facts_only_at_other_release": [
+      "dateutil tzlocal()"
+    ],
+    "answer": "The local time zone is attached to the current local time when no time zone is given.",
+    "declined": false,
+    "outcome": null,
+    "answer_number": 48
+  }
+]
