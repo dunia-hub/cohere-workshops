@@ -1,6 +1,6 @@
 """Rerank versioned code candidates and check them against Git labels."""
 
-from collections.abc import Mapping, Sequence
+from collections.abc import Callable, Mapping, Sequence
 from dataclasses import dataclass
 
 from cohere_workshops.reranking import RERANK_MODEL, RerankClient
@@ -8,6 +8,10 @@ from cohere_workshops.version_search import VersionHit
 from cohere_workshops.versions import CURRENT, VersionedChunk
 
 FORMATS = ("code", "metadata")
+
+# Decides whether a candidate is valid. The default treats the newer revision as
+# valid; pass a target-aware rule (see TargetValidator) to check any commit.
+Validity = Callable[[VersionedChunk], bool]
 
 
 @dataclass(frozen=True)
@@ -22,7 +26,11 @@ class RankedCandidate:
 
 @dataclass(frozen=True)
 class RankingCheck:
-    """Deterministic Git check of one ranking."""
+    """Deterministic Git check of one ranking.
+
+    "Current" means valid under the rule the check was given: the newer revision
+    by default, or the target commit when a target-aware rule is passed.
+    """
 
     top_result_is_current: bool
     current_rank: int | None
@@ -122,6 +130,7 @@ def check_ranking(
     ranking: Sequence[RankedCandidate],
     *,
     k: int = 3,
+    is_valid: Validity = is_current,
 ) -> RankingCheck:
     """Compare where current and stale code landed in one ranking."""
     if not ranking:
@@ -129,28 +138,31 @@ def check_ranking(
     if k < 1:
         raise ValueError("k must be at least 1")
 
-    current_ranks = [c.rank for c in ranking if is_current(c.item)]
-    stale_ranks = [c.rank for c in ranking if not is_current(c.item)]
+    current_ranks = [c.rank for c in ranking if is_valid(c.item)]
+    stale_ranks = [c.rank for c in ranking if not is_valid(c.item)]
     current_rank = min(current_ranks) if current_ranks else None
     best_stale_rank = min(stale_ranks) if stale_ranks else None
     top_k = ranking[:k]
 
     return RankingCheck(
-        top_result_is_current=is_current(ranking[0].item),
+        top_result_is_current=is_valid(ranking[0].item),
         current_rank=current_rank,
         best_stale_rank=best_stale_rank,
         stale_above_current=(
             best_stale_rank is not None
             and (current_rank is None or best_stale_rank < current_rank)
         ),
-        current_in_top_k=any(is_current(c.item) for c in top_k),
-        stale_rate_at_k=sum(not is_current(c.item) for c in top_k) / len(top_k),
+        current_in_top_k=any(is_valid(c.item) for c in top_k),
+        stale_rate_at_k=sum(not is_valid(c.item) for c in top_k) / len(top_k),
     )
 
 
-def temporal_filter(ranking: Sequence[RankedCandidate]) -> tuple[RankedCandidate, ...]:
-    """After Rerank, drop stale code and renumber what is left."""
-    kept = [c for c in ranking if is_current(c.item)]
+def temporal_filter(
+    ranking: Sequence[RankedCandidate],
+    is_valid: Validity = is_current,
+) -> tuple[RankedCandidate, ...]:
+    """After Rerank, drop code that is not valid and renumber what is left."""
+    kept = [c for c in ranking if is_valid(c.item)]
     return tuple(
         RankedCandidate(rank, c.score, c.retrieval_rank, c.item)
         for rank, c in enumerate(kept, start=1)
@@ -168,7 +180,10 @@ def _check_record(check: RankingCheck) -> dict[str, object]:
     }
 
 
-def _ranking_record(ranking: Sequence[RankedCandidate]) -> list[dict[str, object]]:
+def _ranking_record(
+    ranking: Sequence[RankedCandidate],
+    is_valid: Validity = is_current,
+) -> list[dict[str, object]]:
     return [
         {
             "rank": c.rank,
@@ -180,6 +195,7 @@ def _ranking_record(ranking: Sequence[RankedCandidate]) -> list[dict[str, object
             "path": c.item.chunk.path,
             "symbol": c.item.chunk.symbol,
             "chunk_id": c.item.chunk.chunk_id,
+            "valid_at_target": is_valid(c.item),
         }
         for c in ranking
     ]
@@ -197,9 +213,15 @@ def serialize_rerank_result(
     current: tuple[str, str],
     retrieval: Sequence[RankedCandidate],
     reranked: Sequence[RankedCandidate],
+    target: tuple[str, str] | None = None,
+    is_valid: Validity = is_current,
 ) -> dict[str, object]:
-    """Create one auditable record without source code or vectors."""
-    filtered = temporal_filter(reranked)
+    """Create one auditable record without source code or vectors.
+
+    target defaults to the current revision, which is what is_current checks.
+    """
+    filtered = temporal_filter(reranked, is_valid)
+    target = target or current
     return {
         "run_id": run_id,
         "query": query,
@@ -209,9 +231,10 @@ def serialize_rerank_result(
         "rerank_model": rerank_model,
         "previous": {"revision": previous[0], "commit": previous[1]},
         "current": {"revision": current[0], "commit": current[1]},
-        "retrieval_check": _check_record(check_ranking(retrieval, k=k)),
-        "rerank_check": _check_record(check_ranking(reranked, k=k)),
-        "filtered_top": _ranking_record(filtered[:1]),
-        "retrieval": _ranking_record(retrieval),
-        "reranked": _ranking_record(reranked),
+        "target": {"revision": target[0], "commit": target[1]},
+        "retrieval_check": _check_record(check_ranking(retrieval, k=k, is_valid=is_valid)),
+        "rerank_check": _check_record(check_ranking(reranked, k=k, is_valid=is_valid)),
+        "filtered_top": _ranking_record(filtered[:1], is_valid),
+        "retrieval": _ranking_record(retrieval, is_valid),
+        "reranked": _ranking_record(reranked, is_valid),
     }

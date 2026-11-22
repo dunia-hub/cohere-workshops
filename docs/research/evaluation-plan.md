@@ -74,12 +74,12 @@ For answering, the answer key is the ground truth. It is written by the research
 4. **Cohere Embed and Rerank, code text with metadata.** `cohere-rerank --format metadata`. Adds revision, commit and commit date to the text Rerank reads.
 5. **Embed, Rerank and the Git validity filter.** The ranking from configuration 3 with wrong-version chunks removed.
 
-The current `temporal_filter` treats the newer revision as valid. For final runs, configuration 5 must use `TargetValidator`, so it also works when the target is the older commit.
+Configuration 5 checks validity against the target commit (`cohere-rerank --target`), so it works at both the older and the newer commit.
 
 ### Answering
 
 6. **Command without retrieval.** The question and the repository name only. Not yet implemented for questions.
-7. **Agent without the Git validity filter.** The same agent, tools and prompts, with every candidate passed to Command. Not yet implemented.
+7. **Agent without the Git validity filter.** `cohere-agent --no-git-filter`. The same agent, search and models, with the top candidates passed to Command whether or not they are valid. Each piece of evidence is labelled with the revisions it exists in, and the prompts name the target, so Command has the information Git uses and must decide validity itself.
 8. **Agent with the Git validity filter.** `cohere-agent`.
 
 ## Retrieval metrics
@@ -100,7 +100,7 @@ Computed per case from the ranked candidates.
 
 For configuration 5, wrong-version share is zero by construction. Its cost is reported instead: how often the target-valid chunk was never retrieved, so the filter left nothing useful.
 
-`check_ranking` in `rerank_versions.py` compares the best current and best stale chunk anywhere in the ranking. The primary metric needs a per-location comparison, which is new code.
+These metrics are implemented per location in `location_metrics.py`. `check_ranking` in `rerank_versions.py` is a coarser check that compares the best valid and best wrong-version chunk anywhere in the ranking; it is used for console output, not for reported results.
 
 ## Answering metrics
 

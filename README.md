@@ -158,7 +158,7 @@ Retrieval:
 Answering:
 
 6. Cohere Command without retrieval (planned)
-7. The agent without the Git validity check (planned)
+7. The agent without the Git validity check (`cohere-agent --no-git-filter`)
 8. The agent with the Git validity check
 
 Every configuration is tested at both the older and the newer commit. Development cases stay separate from the final evaluation dataset. See the [evaluation plan](docs/research/evaluation-plan.md).
@@ -187,8 +187,7 @@ Every configuration is tested at both the older and the newer commit. Developmen
 - Structural parsing supports Python only.
 - Embeddings are not cached between runs.
 - No final evaluation dataset has been built yet: the commit-pair manifest, queries and answer keys are still to come.
-- Configurations 1, 6 and 7 and the aggregate benchmark runner are not implemented.
-- The Git check in `cohere-rerank` always treats the newer commit as valid; the agent already checks against any target.
+- Configurations 1 and 6 and the aggregate benchmark runner are not implemented.
 - Dependency locking and continuous integration are not configured.
 - All experiment records so far are exploratory, not final results.
 

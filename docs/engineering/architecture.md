@@ -68,9 +68,15 @@ For each query, the output reports whether the top result is current, how many o
 - **code:** path, symbol and code;
 - **metadata:** the same, plus revision, commit and commit date.
 
-`check_ranking` then records whether stale code ranked above current code, whether current code is in the top K, and the stale share of the top K. `temporal_filter` removes stale chunks after Rerank.
+`check_ranking` then records whether wrong-version code ranked above valid code, whether valid code is in the top K, and the wrong-version share of the top K. `temporal_filter` removes wrong-version chunks after Rerank.
 
-This stage treats the newer revision as valid. The agent validates against any target, as described below.
+Validity is checked against the target commit (`--target`, default `--new`) with the same `TargetValidator` the agent uses.
+
+## Per-location metrics
+
+`src/cohere_workshops/location_metrics.py`
+
+`score_location` scores one ranking for one code location at one target: the rank of the target-valid chunk and of the wrong-version chunk at that location, whether the wrong version ranked above the valid one, Valid@1, Recall@K, reciprocal rank, wrong-version share of the top K, and the score gap. `summarize` averages them across cases. These are the retrieval metrics in the evaluation plan.
 
 ## The read-only agent
 
@@ -93,6 +99,10 @@ This stage treats the newer revision as valid. The agent validates against any t
 
 The default Command model is `command-a-plus-05-2026`. `--command-model` selects another; exploratory reruns use `command-a-03-2025` because of the Command A+ monthly limit.
 
+### Without the Git filter (ablation)
+
+`--no-git-filter` sends the top candidates to Command whether or not they are valid. Each piece of evidence is labelled with the revisions it exists in, and the prompts name the target revision and commit, so Command must decide validity itself. Git's decision is still recorded for every candidate and every citation.
+
 ### Stale-name check
 
 `stale_references` flags an answer that names a rejected symbol. It skips names that also exist in valid code, so it cannot flag a superseded function that kept its name. It is a secondary signal; answer keys are the real check.
@@ -103,6 +113,7 @@ The default Command model is `command-a-plus-05-2026`. `--command-model` selects
 cohere-demo-repo
 cohere-versions demo_repo --old v1 --new v2
 cohere-rerank demo_repo --old v1 --new v2 --format both
+cohere-rerank demo_repo --old v1 --new v2 --target v1
 cohere-agent demo_repo --old v1 --new v2 --target v1 --question "How is the transfer fee calculated?"
 ```
 
@@ -163,11 +174,8 @@ Exploratory runs are stored separately from the final evaluation (D016).
 
 ## Remaining architecture work
 
-- Git filter in the Rerank stage validated against the target, not always the newer revision;
-- per-location ranking metric (wrong-version above valid);
 - BM25 over two-revision corpora;
 - Command answering without retrieval, for questions;
-- the agent without the Git filter, as an ablation;
 - a manifest for commit-pair cases, queries and answer keys;
 - an aggregate runner over the manifest;
 - embedding caching, a dependency lock file and continuous integration;

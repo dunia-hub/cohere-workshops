@@ -131,6 +131,9 @@ Implemented:
 - Embed retrieval across two revisions (`cohere-versions`);
 - Rerank in code and metadata formats, with a Git filter (`cohere-rerank`);
 - the read-only agent, validated against any target commit (`cohere-agent`);
+- the agent without the Git filter, as an ablation (`cohere-agent --no-git-filter`);
+- Rerank and the Git filter checked against any target commit (`cohere-rerank --target`);
+- the per-location retrieval metrics (`location_metrics.py`);
 - JSON Lines records for every run;
 - a rerun script for recorded exploratory runs (`scripts/rerun_demo_experiments.py`).
 
@@ -138,7 +141,6 @@ Not yet implemented:
 
 - BM25 over the two-revision index (configuration 1);
 - Command without retrieval for questions (configuration 6);
-- the agent without the Git filter (configuration 7);
 - a manifest format for commit-pair cases, gold chunk labels and answer keys at scale;
 - an aggregate runner and the version-aware metrics;
 - embedding caching, a dependency lock file and continuous integration.

@@ -157,6 +157,11 @@ def _version_key(chunk: RepositoryChunk) -> tuple[str, str, str, int]:
     return (chunk.path, chunk.kind, chunk.symbol or "", chunk.part_index)
 
 
+def location_key(chunk: RepositoryChunk) -> tuple[str, str, str, int]:
+    """The code location a chunk belongs to: path, kind, symbol and part index."""
+    return _version_key(chunk)
+
+
 def label_versions(
     previous: RevisionSnapshot,
     current: RevisionSnapshot,

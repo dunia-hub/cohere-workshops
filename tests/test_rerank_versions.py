@@ -170,3 +170,41 @@ def test_record_has_both_checks_and_no_source(hits) -> None:
     assert record["rerank_check"]["stale_above_current"] is True
     assert record["filtered_top"][0]["chunk_id"] == "new-fee"
     assert "def fee" not in str(record)
+
+
+def test_filter_and_check_accept_a_target_rule(hits) -> None:
+    ranking = retrieval_order(hits)
+
+    def old_is_valid(item: VersionedChunk) -> bool:
+        return item.revision == "v1"
+
+    kept = temporal_filter(ranking, old_is_valid)
+    check = check_ranking(ranking, k=1, is_valid=old_is_valid)
+
+    assert [c.item.chunk.chunk_id for c in kept] == ["old-fee"]
+    assert kept[0].rank == 1
+    assert check.top_result_is_current is False
+    assert check.current_rank == 3
+
+
+def test_record_marks_validity_at_the_target(hits) -> None:
+    ranking = retrieval_order(hits)
+
+    record = serialize_rerank_result(
+        run_id="r1",
+        query="fee",
+        style="code",
+        k=3,
+        embed_model="e",
+        rerank_model="r",
+        previous=("v1", OLD_COMMIT),
+        current=("v2", NEW_COMMIT),
+        retrieval=ranking,
+        reranked=ranking,
+        target=("v1", OLD_COMMIT),
+        is_valid=lambda item: item.revision == "v1",
+    )
+
+    assert record["target"] == {"revision": "v1", "commit": OLD_COMMIT}
+    assert [r["valid_at_target"] for r in record["reranked"]] == [False, False, True]
+    assert record["filtered_top"][0]["chunk_id"] == "old-fee"
