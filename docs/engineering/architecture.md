@@ -127,6 +127,12 @@ Lists every symbol-level location that was superseded or removed between two rev
 
 Every included location gets a place in one seeded shuffle (`sample_order`). The first N are sampled. A location rejected during manual review is replaced by the next in order. The output records every candidate and every exclusion, with paths, line ranges and hashes but no source code. It makes no Cohere calls.
 
+## Review
+
+`src/cohere_workshops/review.py`, `cohere-review`
+
+Walks through the sampled candidates of one list in sample order. For each, it loads both revisions and finds the chunk whose content hash matches the list, so the code shown is exactly the code that was sampled; a wrong repository or tag is refused. The researcher accepts (with a reason) or rejects (with one of `not_behavioural`, `not_library_code`, `no_fair_query`). A rejection samples the next included candidate in seeded order and records it as `replaced_by_order`. The list file is saved atomically after every decision. No Cohere calls.
+
 ## Records
 
 Each command appends JSON Lines records: queries, ranks, scores, version labels, validity decisions, answers and citations. Records never contain API keys or embedding vectors.

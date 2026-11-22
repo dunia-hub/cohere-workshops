@@ -112,6 +112,7 @@ Runs are saved as JSON Lines in `results/`. Records store paths, commit hashes, 
 | `cohere-rerank` | Reranks candidates with Cohere Rerank, checks them against Git and filters old code |
 | `cohere-agent` | Read-only agent: Cohere Command calls a search tool, Git validates evidence, Command answers |
 | `cohere-candidates` | Lists code that changed between two revisions, applies the dataset filters and samples cases with a seed. No Cohere calls |
+| `cohere-review` | Shows each sampled candidate's old and new code, records your accept or reject decision, and samples a replacement in seeded order. No Cohere calls |
 
 Run any command with `--help` for its options.
 
