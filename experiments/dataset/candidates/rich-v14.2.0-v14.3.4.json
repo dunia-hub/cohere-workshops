@@ -1,0 +1,4527 @@
+{
+  "repository_url": "https://github.com/Textualize/rich",
+  "old": {
+    "revision": "v14.2.0",
+    "commit": "494f83c923ca54ecc943bf5e60c0004e65fbb54e"
+  },
+  "new": {
+    "revision": "v14.3.4",
+    "commit": "ee8378c3bbbd7c75abc2f55c6c19e83b218ae81d"
+  },
+  "seed": 2026,
+  "sample_size": 20,
+  "counts": {
+    "candidates": 133,
+    "included": 49,
+    "sampled": 20,
+    "excluded_by_reason": {
+      "ambiguous_location": 25,
+      "contains_changed_symbol": 31,
+      "formatting_or_docstring_only": 11,
+      "test_file": 12,
+      "type_annotations_only": 5
+    }
+  },
+  "scanner_exclusions": {
+    "v14.2.0": [],
+    "v14.3.4": []
+  },
+  "candidates": [
+    {
+      "path": "rich/__init__.py",
+      "kind": "function",
+      "symbol": "inspect",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "v14.2.0",
+        "commit": "494f83c923ca54ecc943bf5e60c0004e65fbb54e",
+        "lines": [
+          120,
+          173
+        ],
+        "content_hash": "790ba003dffd1503d6812c68a7bccc729158ddb984fb3bfea76d0384abbe7e93"
+      },
+      "new": {
+        "revision": "v14.3.4",
+        "commit": "ee8378c3bbbd7c75abc2f55c6c19e83b218ae81d",
+        "lines": [
+          120,
+          173
+        ],
+        "content_hash": "30b7e92d60b43f119a2e9d11fecd2383ace9abe70b76d8d66fca76c77a6dac55"
+      },
+      "lines_changed": 2,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "formatting_or_docstring_only",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "rich/_emoji_replace.py",
+      "kind": "function",
+      "symbol": "_emoji_replace",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "v14.2.0",
+        "commit": "494f83c923ca54ecc943bf5e60c0004e65fbb54e",
+        "lines": [
+          12,
+          32
+        ],
+        "content_hash": "2f037039b341d861fd38357197ffe9ccf7da9aed6e8f194163edaf7f398c040d"
+      },
+      "new": {
+        "revision": "v14.3.4",
+        "commit": "ee8378c3bbbd7c75abc2f55c6c19e83b218ae81d",
+        "lines": [
+          9,
+          31
+        ],
+        "content_hash": "21b66e7f7726d5408d071703da6120cb0b864910c7113576b856c91b770fed33"
+      },
+      "lines_changed": 4,
+      "normalized": true,
+      "included": true,
+      "exclusion_reason": null,
+      "sample_order": 17,
+      "sampled": true,
+      "review": {
+        "decision": null,
+        "reason": null
+      }
+    },
+    {
+      "path": "rich/_inspect.py",
+      "kind": "class",
+      "symbol": "Inspect",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "v14.2.0",
+        "commit": "494f83c923ca54ecc943bf5e60c0004e65fbb54e",
+        "lines": [
+          21,
+          233
+        ],
+        "content_hash": "1ee8b8683c9a59ba39d9a09d375137d43147b4374297dfa07cbfc28557867d1f"
+      },
+      "new": {
+        "revision": "v14.3.4",
+        "commit": "ee8378c3bbbd7c75abc2f55c6c19e83b218ae81d",
+        "lines": [
+          21,
+          237
+        ],
+        "content_hash": "ea7d39cc787b42f0829a128bca69a7c0d0682bc9c7a479bc1e5b59c523541f98"
+      },
+      "lines_changed": 6,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "contains_changed_symbol",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "rich/_inspect.py",
+      "kind": "method",
+      "symbol": "Inspect._get_signature",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "v14.2.0",
+        "commit": "494f83c923ca54ecc943bf5e60c0004e65fbb54e",
+        "lines": [
+          82,
+          119
+        ],
+        "content_hash": "0069a28a37030b479d5b059c89e6cf2387832129b35cff1c1d68c8bc2dc78252"
+      },
+      "new": {
+        "revision": "v14.3.4",
+        "commit": "ee8378c3bbbd7c75abc2f55c6c19e83b218ae81d",
+        "lines": [
+          82,
+          123
+        ],
+        "content_hash": "536593b403c505be551131450ca47632a7d9df84269ea194ec56ee1c971f3276"
+      },
+      "lines_changed": 4,
+      "normalized": true,
+      "included": true,
+      "exclusion_reason": null,
+      "sample_order": 38,
+      "sampled": false,
+      "review": {
+        "decision": null,
+        "reason": null
+      }
+    },
+    {
+      "path": "rich/_windows.py",
+      "kind": "function",
+      "symbol": "get_windows_console_features",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "v14.2.0",
+        "commit": "494f83c923ca54ecc943bf5e60c0004e65fbb54e",
+        "lines": [
+          34,
+          36
+        ],
+        "content_hash": "d09821afb894077e78cc45bbfb9a4f99e1021e2ab4a4e1ade7bfc9c0514c78fb"
+      },
+      "new": {
+        "revision": "v14.3.4",
+        "commit": "ee8378c3bbbd7c75abc2f55c6c19e83b218ae81d",
+        "lines": [
+          40,
+          61
+        ],
+        "content_hash": "e6d05a19ea75e5b24b894af85cabcb88ae62c98417feb4aa7b7eb7dcc8b6f314"
+      },
+      "lines_changed": 21,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "ambiguous_location",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "rich/align.py",
+      "kind": "class",
+      "symbol": "Align",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "v14.2.0",
+        "commit": "494f83c923ca54ecc943bf5e60c0004e65fbb54e",
+        "lines": [
+          17,
+          225
+        ],
+        "content_hash": "2467b5d9ed8f6ac09f454da7bcf149018ce7a01996709dbe99b1a5d66d3ed62b"
+      },
+      "new": {
+        "revision": "v14.3.4",
+        "commit": "ee8378c3bbbd7c75abc2f55c6c19e83b218ae81d",
+        "lines": [
+          17,
+          239
+        ],
+        "content_hash": "133a9654b2d2632affb1395cc16de00705581e16063881ec3a3ff3a37c6a35c1"
+      },
+      "lines_changed": 14,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "formatting_or_docstring_only",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "rich/cells.py",
+      "kind": "function",
+      "symbol": "cached_cell_len",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "v14.2.0",
+        "commit": "494f83c923ca54ecc943bf5e60c0004e65fbb54e",
+        "lines": [
+          34,
+          48
+        ],
+        "content_hash": "65a0d4c41697f1516fca03c352298ce083b6c67bbaaae4ca596c5eeb8c11bf2e"
+      },
+      "new": {
+        "revision": "v14.3.4",
+        "commit": "ee8378c3bbbd7c75abc2f55c6c19e83b218ae81d",
+        "lines": [
+          82,
+          95
+        ],
+        "content_hash": "d747d984bc15bdf60761331e3d9c27ea0b8cb1dc25aa8600069febd5116b52f2"
+      },
+      "lines_changed": 7,
+      "normalized": true,
+      "included": true,
+      "exclusion_reason": null,
+      "sample_order": 43,
+      "sampled": false,
+      "review": {
+        "decision": null,
+        "reason": null
+      }
+    },
+    {
+      "path": "rich/cells.py",
+      "kind": "function",
+      "symbol": "cell_len",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "v14.2.0",
+        "commit": "494f83c923ca54ecc943bf5e60c0004e65fbb54e",
+        "lines": [
+          51,
+          64
+        ],
+        "content_hash": "b88f7f82b921ff0115ddbab69153319364406a25d0a758050f299272e9490bb4"
+      },
+      "new": {
+        "revision": "v14.3.4",
+        "commit": "ee8378c3bbbd7c75abc2f55c6c19e83b218ae81d",
+        "lines": [
+          98,
+          110
+        ],
+        "content_hash": "27a12ad19f10199e85d683e87a9f16e5298772dd4e277a28bae8a546ab324126"
+      },
+      "lines_changed": 15,
+      "normalized": true,
+      "included": true,
+      "exclusion_reason": null,
+      "sample_order": 19,
+      "sampled": true,
+      "review": {
+        "decision": null,
+        "reason": null
+      }
+    },
+    {
+      "path": "rich/cells.py",
+      "kind": "function",
+      "symbol": "chop_cells",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "v14.2.0",
+        "commit": "494f83c923ca54ecc943bf5e60c0004e65fbb54e",
+        "lines": [
+          131,
+          165
+        ],
+        "content_hash": "ce5c2b71da78fb8f78fad863cb2bb11727733481d93df1ac289dfaa4f36c9555"
+      },
+      "new": {
+        "revision": "v14.3.4",
+        "commit": "ee8378c3bbbd7c75abc2f55c6c19e83b218ae81d",
+        "lines": [
+          326,
+          352
+        ],
+        "content_hash": "af8166f6a33326b3e13d5cd73b2cef4addbe6060165f36895e82cae206ef6fee"
+      },
+      "lines_changed": 40,
+      "normalized": true,
+      "included": true,
+      "exclusion_reason": null,
+      "sample_order": 42,
+      "sampled": false,
+      "review": {
+        "decision": null,
+        "reason": null
+      }
+    },
+    {
+      "path": "rich/cells.py",
+      "kind": "function",
+      "symbol": "get_character_cell_size",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "v14.2.0",
+        "commit": "494f83c923ca54ecc943bf5e60c0004e65fbb54e",
+        "lines": [
+          68,
+          93
+        ],
+        "content_hash": "46874ed89c53a3c829e3f3d7b5492fe08acfd33cf561dbb167863f85182c373a"
+      },
+      "new": {
+        "revision": "v14.3.4",
+        "commit": "ee8378c3bbbd7c75abc2f55c6c19e83b218ae81d",
+        "lines": [
+          47,
+          78
+        ],
+        "content_hash": "7d07f33e8fa636f7456a1021323db56390f5d7a9498a23647cf83dc729573e9d"
+      },
+      "lines_changed": 26,
+      "normalized": true,
+      "included": true,
+      "exclusion_reason": null,
+      "sample_order": 18,
+      "sampled": true,
+      "review": {
+        "decision": null,
+        "reason": null
+      }
+    },
+    {
+      "path": "rich/cells.py",
+      "kind": "function",
+      "symbol": "set_cell_size",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "v14.2.0",
+        "commit": "494f83c923ca54ecc943bf5e60c0004e65fbb54e",
+        "lines": [
+          96,
+          128
+        ],
+        "content_hash": "a506c41d2a6672a5f14294b0424ea883e770c5b2619a1e39b49e3cae74c792a9"
+      },
+      "new": {
+        "revision": "v14.3.4",
+        "commit": "ee8378c3bbbd7c75abc2f55c6c19e83b218ae81d",
+        "lines": [
+          299,
+          323
+        ],
+        "content_hash": "f2ad16bc943c0afe89388fae25fb8b66d648ff007049f8c0facb4f8d3b0caeba"
+      },
+      "lines_changed": 32,
+      "normalized": true,
+      "included": true,
+      "exclusion_reason": null,
+      "sample_order": 6,
+      "sampled": true,
+      "review": {
+        "decision": null,
+        "reason": null
+      }
+    },
+    {
+      "path": "rich/console.py",
+      "kind": "class",
+      "symbol": "Console",
+      "part_index": 3,
+      "part_count": 7,
+      "status": "superseded",
+      "old": {
+        "revision": "v14.2.0",
+        "commit": "494f83c923ca54ecc943bf5e60c0004e65fbb54e",
+        "lines": [
+          1233,
+          1525
+        ],
+        "content_hash": "33b982257501d800cb91cd5cde7e47d89fbf47a0a5500e706f9598932683e4c9"
+      },
+      "new": {
+        "revision": "v14.3.4",
+        "commit": "ee8378c3bbbd7c75abc2f55c6c19e83b218ae81d",
+        "lines": [
+          1226,
+          1518
+        ],
+        "content_hash": "9e24c0407effaca1e370ce852858c26ad2e3d38126b03c0715eef3b9eafce57d"
+      },
+      "lines_changed": 2,
+      "normalized": false,
+      "included": false,
+      "exclusion_reason": "contains_changed_symbol",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "rich/console.py",
+      "kind": "class",
+      "symbol": "Console",
+      "part_index": 4,
+      "part_count": 7,
+      "status": "superseded",
+      "old": {
+        "revision": "v14.2.0",
+        "commit": "494f83c923ca54ecc943bf5e60c0004e65fbb54e",
+        "lines": [
+          1526,
+          1823
+        ],
+        "content_hash": "568ad9accd106e686f5dbb8839abe0c0bb3b05900bfe6448c69f1b989f0c2f22"
+      },
+      "new": {
+        "revision": "v14.3.4",
+        "commit": "ee8378c3bbbd7c75abc2f55c6c19e83b218ae81d",
+        "lines": [
+          1519,
+          1818
+        ],
+        "content_hash": "9e5a6297e16873299725e8af713350fca9d1a6357af29db008570c73463edff7"
+      },
+      "lines_changed": 36,
+      "normalized": false,
+      "included": false,
+      "exclusion_reason": "contains_changed_symbol",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "rich/console.py",
+      "kind": "class",
+      "symbol": "Console",
+      "part_index": 5,
+      "part_count": 7,
+      "status": "superseded",
+      "old": {
+        "revision": "v14.2.0",
+        "commit": "494f83c923ca54ecc943bf5e60c0004e65fbb54e",
+        "lines": [
+          1824,
+          2099
+        ],
+        "content_hash": "4486b224f27e11f56a6704ee2992094581ac1f1eccd8e65c6722e0c8555b7b9d"
+      },
+      "new": {
+        "revision": "v14.3.4",
+        "commit": "ee8378c3bbbd7c75abc2f55c6c19e83b218ae81d",
+        "lines": [
+          1819,
+          2102
+        ],
+        "content_hash": "4fe3c5684a15fb47358e2f20aad62861abf016eca914dedf68645f7281ae8fcb"
+      },
+      "lines_changed": 42,
+      "normalized": false,
+      "included": false,
+      "exclusion_reason": "contains_changed_symbol",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "rich/console.py",
+      "kind": "class",
+      "symbol": "Console",
+      "part_index": 6,
+      "part_count": 7,
+      "status": "superseded",
+      "old": {
+        "revision": "v14.2.0",
+        "commit": "494f83c923ca54ecc943bf5e60c0004e65fbb54e",
+        "lines": [
+          2100,
+          2373
+        ],
+        "content_hash": "ac407259e852458844c467ecc5e626b1e494ff2c5a65de59ba0ec84cb092acc8"
+      },
+      "new": {
+        "revision": "v14.3.4",
+        "commit": "ee8378c3bbbd7c75abc2f55c6c19e83b218ae81d",
+        "lines": [
+          2103,
+          2375
+        ],
+        "content_hash": "d7022026c8d923b3b8ce3c2f7e4cd3d712b7bffe11e0ad5ef55cdf9a890fc1ca"
+      },
+      "lines_changed": 37,
+      "normalized": false,
+      "included": false,
+      "exclusion_reason": "contains_changed_symbol",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "rich/console.py",
+      "kind": "class",
+      "symbol": "Console",
+      "part_index": 7,
+      "part_count": 7,
+      "status": "superseded",
+      "old": {
+        "revision": "v14.2.0",
+        "commit": "494f83c923ca54ecc943bf5e60c0004e65fbb54e",
+        "lines": [
+          2374,
+          2612
+        ],
+        "content_hash": "86327244acff8ca03911fc8293b6baff8f365c612523258d9903881bc169709f"
+      },
+      "new": {
+        "revision": "v14.3.4",
+        "commit": "ee8378c3bbbd7c75abc2f55c6c19e83b218ae81d",
+        "lines": [
+          2376,
+          2632
+        ],
+        "content_hash": "06fcf6b409b406f8041e6707bb0d0f8a2319bd0f40ed6fee2c8fa41c7929db79"
+      },
+      "lines_changed": 18,
+      "normalized": false,
+      "included": false,
+      "exclusion_reason": "contains_changed_symbol",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "rich/console.py",
+      "kind": "function",
+      "symbol": "_svg_hash",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "removed",
+      "old": {
+        "revision": "v14.2.0",
+        "commit": "494f83c923ca54ecc943bf5e60c0004e65fbb54e",
+        "lines": [
+          2615,
+          2624
+        ],
+        "content_hash": "dd9846ae5589a2c8738a31a7d61a5408bd2dd4516614c4dc5d5eaa0d2b0552b5"
+      },
+      "new": null,
+      "lines_changed": 10,
+      "normalized": true,
+      "included": true,
+      "exclusion_reason": null,
+      "sample_order": 1,
+      "sampled": true,
+      "review": {
+        "decision": null,
+        "reason": null
+      }
+    },
+    {
+      "path": "rich/console.py",
+      "kind": "method",
+      "symbol": "Console._buffer_index",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "v14.2.0",
+        "commit": "494f83c923ca54ecc943bf5e60c0004e65fbb54e",
+        "lines": [
+          782,
+          784
+        ],
+        "content_hash": "3666f1b24e1722836fbf5f728602e0ae1332686e26472b257d278ad8ea7a64b8"
+      },
+      "new": {
+        "revision": "v14.3.4",
+        "commit": "ee8378c3bbbd7c75abc2f55c6c19e83b218ae81d",
+        "lines": [
+          780,
+          781
+        ],
+        "content_hash": "c0040f025f5b6ff78c3416644fb7a7c18d09dbe68ca31bdeaca551a5eeb2eb2e"
+      },
+      "lines_changed": 5,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "ambiguous_location",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "rich/console.py",
+      "kind": "method",
+      "symbol": "Console._caller_frame_info",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "v14.2.0",
+        "commit": "494f83c923ca54ecc943bf5e60c0004e65fbb54e",
+        "lines": [
+          1898,
+          1930
+        ],
+        "content_hash": "f15674a8de0b366699b034f8ce874c5558f35ce39611a6ddc78c64ead6c541e1"
+      },
+      "new": {
+        "revision": "v14.3.4",
+        "commit": "ee8378c3bbbd7c75abc2f55c6c19e83b218ae81d",
+        "lines": [
+          1905,
+          1941
+        ],
+        "content_hash": "171ce576953d560cf0eb6366a0a0c66ce37d025f4c88b2cdd5f641c53b64e813"
+      },
+      "lines_changed": 18,
+      "normalized": true,
+      "included": true,
+      "exclusion_reason": null,
+      "sample_order": 31,
+      "sampled": false,
+      "review": {
+        "decision": null,
+        "reason": null
+      }
+    },
+    {
+      "path": "rich/console.py",
+      "kind": "method",
+      "symbol": "Console._collect_renderables",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "v14.2.0",
+        "commit": "494f83c923ca54ecc943bf5e60c0004e65fbb54e",
+        "lines": [
+          1506,
+          1583
+        ],
+        "content_hash": "949d39137fb74ac4f46b705eb7b075ef285bc6ead12f1e7cb3e3bbf86f186697"
+      },
+      "new": {
+        "revision": "v14.3.4",
+        "commit": "ee8378c3bbbd7c75abc2f55c6c19e83b218ae81d",
+        "lines": [
+          1499,
+          1586
+        ],
+        "content_hash": "fe3e8c9c80a8680602adcacaf4c0098e8f71cb710ff45e35b3da88c294b76ec2"
+      },
+      "lines_changed": 10,
+      "normalized": true,
+      "included": true,
+      "exclusion_reason": null,
+      "sample_order": 20,
+      "sampled": true,
+      "review": {
+        "decision": null,
+        "reason": null
+      }
+    },
+    {
+      "path": "rich/console.py",
+      "kind": "method",
+      "symbol": "Console.export_html",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "v14.2.0",
+        "commit": "494f83c923ca54ecc943bf5e60c0004e65fbb54e",
+        "lines": [
+          2219,
+          2292
+        ],
+        "content_hash": "3d0f72076c8e4aad5731dd3e468046070b42b37f5edcf53c7e8eda49f64204f8"
+      },
+      "new": {
+        "revision": "v14.3.4",
+        "commit": "ee8378c3bbbd7c75abc2f55c6c19e83b218ae81d",
+        "lines": [
+          2234,
+          2309
+        ],
+        "content_hash": "7d44b6b1f6104529da772dec585f3154c43153a5306f8952322f88c7ad077b9f"
+      },
+      "lines_changed": 2,
+      "normalized": true,
+      "included": true,
+      "exclusion_reason": null,
+      "sample_order": 28,
+      "sampled": false,
+      "review": {
+        "decision": null,
+        "reason": null
+      }
+    },
+    {
+      "path": "rich/console.py",
+      "kind": "method",
+      "symbol": "Console.export_svg",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "v14.2.0",
+        "commit": "494f83c923ca54ecc943bf5e60c0004e65fbb54e",
+        "lines": [
+          2325,
+          2574
+        ],
+        "content_hash": "c0906ac25d285a8555ea8a6dc90b28d69df1c31c9abcaea4360783fb6b5ccdc0"
+      },
+      "new": {
+        "revision": "v14.3.4",
+        "commit": "ee8378c3bbbd7c75abc2f55c6c19e83b218ae81d",
+        "lines": [
+          2342,
+          2594
+        ],
+        "content_hash": "904308c6eecf82d423c23df00b5e877374f2ea0ca8b99b43c7cfb9b11e7f2727"
+      },
+      "lines_changed": 3,
+      "normalized": true,
+      "included": true,
+      "exclusion_reason": null,
+      "sample_order": 32,
+      "sampled": false,
+      "review": {
+        "decision": null,
+        "reason": null
+      }
+    },
+    {
+      "path": "rich/console.py",
+      "kind": "method",
+      "symbol": "Console.file",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "v14.2.0",
+        "commit": "494f83c923ca54ecc943bf5e60c0004e65fbb54e",
+        "lines": [
+          763,
+          769
+        ],
+        "content_hash": "7655e2ed16bacb9d7f3abe03ecbfe675a888cf5680419bd108eefccd026c80cf"
+      },
+      "new": {
+        "revision": "v14.3.4",
+        "commit": "ee8378c3bbbd7c75abc2f55c6c19e83b218ae81d",
+        "lines": [
+          765,
+          767
+        ],
+        "content_hash": "d81759e3bd8097f1ef4fe26e945796fbfe4bb7fc5aa0445278cd8072b652ca2f"
+      },
+      "lines_changed": 10,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "ambiguous_location",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "rich/console.py",
+      "kind": "method",
+      "symbol": "Console.height",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "v14.2.0",
+        "commit": "494f83c923ca54ecc943bf5e60c0004e65fbb54e",
+        "lines": [
+          1081,
+          1087
+        ],
+        "content_hash": "66042011202cec06a25b259fb8f5bd5bfe2f2de376f1ef7916cf983ccfc68c4c"
+      },
+      "new": {
+        "revision": "v14.3.4",
+        "commit": "ee8378c3bbbd7c75abc2f55c6c19e83b218ae81d",
+        "lines": [
+          1083,
+          1089
+        ],
+        "content_hash": "dff88fdbdb5bd40997c3c5bd18c1835f0538369d7b3eed3567049b26bb8f5646"
+      },
+      "lines_changed": 10,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "ambiguous_location",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "rich/console.py",
+      "kind": "method",
+      "symbol": "Console.input",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "v14.2.0",
+        "commit": "494f83c923ca54ecc943bf5e60c0004e65fbb54e",
+        "lines": [
+          2139,
+          2171
+        ],
+        "content_hash": "72a214d4b238e31252a0a8f0a151c8a24f84f43a4407c4428ccf97c346bcd053"
+      },
+      "new": {
+        "revision": "v14.3.4",
+        "commit": "ee8378c3bbbd7c75abc2f55c6c19e83b218ae81d",
+        "lines": [
+          2152,
+          2186
+        ],
+        "content_hash": "690fee868a32f38cb0bf2804b00426e3c9762d5136f3beb2e31cd60d448dd608"
+      },
+      "lines_changed": 4,
+      "normalized": true,
+      "included": true,
+      "exclusion_reason": null,
+      "sample_order": 30,
+      "sampled": false,
+      "review": {
+        "decision": null,
+        "reason": null
+      }
+    },
+    {
+      "path": "rich/console.py",
+      "kind": "method",
+      "symbol": "Console.log",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "v14.2.0",
+        "commit": "494f83c923ca54ecc943bf5e60c0004e65fbb54e",
+        "lines": [
+          1932,
+          2011
+        ],
+        "content_hash": "f9612c8ec153a5b3cd5e59e967153cb7d37be3a2278891688952f4013f818bb7"
+      },
+      "new": {
+        "revision": "v14.3.4",
+        "commit": "ee8378c3bbbd7c75abc2f55c6c19e83b218ae81d",
+        "lines": [
+          1943,
+          2024
+        ],
+        "content_hash": "26616c4e99e269023b509b95ac90fbbfbd0de879ab740153043fdbc3b7487dec"
+      },
+      "lines_changed": 2,
+      "normalized": true,
+      "included": true,
+      "exclusion_reason": null,
+      "sample_order": 41,
+      "sampled": false,
+      "review": {
+        "decision": null,
+        "reason": null
+      }
+    },
+    {
+      "path": "rich/console.py",
+      "kind": "method",
+      "symbol": "Console.print",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "v14.2.0",
+        "commit": "494f83c923ca54ecc943bf5e60c0004e65fbb54e",
+        "lines": [
+          1648,
+          1745
+        ],
+        "content_hash": "69d7e86f612c4e3c23f24e36fe3924f1a9af32d18221c10a7c1bd2f75750662d"
+      },
+      "new": {
+        "revision": "v14.3.4",
+        "commit": "ee8378c3bbbd7c75abc2f55c6c19e83b218ae81d",
+        "lines": [
+          1651,
+          1752
+        ],
+        "content_hash": "e8ee5eeca3b1c6305f03df2b2a1cca0302accae9210c210271a1460eca7db019"
+      },
+      "lines_changed": 14,
+      "normalized": true,
+      "included": true,
+      "exclusion_reason": null,
+      "sample_order": 7,
+      "sampled": true,
+      "review": {
+        "decision": null,
+        "reason": null
+      }
+    },
+    {
+      "path": "rich/console.py",
+      "kind": "method",
+      "symbol": "Console.render",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "v14.2.0",
+        "commit": "494f83c923ca54ecc943bf5e60c0004e65fbb54e",
+        "lines": [
+          1300,
+          1349
+        ],
+        "content_hash": "f385059d80c18803750b888b453e8e415ce41ccf6008afa597c2be78764b40eb"
+      },
+      "new": {
+        "revision": "v14.3.4",
+        "commit": "ee8378c3bbbd7c75abc2f55c6c19e83b218ae81d",
+        "lines": [
+          1293,
+          1342
+        ],
+        "content_hash": "13855d37d52bec19145f432317e5dd04db455440c7d1c7267c82af6580898dbd"
+      },
+      "lines_changed": 2,
+      "normalized": true,
+      "included": true,
+      "exclusion_reason": null,
+      "sample_order": 16,
+      "sampled": true,
+      "review": {
+        "decision": null,
+        "reason": null
+      }
+    },
+    {
+      "path": "rich/console.py",
+      "kind": "method",
+      "symbol": "Console.size",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "v14.2.0",
+        "commit": "494f83c923ca54ecc943bf5e60c0004e65fbb54e",
+        "lines": [
+          1011,
+          1049
+        ],
+        "content_hash": "677bff3990f6d734d779a4dae4d1dcde89ac58cf176096c9e41a4c4721858510"
+      },
+      "new": {
+        "revision": "v14.3.4",
+        "commit": "ee8378c3bbbd7c75abc2f55c6c19e83b218ae81d",
+        "lines": [
+          1045,
+          1053
+        ],
+        "content_hash": "2dcdbbfe28c82ad8e02de5b591a71a05dc1b120c83988842d74b15022e4e5c2e"
+      },
+      "lines_changed": 44,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "ambiguous_location",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "rich/console.py",
+      "kind": "method",
+      "symbol": "Console.width",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "v14.2.0",
+        "commit": "494f83c923ca54ecc943bf5e60c0004e65fbb54e",
+        "lines": [
+          1063,
+          1069
+        ],
+        "content_hash": "919eb9ad1e13ebaa29a3e72b808aeaea6685b7303566f7d1ce85e00b7ef660bd"
+      },
+      "new": {
+        "revision": "v14.3.4",
+        "commit": "ee8378c3bbbd7c75abc2f55c6c19e83b218ae81d",
+        "lines": [
+          1065,
+          1071
+        ],
+        "content_hash": "38761ae86d8d7d02dfa4c188767d374a1ca0799b593bc0bb720afd241ffb46cd"
+      },
+      "lines_changed": 10,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "ambiguous_location",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "rich/containers.py",
+      "kind": "method",
+      "symbol": "Lines.__getitem__",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "v14.2.0",
+        "commit": "494f83c923ca54ecc943bf5e60c0004e65fbb54e",
+        "lines": [
+          79,
+          80
+        ],
+        "content_hash": "a8dcb8603f4c0d7b823d3e8b55e49365f216fe90588ac95fd08e8baadc641e69"
+      },
+      "new": {
+        "revision": "v14.3.4",
+        "commit": "ee8378c3bbbd7c75abc2f55c6c19e83b218ae81d",
+        "lines": [
+          86,
+          87
+        ],
+        "content_hash": "b208953562ac7d25f071ad0488f5955822845efea29243ae805389ba7987788c"
+      },
+      "lines_changed": 4,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "ambiguous_location",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "rich/containers.py",
+      "kind": "method",
+      "symbol": "Lines.__getitem__",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "v14.2.0",
+        "commit": "494f83c923ca54ecc943bf5e60c0004e65fbb54e",
+        "lines": [
+          83,
+          84
+        ],
+        "content_hash": "d10058a0fb262c0e336a4d9fedd28acff9a013802f8c1ef0c33650ad37f34a0f"
+      },
+      "new": {
+        "revision": "v14.3.4",
+        "commit": "ee8378c3bbbd7c75abc2f55c6c19e83b218ae81d",
+        "lines": [
+          86,
+          87
+        ],
+        "content_hash": "b208953562ac7d25f071ad0488f5955822845efea29243ae805389ba7987788c"
+      },
+      "lines_changed": 4,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "ambiguous_location",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "rich/emoji.py",
+      "kind": "class",
+      "symbol": "Emoji",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "v14.2.0",
+        "commit": "494f83c923ca54ecc943bf5e60c0004e65fbb54e",
+        "lines": [
+          22,
+          73
+        ],
+        "content_hash": "aaff64a1f6daa139af0b1a5e13f940e7e26406ef83a8135d7aaa6bc10c4020bb"
+      },
+      "new": {
+        "revision": "v14.3.4",
+        "commit": "ee8378c3bbbd7c75abc2f55c6c19e83b218ae81d",
+        "lines": [
+          20,
+          73
+        ],
+        "content_hash": "c44d4bea3e6aa09864833cda81d12c4a58a7758d6ca1503758894b4cdd1cd82e"
+      },
+      "lines_changed": 4,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "contains_changed_symbol",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "rich/emoji.py",
+      "kind": "method",
+      "symbol": "Emoji.__init__",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "v14.2.0",
+        "commit": "494f83c923ca54ecc943bf5e60c0004e65fbb54e",
+        "lines": [
+          27,
+          50
+        ],
+        "content_hash": "c5c2f1c1f871de805852287e4d21c8e012ca689e7d5500b7fb9d7a3000c21313"
+      },
+      "new": {
+        "revision": "v14.3.4",
+        "commit": "ee8378c3bbbd7c75abc2f55c6c19e83b218ae81d",
+        "lines": [
+          25,
+          50
+        ],
+        "content_hash": "1f0f71aef4cfffe75d7f921c89fde274d18bf5d64c9ae4558a1099900191ebd5"
+      },
+      "lines_changed": 2,
+      "normalized": true,
+      "included": true,
+      "exclusion_reason": null,
+      "sample_order": 35,
+      "sampled": false,
+      "review": {
+        "decision": null,
+        "reason": null
+      }
+    },
+    {
+      "path": "rich/highlighter.py",
+      "kind": "class",
+      "symbol": "ISO8601Highlighter",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "v14.2.0",
+        "commit": "494f83c923ca54ecc943bf5e60c0004e65fbb54e",
+        "lines": [
+          143,
+          198
+        ],
+        "content_hash": "b91f6de65491f62ed90c09667687da8969a1b16d39ad5085155bb3a19bbb5483"
+      },
+      "new": {
+        "revision": "v14.3.4",
+        "commit": "ee8378c3bbbd7c75abc2f55c6c19e83b218ae81d",
+        "lines": [
+          143,
+          198
+        ],
+        "content_hash": "983a1e02a8dbfb5b1ff9d6d643d6e524e71ca79a8e883758ff69c32871d997f0"
+      },
+      "lines_changed": 4,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "type_annotations_only",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "rich/highlighter.py",
+      "kind": "class",
+      "symbol": "JSONHighlighter",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "v14.2.0",
+        "commit": "494f83c923ca54ecc943bf5e60c0004e65fbb54e",
+        "lines": [
+          106,
+          140
+        ],
+        "content_hash": "27c2e92f7c3db4ccd373fea466555b58b54012e27d708b320c30d7ebd03387f9"
+      },
+      "new": {
+        "revision": "v14.3.4",
+        "commit": "ee8378c3bbbd7c75abc2f55c6c19e83b218ae81d",
+        "lines": [
+          106,
+          140
+        ],
+        "content_hash": "fe8813d6d7c6caac4e8197bd71031004918ec4f27d91df7099a49ff31b022aba"
+      },
+      "lines_changed": 4,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "type_annotations_only",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "rich/highlighter.py",
+      "kind": "class",
+      "symbol": "RegexHighlighter",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "v14.2.0",
+        "commit": "494f83c923ca54ecc943bf5e60c0004e65fbb54e",
+        "lines": [
+          61,
+          77
+        ],
+        "content_hash": "106411d53451bc47c7f9c099db87bc4e7756c78f61ca057be433a3f9229ae2f1"
+      },
+      "new": {
+        "revision": "v14.3.4",
+        "commit": "ee8378c3bbbd7c75abc2f55c6c19e83b218ae81d",
+        "lines": [
+          61,
+          77
+        ],
+        "content_hash": "1d7dabfd8be4bc5d9c7ebc596b4ea7d80adab773692dedd97ed7a4a665f7f263"
+      },
+      "lines_changed": 4,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "type_annotations_only",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "rich/highlighter.py",
+      "kind": "class",
+      "symbol": "ReprHighlighter",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "v14.2.0",
+        "commit": "494f83c923ca54ecc943bf5e60c0004e65fbb54e",
+        "lines": [
+          80,
+          103
+        ],
+        "content_hash": "98e993a66ea63d9075a041a3eee5a1f4ea6c6aca0c5105498e7c93296eb1ad4c"
+      },
+      "new": {
+        "revision": "v14.3.4",
+        "commit": "ee8378c3bbbd7c75abc2f55c6c19e83b218ae81d",
+        "lines": [
+          80,
+          103
+        ],
+        "content_hash": "a58c379852c81ab084d3a817701617eded2fe4f6f267df68beb927769a9455d6"
+      },
+      "lines_changed": 2,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "type_annotations_only",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "rich/live.py",
+      "kind": "class",
+      "symbol": "Live",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "v14.2.0",
+        "commit": "494f83c923ca54ecc943bf5e60c0004e65fbb54e",
+        "lines": [
+          41,
+          293
+        ],
+        "content_hash": "92c09ac76e135551db1e64d08d55373cce1ab9f086d40735680226de14490d01"
+      },
+      "new": {
+        "revision": "v14.3.4",
+        "commit": "ee8378c3bbbd7c75abc2f55c6c19e83b218ae81d",
+        "lines": [
+          41,
+          297
+        ],
+        "content_hash": "749af3cd86577786c9c3b1962c3164c7bdd943f65e83b459357f11a1830d4c8d"
+      },
+      "lines_changed": 6,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "contains_changed_symbol",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "rich/live.py",
+      "kind": "method",
+      "symbol": "Live.stop",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "v14.2.0",
+        "commit": "494f83c923ca54ecc943bf5e60c0004e65fbb54e",
+        "lines": [
+          145,
+          177
+        ],
+        "content_hash": "0984e2969e9030a64a9c5092cbc4a76cfe4f650c8928704b99a3e8bdcda629eb"
+      },
+      "new": {
+        "revision": "v14.3.4",
+        "commit": "ee8378c3bbbd7c75abc2f55c6c19e83b218ae81d",
+        "lines": [
+          145,
+          181
+        ],
+        "content_hash": "1f17c9f00ce49943e29cd79a7b549a983804f3d37d99224849228c74163196f0"
+      },
+      "lines_changed": 6,
+      "normalized": true,
+      "included": true,
+      "exclusion_reason": null,
+      "sample_order": 33,
+      "sampled": false,
+      "review": {
+        "decision": null,
+        "reason": null
+      }
+    },
+    {
+      "path": "rich/live_render.py",
+      "kind": "class",
+      "symbol": "LiveRender",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "v14.2.0",
+        "commit": "494f83c923ca54ecc943bf5e60c0004e65fbb54e",
+        "lines": [
+          14,
+          106
+        ],
+        "content_hash": "80d195b9828d61520047ebd0e6fdc6d45f5732349187fae3be96f41d58ebe6be"
+      },
+      "new": {
+        "revision": "v14.3.4",
+        "commit": "ee8378c3bbbd7c75abc2f55c6c19e83b218ae81d",
+        "lines": [
+          13,
+          116
+        ],
+        "content_hash": "6031c3528da174ab8f730cfa71115e2d49591f2f4c59ecb7ff739bdc18adf92d"
+      },
+      "lines_changed": 11,
+      "normalized": true,
+      "included": true,
+      "exclusion_reason": null,
+      "sample_order": 36,
+      "sampled": false,
+      "review": {
+        "decision": null,
+        "reason": null
+      }
+    },
+    {
+      "path": "rich/logging.py",
+      "kind": "class",
+      "symbol": "RichHandler",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "v14.2.0",
+        "commit": "494f83c923ca54ecc943bf5e60c0004e65fbb54e",
+        "lines": [
+          18,
+          239
+        ],
+        "content_hash": "7b46921b7c75270fea4ce5f4345efc1abb5905c77782fe376a94a04591f9b271"
+      },
+      "new": {
+        "revision": "v14.3.4",
+        "commit": "ee8378c3bbbd7c75abc2f55c6c19e83b218ae81d",
+        "lines": [
+          24,
+          247
+        ],
+        "content_hash": "1d9818a000430f93ebf654a188f3852d2cfe5de582dd15f75fd7508760da8e87"
+      },
+      "lines_changed": 10,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "contains_changed_symbol",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "rich/logging.py",
+      "kind": "method",
+      "symbol": "RichHandler.emit",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "v14.2.0",
+        "commit": "494f83c923ca54ecc943bf5e60c0004e65fbb54e",
+        "lines": [
+          132,
+          180
+        ],
+        "content_hash": "65618a7b7b10a5408ff858304e8ab837c8ab70b6d811b6be9fa3c78fc6e0c54e"
+      },
+      "new": {
+        "revision": "v14.3.4",
+        "commit": "ee8378c3bbbd7c75abc2f55c6c19e83b218ae81d",
+        "lines": [
+          138,
+          188
+        ],
+        "content_hash": "f0197dffee2ba5cdf5b624eaf15baf85b68a72b7bc48e83dd1843dfcb3234218"
+      },
+      "lines_changed": 2,
+      "normalized": true,
+      "included": true,
+      "exclusion_reason": null,
+      "sample_order": 34,
+      "sampled": false,
+      "review": {
+        "decision": null,
+        "reason": null
+      }
+    },
+    {
+      "path": "rich/logging.py",
+      "kind": "method",
+      "symbol": "RichHandler.render",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "v14.2.0",
+        "commit": "494f83c923ca54ecc943bf5e60c0004e65fbb54e",
+        "lines": [
+          207,
+          239
+        ],
+        "content_hash": "94de9d23cd3b9b1c0aece67000732de19977ef14ceca628283af407dc419ae19"
+      },
+      "new": {
+        "revision": "v14.3.4",
+        "commit": "ee8378c3bbbd7c75abc2f55c6c19e83b218ae81d",
+        "lines": [
+          215,
+          247
+        ],
+        "content_hash": "5a84c6ed06860504fad4ffcbc9db71967f3f323ece752e3831f316a90726b1e6"
+      },
+      "lines_changed": 6,
+      "normalized": true,
+      "included": true,
+      "exclusion_reason": null,
+      "sample_order": 2,
+      "sampled": true,
+      "review": {
+        "decision": null,
+        "reason": null
+      }
+    },
+    {
+      "path": "rich/logging.py",
+      "kind": "method",
+      "symbol": "RichHandler.render_message",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "v14.2.0",
+        "commit": "494f83c923ca54ecc943bf5e60c0004e65fbb54e",
+        "lines": [
+          182,
+          205
+        ],
+        "content_hash": "f181acd11acdca812f11dee2ca62f36dff436935a770368034e660906d8e4288"
+      },
+      "new": {
+        "revision": "v14.3.4",
+        "commit": "ee8378c3bbbd7c75abc2f55c6c19e83b218ae81d",
+        "lines": [
+          190,
+          213
+        ],
+        "content_hash": "44ba6d63bcf7e22fa162e6e5d5d91915eccf7cbbaf46f7097ad49aee9f2f3bc9"
+      },
+      "lines_changed": 2,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "type_annotations_only",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "rich/markdown.py",
+      "kind": "class",
+      "symbol": "Heading",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "v14.2.0",
+        "commit": "494f83c923ca54ecc943bf5e60c0004e65fbb54e",
+        "lines": [
+          127,
+          159
+        ],
+        "content_hash": "9aac3aef85221539efd6464d657652c00450d82342fa32137476a67208b4daa2"
+      },
+      "new": {
+        "revision": "v14.3.4",
+        "commit": "ee8378c3bbbd7c75abc2f55c6c19e83b218ae81d",
+        "lines": [
+          133,
+          164
+        ],
+        "content_hash": "ff11814094223b5de2bef6d46160ea810ad32bf0b16f1f04e106e0b981633e20"
+      },
+      "lines_changed": 27,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "contains_changed_symbol",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "rich/markdown.py",
+      "kind": "class",
+      "symbol": "HorizontalRule",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "v14.2.0",
+        "commit": "494f83c923ca54ecc943bf5e60c0004e65fbb54e",
+        "lines": [
+          213,
+          222
+        ],
+        "content_hash": "54116742fddbade1672e3022f3487d1d658f5353738a5b46d6de2bb06ab99d8e"
+      },
+      "new": {
+        "revision": "v14.3.4",
+        "commit": "ee8378c3bbbd7c75abc2f55c6c19e83b218ae81d",
+        "lines": [
+          218,
+          228
+        ],
+        "content_hash": "1566856a0958d69c66a443e8f7dc3e8f9bcbde41d0fee40b8f707aa0ec4ffbd7"
+      },
+      "lines_changed": 3,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "contains_changed_symbol",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "rich/markdown.py",
+      "kind": "class",
+      "symbol": "TableElement",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "v14.2.0",
+        "commit": "494f83c923ca54ecc943bf5e60c0004e65fbb54e",
+        "lines": [
+          225,
+          255
+        ],
+        "content_hash": "ee9b72c6b71d60cf8bfe6bb26d9d1c3cc92dab130a82424511013ffc085de09d"
+      },
+      "new": {
+        "revision": "v14.3.4",
+        "commit": "ee8378c3bbbd7c75abc2f55c6c19e83b218ae81d",
+        "lines": [
+          231,
+          269
+        ],
+        "content_hash": "a4028f3348cd98a2acb2f1a3c3b7b88760d1c942a40900ae2c90b62912ebef3d"
+      },
+      "lines_changed": 12,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "contains_changed_symbol",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "rich/markdown.py",
+      "kind": "method",
+      "symbol": "Heading.__rich_console__",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "v14.2.0",
+        "commit": "494f83c923ca54ecc943bf5e60c0004e65fbb54e",
+        "lines": [
+          143,
+          159
+        ],
+        "content_hash": "59feda7f5a0b8f9a5b3194d1ca807068ee1d10e329bda84f64b9e2497bfdd0ac"
+      },
+      "new": {
+        "revision": "v14.3.4",
+        "commit": "ee8378c3bbbd7c75abc2f55c6c19e83b218ae81d",
+        "lines": [
+          158,
+          164
+        ],
+        "content_hash": "ae993729c5583db08b481ab9681270357709d7e77db566f49c3f59aef5adcefd"
+      },
+      "lines_changed": 18,
+      "normalized": true,
+      "included": true,
+      "exclusion_reason": null,
+      "sample_order": 25,
+      "sampled": false,
+      "review": {
+        "decision": null,
+        "reason": null
+      }
+    },
+    {
+      "path": "rich/markdown.py",
+      "kind": "method",
+      "symbol": "HorizontalRule.__rich_console__",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "v14.2.0",
+        "commit": "494f83c923ca54ecc943bf5e60c0004e65fbb54e",
+        "lines": [
+          218,
+          222
+        ],
+        "content_hash": "72ff1e847058f69fea291ca20e7ccd4d15ac6b54427dd21e03ccb05b432cda15"
+      },
+      "new": {
+        "revision": "v14.3.4",
+        "commit": "ee8378c3bbbd7c75abc2f55c6c19e83b218ae81d",
+        "lines": [
+          223,
+          228
+        ],
+        "content_hash": "1eeb178ae9aa91b4fef2e07e4030046c16f2d40cfcedfa14a654301260025270"
+      },
+      "lines_changed": 3,
+      "normalized": true,
+      "included": true,
+      "exclusion_reason": null,
+      "sample_order": 37,
+      "sampled": false,
+      "review": {
+        "decision": null,
+        "reason": null
+      }
+    },
+    {
+      "path": "rich/markdown.py",
+      "kind": "method",
+      "symbol": "TableElement.__rich_console__",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "v14.2.0",
+        "commit": "494f83c923ca54ecc943bf5e60c0004e65fbb54e",
+        "lines": [
+          241,
+          255
+        ],
+        "content_hash": "36fda7888a42f28a141bbaf29646b520b4d993fdabec2c6cc70ea6cde09c351d"
+      },
+      "new": {
+        "revision": "v14.3.4",
+        "commit": "ee8378c3bbbd7c75abc2f55c6c19e83b218ae81d",
+        "lines": [
+          247,
+          269
+        ],
+        "content_hash": "e4e9e8fbbe8d0fb08c5c60bb0972ca7543b932a103b88a631ee7fbc8a54aa0eb"
+      },
+      "lines_changed": 12,
+      "normalized": true,
+      "included": true,
+      "exclusion_reason": null,
+      "sample_order": 49,
+      "sampled": false,
+      "review": {
+        "decision": null,
+        "reason": null
+      }
+    },
+    {
+      "path": "rich/pretty.py",
+      "kind": "class",
+      "symbol": "install.RichFormatter",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "v14.2.0",
+        "commit": "494f83c923ca54ecc943bf5e60c0004e65fbb54e",
+        "lines": [
+          230,
+          246
+        ],
+        "content_hash": "1f0af09af20e55a0a4e7462917cd57ad03c643f9530f35f7a2bb6f43feff301b"
+      },
+      "new": {
+        "revision": "v14.3.4",
+        "commit": "ee8378c3bbbd7c75abc2f55c6c19e83b218ae81d",
+        "lines": [
+          230,
+          246
+        ],
+        "content_hash": "7e8a06b161fe9d3fb318e04a1d5ef6816a47374763e9c81f7da1ef6a0a5aeb44"
+      },
+      "lines_changed": 2,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "contains_changed_symbol",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "rich/pretty.py",
+      "kind": "function",
+      "symbol": "install",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "v14.2.0",
+        "commit": "494f83c923ca54ecc943bf5e60c0004e65fbb54e",
+        "lines": [
+          171,
+          250
+        ],
+        "content_hash": "0cd8b62b352f81bb1e02bcbfe887c0f3874fa506558ff7cf952c4dc234089a84"
+      },
+      "new": {
+        "revision": "v14.3.4",
+        "commit": "ee8378c3bbbd7c75abc2f55c6c19e83b218ae81d",
+        "lines": [
+          171,
+          250
+        ],
+        "content_hash": "646e3b4a949702c953e2657d14a316f6949746f85351e1131bfe2e2850a9046a"
+      },
+      "lines_changed": 2,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "contains_changed_symbol",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "rich/pretty.py",
+      "kind": "method",
+      "symbol": "install.RichFormatter.__call__",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "v14.2.0",
+        "commit": "494f83c923ca54ecc943bf5e60c0004e65fbb54e",
+        "lines": [
+          233,
+          246
+        ],
+        "content_hash": "6fe5ce625420b537d6560cade7a60ae51deef8c5ff60ed379b6bdbed28b5b2ae"
+      },
+      "new": {
+        "revision": "v14.3.4",
+        "commit": "ee8378c3bbbd7c75abc2f55c6c19e83b218ae81d",
+        "lines": [
+          233,
+          246
+        ],
+        "content_hash": "d66ff016b5f72113e931e8651efa25c3d8ac63d5216b9097f8459b11ff1cb1df"
+      },
+      "lines_changed": 2,
+      "normalized": true,
+      "included": true,
+      "exclusion_reason": null,
+      "sample_order": 27,
+      "sampled": false,
+      "review": {
+        "decision": null,
+        "reason": null
+      }
+    },
+    {
+      "path": "rich/progress.py",
+      "kind": "class",
+      "symbol": "Progress",
+      "part_index": 1,
+      "part_count": 2,
+      "status": "superseded",
+      "old": {
+        "revision": "v14.2.0",
+        "commit": "494f83c923ca54ecc943bf5e60c0004e65fbb54e",
+        "lines": [
+          1061,
+          1370
+        ],
+        "content_hash": "829ba1f961afaa8e42ca1043010d6b0e12bc299019f0f4b8ba1e6f3dce930b7c"
+      },
+      "new": {
+        "revision": "v14.3.4",
+        "commit": "ee8378c3bbbd7c75abc2f55c6c19e83b218ae81d",
+        "lines": [
+          1061,
+          1371
+        ],
+        "content_hash": "cd0a302a4fbcbcb5ee5fa91423de2be0f3d2690ed0382a9de313227a344807bc"
+      },
+      "lines_changed": 9,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "contains_changed_symbol",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "rich/progress.py",
+      "kind": "class",
+      "symbol": "Progress",
+      "part_index": 2,
+      "part_count": 2,
+      "status": "superseded",
+      "old": {
+        "revision": "v14.2.0",
+        "commit": "494f83c923ca54ecc943bf5e60c0004e65fbb54e",
+        "lines": [
+          1371,
+          1650
+        ],
+        "content_hash": "7a6550b8c4a6366c79a5d981be333682025a361722570be649eb4f58ae610d97"
+      },
+      "new": {
+        "revision": "v14.3.4",
+        "commit": "ee8378c3bbbd7c75abc2f55c6c19e83b218ae81d",
+        "lines": [
+          1372,
+          1651
+        ],
+        "content_hash": "b7fb55c8ac82131fcde02beecca265e58b8bf0f03d506fdcf3a2bdc6a3265513"
+      },
+      "lines_changed": 2,
+      "normalized": false,
+      "included": false,
+      "exclusion_reason": "contains_changed_symbol",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "rich/progress.py",
+      "kind": "function",
+      "symbol": "open",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "v14.2.0",
+        "commit": "494f83c923ca54ecc943bf5e60c0004e65fbb54e",
+        "lines": [
+          372,
+          393
+        ],
+        "content_hash": "d9863471dcfc14820a4a64b89ed670bd629b8a497975c720b0be21860e9e8d65"
+      },
+      "new": {
+        "revision": "v14.3.4",
+        "commit": "ee8378c3bbbd7c75abc2f55c6c19e83b218ae81d",
+        "lines": [
+          421,
+          504
+        ],
+        "content_hash": "ea0789fadc25c667d2984303d3aa1c89ee26f0383e8ca3023e4f365efbe9d95d"
+      },
+      "lines_changed": 68,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "ambiguous_location",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "rich/progress.py",
+      "kind": "function",
+      "symbol": "open",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "v14.2.0",
+        "commit": "494f83c923ca54ecc943bf5e60c0004e65fbb54e",
+        "lines": [
+          397,
+          418
+        ],
+        "content_hash": "70b069eb670fa2ba0ab9566809669cff76942e0f909e2f88695f03ec256aec7c"
+      },
+      "new": {
+        "revision": "v14.3.4",
+        "commit": "ee8378c3bbbd7c75abc2f55c6c19e83b218ae81d",
+        "lines": [
+          421,
+          504
+        ],
+        "content_hash": "ea0789fadc25c667d2984303d3aa1c89ee26f0383e8ca3023e4f365efbe9d95d"
+      },
+      "lines_changed": 68,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "ambiguous_location",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "rich/progress.py",
+      "kind": "method",
+      "symbol": "Progress.open",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "v14.2.0",
+        "commit": "494f83c923ca54ecc943bf5e60c0004e65fbb54e",
+        "lines": [
+          1279,
+          1292
+        ],
+        "content_hash": "4832bb6b72f34cb0748a8ee768a7540933b8d7195ad5c7d791bdb9e9b74b350a"
+      },
+      "new": {
+        "revision": "v14.3.4",
+        "commit": "ee8378c3bbbd7c75abc2f55c6c19e83b218ae81d",
+        "lines": [
+          1311,
+          1386
+        ],
+        "content_hash": "e5e48ca0e2356c1d79fa175eafd2247ab66b8dff770ecb1a007864c71010c0fd"
+      },
+      "lines_changed": 68,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "ambiguous_location",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "rich/progress.py",
+      "kind": "method",
+      "symbol": "Progress.open",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "v14.2.0",
+        "commit": "494f83c923ca54ecc943bf5e60c0004e65fbb54e",
+        "lines": [
+          1295,
+          1308
+        ],
+        "content_hash": "1a4ef84b317fd8d810e6af6f6a4b1c3ffd4ecaeb06d81b61cb49fb64ceb62851"
+      },
+      "new": {
+        "revision": "v14.3.4",
+        "commit": "ee8378c3bbbd7c75abc2f55c6c19e83b218ae81d",
+        "lines": [
+          1311,
+          1386
+        ],
+        "content_hash": "e5e48ca0e2356c1d79fa175eafd2247ab66b8dff770ecb1a007864c71010c0fd"
+      },
+      "lines_changed": 68,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "ambiguous_location",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "rich/progress.py",
+      "kind": "method",
+      "symbol": "Progress.reset",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "v14.2.0",
+        "commit": "494f83c923ca54ecc943bf5e60c0004e65fbb54e",
+        "lines": [
+          1477,
+          1514
+        ],
+        "content_hash": "8c021b2de6845b6e67c67fc3c2a9443555c029dcc08cf4c4490322a6b816e8db"
+      },
+      "new": {
+        "revision": "v14.3.4",
+        "commit": "ee8378c3bbbd7c75abc2f55c6c19e83b218ae81d",
+        "lines": [
+          1478,
+          1515
+        ],
+        "content_hash": "d0a578313edb2bb57f6411260465680d45369bf03fd2f34c12f419f838ef344c"
+      },
+      "lines_changed": 2,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "formatting_or_docstring_only",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "rich/progress.py",
+      "kind": "method",
+      "symbol": "Progress.stop",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "v14.2.0",
+        "commit": "494f83c923ca54ecc943bf5e60c0004e65fbb54e",
+        "lines": [
+          1173,
+          1177
+        ],
+        "content_hash": "7d1fe1e218122fb2dcb7a98301ee5d62505382834ba6b2918265713ab39dda45"
+      },
+      "new": {
+        "revision": "v14.3.4",
+        "commit": "ee8378c3bbbd7c75abc2f55c6c19e83b218ae81d",
+        "lines": [
+          1173,
+          1178
+        ],
+        "content_hash": "443e5ec0ed77dcd94d5a57ba122c3f88736751fd194c563045a534c76346a116"
+      },
+      "lines_changed": 7,
+      "normalized": true,
+      "included": true,
+      "exclusion_reason": null,
+      "sample_order": 47,
+      "sampled": false,
+      "review": {
+        "decision": null,
+        "reason": null
+      }
+    },
+    {
+      "path": "rich/prompt.py",
+      "kind": "class",
+      "symbol": "PromptBase",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "v14.2.0",
+        "commit": "494f83c923ca54ecc943bf5e60c0004e65fbb54e",
+        "lines": [
+          30,
+          301
+        ],
+        "content_hash": "05335b4f9341793f252a846303fe02ae4d765898d44a73673cba2e8e47d944c6"
+      },
+      "new": {
+        "revision": "v14.3.4",
+        "commit": "ee8378c3bbbd7c75abc2f55c6c19e83b218ae81d",
+        "lines": [
+          30,
+          301
+        ],
+        "content_hash": "9cc0f95cccf84cb54455b8aff1a981fd9fde7ea5379d5c8d068f46ac86d386e2"
+      },
+      "lines_changed": 2,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "contains_changed_symbol",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "rich/prompt.py",
+      "kind": "method",
+      "symbol": "PromptBase.__call__",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "v14.2.0",
+        "commit": "494f83c923ca54ecc943bf5e60c0004e65fbb54e",
+        "lines": [
+          271,
+          272
+        ],
+        "content_hash": "bfe9e4d5e08b979098b6bf90837de4597b5f083489420bb295fe853a9c0ec618"
+      },
+      "new": {
+        "revision": "v14.3.4",
+        "commit": "ee8378c3bbbd7c75abc2f55c6c19e83b218ae81d",
+        "lines": [
+          280,
+          301
+        ],
+        "content_hash": "c541b5d0697d58ea130a7479d553cceb18fe61dc026af62ab02eacfad33bdc20"
+      },
+      "lines_changed": 24,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "ambiguous_location",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "rich/prompt.py",
+      "kind": "method",
+      "symbol": "PromptBase.__call__",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "v14.2.0",
+        "commit": "494f83c923ca54ecc943bf5e60c0004e65fbb54e",
+        "lines": [
+          275,
+          278
+        ],
+        "content_hash": "a0e536ec7eb141295a3b33cf7ff8d9cf534ce8175d2514c54f252a97eb29b8f0"
+      },
+      "new": {
+        "revision": "v14.3.4",
+        "commit": "ee8378c3bbbd7c75abc2f55c6c19e83b218ae81d",
+        "lines": [
+          280,
+          301
+        ],
+        "content_hash": "c541b5d0697d58ea130a7479d553cceb18fe61dc026af62ab02eacfad33bdc20"
+      },
+      "lines_changed": 26,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "ambiguous_location",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "rich/prompt.py",
+      "kind": "method",
+      "symbol": "PromptBase.ask",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "v14.2.0",
+        "commit": "494f83c923ca54ecc943bf5e60c0004e65fbb54e",
+        "lines": [
+          80,
+          93
+        ],
+        "content_hash": "c9ff7a1abb214e0d92b7f09215da3796ecc77f8d53cbf6d4ceb64db36a1b7b26"
+      },
+      "new": {
+        "revision": "v14.3.4",
+        "commit": "ee8378c3bbbd7c75abc2f55c6c19e83b218ae81d",
+        "lines": [
+          112,
+          149
+        ],
+        "content_hash": "db65be82b29d0b38ddaa4b9b94888c1187ae062ec48d1d96412ef11bb5cf6e1c"
+      },
+      "lines_changed": 30,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "ambiguous_location",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "rich/prompt.py",
+      "kind": "method",
+      "symbol": "PromptBase.ask",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "v14.2.0",
+        "commit": "494f83c923ca54ecc943bf5e60c0004e65fbb54e",
+        "lines": [
+          97,
+          109
+        ],
+        "content_hash": "1b16b66619cbb62b3b2aa86ad5b3f68735254e9e151668ce08e95e419f824ce5"
+      },
+      "new": {
+        "revision": "v14.3.4",
+        "commit": "ee8378c3bbbd7c75abc2f55c6c19e83b218ae81d",
+        "lines": [
+          112,
+          149
+        ],
+        "content_hash": "db65be82b29d0b38ddaa4b9b94888c1187ae062ec48d1d96412ef11bb5cf6e1c"
+      },
+      "lines_changed": 29,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "ambiguous_location",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "rich/prompt.py",
+      "kind": "method",
+      "symbol": "PromptBase.on_validate_error",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "v14.2.0",
+        "commit": "494f83c923ca54ecc943bf5e60c0004e65fbb54e",
+        "lines": [
+          258,
+          265
+        ],
+        "content_hash": "9c49409d51e0ea5d1a5dede6360c51282c243fa1282aa2f63d6844caf611d6b5"
+      },
+      "new": {
+        "revision": "v14.3.4",
+        "commit": "ee8378c3bbbd7c75abc2f55c6c19e83b218ae81d",
+        "lines": [
+          258,
+          265
+        ],
+        "content_hash": "57c9ed572955e4b3babefd266a3e4d5a095bc2eb443646fc0d8a57c092d24544"
+      },
+      "lines_changed": 2,
+      "normalized": true,
+      "included": true,
+      "exclusion_reason": null,
+      "sample_order": 11,
+      "sampled": true,
+      "review": {
+        "decision": null,
+        "reason": null
+      }
+    },
+    {
+      "path": "rich/protocol.py",
+      "kind": "function",
+      "symbol": "rich_cast",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "v14.2.0",
+        "commit": "494f83c923ca54ecc943bf5e60c0004e65fbb54e",
+        "lines": [
+          19,
+          42
+        ],
+        "content_hash": "4f770cf7bc73911cad4b99ea04cc1c9d8fd6f6593ba826a5912c3ee2586760ad"
+      },
+      "new": {
+        "revision": "v14.3.4",
+        "commit": "ee8378c3bbbd7c75abc2f55c6c19e83b218ae81d",
+        "lines": [
+          18,
+          41
+        ],
+        "content_hash": "12c82ba3213793a4a78f9f55b075b9849275e51929ca25453fb0d501048c9fe3"
+      },
+      "lines_changed": 2,
+      "normalized": true,
+      "included": true,
+      "exclusion_reason": null,
+      "sample_order": 44,
+      "sampled": false,
+      "review": {
+        "decision": null,
+        "reason": null
+      }
+    },
+    {
+      "path": "rich/repr.py",
+      "kind": "function",
+      "symbol": "auto",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "v14.2.0",
+        "commit": "494f83c923ca54ecc943bf5e60c0004e65fbb54e",
+        "lines": [
+          28,
+          29
+        ],
+        "content_hash": "dea7076680a036679c38ebf745cf34061731ddca6ba88ff27e9e1351f05549aa"
+      },
+      "new": {
+        "revision": "v14.3.4",
+        "commit": "ee8378c3bbbd7c75abc2f55c6c19e83b218ae81d",
+        "lines": [
+          36,
+          102
+        ],
+        "content_hash": "fdb923b45175c9022409d1b9bc4f5ef9532c8a242a8862ff9c8f6f143af1d34f"
+      },
+      "lines_changed": 69,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "ambiguous_location",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "rich/repr.py",
+      "kind": "function",
+      "symbol": "auto",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "v14.2.0",
+        "commit": "494f83c923ca54ecc943bf5e60c0004e65fbb54e",
+        "lines": [
+          33,
+          34
+        ],
+        "content_hash": "5eb426f3469250a3017d521d5cfb4e4c0e03041165834fd84cf3a6cb90507bbd"
+      },
+      "new": {
+        "revision": "v14.3.4",
+        "commit": "ee8378c3bbbd7c75abc2f55c6c19e83b218ae81d",
+        "lines": [
+          36,
+          102
+        ],
+        "content_hash": "fdb923b45175c9022409d1b9bc4f5ef9532c8a242a8862ff9c8f6f143af1d34f"
+      },
+      "lines_changed": 69,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "ambiguous_location",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "rich/repr.py",
+      "kind": "function",
+      "symbol": "auto",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "v14.2.0",
+        "commit": "494f83c923ca54ecc943bf5e60c0004e65fbb54e",
+        "lines": [
+          37,
+          101
+        ],
+        "content_hash": "73e42b2253cd556473177e2fa7a343aff47d922f4e4bec191233fa30b76e90fd"
+      },
+      "new": {
+        "revision": "v14.3.4",
+        "commit": "ee8378c3bbbd7c75abc2f55c6c19e83b218ae81d",
+        "lines": [
+          36,
+          102
+        ],
+        "content_hash": "fdb923b45175c9022409d1b9bc4f5ef9532c8a242a8862ff9c8f6f143af1d34f"
+      },
+      "lines_changed": 2,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "ambiguous_location",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "rich/repr.py",
+      "kind": "function",
+      "symbol": "auto.do_replace",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "v14.2.0",
+        "commit": "494f83c923ca54ecc943bf5e60c0004e65fbb54e",
+        "lines": [
+          42,
+          96
+        ],
+        "content_hash": "ec1b46d4e7a99af5b4606c88033f7e5adb53ddf518e7ce9e93d67b961082212d"
+      },
+      "new": {
+        "revision": "v14.3.4",
+        "commit": "ee8378c3bbbd7c75abc2f55c6c19e83b218ae81d",
+        "lines": [
+          41,
+          97
+        ],
+        "content_hash": "d6b80cc8de613dfa1b132b2e0dba47a38e9cee620bbfaa693983eea0e830b754"
+      },
+      "lines_changed": 2,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "contains_changed_symbol",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "rich/repr.py",
+      "kind": "function",
+      "symbol": "auto.do_replace.auto_rich_repr",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "v14.2.0",
+        "commit": "494f83c923ca54ecc943bf5e60c0004e65fbb54e",
+        "lines": [
+          68,
+          86
+        ],
+        "content_hash": "c53c22e9436f3b316538183dc99727e2538d5ceccc1c2797457f8fe261764b8f"
+      },
+      "new": {
+        "revision": "v14.3.4",
+        "commit": "ee8378c3bbbd7c75abc2f55c6c19e83b218ae81d",
+        "lines": [
+          67,
+          87
+        ],
+        "content_hash": "922ac9b0e983eb5d48bffe567fa8231fed6ff05a4c7b923ebb9fdd9898ccbe03"
+      },
+      "lines_changed": 2,
+      "normalized": true,
+      "included": true,
+      "exclusion_reason": null,
+      "sample_order": 15,
+      "sampled": true,
+      "review": {
+        "decision": null,
+        "reason": null
+      }
+    },
+    {
+      "path": "rich/repr.py",
+      "kind": "function",
+      "symbol": "rich_repr",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "v14.2.0",
+        "commit": "494f83c923ca54ecc943bf5e60c0004e65fbb54e",
+        "lines": [
+          105,
+          106
+        ],
+        "content_hash": "1daea9ce657a0d7bd0309d79dedd7048291d2f72851ba1d22dcbb8ded942b69d"
+      },
+      "new": {
+        "revision": "v14.3.4",
+        "commit": "ee8378c3bbbd7c75abc2f55c6c19e83b218ae81d",
+        "lines": [
+          115,
+          121
+        ],
+        "content_hash": "eb47348ca4d8b96488569113c12c22ea8ffcca292202cfd60c732af1cee2f5f4"
+      },
+      "lines_changed": 9,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "ambiguous_location",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "rich/repr.py",
+      "kind": "function",
+      "symbol": "rich_repr",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "v14.2.0",
+        "commit": "494f83c923ca54ecc943bf5e60c0004e65fbb54e",
+        "lines": [
+          110,
+          111
+        ],
+        "content_hash": "5ba0bb9f27292821e4243c43b9132f5bf7ceedf694447f171e41e84d6235ca63"
+      },
+      "new": {
+        "revision": "v14.3.4",
+        "commit": "ee8378c3bbbd7c75abc2f55c6c19e83b218ae81d",
+        "lines": [
+          115,
+          121
+        ],
+        "content_hash": "eb47348ca4d8b96488569113c12c22ea8ffcca292202cfd60c732af1cee2f5f4"
+      },
+      "lines_changed": 9,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "ambiguous_location",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "rich/scope.py",
+      "kind": "function",
+      "symbol": "render_scope",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "v14.2.0",
+        "commit": "494f83c923ca54ecc943bf5e60c0004e65fbb54e",
+        "lines": [
+          14,
+          67
+        ],
+        "content_hash": "3708b855f1f50ad949d6ab54086adcd4121b39b2a02fbbeb248961ccfb7e7040"
+      },
+      "new": {
+        "revision": "v14.3.4",
+        "commit": "ee8378c3bbbd7c75abc2f55c6c19e83b218ae81d",
+        "lines": [
+          14,
+          73
+        ],
+        "content_hash": "8ff4ed49c1781ecf50eace5e8f08d78dc41b2d496f7fef1ada2b6e3695d99f50"
+      },
+      "lines_changed": 6,
+      "normalized": true,
+      "included": true,
+      "exclusion_reason": null,
+      "sample_order": 45,
+      "sampled": false,
+      "review": {
+        "decision": null,
+        "reason": null
+      }
+    },
+    {
+      "path": "rich/segment.py",
+      "kind": "class",
+      "symbol": "Segment",
+      "part_index": 1,
+      "part_count": 2,
+      "status": "superseded",
+      "old": {
+        "revision": "v14.2.0",
+        "commit": "494f83c923ca54ecc943bf5e60c0004e65fbb54e",
+        "lines": [
+          64,
+          410
+        ],
+        "content_hash": "19a6023709e86c99019161d7823765b0e2b216b45551c70c07a3e5afe7ca1412"
+      },
+      "new": {
+        "revision": "v14.3.4",
+        "commit": "ee8378c3bbbd7c75abc2f55c6c19e83b218ae81d",
+        "lines": [
+          61,
+          407
+        ],
+        "content_hash": "5cb9189374da5ba24f9f64ffb5f7796c1a2c0ba384524ea0615edbcfef8481d4"
+      },
+      "lines_changed": 62,
+      "normalized": false,
+      "included": true,
+      "exclusion_reason": null,
+      "sample_order": 22,
+      "sampled": false,
+      "review": {
+        "decision": null,
+        "reason": null
+      }
+    },
+    {
+      "path": "rich/segment.py",
+      "kind": "class",
+      "symbol": "Segment",
+      "part_index": 2,
+      "part_count": 2,
+      "status": "superseded",
+      "old": {
+        "revision": "v14.2.0",
+        "commit": "494f83c923ca54ecc943bf5e60c0004e65fbb54e",
+        "lines": [
+          411,
+          668
+        ],
+        "content_hash": "baff92f50bc5cacfc1788b30b98eb2bf3e759f67423c9bcc31227b4aadf71edb"
+      },
+      "new": {
+        "revision": "v14.3.4",
+        "commit": "ee8378c3bbbd7c75abc2f55c6c19e83b218ae81d",
+        "lines": [
+          408,
+          696
+        ],
+        "content_hash": "04aa866a284941700562c0d43584a2e07341fe40f3fadabeeff5d98dbaf4273f"
+      },
+      "lines_changed": 31,
+      "normalized": false,
+      "included": true,
+      "exclusion_reason": null,
+      "sample_order": 14,
+      "sampled": true,
+      "review": {
+        "decision": null,
+        "reason": null
+      }
+    },
+    {
+      "path": "rich/style.py",
+      "kind": "class",
+      "symbol": "Style",
+      "part_index": 1,
+      "part_count": 3,
+      "status": "superseded",
+      "old": {
+        "revision": "v14.2.0",
+        "commit": "494f83c923ca54ecc943bf5e60c0004e65fbb54e",
+        "lines": [
+          36,
+          373
+        ],
+        "content_hash": "fbf4423fa1b25ddbaf875c27d89dc7ccf8308d2ec3b3c137a9255a8b24a13aca"
+      },
+      "new": {
+        "revision": "v14.3.4",
+        "commit": "ee8378c3bbbd7c75abc2f55c6c19e83b218ae81d",
+        "lines": [
+          40,
+          377
+        ],
+        "content_hash": "2a1565caab7e6db2d5e088dcc808036179052c1bf19abf391d7ef39040dd73c6"
+      },
+      "lines_changed": 4,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "contains_changed_symbol",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "rich/style.py",
+      "kind": "class",
+      "symbol": "Style",
+      "part_index": 2,
+      "part_count": 3,
+      "status": "superseded",
+      "old": {
+        "revision": "v14.2.0",
+        "commit": "494f83c923ca54ecc943bf5e60c0004e65fbb54e",
+        "lines": [
+          374,
+          728
+        ],
+        "content_hash": "1d53da4442eedf648eb5990edfcb207a199a87ba53483e388dad27521affb829"
+      },
+      "new": {
+        "revision": "v14.3.4",
+        "commit": "ee8378c3bbbd7c75abc2f55c6c19e83b218ae81d",
+        "lines": [
+          378,
+          732
+        ],
+        "content_hash": "85c539f4b39119015a6ecd8a535500b5189d4880b664a14ddf30b5c3e4695e54"
+      },
+      "lines_changed": 6,
+      "normalized": false,
+      "included": false,
+      "exclusion_reason": "contains_changed_symbol",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "rich/style.py",
+      "kind": "method",
+      "symbol": "Style.__init__",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "v14.2.0",
+        "commit": "494f83c923ca54ecc943bf5e60c0004e65fbb54e",
+        "lines": [
+          127,
+          201
+        ],
+        "content_hash": "0c1474bf9691ebf60050bf01c8af25af0c6291341e3125b4e1c680ecbab310f2"
+      },
+      "new": {
+        "revision": "v14.3.4",
+        "commit": "ee8378c3bbbd7c75abc2f55c6c19e83b218ae81d",
+        "lines": [
+          131,
+          205
+        ],
+        "content_hash": "3931ff8d18696d870555ed3f7821fc5553ddc0216784eb159a0bd4bd0e6e631d"
+      },
+      "lines_changed": 2,
+      "normalized": true,
+      "included": true,
+      "exclusion_reason": null,
+      "sample_order": 3,
+      "sampled": true,
+      "review": {
+        "decision": null,
+        "reason": null
+      }
+    },
+    {
+      "path": "rich/style.py",
+      "kind": "method",
+      "symbol": "Style.copy",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "v14.2.0",
+        "commit": "494f83c923ca54ecc943bf5e60c0004e65fbb54e",
+        "lines": [
+          622,
+          642
+        ],
+        "content_hash": "84114127fa2b53d2b65953aa7c57aa651a052b9c56bc53c2738ed34741ce2f83"
+      },
+      "new": {
+        "revision": "v14.3.4",
+        "commit": "ee8378c3bbbd7c75abc2f55c6c19e83b218ae81d",
+        "lines": [
+          626,
+          646
+        ],
+        "content_hash": "0136db6b45bf3556d0adaedbe2053e2d46d0cfd5dbc2c2270535477f00b59d73"
+      },
+      "lines_changed": 2,
+      "normalized": true,
+      "included": true,
+      "exclusion_reason": null,
+      "sample_order": 26,
+      "sampled": false,
+      "review": {
+        "decision": null,
+        "reason": null
+      }
+    },
+    {
+      "path": "rich/style.py",
+      "kind": "method",
+      "symbol": "Style.from_meta",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "v14.2.0",
+        "commit": "494f83c923ca54ecc943bf5e60c0004e65fbb54e",
+        "lines": [
+          233,
+          251
+        ],
+        "content_hash": "e40dfd55685b39b55961c8902387a5c2f2892a6b3d7375b1b4bff3041062b647"
+      },
+      "new": {
+        "revision": "v14.3.4",
+        "commit": "ee8378c3bbbd7c75abc2f55c6c19e83b218ae81d",
+        "lines": [
+          237,
+          255
+        ],
+        "content_hash": "72d5855433568278970eed2a0cd221a85fe3d69aabbe2b7a905139ebd91f6dd5"
+      },
+      "lines_changed": 2,
+      "normalized": true,
+      "included": true,
+      "exclusion_reason": null,
+      "sample_order": 40,
+      "sampled": false,
+      "review": {
+        "decision": null,
+        "reason": null
+      }
+    },
+    {
+      "path": "rich/style.py",
+      "kind": "method",
+      "symbol": "Style.update_link",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "v14.2.0",
+        "commit": "494f83c923ca54ecc943bf5e60c0004e65fbb54e",
+        "lines": [
+          667,
+          688
+        ],
+        "content_hash": "c53c14dd6f6c77c2d839667c6fe299c4301c8fd16e9171f3b115ba5534788e6e"
+      },
+      "new": {
+        "revision": "v14.3.4",
+        "commit": "ee8378c3bbbd7c75abc2f55c6c19e83b218ae81d",
+        "lines": [
+          671,
+          692
+        ],
+        "content_hash": "1472524033f52f688ad6505b381cff819f2c4f1cd1c8543630fd38b516da384a"
+      },
+      "lines_changed": 2,
+      "normalized": true,
+      "included": true,
+      "exclusion_reason": null,
+      "sample_order": 10,
+      "sampled": true,
+      "review": {
+        "decision": null,
+        "reason": null
+      }
+    },
+    {
+      "path": "rich/style.py",
+      "kind": "method",
+      "symbol": "Style.without_color",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "v14.2.0",
+        "commit": "494f83c923ca54ecc943bf5e60c0004e65fbb54e",
+        "lines": [
+          474,
+          490
+        ],
+        "content_hash": "8fdf6e92815d288bb8c3e8bdca7b69bbd72765a15c21454b11e9f6dd4283231a"
+      },
+      "new": {
+        "revision": "v14.3.4",
+        "commit": "ee8378c3bbbd7c75abc2f55c6c19e83b218ae81d",
+        "lines": [
+          478,
+          494
+        ],
+        "content_hash": "be330308f284734a51ea05939153f015a5816a7b1f0c87098901620088a1a432"
+      },
+      "lines_changed": 2,
+      "normalized": true,
+      "included": true,
+      "exclusion_reason": null,
+      "sample_order": 12,
+      "sampled": true,
+      "review": {
+        "decision": null,
+        "reason": null
+      }
+    },
+    {
+      "path": "rich/table.py",
+      "kind": "class",
+      "symbol": "Column",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "v14.2.0",
+        "commit": "494f83c923ca54ecc943bf5e60c0004e65fbb54e",
+        "lines": [
+          39,
+          129
+        ],
+        "content_hash": "85971a7641dc6b75ebd76cec5a0af2272bdec454c5f3d53f457b9c13d9894eaa"
+      },
+      "new": {
+        "revision": "v14.3.4",
+        "commit": "ee8378c3bbbd7c75abc2f55c6c19e83b218ae81d",
+        "lines": [
+          39,
+          128
+        ],
+        "content_hash": "7ae519dbc9a63132c87509dffd0fb029395b3b612b70ae282f1974b49e87d02d"
+      },
+      "lines_changed": 1,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "formatting_or_docstring_only",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "rich/table.py",
+      "kind": "class",
+      "symbol": "Table",
+      "part_index": 2,
+      "part_count": 3,
+      "status": "superseded",
+      "old": {
+        "revision": "v14.2.0",
+        "commit": "494f83c923ca54ecc943bf5e60c0004e65fbb54e",
+        "lines": [
+          417,
+          730
+        ],
+        "content_hash": "3b5d9e750a0ed146a904d5d2e6b02667fef5de2bbb47c0b3de2fad13953e1bd5"
+      },
+      "new": {
+        "revision": "v14.3.4",
+        "commit": "ee8378c3bbbd7c75abc2f55c6c19e83b218ae81d",
+        "lines": [
+          416,
+          734
+        ],
+        "content_hash": "a7c2428b3bb42799799c077cf60f7f57ae906f07105e0c86a89f61d32db79c1d"
+      },
+      "lines_changed": 19,
+      "normalized": false,
+      "included": false,
+      "exclusion_reason": "contains_changed_symbol",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "rich/table.py",
+      "kind": "class",
+      "symbol": "Table",
+      "part_index": 3,
+      "part_count": 3,
+      "status": "superseded",
+      "old": {
+        "revision": "v14.2.0",
+        "commit": "494f83c923ca54ecc943bf5e60c0004e65fbb54e",
+        "lines": [
+          731,
+          926
+        ],
+        "content_hash": "23b8295d6fa55f160b2a5c69f12a42284552838209d04d2b4d5a89086864ab48"
+      },
+      "new": {
+        "revision": "v14.3.4",
+        "commit": "ee8378c3bbbd7c75abc2f55c6c19e83b218ae81d",
+        "lines": [
+          735,
+          935
+        ],
+        "content_hash": "ab0c9f849ab97af4d5b1c0e0074ef4123e6e5b3ac54aee717561b1c384826f15"
+      },
+      "lines_changed": 5,
+      "normalized": false,
+      "included": false,
+      "exclusion_reason": "contains_changed_symbol",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "rich/table.py",
+      "kind": "method",
+      "symbol": "Table.__rich_console__",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "v14.2.0",
+        "commit": "494f83c923ca54ecc943bf5e60c0004e65fbb54e",
+        "lines": [
+          476,
+          521
+        ],
+        "content_hash": "9a2de04b659c4f4fb369ed2a04bad8d9e90c38a1751fef6091bf94c75afa6cb2"
+      },
+      "new": {
+        "revision": "v14.3.4",
+        "commit": "ee8378c3bbbd7c75abc2f55c6c19e83b218ae81d",
+        "lines": [
+          475,
+          521
+        ],
+        "content_hash": "34d812edbfe5a5482de82d2d931059ea749e847b9b624ee61c82ea5414dfb92d"
+      },
+      "lines_changed": 1,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "formatting_or_docstring_only",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "rich/table.py",
+      "kind": "method",
+      "symbol": "Table._calculate_column_widths",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "v14.2.0",
+        "commit": "494f83c923ca54ecc943bf5e60c0004e65fbb54e",
+        "lines": [
+          523,
+          585
+        ],
+        "content_hash": "98ef821c6c0b90d4be759f0092b1163a18cdcdb3a3ffec6118b31a5d6f1ac82a"
+      },
+      "new": {
+        "revision": "v14.3.4",
+        "commit": "ee8378c3bbbd7c75abc2f55c6c19e83b218ae81d",
+        "lines": [
+          523,
+          586
+        ],
+        "content_hash": "43a83e8eb7f1155aa5b0530114e7c39f07dd48ad95961a3b9775af241ffd359f"
+      },
+      "lines_changed": 1,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "formatting_or_docstring_only",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "rich/table.py",
+      "kind": "method",
+      "symbol": "Table._get_padding_width",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "v14.2.0",
+        "commit": "494f83c923ca54ecc943bf5e60c0004e65fbb54e",
+        "lines": [
+          699,
+          705
+        ],
+        "content_hash": "3b268130e35d3a92d1aede6fe838a03862d2e122bf1c211d0f260f9df41f6e0f"
+      },
+      "new": {
+        "revision": "v14.3.4",
+        "commit": "ee8378c3bbbd7c75abc2f55c6c19e83b218ae81d",
+        "lines": [
+          700,
+          714
+        ],
+        "content_hash": "598a3a9faf84f0b9c4fe6486e88c5bdd50e3c617d9dc2d342624d35948392b2a"
+      },
+      "lines_changed": 12,
+      "normalized": true,
+      "included": true,
+      "exclusion_reason": null,
+      "sample_order": 39,
+      "sampled": false,
+      "review": {
+        "decision": null,
+        "reason": null
+      }
+    },
+    {
+      "path": "rich/table.py",
+      "kind": "method",
+      "symbol": "Table._measure_column",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "v14.2.0",
+        "commit": "494f83c923ca54ecc943bf5e60c0004e65fbb54e",
+        "lines": [
+          707,
+          745
+        ],
+        "content_hash": "c1c2d904e1a0c2604030784e2b5495c75de24873a92ca3886a9ef50e46de52cb"
+      },
+      "new": {
+        "revision": "v14.3.4",
+        "commit": "ee8378c3bbbd7c75abc2f55c6c19e83b218ae81d",
+        "lines": [
+          716,
+          753
+        ],
+        "content_hash": "fd7da0d3e5b1417750b1a3379a48183b222e6348905fdd2690921987ed159b1c"
+      },
+      "lines_changed": 1,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "formatting_or_docstring_only",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "rich/table.py",
+      "kind": "method",
+      "symbol": "Table._render",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "v14.2.0",
+        "commit": "494f83c923ca54ecc943bf5e60c0004e65fbb54e",
+        "lines": [
+          747,
+          926
+        ],
+        "content_hash": "0021bce83076466fd0885fc6d5e1ecbdb54d13ccca9424fd77a9263cd572c62d"
+      },
+      "new": {
+        "revision": "v14.3.4",
+        "commit": "ee8378c3bbbd7c75abc2f55c6c19e83b218ae81d",
+        "lines": [
+          755,
+          935
+        ],
+        "content_hash": "6490471a63634d3280c60e2759cdf7bf0e769e3831a033a98ac691b4b60f7708"
+      },
+      "lines_changed": 1,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "formatting_or_docstring_only",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "rich/table.py",
+      "kind": "method",
+      "symbol": "Table.expand",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "v14.2.0",
+        "commit": "494f83c923ca54ecc943bf5e60c0004e65fbb54e",
+        "lines": [
+          287,
+          289
+        ],
+        "content_hash": "918b2e83e89627a16bee8c7476c2779e87a3396b34960f5b81361ab47f8ea355"
+      },
+      "new": {
+        "revision": "v14.3.4",
+        "commit": "ee8378c3bbbd7c75abc2f55c6c19e83b218ae81d",
+        "lines": [
+          291,
+          293
+        ],
+        "content_hash": "b245c24da40702ff6048885caba5c140f9c6ac4fef3b1594274995172743f98b"
+      },
+      "lines_changed": 6,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "ambiguous_location",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "rich/table.py",
+      "kind": "method",
+      "symbol": "Table.padding",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "v14.2.0",
+        "commit": "494f83c923ca54ecc943bf5e60c0004e65fbb54e",
+        "lines": [
+          355,
+          357
+        ],
+        "content_hash": "6e80b622dc9d0627ee2c2caf6276b643a389728c43bc8a3cdfb88b35d045045a"
+      },
+      "new": {
+        "revision": "v14.3.4",
+        "commit": "ee8378c3bbbd7c75abc2f55c6c19e83b218ae81d",
+        "lines": [
+          359,
+          362
+        ],
+        "content_hash": "2c3fb1a0c89d0a2c01f335682d616f3d953419e0657cf58b0e8cdf2e618a752c"
+      },
+      "lines_changed": 7,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "ambiguous_location",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "rich/text.py",
+      "kind": "class",
+      "symbol": "Text",
+      "part_index": 2,
+      "part_count": 4,
+      "status": "superseded",
+      "old": {
+        "revision": "v14.2.0",
+        "commit": "494f83c923ca54ecc943bf5e60c0004e65fbb54e",
+        "lines": [
+          452,
+          781
+        ],
+        "content_hash": "b4f918dc56fd2a3797f606962adc714ee27016edff6171f818de72ef6b120bfa"
+      },
+      "new": {
+        "revision": "v14.3.4",
+        "commit": "ee8378c3bbbd7c75abc2f55c6c19e83b218ae81d",
+        "lines": [
+          452,
+          780
+        ],
+        "content_hash": "44419b4130515a1ed683ad25336adbe2b586b343e4dec26d759107152ed0b0a4"
+      },
+      "lines_changed": 1,
+      "normalized": false,
+      "included": false,
+      "exclusion_reason": "contains_changed_symbol",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "rich/text.py",
+      "kind": "class",
+      "symbol": "Text",
+      "part_index": 3,
+      "part_count": 4,
+      "status": "superseded",
+      "old": {
+        "revision": "v14.2.0",
+        "commit": "494f83c923ca54ecc943bf5e60c0004e65fbb54e",
+        "lines": [
+          782,
+          1120
+        ],
+        "content_hash": "5f26b4c62dc6675380bdf411ab30ed7291bc3a1dee14c836594e91035de79195"
+      },
+      "new": {
+        "revision": "v14.3.4",
+        "commit": "ee8378c3bbbd7c75abc2f55c6c19e83b218ae81d",
+        "lines": [
+          781,
+          1119
+        ],
+        "content_hash": "23d8dc37fd3f056414812efb608fa432e3a71b1292e04e9270c2f0df76e621bf"
+      },
+      "lines_changed": 4,
+      "normalized": false,
+      "included": false,
+      "exclusion_reason": "contains_changed_symbol",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "rich/text.py",
+      "kind": "class",
+      "symbol": "Text",
+      "part_index": 4,
+      "part_count": 4,
+      "status": "superseded",
+      "old": {
+        "revision": "v14.2.0",
+        "commit": "494f83c923ca54ecc943bf5e60c0004e65fbb54e",
+        "lines": [
+          1121,
+          1333
+        ],
+        "content_hash": "18df4cbc4516ec0974f3ffccb3b26a7b62db5974491ab0c2bbcfe55f3d8c6e2c"
+      },
+      "new": {
+        "revision": "v14.3.4",
+        "commit": "ee8378c3bbbd7c75abc2f55c6c19e83b218ae81d",
+        "lines": [
+          1120,
+          1335
+        ],
+        "content_hash": "f2f2a19effc850ff68a7da5a7733ba5f419f5ed7599dbbafd5d3166da6d6f9bb"
+      },
+      "lines_changed": 7,
+      "normalized": false,
+      "included": false,
+      "exclusion_reason": "contains_changed_symbol",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "rich/text.py",
+      "kind": "method",
+      "symbol": "Text.__rich_console__",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "v14.2.0",
+        "commit": "494f83c923ca54ecc943bf5e60c0004e65fbb54e",
+        "lines": [
+          689,
+          706
+        ],
+        "content_hash": "f69ec8daaab9b0d0b9dc60162ee2fa27f06ee282a253ec0fa52510021be853af"
+      },
+      "new": {
+        "revision": "v14.3.4",
+        "commit": "ee8378c3bbbd7c75abc2f55c6c19e83b218ae81d",
+        "lines": [
+          689,
+          705
+        ],
+        "content_hash": "8a574d9de2f1abace99f9990f0adaa594da788377abd5321185efd04627f651b"
+      },
+      "lines_changed": 1,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "formatting_or_docstring_only",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "rich/text.py",
+      "kind": "method",
+      "symbol": "Text.append_text",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "v14.2.0",
+        "commit": "494f83c923ca54ecc943bf5e60c0004e65fbb54e",
+        "lines": [
+          1009,
+          1029
+        ],
+        "content_hash": "ab7512aae2787ced35bdea4e7eacd3e7227287f8cd4d18b917cdbc42282fa404"
+      },
+      "new": {
+        "revision": "v14.3.4",
+        "commit": "ee8378c3bbbd7c75abc2f55c6c19e83b218ae81d",
+        "lines": [
+          1008,
+          1028
+        ],
+        "content_hash": "af4ea027fca0465e8eb843f8186152da58793b25982f276dd3705a38e0ca40fe"
+      },
+      "lines_changed": 2,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "formatting_or_docstring_only",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "rich/text.py",
+      "kind": "method",
+      "symbol": "Text.divide",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "v14.2.0",
+        "commit": "494f83c923ca54ecc943bf5e60c0004e65fbb54e",
+        "lines": [
+          1107,
+          1184
+        ],
+        "content_hash": "94e927f6ada1724079e66b4e45ceb68480ba83411f03565006696a7852d0c067"
+      },
+      "new": {
+        "revision": "v14.3.4",
+        "commit": "ee8378c3bbbd7c75abc2f55c6c19e83b218ae81d",
+        "lines": [
+          1106,
+          1183
+        ],
+        "content_hash": "78892b3941b9ac1a005c887766b8a277038ab5a0b5ae87a5d4fea849d3bb3b18"
+      },
+      "lines_changed": 2,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "formatting_or_docstring_only",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "rich/text.py",
+      "kind": "method",
+      "symbol": "Text.plain",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "v14.2.0",
+        "commit": "494f83c923ca54ecc943bf5e60c0004e65fbb54e",
+        "lines": [
+          403,
+          407
+        ],
+        "content_hash": "288f1749848e09c9dbe341dcf5520f9e22fac4c454a0ee70f1a7d6dab15fe007"
+      },
+      "new": {
+        "revision": "v14.3.4",
+        "commit": "ee8378c3bbbd7c75abc2f55c6c19e83b218ae81d",
+        "lines": [
+          410,
+          418
+        ],
+        "content_hash": "56680c8691611a25b1d8205c64d73a26be204228f6a727741c7ed3bd93f2d0c5"
+      },
+      "lines_changed": 14,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "ambiguous_location",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "rich/text.py",
+      "kind": "method",
+      "symbol": "Text.spans",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "v14.2.0",
+        "commit": "494f83c923ca54ecc943bf5e60c0004e65fbb54e",
+        "lines": [
+          421,
+          423
+        ],
+        "content_hash": "19e1254387443a63a3ca8846c601a50384287de3bd8f6ec07778f5ec712508a6"
+      },
+      "new": {
+        "revision": "v14.3.4",
+        "commit": "ee8378c3bbbd7c75abc2f55c6c19e83b218ae81d",
+        "lines": [
+          426,
+          428
+        ],
+        "content_hash": "d5146707ccbdba8c64c4460c80aed3d3d0df4b02dc75e7083d381a3351734e7b"
+      },
+      "lines_changed": 6,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "ambiguous_location",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "rich/text.py",
+      "kind": "method",
+      "symbol": "Text.wrap",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "v14.2.0",
+        "commit": "494f83c923ca54ecc943bf5e60c0004e65fbb54e",
+        "lines": [
+          1202,
+          1248
+        ],
+        "content_hash": "57b855ffea70beae0752bb6a0aa3d03bc56d20047a73271398970046a963140e"
+      },
+      "new": {
+        "revision": "v14.3.4",
+        "commit": "ee8378c3bbbd7c75abc2f55c6c19e83b218ae81d",
+        "lines": [
+          1201,
+          1250
+        ],
+        "content_hash": "034809139a2935ac38237acd7252a056f9bc7d47f791e460ce068238109319f0"
+      },
+      "lines_changed": 7,
+      "normalized": true,
+      "included": true,
+      "exclusion_reason": null,
+      "sample_order": 8,
+      "sampled": true,
+      "review": {
+        "decision": null,
+        "reason": null
+      }
+    },
+    {
+      "path": "rich/theme.py",
+      "kind": "class",
+      "symbol": "Theme",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "v14.2.0",
+        "commit": "494f83c923ca54ecc943bf5e60c0004e65fbb54e",
+        "lines": [
+          8,
+          73
+        ],
+        "content_hash": "9fbbc0c1ccefcec4bd2712a0adcb754aa01be10185ce1be902153c7e3fd3c906"
+      },
+      "new": {
+        "revision": "v14.3.4",
+        "commit": "ee8378c3bbbd7c75abc2f55c6c19e83b218ae81d",
+        "lines": [
+          7,
+          74
+        ],
+        "content_hash": "0af1233cb819fa01360d118778c395faad709c20e9de83583ce6203e55a04ea8"
+      },
+      "lines_changed": 2,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "contains_changed_symbol",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "rich/theme.py",
+      "kind": "method",
+      "symbol": "Theme.from_file",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "v14.2.0",
+        "commit": "494f83c923ca54ecc943bf5e60c0004e65fbb54e",
+        "lines": [
+          39,
+          56
+        ],
+        "content_hash": "22c600604b1c5df2e93826a76b9277d3881dceff5850463c2d265cd12f6948b4"
+      },
+      "new": {
+        "revision": "v14.3.4",
+        "commit": "ee8378c3bbbd7c75abc2f55c6c19e83b218ae81d",
+        "lines": [
+          38,
+          57
+        ],
+        "content_hash": "eb161df4eaa2dc5a5e2c047cf417a2b94e65199b7ec12493f25497aa4f349095"
+      },
+      "lines_changed": 2,
+      "normalized": true,
+      "included": true,
+      "exclusion_reason": null,
+      "sample_order": 9,
+      "sampled": true,
+      "review": {
+        "decision": null,
+        "reason": null
+      }
+    },
+    {
+      "path": "rich/traceback.py",
+      "kind": "class",
+      "symbol": "Traceback",
+      "part_index": 1,
+      "part_count": 3,
+      "status": "superseded",
+      "old": {
+        "revision": "v14.2.0",
+        "commit": "494f83c923ca54ecc943bf5e60c0004e65fbb54e",
+        "lines": [
+          255,
+          522
+        ],
+        "content_hash": "23d64141ee7ad1fb453f236120c5aa833a677cb6b5e8cbf6fec6321c9bf9b85c"
+      },
+      "new": {
+        "revision": "v14.3.4",
+        "commit": "ee8378c3bbbd7c75abc2f55c6c19e83b218ae81d",
+        "lines": [
+          262,
+          518
+        ],
+        "content_hash": "fa1f33beff4cfbf7a3870e02c73846b8fea2d8ee1e253ae47478336eaefdca95"
+      },
+      "lines_changed": 41,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "contains_changed_symbol",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "rich/traceback.py",
+      "kind": "class",
+      "symbol": "Traceback",
+      "part_index": 2,
+      "part_count": 3,
+      "status": "superseded",
+      "old": {
+        "revision": "v14.2.0",
+        "commit": "494f83c923ca54ecc943bf5e60c0004e65fbb54e",
+        "lines": [
+          523,
+          809
+        ],
+        "content_hash": "562a69cda40aead8e14c1e506477b62a721ec83d5a778c1661a2e3948ba591ff"
+      },
+      "new": {
+        "revision": "v14.3.4",
+        "commit": "ee8378c3bbbd7c75abc2f55c6c19e83b218ae81d",
+        "lines": [
+          519,
+          802
+        ],
+        "content_hash": "b3e3c1169fb65a90efa1043debb71159f09ab28401b027c82a7c6d735be5baec"
+      },
+      "lines_changed": 61,
+      "normalized": false,
+      "included": false,
+      "exclusion_reason": "contains_changed_symbol",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "rich/traceback.py",
+      "kind": "class",
+      "symbol": "Traceback",
+      "part_index": 3,
+      "part_count": 3,
+      "status": "superseded",
+      "old": {
+        "revision": "v14.2.0",
+        "commit": "494f83c923ca54ecc943bf5e60c0004e65fbb54e",
+        "lines": [
+          810,
+          870
+        ],
+        "content_hash": "eff8448bb227ac626b44ac301dfee00225a44a7c32c066600e41c588e0fbd895"
+      },
+      "new": {
+        "revision": "v14.3.4",
+        "commit": "ee8378c3bbbd7c75abc2f55c6c19e83b218ae81d",
+        "lines": [
+          803,
+          895
+        ],
+        "content_hash": "007bf9cc1b70047b76434cd2797bf22930aec07b3e52b7e41e245d49c34ac6ea"
+      },
+      "lines_changed": 32,
+      "normalized": false,
+      "included": false,
+      "exclusion_reason": "contains_changed_symbol",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "rich/traceback.py",
+      "kind": "function",
+      "symbol": "Traceback._render_stack.render_locals",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "v14.2.0",
+        "commit": "494f83c923ca54ecc943bf5e60c0004e65fbb54e",
+        "lines": [
+          749,
+          757
+        ],
+        "content_hash": "1b40e73b774fd8b6b3575ef10319fb7115f231d70bcedf40d5e7fb30fc6bd982"
+      },
+      "new": {
+        "revision": "v14.3.4",
+        "commit": "ee8378c3bbbd7c75abc2f55c6c19e83b218ae81d",
+        "lines": [
+          772,
+          782
+        ],
+        "content_hash": "6a228dad83b5951a0b271890596ae5fa579d9735dee8cd3b8373095fa6c3a674"
+      },
+      "lines_changed": 2,
+      "normalized": true,
+      "included": true,
+      "exclusion_reason": null,
+      "sample_order": 13,
+      "sampled": true,
+      "review": {
+        "decision": null,
+        "reason": null
+      }
+    },
+    {
+      "path": "rich/traceback.py",
+      "kind": "function",
+      "symbol": "install",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "v14.2.0",
+        "commit": "494f83c923ca54ecc943bf5e60c0004e65fbb54e",
+        "lines": [
+          83,
+          211
+        ],
+        "content_hash": "91f2281ee9740cba32cdd5b4800a12336a4246a0780b50df19d5f8976a3ebfd8"
+      },
+      "new": {
+        "revision": "v14.3.4",
+        "commit": "ee8378c3bbbd7c75abc2f55c6c19e83b218ae81d",
+        "lines": [
+          84,
+          218
+        ],
+        "content_hash": "3d32b1b6baadabe4dccf8d4f7232c027dc8e0bddfd8390059cece682f0fa1dc9"
+      },
+      "lines_changed": 6,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "contains_changed_symbol",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "rich/traceback.py",
+      "kind": "function",
+      "symbol": "install.excepthook",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "v14.2.0",
+        "commit": "494f83c923ca54ecc943bf5e60c0004e65fbb54e",
+        "lines": [
+          134,
+          157
+        ],
+        "content_hash": "a3d79a287265b252157e9aa0ced3a2082e896f43627ce515118e6be17073e270"
+      },
+      "new": {
+        "revision": "v14.3.4",
+        "commit": "ee8378c3bbbd7c75abc2f55c6c19e83b218ae81d",
+        "lines": [
+          139,
+          164
+        ],
+        "content_hash": "583e6a9fd61414d716970f4ed282fad90baac1c828ae047718804fd0a7b4643c"
+      },
+      "lines_changed": 2,
+      "normalized": true,
+      "included": true,
+      "exclusion_reason": null,
+      "sample_order": 5,
+      "sampled": true,
+      "review": {
+        "decision": null,
+        "reason": null
+      }
+    },
+    {
+      "path": "rich/traceback.py",
+      "kind": "method",
+      "symbol": "Traceback.__init__",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "v14.2.0",
+        "commit": "494f83c923ca54ecc943bf5e60c0004e65fbb54e",
+        "lines": [
+          286,
+          337
+        ],
+        "content_hash": "7344b6b24f93b7b9edd59b42b4d8498923218055ad2f289100fdd44da1ef8466"
+      },
+      "new": {
+        "revision": "v14.3.4",
+        "commit": "ee8378c3bbbd7c75abc2f55c6c19e83b218ae81d",
+        "lines": [
+          295,
+          350
+        ],
+        "content_hash": "fb4057143c699920f40c43916eb4a40fa886fda6accd5200424d35a232e0bf41"
+      },
+      "lines_changed": 4,
+      "normalized": true,
+      "included": true,
+      "exclusion_reason": null,
+      "sample_order": 23,
+      "sampled": false,
+      "review": {
+        "decision": null,
+        "reason": null
+      }
+    },
+    {
+      "path": "rich/traceback.py",
+      "kind": "method",
+      "symbol": "Traceback._render_stack",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "v14.2.0",
+        "commit": "494f83c923ca54ecc943bf5e60c0004e65fbb54e",
+        "lines": [
+          745,
+          870
+        ],
+        "content_hash": "93b3ad774d19b96e0f2a9c67a9f496fee01ef162c43506270b3f9fbc931679fa"
+      },
+      "new": {
+        "revision": "v14.3.4",
+        "commit": "ee8378c3bbbd7c75abc2f55c6c19e83b218ae81d",
+        "lines": [
+          768,
+          895
+        ],
+        "content_hash": "2fef56d95d9e2952c10bef671aad8d3cba1077c42af59713f7305dcaf67ec7a5"
+      },
+      "lines_changed": 2,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "contains_changed_symbol",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "rich/traceback.py",
+      "kind": "method",
+      "symbol": "Traceback.extract",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "v14.2.0",
+        "commit": "494f83c923ca54ecc943bf5e60c0004e65fbb54e",
+        "lines": [
+          413,
+          601
+        ],
+        "content_hash": "ac4dd71d069242b6d2ffb3993831336cd9b56c7c4112c754fa4c6dce3da81a39"
+      },
+      "new": {
+        "revision": "v14.3.4",
+        "commit": "ee8378c3bbbd7c75abc2f55c6c19e83b218ae81d",
+        "lines": [
+          433,
+          624
+        ],
+        "content_hash": "a09a246fdcabd84ae9c48f389dde7b7e7d0ce4ff947434df50fb65ae54a321d3"
+      },
+      "lines_changed": 3,
+      "normalized": true,
+      "included": true,
+      "exclusion_reason": null,
+      "sample_order": 29,
+      "sampled": false,
+      "review": {
+        "decision": null,
+        "reason": null
+      }
+    },
+    {
+      "path": "rich/traceback.py",
+      "kind": "method",
+      "symbol": "Traceback.from_exception",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "v14.2.0",
+        "commit": "494f83c923ca54ecc943bf5e60c0004e65fbb54e",
+        "lines": [
+          340,
+          410
+        ],
+        "content_hash": "7cb143e1f00f80f2710d38d0b447e0db0150cb2e57adc7cf6eda0a32f9383748"
+      },
+      "new": {
+        "revision": "v14.3.4",
+        "commit": "ee8378c3bbbd7c75abc2f55c6c19e83b218ae81d",
+        "lines": [
+          353,
+          430
+        ],
+        "content_hash": "6dd45852abaa9ebc8adbbafbe60d4e0343c6d4b9bb322e493f21b31427ca60bc"
+      },
+      "lines_changed": 7,
+      "normalized": true,
+      "included": true,
+      "exclusion_reason": null,
+      "sample_order": 21,
+      "sampled": false,
+      "review": {
+        "decision": null,
+        "reason": null
+      }
+    },
+    {
+      "path": "tests/test_columns.py",
+      "kind": "function",
+      "symbol": "render",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "v14.2.0",
+        "commit": "494f83c923ca54ecc943bf5e60c0004e65fbb54e",
+        "lines": [
+          31,
+          61
+        ],
+        "content_hash": "63814ab1c606e1ee08ed227fa8e8b8acb5c20f9ffe595d266f79ac660548a110"
+      },
+      "new": {
+        "revision": "v14.3.4",
+        "commit": "ee8378c3bbbd7c75abc2f55c6c19e83b218ae81d",
+        "lines": [
+          31,
+          63
+        ],
+        "content_hash": "57afbedb6ddb5b36a5c069cf9f64ef9bd70f80f68a0ad183624dd64f92e51903"
+      },
+      "lines_changed": 2,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "test_file",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "tests/test_columns.py",
+      "kind": "function",
+      "symbol": "test_render",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "v14.2.0",
+        "commit": "494f83c923ca54ecc943bf5e60c0004e65fbb54e",
+        "lines": [
+          64,
+          66
+        ],
+        "content_hash": "d0c63c3134c8707b8acf23c537de021e8278ae0620d8dfdf3d44b02c8e0c71c4"
+      },
+      "new": {
+        "revision": "v14.3.4",
+        "commit": "ee8378c3bbbd7c75abc2f55c6c19e83b218ae81d",
+        "lines": [
+          66,
+          71
+        ],
+        "content_hash": "5d87cda3a99ee5b0b1a2c79028ade8c29d93ef5305ea7933f3b2c8003d0aaff3"
+      },
+      "lines_changed": 5,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "test_file",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "tests/test_console.py",
+      "kind": "function",
+      "symbol": "test_force_color",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "v14.2.0",
+        "commit": "494f83c923ca54ecc943bf5e60c0004e65fbb54e",
+        "lines": [
+          947,
+          951
+        ],
+        "content_hash": "9dc2f51529b06bfbdeb18b8350aa77cf167e46348e34d7f8b630b1566f5f5919"
+      },
+      "new": {
+        "revision": "v14.3.4",
+        "commit": "ee8378c3bbbd7c75abc2f55c6c19e83b218ae81d",
+        "lines": [
+          962,
+          971
+        ],
+        "content_hash": "b7080ab79ddb763a9461441189d3180b513fe7c9386b489d45527e8e62b21d57"
+      },
+      "lines_changed": 15,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "test_file",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "tests/test_console.py",
+      "kind": "function",
+      "symbol": "test_input_password",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "v14.2.0",
+        "commit": "494f83c923ca54ecc943bf5e60c0004e65fbb54e",
+        "lines": [
+          398,
+          409
+        ],
+        "content_hash": "469f467378b75371622816bf91fad135323bac14b9c16f56e16ec4c82d4f068c"
+      },
+      "new": {
+        "revision": "v14.3.4",
+        "commit": "ee8378c3bbbd7c75abc2f55c6c19e83b218ae81d",
+        "lines": [
+          398,
+          409
+        ],
+        "content_hash": "41e06bd5fb40d5b6909e1ce3a6a0fe5d7a9ee67b32cfd9cfaabbbc0ca1c20a08"
+      },
+      "lines_changed": 4,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "test_file",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "tests/test_console.py",
+      "kind": "function",
+      "symbol": "test_soft_wrap",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "v14.2.0",
+        "commit": "494f83c923ca54ecc943bf5e60c0004e65fbb54e",
+        "lines": [
+          48,
+          51
+        ],
+        "content_hash": "4fe8cb72419ef61995f0db1a2c039ec1290300fa2801827de6f85ac4a0c9e59b"
+      },
+      "new": {
+        "revision": "v14.3.4",
+        "commit": "ee8378c3bbbd7c75abc2f55c6c19e83b218ae81d",
+        "lines": [
+          598,
+          601
+        ],
+        "content_hash": "4ab586b07a93f8e7eee3892bc9dc554df4309a0c7310556ca78b02c3e6026df2"
+      },
+      "lines_changed": 6,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "test_file",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "tests/test_markdown.py",
+      "kind": "function",
+      "symbol": "test_inline_styles_in_table",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "v14.2.0",
+        "commit": "494f83c923ca54ecc943bf5e60c0004e65fbb54e",
+        "lines": [
+          136,
+          148
+        ],
+        "content_hash": "4d7ec38683bd42aab921d0fe97b8e062e92a65b4fabf1c05eec61f1b51d2e3a0"
+      },
+      "new": {
+        "revision": "v14.3.4",
+        "commit": "ee8378c3bbbd7c75abc2f55c6c19e83b218ae81d",
+        "lines": [
+          136,
+          148
+        ],
+        "content_hash": "534fe387f8f5ed7114632a4b62d4e6457378387cad7eab00a0f6de4d466317fc"
+      },
+      "lines_changed": 2,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "test_file",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "tests/test_markdown.py",
+      "kind": "function",
+      "symbol": "test_inline_styles_with_justification",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "v14.2.0",
+        "commit": "494f83c923ca54ecc943bf5e60c0004e65fbb54e",
+        "lines": [
+          151,
+          166
+        ],
+        "content_hash": "e9a04b3f0176a35c38e632a9ddf3d1c4c36e08707e49b389315e4804a8c43951"
+      },
+      "new": {
+        "revision": "v14.3.4",
+        "commit": "ee8378c3bbbd7c75abc2f55c6c19e83b218ae81d",
+        "lines": [
+          151,
+          166
+        ],
+        "content_hash": "01495de41d6209933a32b22a054ae03c8a2c7c218704e3b03e9973d75219a265"
+      },
+      "lines_changed": 2,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "test_file",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "tests/test_markdown.py",
+      "kind": "function",
+      "symbol": "test_markdown_render",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "v14.2.0",
+        "commit": "494f83c923ca54ecc943bf5e60c0004e65fbb54e",
+        "lines": [
+          99,
+          103
+        ],
+        "content_hash": "59b74017891e7cf2332e90d9384c9b5625beecd305719a6c8d68ce8790a5105f"
+      },
+      "new": {
+        "revision": "v14.3.4",
+        "commit": "ee8378c3bbbd7c75abc2f55c6c19e83b218ae81d",
+        "lines": [
+          99,
+          103
+        ],
+        "content_hash": "48bb2531a827a9e28664983b4a79756266729652d196ae2d5d19dab35c0eb50f"
+      },
+      "lines_changed": 2,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "test_file",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "tests/test_markdown.py",
+      "kind": "function",
+      "symbol": "test_markdown_table",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "v14.2.0",
+        "commit": "494f83c923ca54ecc943bf5e60c0004e65fbb54e",
+        "lines": [
+          119,
+          133
+        ],
+        "content_hash": "1f40e3edd0b72ec7a982526f5450cfcd27f15b602ed8a2e2a71261c36c3ff316"
+      },
+      "new": {
+        "revision": "v14.3.4",
+        "commit": "ee8378c3bbbd7c75abc2f55c6c19e83b218ae81d",
+        "lines": [
+          119,
+          133
+        ],
+        "content_hash": "6f642378a9c4fd3b86c9c637eda1a50940397068295abfae26584d4c88116302"
+      },
+      "lines_changed": 2,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "test_file",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "tests/test_markdown.py",
+      "kind": "function",
+      "symbol": "test_partial_table",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "v14.2.0",
+        "commit": "494f83c923ca54ecc943bf5e60c0004e65fbb54e",
+        "lines": [
+          169,
+          174
+        ],
+        "content_hash": "3c87087f4ff0f52895708dd281228078ddedca3742519f5e039c6ecae7e13f0b"
+      },
+      "new": {
+        "revision": "v14.3.4",
+        "commit": "ee8378c3bbbd7c75abc2f55c6c19e83b218ae81d",
+        "lines": [
+          169,
+          174
+        ],
+        "content_hash": "67110feb2f4e3d33e1f0f6198ebce9dc698c2d2327d91ca59e72eee1b1ef66db"
+      },
+      "lines_changed": 2,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "test_file",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "tests/test_markdown_no_hyperlinks.py",
+      "kind": "function",
+      "symbol": "test_markdown_render",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "v14.2.0",
+        "commit": "494f83c923ca54ecc943bf5e60c0004e65fbb54e",
+        "lines": [
+          92,
+          97
+        ],
+        "content_hash": "61bd4b82dc88da436da3152a8e697313f399b6c502b5d25db3cf253ba0a725b0"
+      },
+      "new": {
+        "revision": "v14.3.4",
+        "commit": "ee8378c3bbbd7c75abc2f55c6c19e83b218ae81d",
+        "lines": [
+          92,
+          97
+        ],
+        "content_hash": "73382721ebdf63b188ad0234f9c580834fed29cd98dbddf65b0f2a557bdd9e1b"
+      },
+      "lines_changed": 2,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "test_file",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "tests/test_win32_console.py",
+      "kind": "function",
+      "symbol": "test_write_styled_reverse",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "v14.2.0",
+        "commit": "494f83c923ca54ecc943bf5e60c0004e65fbb54e",
+        "lines": [
+          123,
+          137
+        ],
+        "content_hash": "1afe5500fff9dec033339094be811219be6681bc2e36e59c03614932b4ffc024"
+      },
+      "new": {
+        "revision": "v14.3.4",
+        "commit": "ee8378c3bbbd7c75abc2f55c6c19e83b218ae81d",
+        "lines": [
+          140,
+          154
+        ],
+        "content_hash": "c41ef9f3537ae16949de5ea608a8ab83d7ee240a97a4880938d07559408909ac"
+      },
+      "lines_changed": 4,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "test_file",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "tools/make_terminal_widths.py",
+      "kind": "function",
+      "symbol": "get_cell_size",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "removed",
+      "old": {
+        "revision": "v14.2.0",
+        "commit": "494f83c923ca54ecc943bf5e60c0004e65fbb54e",
+        "lines": [
+          42,
+          58
+        ],
+        "content_hash": "903f35a7bd22f3d45cfa1b10ba6da23feb580487da58b19d44f6f5650fa99a7b"
+      },
+      "new": null,
+      "lines_changed": 17,
+      "normalized": true,
+      "included": true,
+      "exclusion_reason": null,
+      "sample_order": 24,
+      "sampled": false,
+      "review": {
+        "decision": null,
+        "reason": null
+      }
+    },
+    {
+      "path": "tools/make_terminal_widths.py",
+      "kind": "function",
+      "symbol": "make_widths_table",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "removed",
+      "old": {
+        "revision": "v14.2.0",
+        "commit": "494f83c923ca54ecc943bf5e60c0004e65fbb54e",
+        "lines": [
+          13,
+          39
+        ],
+        "content_hash": "e7723adb9574a490cf1954f29db8a644437daa21655871127527c721ea5c9939"
+      },
+      "new": null,
+      "lines_changed": 27,
+      "normalized": true,
+      "included": true,
+      "exclusion_reason": null,
+      "sample_order": 4,
+      "sampled": true,
+      "review": {
+        "decision": null,
+        "reason": null
+      }
+    },
+    {
+      "path": "tools/make_terminal_widths.py",
+      "kind": "function",
+      "symbol": "run",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "removed",
+      "old": {
+        "revision": "v14.2.0",
+        "commit": "494f83c923ca54ecc943bf5e60c0004e65fbb54e",
+        "lines": [
+          73,
+          85
+        ],
+        "content_hash": "5d9538dfbe575ee1f54fcb5273ee7b311f87aee2f9308aecec8e0ea02a9122fd"
+      },
+      "new": null,
+      "lines_changed": 13,
+      "normalized": true,
+      "included": true,
+      "exclusion_reason": null,
+      "sample_order": 46,
+      "sampled": false,
+      "review": {
+        "decision": null,
+        "reason": null
+      }
+    },
+    {
+      "path": "tools/make_terminal_widths.py",
+      "kind": "function",
+      "symbol": "test",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "removed",
+      "old": {
+        "revision": "v14.2.0",
+        "commit": "494f83c923ca54ecc943bf5e60c0004e65fbb54e",
+        "lines": [
+          61,
+          70
+        ],
+        "content_hash": "c334e458170e6bc2b565e3fecd8dd00cd9f8b728cebeb64b807700f1f57f221e"
+      },
+      "new": null,
+      "lines_changed": 10,
+      "normalized": true,
+      "included": true,
+      "exclusion_reason": null,
+      "sample_order": 48,
+      "sampled": false,
+      "review": {
+        "decision": null,
+        "reason": null
+      }
+    }
+  ]
+}

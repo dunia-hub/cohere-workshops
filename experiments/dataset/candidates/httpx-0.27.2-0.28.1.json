@@ -1,0 +1,5227 @@
+{
+  "repository_url": "https://github.com/encode/httpx",
+  "old": {
+    "revision": "0.27.2",
+    "commit": "609df7ecc0f7cb10a1c998aa9c269bba77337c5f"
+  },
+  "new": {
+    "revision": "0.28.1",
+    "commit": "26d48e0634e6ee9cdc0533996db289ce4b430177"
+  },
+  "seed": 2026,
+  "sample_size": 20,
+  "counts": {
+    "candidates": 165,
+    "included": 69,
+    "sampled": 20,
+    "excluded_by_reason": {
+      "ambiguous_location": 14,
+      "contains_changed_symbol": 26,
+      "formatting_or_docstring_only": 1,
+      "renamed_or_moved": 7,
+      "test_file": 48
+    }
+  },
+  "scanner_exclusions": {
+    "0.27.2": [],
+    "0.28.1": []
+  },
+  "candidates": [
+    {
+      "path": "httpx/_api.py",
+      "kind": "function",
+      "symbol": "delete",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "0.27.2",
+        "commit": "609df7ecc0f7cb10a1c998aa9c269bba77337c5f",
+        "lines": [
+          442,
+          479
+        ],
+        "content_hash": "a9dcde1892ad0964ef5523151035c8a0eaa53f0fc31bfd0c00b80ce2825a9c40"
+      },
+      "new": {
+        "revision": "0.28.1",
+        "commit": "26d48e0634e6ee9cdc0533996db289ce4b430177",
+        "lines": [
+          405,
+          438
+        ],
+        "content_hash": "80d05a6e877c28765ec3d14563dc52af18d456e282b672e44f9d0f516aeab048"
+      },
+      "lines_changed": 6,
+      "normalized": true,
+      "included": true,
+      "exclusion_reason": null,
+      "sample_order": 24,
+      "sampled": false,
+      "review": {
+        "decision": null,
+        "reason": null
+      }
+    },
+    {
+      "path": "httpx/_api.py",
+      "kind": "function",
+      "symbol": "get",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "0.27.2",
+        "commit": "609df7ecc0f7cb10a1c998aa9c269bba77337c5f",
+        "lines": [
+          187,
+          224
+        ],
+        "content_hash": "34d823cafd6b79e80c775d6a2ca50671828632778ddeaececdad0adc32575059"
+      },
+      "new": {
+        "revision": "0.28.1",
+        "commit": "26d48e0634e6ee9cdc0533996db289ce4b430177",
+        "lines": [
+          174,
+          207
+        ],
+        "content_hash": "5609646e00269ffb3cea1c27c9ad1c01048dda60ffe0d59cb8bd88ab841a3ba6"
+      },
+      "lines_changed": 6,
+      "normalized": true,
+      "included": true,
+      "exclusion_reason": null,
+      "sample_order": 62,
+      "sampled": false,
+      "review": {
+        "decision": null,
+        "reason": null
+      }
+    },
+    {
+      "path": "httpx/_api.py",
+      "kind": "function",
+      "symbol": "head",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "0.27.2",
+        "commit": "609df7ecc0f7cb10a1c998aa9c269bba77337c5f",
+        "lines": [
+          267,
+          304
+        ],
+        "content_hash": "7586d2d4b6e00b06a62dd91a7a8dc056b85f89b1aa25d9aeda189987cb98f1ae"
+      },
+      "new": {
+        "revision": "0.28.1",
+        "commit": "26d48e0634e6ee9cdc0533996db289ce4b430177",
+        "lines": [
+          246,
+          279
+        ],
+        "content_hash": "b9c734d526fa6e0c34eda5991f183b80527c823dd4d9314c7a150444f5a01e09"
+      },
+      "lines_changed": 6,
+      "normalized": true,
+      "included": true,
+      "exclusion_reason": null,
+      "sample_order": 44,
+      "sampled": false,
+      "review": {
+        "decision": null,
+        "reason": null
+      }
+    },
+    {
+      "path": "httpx/_api.py",
+      "kind": "function",
+      "symbol": "options",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "0.27.2",
+        "commit": "609df7ecc0f7cb10a1c998aa9c269bba77337c5f",
+        "lines": [
+          227,
+          264
+        ],
+        "content_hash": "7716775eebcf0f8518b66c880dcedadc2c4aa6531bcc5d0fef4e7f9990f29080"
+      },
+      "new": {
+        "revision": "0.28.1",
+        "commit": "26d48e0634e6ee9cdc0533996db289ce4b430177",
+        "lines": [
+          210,
+          243
+        ],
+        "content_hash": "f317627d7fae0c116fb493cea20faf7cbec49a58ec8520c0c9a559fcbfe6a6d9"
+      },
+      "lines_changed": 6,
+      "normalized": true,
+      "included": true,
+      "exclusion_reason": null,
+      "sample_order": 63,
+      "sampled": false,
+      "review": {
+        "decision": null,
+        "reason": null
+      }
+    },
+    {
+      "path": "httpx/_api.py",
+      "kind": "function",
+      "symbol": "patch",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "0.27.2",
+        "commit": "609df7ecc0f7cb10a1c998aa9c269bba77337c5f",
+        "lines": [
+          397,
+          439
+        ],
+        "content_hash": "803eef65525ccb173a970433dbf56ed00d6ee87c510e1bd2ea01c63bac9885ca"
+      },
+      "new": {
+        "revision": "0.28.1",
+        "commit": "26d48e0634e6ee9cdc0533996db289ce4b430177",
+        "lines": [
+          364,
+          402
+        ],
+        "content_hash": "e6044bb26dab5b8dd06b3d760ce2ea94afcd9f4ec92f7ec76b886090c618e74e"
+      },
+      "lines_changed": 6,
+      "normalized": true,
+      "included": true,
+      "exclusion_reason": null,
+      "sample_order": 53,
+      "sampled": false,
+      "review": {
+        "decision": null,
+        "reason": null
+      }
+    },
+    {
+      "path": "httpx/_api.py",
+      "kind": "function",
+      "symbol": "post",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "0.27.2",
+        "commit": "609df7ecc0f7cb10a1c998aa9c269bba77337c5f",
+        "lines": [
+          307,
+          349
+        ],
+        "content_hash": "7bda64c36512c6d7f4c90d6867761d4c87823090551c53f4a807b9c809e4502d"
+      },
+      "new": {
+        "revision": "0.28.1",
+        "commit": "26d48e0634e6ee9cdc0533996db289ce4b430177",
+        "lines": [
+          282,
+          320
+        ],
+        "content_hash": "5373eef5b8ee30756d0853c4e2ed720803740641011afd78071d5e6f2bd9bd28"
+      },
+      "lines_changed": 6,
+      "normalized": true,
+      "included": true,
+      "exclusion_reason": null,
+      "sample_order": 26,
+      "sampled": false,
+      "review": {
+        "decision": null,
+        "reason": null
+      }
+    },
+    {
+      "path": "httpx/_api.py",
+      "kind": "function",
+      "symbol": "put",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "0.27.2",
+        "commit": "609df7ecc0f7cb10a1c998aa9c269bba77337c5f",
+        "lines": [
+          352,
+          394
+        ],
+        "content_hash": "75fdf8a230bcb7668488f7be4f540c51326fde85947c79733dbcf4f27f83b225"
+      },
+      "new": {
+        "revision": "0.28.1",
+        "commit": "26d48e0634e6ee9cdc0533996db289ce4b430177",
+        "lines": [
+          323,
+          361
+        ],
+        "content_hash": "d33c84e3ae7d85cefe599a1dd07a02360c00160f671cd8ddc68506ff45df1e13"
+      },
+      "lines_changed": 6,
+      "normalized": true,
+      "included": true,
+      "exclusion_reason": null,
+      "sample_order": 29,
+      "sampled": false,
+      "review": {
+        "decision": null,
+        "reason": null
+      }
+    },
+    {
+      "path": "httpx/_api.py",
+      "kind": "function",
+      "symbol": "request",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "0.27.2",
+        "commit": "609df7ecc0f7cb10a1c998aa9c269bba77337c5f",
+        "lines": [
+          38,
+          129
+        ],
+        "content_hash": "77d31c0a18f23cb93b3e3abd805e0d06171aa4932244af4c1b67f2dfdfa27b92"
+      },
+      "new": {
+        "revision": "0.28.1",
+        "commit": "26d48e0634e6ee9cdc0533996db289ce4b430177",
+        "lines": [
+          39,
+          120
+        ],
+        "content_hash": "e1b4926d38b0fb5af44ca74bcf23fb051c1fffa5553c5ad4d7bfe84923c880f4"
+      },
+      "lines_changed": 18,
+      "normalized": true,
+      "included": true,
+      "exclusion_reason": null,
+      "sample_order": 27,
+      "sampled": false,
+      "review": {
+        "decision": null,
+        "reason": null
+      }
+    },
+    {
+      "path": "httpx/_api.py",
+      "kind": "function",
+      "symbol": "stream",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "0.27.2",
+        "commit": "609df7ecc0f7cb10a1c998aa9c269bba77337c5f",
+        "lines": [
+          133,
+          184
+        ],
+        "content_hash": "19f0fe17549cc7d7870dd3c6cadb8d9bf743a05e61daa5909544e99816d735e1"
+      },
+      "new": {
+        "revision": "0.28.1",
+        "commit": "26d48e0634e6ee9cdc0533996db289ce4b430177",
+        "lines": [
+          124,
+          171
+        ],
+        "content_hash": "9c2b71985e42e16329c61827997e115da9228715fa5ab7e48e339eceebc0b581"
+      },
+      "lines_changed": 6,
+      "normalized": true,
+      "included": true,
+      "exclusion_reason": null,
+      "sample_order": 66,
+      "sampled": false,
+      "review": {
+        "decision": null,
+        "reason": null
+      }
+    },
+    {
+      "path": "httpx/_client.py",
+      "kind": "class",
+      "symbol": "AsyncClient",
+      "part_index": 1,
+      "part_count": 3,
+      "status": "superseded",
+      "old": {
+        "revision": "0.27.2",
+        "commit": "609df7ecc0f7cb10a1c998aa9c269bba77337c5f",
+        "lines": [
+          1320,
+          1659
+        ],
+        "content_hash": "a0e60ae036a32cc7584a1f4c6a2715a70a1b3f226b550e1c292aa2760272199c"
+      },
+      "new": {
+        "revision": "0.28.1",
+        "commit": "26d48e0634e6ee9cdc0533996db289ce4b430177",
+        "lines": [
+          1307,
+          1662
+        ],
+        "content_hash": "6c5cfc49ddb849459bc8089ceed87631b650610111c993e688cdf2fe62c9948c"
+      },
+      "lines_changed": 110,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "contains_changed_symbol",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "httpx/_client.py",
+      "kind": "class",
+      "symbol": "AsyncClient",
+      "part_index": 2,
+      "part_count": 3,
+      "status": "superseded",
+      "old": {
+        "revision": "0.27.2",
+        "commit": "609df7ecc0f7cb10a1c998aa9c269bba77337c5f",
+        "lines": [
+          1660,
+          2041
+        ],
+        "content_hash": "870309d519fa1db52b67295b3e09f415f560ddbb04e4c37e66ef4db18ca409ce"
+      },
+      "new": {
+        "revision": "0.28.1",
+        "commit": "26d48e0634e6ee9cdc0533996db289ce4b430177",
+        "lines": [
+          1663,
+          2019
+        ],
+        "content_hash": "0653f4a2fc3605eee135301b1bd60fd5ef575698125cd2e04f843822836f3c0f"
+      },
+      "lines_changed": 77,
+      "normalized": false,
+      "included": false,
+      "exclusion_reason": "contains_changed_symbol",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "httpx/_client.py",
+      "kind": "class",
+      "symbol": "AsyncClient",
+      "part_index": 3,
+      "part_count": 3,
+      "status": "removed",
+      "old": {
+        "revision": "0.27.2",
+        "commit": "609df7ecc0f7cb10a1c998aa9c269bba77337c5f",
+        "lines": [
+          2042,
+          2065
+        ],
+        "content_hash": "341c0986913caa8843acc9bf759d47181ed6f428cd62db0e8a4295100091c48b"
+      },
+      "new": null,
+      "lines_changed": 24,
+      "normalized": false,
+      "included": false,
+      "exclusion_reason": "contains_changed_symbol",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "httpx/_client.py",
+      "kind": "class",
+      "symbol": "BaseClient",
+      "part_index": 1,
+      "part_count": 2,
+      "status": "superseded",
+      "old": {
+        "revision": "0.27.2",
+        "commit": "609df7ecc0f7cb10a1c998aa9c269bba77337c5f",
+        "lines": [
+          162,
+          510
+        ],
+        "content_hash": "57d02454091a59c79ce03db7705812a15f3df20c60671728ea76e985cda6a1aa"
+      },
+      "new": {
+        "revision": "0.28.1",
+        "commit": "26d48e0634e6ee9cdc0533996db289ce4b430177",
+        "lines": [
+          188,
+          536
+        ],
+        "content_hash": "48dba87972aca9feba6ab0a9d26abb0ff8f42afe5516ef5c5931df9daf2a4fce"
+      },
+      "lines_changed": 18,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "contains_changed_symbol",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "httpx/_client.py",
+      "kind": "class",
+      "symbol": "BaseClient",
+      "part_index": 2,
+      "part_count": 2,
+      "status": "superseded",
+      "old": {
+        "revision": "0.27.2",
+        "commit": "609df7ecc0f7cb10a1c998aa9c269bba77337c5f",
+        "lines": [
+          511,
+          571
+        ],
+        "content_hash": "70adc75b9d0efc59f74d89ec669102b77f611f3c0c78aa003ca44d2fa4011ef5"
+      },
+      "new": {
+        "revision": "0.28.1",
+        "commit": "26d48e0634e6ee9cdc0533996db289ce4b430177",
+        "lines": [
+          537,
+          591
+        ],
+        "content_hash": "9f1457d933e763349d0f3fb22b0412e36ec747cac6ec87f5732b7678fac5ef1e"
+      },
+      "lines_changed": 10,
+      "normalized": false,
+      "included": false,
+      "exclusion_reason": "contains_changed_symbol",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "httpx/_client.py",
+      "kind": "class",
+      "symbol": "BoundAsyncStream",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "0.27.2",
+        "commit": "609df7ecc0f7cb10a1c998aa9c269bba77337c5f",
+        "lines": [
+          136,
+          156
+        ],
+        "content_hash": "4e50f8670b247963c3e58be797fd45bad4efcb11e8a2f35fe087291843e96b88"
+      },
+      "new": {
+        "revision": "0.28.1",
+        "commit": "26d48e0634e6ee9cdc0533996db289ce4b430177",
+        "lines": [
+          162,
+          182
+        ],
+        "content_hash": "8cd576810ca14e19bf648ca96458dbb0cedd558f0ed7f5b8ba26f0011ab82998"
+      },
+      "lines_changed": 8,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "contains_changed_symbol",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "httpx/_client.py",
+      "kind": "class",
+      "symbol": "BoundSyncStream",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "0.27.2",
+        "commit": "609df7ecc0f7cb10a1c998aa9c269bba77337c5f",
+        "lines": [
+          113,
+          133
+        ],
+        "content_hash": "07014596683756c44fb1ce491379d7afbd365a845d726974309b78f7696b0333"
+      },
+      "new": {
+        "revision": "0.28.1",
+        "commit": "26d48e0634e6ee9cdc0533996db289ce4b430177",
+        "lines": [
+          139,
+          159
+        ],
+        "content_hash": "d91f88997da3fccf3bfa1f3e4366e2702608f44531bd443e14fa5c061732b0c7"
+      },
+      "lines_changed": 8,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "contains_changed_symbol",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "httpx/_client.py",
+      "kind": "class",
+      "symbol": "Client",
+      "part_index": 1,
+      "part_count": 3,
+      "status": "superseded",
+      "old": {
+        "revision": "0.27.2",
+        "commit": "609df7ecc0f7cb10a1c998aa9c269bba77337c5f",
+        "lines": [
+          574,
+          916
+        ],
+        "content_hash": "24eca74c7a24d3f3b641d8d2bad50dda91d0122da7c21a9536456ab60be37554"
+      },
+      "new": {
+        "revision": "0.28.1",
+        "commit": "26d48e0634e6ee9cdc0533996db289ce4b430177",
+        "lines": [
+          594,
+          953
+        ],
+        "content_hash": "c9015c1a0629aaedbd41811348ff14ce1e3f7a91fe67e9a25827158025795a4f"
+      },
+      "lines_changed": 113,
+      "normalized": false,
+      "included": false,
+      "exclusion_reason": "contains_changed_symbol",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "httpx/_client.py",
+      "kind": "class",
+      "symbol": "Client",
+      "part_index": 2,
+      "part_count": 3,
+      "status": "superseded",
+      "old": {
+        "revision": "0.27.2",
+        "commit": "609df7ecc0f7cb10a1c998aa9c269bba77337c5f",
+        "lines": [
+          917,
+          1309
+        ],
+        "content_hash": "92d1790ddc50378d7c36bd7d271f6be38ced91c0cf77472245e25146d41867c5"
+      },
+      "new": {
+        "revision": "0.28.1",
+        "commit": "26d48e0634e6ee9cdc0533996db289ce4b430177",
+        "lines": [
+          954,
+          1304
+        ],
+        "content_hash": "8fe63d55e96656be7febc2cad705e832bd5c3db260bd65b149437f1367aeec4e"
+      },
+      "lines_changed": 62,
+      "normalized": false,
+      "included": false,
+      "exclusion_reason": "contains_changed_symbol",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "httpx/_client.py",
+      "kind": "class",
+      "symbol": "Client",
+      "part_index": 3,
+      "part_count": 3,
+      "status": "removed",
+      "old": {
+        "revision": "0.27.2",
+        "commit": "609df7ecc0f7cb10a1c998aa9c269bba77337c5f",
+        "lines": [
+          1310,
+          1317
+        ],
+        "content_hash": "be455760c0c4afcceca9028811a5e6d55d45b705ad21e645caf6c6b87c71aea4"
+      },
+      "new": null,
+      "lines_changed": 8,
+      "normalized": false,
+      "included": false,
+      "exclusion_reason": "contains_changed_symbol",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "httpx/_client.py",
+      "kind": "method",
+      "symbol": "AsyncClient.__init__",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "0.27.2",
+        "commit": "609df7ecc0f7cb10a1c998aa9c269bba77337c5f",
+        "lines": [
+          1375,
+          1471
+        ],
+        "content_hash": "d95a6ba09c9c73ecf7339a0e33d69a1f0125c12133bf4acd9ca3aa610ddea06c"
+      },
+      "new": {
+        "revision": "0.28.1",
+        "commit": "26d48e0634e6ee9cdc0533996db289ce4b430177",
+        "lines": [
+          1353,
+          1430
+        ],
+        "content_hash": "4dc8397d2249ef58e1422917f7f3860f078ed2588effb98ab4adcbbc79b5d8e3"
+      },
+      "lines_changed": 29,
+      "normalized": true,
+      "included": true,
+      "exclusion_reason": null,
+      "sample_order": 50,
+      "sampled": false,
+      "review": {
+        "decision": null,
+        "reason": null
+      }
+    },
+    {
+      "path": "httpx/_client.py",
+      "kind": "method",
+      "symbol": "AsyncClient._init_proxy_transport",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "0.27.2",
+        "commit": "609df7ecc0f7cb10a1c998aa9c269bba77337c5f",
+        "lines": [
+          1499,
+          1517
+        ],
+        "content_hash": "516d445d473c96f08029131701e8b362c5a3e19bdb8968834f24fe4a7fcd10cc"
+      },
+      "new": {
+        "revision": "0.28.1",
+        "commit": "26d48e0634e6ee9cdc0533996db289ce4b430177",
+        "lines": [
+          1454,
+          1472
+        ],
+        "content_hash": "95dcc6c52696881f39991f6297d8b1f6a8b3796ffbfbe7f28ceb62a69736aaf1"
+      },
+      "lines_changed": 6,
+      "normalized": true,
+      "included": true,
+      "exclusion_reason": null,
+      "sample_order": 46,
+      "sampled": false,
+      "review": {
+        "decision": null,
+        "reason": null
+      }
+    },
+    {
+      "path": "httpx/_client.py",
+      "kind": "method",
+      "symbol": "AsyncClient._init_transport",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "0.27.2",
+        "commit": "609df7ecc0f7cb10a1c998aa9c269bba77337c5f",
+        "lines": [
+          1473,
+          1497
+        ],
+        "content_hash": "91acfc09033144d1f6d77008b08de9a1e208e42271a06105974bab4fd2007d23"
+      },
+      "new": {
+        "revision": "0.28.1",
+        "commit": "26d48e0634e6ee9cdc0533996db289ce4b430177",
+        "lines": [
+          1432,
+          1452
+        ],
+        "content_hash": "e0a943317ef65dd4ecde9efb3d2e834119c21ad861722e326bff365ba708a701"
+      },
+      "lines_changed": 10,
+      "normalized": true,
+      "included": true,
+      "exclusion_reason": null,
+      "sample_order": 57,
+      "sampled": false,
+      "review": {
+        "decision": null,
+        "reason": null
+      }
+    },
+    {
+      "path": "httpx/_client.py",
+      "kind": "method",
+      "symbol": "AsyncClient._send_single_request",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "0.27.2",
+        "commit": "609df7ecc0f7cb10a1c998aa9c269bba77337c5f",
+        "lines": [
+          1762,
+          1795
+        ],
+        "content_hash": "107ec34d9606ddea4aefc7cfcd92bc403c6c208dc3f04065b02d0c6b6d879a3c"
+      },
+      "new": {
+        "revision": "0.28.1",
+        "commit": "26d48e0634e6ee9cdc0533996db289ce4b430177",
+        "lines": [
+          1717,
+          1749
+        ],
+        "content_hash": "339c8a224990002fade9ba9852db8636799edfbc2d444b8e6c08421b421e41fb"
+      },
+      "lines_changed": 5,
+      "normalized": true,
+      "included": true,
+      "exclusion_reason": null,
+      "sample_order": 40,
+      "sampled": false,
+      "review": {
+        "decision": null,
+        "reason": null
+      }
+    },
+    {
+      "path": "httpx/_client.py",
+      "kind": "method",
+      "symbol": "AsyncClient.request",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "0.27.2",
+        "commit": "609df7ecc0f7cb10a1c998aa9c269bba77337c5f",
+        "lines": [
+          1530,
+          1585
+        ],
+        "content_hash": "d34899ba9cc71afd627253f6de7447b1c097043c4e7ab5a8f817d75533fb3496"
+      },
+      "new": {
+        "revision": "0.28.1",
+        "commit": "26d48e0634e6ee9cdc0533996db289ce4b430177",
+        "lines": [
+          1485,
+          1540
+        ],
+        "content_hash": "3c60c7bbc151d9027d8cea0361feea0cfcc6112a8d6b07c4e17c961fc7761982"
+      },
+      "lines_changed": 2,
+      "normalized": true,
+      "included": true,
+      "exclusion_reason": null,
+      "sample_order": 5,
+      "sampled": true,
+      "review": {
+        "decision": null,
+        "reason": null
+      }
+    },
+    {
+      "path": "httpx/_client.py",
+      "kind": "method",
+      "symbol": "BaseClient._get_proxy_map",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "0.27.2",
+        "commit": "609df7ecc0f7cb10a1c998aa9c269bba77337c5f",
+        "lines": [
+          213,
+          231
+        ],
+        "content_hash": "4ee2d3449bfd9245735cfdefce82c86827ec14a39c17d2fcb93befc6751066e5"
+      },
+      "new": {
+        "revision": "0.28.1",
+        "commit": "26d48e0634e6ee9cdc0533996db289ce4b430177",
+        "lines": [
+          239,
+          251
+        ],
+        "content_hash": "2f6fd8863d60de1f7c7a1e575cb0ed85be24d703556e0e5b70ff4ca7475ca68e"
+      },
+      "lines_changed": 12,
+      "normalized": true,
+      "included": true,
+      "exclusion_reason": null,
+      "sample_order": 52,
+      "sampled": false,
+      "review": {
+        "decision": null,
+        "reason": null
+      }
+    },
+    {
+      "path": "httpx/_client.py",
+      "kind": "method",
+      "symbol": "BaseClient._redirect_headers",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "0.27.2",
+        "commit": "609df7ecc0f7cb10a1c998aa9c269bba77337c5f",
+        "lines": [
+          526,
+          551
+        ],
+        "content_hash": "67e6c907f77570d1c75ce2365795a731c4c62b1db77da5aecde7f397a1b028f0"
+      },
+      "new": {
+        "revision": "0.28.1",
+        "commit": "26d48e0634e6ee9cdc0533996db289ce4b430177",
+        "lines": [
+          546,
+          571
+        ],
+        "content_hash": "ee31e38c0160b54fc839bb7fbf7058a13aad8d467b1a884026fa697b18987fb7"
+      },
+      "lines_changed": 4,
+      "normalized": true,
+      "included": true,
+      "exclusion_reason": null,
+      "sample_order": 1,
+      "sampled": true,
+      "review": {
+        "decision": null,
+        "reason": null
+      }
+    },
+    {
+      "path": "httpx/_client.py",
+      "kind": "method",
+      "symbol": "BaseClient.auth",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "0.27.2",
+        "commit": "609df7ecc0f7cb10a1c998aa9c269bba77337c5f",
+        "lines": [
+          253,
+          261
+        ],
+        "content_hash": "801e1d7bf68bac25d68e347f027b3ce6ad0ce75602fd5092757438bda9fc9859"
+      },
+      "new": {
+        "revision": "0.28.1",
+        "commit": "26d48e0634e6ee9cdc0533996db289ce4b430177",
+        "lines": [
+          284,
+          285
+        ],
+        "content_hash": "cc171fcabf6870141d5a3dd91d6dac2c81e316440a079aa6301569dd8e868089"
+      },
+      "lines_changed": 11,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "ambiguous_location",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "httpx/_client.py",
+      "kind": "method",
+      "symbol": "BaseClient.base_url",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "0.27.2",
+        "commit": "609df7ecc0f7cb10a1c998aa9c269bba77337c5f",
+        "lines": [
+          268,
+          272
+        ],
+        "content_hash": "0ad8bcd5361c664f949acf9ae88a6d86e364ba845ef061e90e9f52a35107f120"
+      },
+      "new": {
+        "revision": "0.28.1",
+        "commit": "26d48e0634e6ee9cdc0533996db289ce4b430177",
+        "lines": [
+          295,
+          296
+        ],
+        "content_hash": "8b5b64694527b6ce24372e39c3ba44e11bc7067b58009065f3aeb89d351ffb1a"
+      },
+      "lines_changed": 7,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "ambiguous_location",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "httpx/_client.py",
+      "kind": "method",
+      "symbol": "BaseClient.cookies",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "0.27.2",
+        "commit": "609df7ecc0f7cb10a1c998aa9c269bba77337c5f",
+        "lines": [
+          299,
+          303
+        ],
+        "content_hash": "4dc2d4726b859582c9fe01621ade5c1dc2292eaa62dddd3cb3d4a28abb72638a"
+      },
+      "new": {
+        "revision": "0.28.1",
+        "commit": "26d48e0634e6ee9cdc0533996db289ce4b430177",
+        "lines": [
+          326,
+          327
+        ],
+        "content_hash": "1817f950502c1b8f86004880d93678369d5aedfbf04f58de1a2dd6fbb40403bb"
+      },
+      "lines_changed": 7,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "ambiguous_location",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "httpx/_client.py",
+      "kind": "method",
+      "symbol": "BaseClient.event_hooks",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "0.27.2",
+        "commit": "609df7ecc0f7cb10a1c998aa9c269bba77337c5f",
+        "lines": [
+          242,
+          243
+        ],
+        "content_hash": "b32f778c2fa74deb4ad1ff3eadadc25861bef251e51874f3b91a272689b34c52"
+      },
+      "new": {
+        "revision": "0.28.1",
+        "commit": "26d48e0634e6ee9cdc0533996db289ce4b430177",
+        "lines": [
+          266,
+          270
+        ],
+        "content_hash": "e70a84c8b5fca9b6c83482420c335523a4d735485696b6c8dc52d96194736c91"
+      },
+      "lines_changed": 7,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "ambiguous_location",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "httpx/_client.py",
+      "kind": "method",
+      "symbol": "BaseClient.headers",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "0.27.2",
+        "commit": "609df7ecc0f7cb10a1c998aa9c269bba77337c5f",
+        "lines": [
+          279,
+          283
+        ],
+        "content_hash": "fb69e9161a0329febff73f6089e45ed90dfb650a2120153d7fedf4114089a856"
+      },
+      "new": {
+        "revision": "0.28.1",
+        "commit": "26d48e0634e6ee9cdc0533996db289ce4b430177",
+        "lines": [
+          306,
+          316
+        ],
+        "content_hash": "4e27ae6a4b3c120fb305ed74a6557c233bfc419d8e1c4231faeb922e5249cf30"
+      },
+      "lines_changed": 16,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "ambiguous_location",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "httpx/_client.py",
+      "kind": "method",
+      "symbol": "BaseClient.params",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "0.27.2",
+        "commit": "609df7ecc0f7cb10a1c998aa9c269bba77337c5f",
+        "lines": [
+          310,
+          314
+        ],
+        "content_hash": "68eb5ece4ae343e90fef6414c21805b87cadbc204c4db04afdb5d9e4a9e02771"
+      },
+      "new": {
+        "revision": "0.28.1",
+        "commit": "26d48e0634e6ee9cdc0533996db289ce4b430177",
+        "lines": [
+          337,
+          338
+        ],
+        "content_hash": "72fb420ebb3082122b86cde4f468046e82457f167abd4013b5546a18f323f0bb"
+      },
+      "lines_changed": 7,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "ambiguous_location",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "httpx/_client.py",
+      "kind": "method",
+      "symbol": "BaseClient.timeout",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "0.27.2",
+        "commit": "609df7ecc0f7cb10a1c998aa9c269bba77337c5f",
+        "lines": [
+          234,
+          235
+        ],
+        "content_hash": "55edbae23adf1e311aa4ee85521238dc9866e35b6e137b0150ff92c28d4f3d00"
+      },
+      "new": {
+        "revision": "0.28.1",
+        "commit": "26d48e0634e6ee9cdc0533996db289ce4b430177",
+        "lines": [
+          258,
+          259
+        ],
+        "content_hash": "ba655d4d51c05eddd778c4f7528af7ee7d0276282bed835696991a56e1bf5346"
+      },
+      "lines_changed": 4,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "ambiguous_location",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "httpx/_client.py",
+      "kind": "method",
+      "symbol": "BoundAsyncStream.__init__",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "0.27.2",
+        "commit": "609df7ecc0f7cb10a1c998aa9c269bba77337c5f",
+        "lines": [
+          142,
+          147
+        ],
+        "content_hash": "6faeeb70f00615f4c44c1bd8cc9263634be655a7e1ab0f7655eb19576c2bf956"
+      },
+      "new": {
+        "revision": "0.28.1",
+        "commit": "26d48e0634e6ee9cdc0533996db289ce4b430177",
+        "lines": [
+          168,
+          173
+        ],
+        "content_hash": "47f2b15b35e86099e3268226b5bb7039c8c8dcc7947843f51a236de1f31c08e8"
+      },
+      "lines_changed": 4,
+      "normalized": true,
+      "included": true,
+      "exclusion_reason": null,
+      "sample_order": 36,
+      "sampled": false,
+      "review": {
+        "decision": null,
+        "reason": null
+      }
+    },
+    {
+      "path": "httpx/_client.py",
+      "kind": "method",
+      "symbol": "BoundAsyncStream.aclose",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "0.27.2",
+        "commit": "609df7ecc0f7cb10a1c998aa9c269bba77337c5f",
+        "lines": [
+          153,
+          156
+        ],
+        "content_hash": "5d5251bfec1e7ec35433af5450982c69717b6e6523c4b329e4ed5c3ef7710e77"
+      },
+      "new": {
+        "revision": "0.28.1",
+        "commit": "26d48e0634e6ee9cdc0533996db289ce4b430177",
+        "lines": [
+          179,
+          182
+        ],
+        "content_hash": "cec6f43fb454a3edafe169f5044e4ec41af160a16563eb3fc1acb361d7a8ac83"
+      },
+      "lines_changed": 4,
+      "normalized": true,
+      "included": true,
+      "exclusion_reason": null,
+      "sample_order": 48,
+      "sampled": false,
+      "review": {
+        "decision": null,
+        "reason": null
+      }
+    },
+    {
+      "path": "httpx/_client.py",
+      "kind": "method",
+      "symbol": "BoundSyncStream.__init__",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "0.27.2",
+        "commit": "609df7ecc0f7cb10a1c998aa9c269bba77337c5f",
+        "lines": [
+          119,
+          124
+        ],
+        "content_hash": "76a1e5203e70f4d3d40ba8bf9bafbce79825af1cbf43d3f37130095c9cd64368"
+      },
+      "new": {
+        "revision": "0.28.1",
+        "commit": "26d48e0634e6ee9cdc0533996db289ce4b430177",
+        "lines": [
+          145,
+          150
+        ],
+        "content_hash": "fea4bff74be6c261f58825f6a1cefb513fa86591676ee4e275acb74367ccdec7"
+      },
+      "lines_changed": 4,
+      "normalized": true,
+      "included": true,
+      "exclusion_reason": null,
+      "sample_order": 28,
+      "sampled": false,
+      "review": {
+        "decision": null,
+        "reason": null
+      }
+    },
+    {
+      "path": "httpx/_client.py",
+      "kind": "method",
+      "symbol": "BoundSyncStream.close",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "0.27.2",
+        "commit": "609df7ecc0f7cb10a1c998aa9c269bba77337c5f",
+        "lines": [
+          130,
+          133
+        ],
+        "content_hash": "21744054106aec9e09221c975a58fa94b85a8e0d16e3f62aca9a4f4159b666e3"
+      },
+      "new": {
+        "revision": "0.28.1",
+        "commit": "26d48e0634e6ee9cdc0533996db289ce4b430177",
+        "lines": [
+          156,
+          159
+        ],
+        "content_hash": "9acd1319fe0cd29ff9d1343487a2fadb0b8491ad6551310c924912b6427855da"
+      },
+      "lines_changed": 4,
+      "normalized": true,
+      "included": true,
+      "exclusion_reason": null,
+      "sample_order": 51,
+      "sampled": false,
+      "review": {
+        "decision": null,
+        "reason": null
+      }
+    },
+    {
+      "path": "httpx/_client.py",
+      "kind": "method",
+      "symbol": "Client.__init__",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "0.27.2",
+        "commit": "609df7ecc0f7cb10a1c998aa9c269bba77337c5f",
+        "lines": [
+          628,
+          724
+        ],
+        "content_hash": "ada4432959578f414c6e0eb8ce23193c6244998012269efbb75eca207308a3f9"
+      },
+      "new": {
+        "revision": "0.28.1",
+        "commit": "26d48e0634e6ee9cdc0533996db289ce4b430177",
+        "lines": [
+          639,
+          716
+        ],
+        "content_hash": "a3bbb12afe326ab278fb3c324fb14e1f8507a03956e36453c2808c0d4ab4e950"
+      },
+      "lines_changed": 31,
+      "normalized": true,
+      "included": true,
+      "exclusion_reason": null,
+      "sample_order": 33,
+      "sampled": false,
+      "review": {
+        "decision": null,
+        "reason": null
+      }
+    },
+    {
+      "path": "httpx/_client.py",
+      "kind": "method",
+      "symbol": "Client._init_proxy_transport",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "0.27.2",
+        "commit": "609df7ecc0f7cb10a1c998aa9c269bba77337c5f",
+        "lines": [
+          752,
+          770
+        ],
+        "content_hash": "82f3610700b03c5f26ac77a1846e189f710d52936c2289d984e8d9317c7b0c17"
+      },
+      "new": {
+        "revision": "0.28.1",
+        "commit": "26d48e0634e6ee9cdc0533996db289ce4b430177",
+        "lines": [
+          740,
+          758
+        ],
+        "content_hash": "584bd8df834947e621e45aff7c535d339f90664dcdd4ad60d149020e24eeeeb5"
+      },
+      "lines_changed": 6,
+      "normalized": true,
+      "included": true,
+      "exclusion_reason": null,
+      "sample_order": 49,
+      "sampled": false,
+      "review": {
+        "decision": null,
+        "reason": null
+      }
+    },
+    {
+      "path": "httpx/_client.py",
+      "kind": "method",
+      "symbol": "Client._init_transport",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "0.27.2",
+        "commit": "609df7ecc0f7cb10a1c998aa9c269bba77337c5f",
+        "lines": [
+          726,
+          750
+        ],
+        "content_hash": "c16842b6ce163a6f601375e8ad445b14e7a94efdfc6eabba701e7e788378b37f"
+      },
+      "new": {
+        "revision": "0.28.1",
+        "commit": "26d48e0634e6ee9cdc0533996db289ce4b430177",
+        "lines": [
+          718,
+          738
+        ],
+        "content_hash": "031c37f984f8b3e91e4f6b60bef8d6b966f7c83e6eeba323c1fc2d267055e5de"
+      },
+      "lines_changed": 10,
+      "normalized": true,
+      "included": true,
+      "exclusion_reason": null,
+      "sample_order": 37,
+      "sampled": false,
+      "review": {
+        "decision": null,
+        "reason": null
+      }
+    },
+    {
+      "path": "httpx/_client.py",
+      "kind": "method",
+      "symbol": "Client._send_single_request",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "0.27.2",
+        "commit": "609df7ecc0f7cb10a1c998aa9c269bba77337c5f",
+        "lines": [
+          1013,
+          1047
+        ],
+        "content_hash": "f23edbb582d9be1cb1f2f751826be4c99ec528ea0ace9147bf2c87957db1fffb"
+      },
+      "new": {
+        "revision": "0.28.1",
+        "commit": "26d48e0634e6ee9cdc0533996db289ce4b430177",
+        "lines": [
+          1001,
+          1034
+        ],
+        "content_hash": "d964c700bd8e298c8af6bdbb5affa4bf2745a28a1b2f18fd4ecf22b5a0719407"
+      },
+      "lines_changed": 5,
+      "normalized": true,
+      "included": true,
+      "exclusion_reason": null,
+      "sample_order": 41,
+      "sampled": false,
+      "review": {
+        "decision": null,
+        "reason": null
+      }
+    },
+    {
+      "path": "httpx/_client.py",
+      "kind": "method",
+      "symbol": "Client.request",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "0.27.2",
+        "commit": "609df7ecc0f7cb10a1c998aa9c269bba77337c5f",
+        "lines": [
+          783,
+          837
+        ],
+        "content_hash": "f863c6136d0e3eeac6aed8f78f4469e944904ec6e5c5f363ffeca0f93f1ad575"
+      },
+      "new": {
+        "revision": "0.28.1",
+        "commit": "26d48e0634e6ee9cdc0533996db289ce4b430177",
+        "lines": [
+          771,
+          825
+        ],
+        "content_hash": "86948163b53ccab88e9312c6bd280f5ce47eb0c9da31efb699d3d4de109809c3"
+      },
+      "lines_changed": 2,
+      "normalized": true,
+      "included": true,
+      "exclusion_reason": null,
+      "sample_order": 65,
+      "sampled": false,
+      "review": {
+        "decision": null,
+        "reason": null
+      }
+    },
+    {
+      "path": "httpx/_compat.py",
+      "kind": "function",
+      "symbol": "set_minimum_tls_version_1_2",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "removed",
+      "old": {
+        "revision": "0.27.2",
+        "commit": "609df7ecc0f7cb10a1c998aa9c269bba77337c5f",
+        "lines": [
+          43,
+          50
+        ],
+        "content_hash": "2f91d0bea57554ec00f1d866ac0de276fd82292f57186eaaaa325ad826d39f78"
+      },
+      "new": null,
+      "lines_changed": 8,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "ambiguous_location",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "httpx/_compat.py",
+      "kind": "function",
+      "symbol": "set_minimum_tls_version_1_2",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "removed",
+      "old": {
+        "revision": "0.27.2",
+        "commit": "609df7ecc0f7cb10a1c998aa9c269bba77337c5f",
+        "lines": [
+          54,
+          60
+        ],
+        "content_hash": "f396b37958b67c881fc2dcb54914e281a9b4c58db95e870aef7589649eefa2cb"
+      },
+      "new": null,
+      "lines_changed": 7,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "ambiguous_location",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "httpx/_config.py",
+      "kind": "class",
+      "symbol": "Proxy",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "0.27.2",
+        "commit": "609df7ecc0f7cb10a1c998aa9c269bba77337c5f",
+        "lines": [
+          325,
+          367
+        ],
+        "content_hash": "8e70dd4f187f3c0cc044c8871c45272f3de1699260c825ea69d0df640a5e77f0"
+      },
+      "new": {
+        "revision": "0.28.1",
+        "commit": "26d48e0634e6ee9cdc0533996db289ce4b430177",
+        "lines": [
+          201,
+          243
+        ],
+        "content_hash": "54d13ca92e84cd6515bc1fb9b5a7c16b4ba6fdc65ea6e1bdf86fdcb534b359a4"
+      },
+      "lines_changed": 2,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "contains_changed_symbol",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "httpx/_config.py",
+      "kind": "class",
+      "symbol": "SSLConfig",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "removed",
+      "old": {
+        "revision": "0.27.2",
+        "commit": "609df7ecc0f7cb10a1c998aa9c269bba77337c5f",
+        "lines": [
+          60,
+          193
+        ],
+        "content_hash": "45efc22ea6801be685290be3f6790da158e30c91528ebabd12aa260324bc4b18"
+      },
+      "new": null,
+      "lines_changed": 134,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "contains_changed_symbol",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "httpx/_config.py",
+      "kind": "function",
+      "symbol": "create_ssl_context",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "0.27.2",
+        "commit": "609df7ecc0f7cb10a1c998aa9c269bba77337c5f",
+        "lines": [
+          49,
+          57
+        ],
+        "content_hash": "461a298b324043c201a0f934de2990b008094445dcace34f8affa394764c30cd"
+      },
+      "new": {
+        "revision": "0.28.1",
+        "commit": "26d48e0634e6ee9cdc0533996db289ce4b430177",
+        "lines": [
+          23,
+          69
+        ],
+        "content_hash": "72025cd79112712b06019f8adfefda2da666aa892477aead46debbed25c6e026"
+      },
+      "lines_changed": 48,
+      "normalized": true,
+      "included": true,
+      "exclusion_reason": null,
+      "sample_order": 35,
+      "sampled": false,
+      "review": {
+        "decision": null,
+        "reason": null
+      }
+    },
+    {
+      "path": "httpx/_config.py",
+      "kind": "method",
+      "symbol": "Proxy.__init__",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "0.27.2",
+        "commit": "609df7ecc0f7cb10a1c998aa9c269bba77337c5f",
+        "lines": [
+          326,
+          348
+        ],
+        "content_hash": "93cfc282c1a6ee5385b890a2cd102038a04e1706d4fcd01de69e38b6358b59e8"
+      },
+      "new": {
+        "revision": "0.28.1",
+        "commit": "26d48e0634e6ee9cdc0533996db289ce4b430177",
+        "lines": [
+          202,
+          224
+        ],
+        "content_hash": "22b7381dd95c3beb4dfbd4fc24b2659337d2623ef5ca21b852fb5e4701e693d0"
+      },
+      "lines_changed": 2,
+      "normalized": true,
+      "included": true,
+      "exclusion_reason": null,
+      "sample_order": 11,
+      "sampled": true,
+      "review": {
+        "decision": null,
+        "reason": null
+      }
+    },
+    {
+      "path": "httpx/_config.py",
+      "kind": "method",
+      "symbol": "SSLConfig.__init__",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "removed",
+      "old": {
+        "revision": "0.27.2",
+        "commit": "609df7ecc0f7cb10a1c998aa9c269bba77337c5f",
+        "lines": [
+          67,
+          79
+        ],
+        "content_hash": "647b4586576b7fb582c159763087f280e7e441291e5038214dbf32f867fb8ffb"
+      },
+      "new": null,
+      "lines_changed": 13,
+      "normalized": true,
+      "included": true,
+      "exclusion_reason": null,
+      "sample_order": 64,
+      "sampled": false,
+      "review": {
+        "decision": null,
+        "reason": null
+      }
+    },
+    {
+      "path": "httpx/_config.py",
+      "kind": "method",
+      "symbol": "SSLConfig._create_default_ssl_context",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "removed",
+      "old": {
+        "revision": "0.27.2",
+        "commit": "609df7ecc0f7cb10a1c998aa9c269bba77337c5f",
+        "lines": [
+          159,
+          177
+        ],
+        "content_hash": "2c41443b107d4d02f94f7051a44629b62f8408a08b1053bf16395db9cda33dd7"
+      },
+      "new": null,
+      "lines_changed": 19,
+      "normalized": true,
+      "included": true,
+      "exclusion_reason": null,
+      "sample_order": 6,
+      "sampled": true,
+      "review": {
+        "decision": null,
+        "reason": null
+      }
+    },
+    {
+      "path": "httpx/_config.py",
+      "kind": "method",
+      "symbol": "SSLConfig._load_client_certs",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "removed",
+      "old": {
+        "revision": "0.27.2",
+        "commit": "609df7ecc0f7cb10a1c998aa9c269bba77337c5f",
+        "lines": [
+          179,
+          193
+        ],
+        "content_hash": "1721157031665a3f926d16b4242c416716e2f217933266410b2fd580475025e6"
+      },
+      "new": null,
+      "lines_changed": 15,
+      "normalized": true,
+      "included": true,
+      "exclusion_reason": null,
+      "sample_order": 59,
+      "sampled": false,
+      "review": {
+        "decision": null,
+        "reason": null
+      }
+    },
+    {
+      "path": "httpx/_config.py",
+      "kind": "method",
+      "symbol": "SSLConfig.load_ssl_context",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "removed",
+      "old": {
+        "revision": "0.27.2",
+        "commit": "609df7ecc0f7cb10a1c998aa9c269bba77337c5f",
+        "lines": [
+          81,
+          92
+        ],
+        "content_hash": "ac7a8919430db00621552c9a067cbc1f178c7fcf99d6fc786fe79f94fcbd00a0"
+      },
+      "new": null,
+      "lines_changed": 12,
+      "normalized": true,
+      "included": true,
+      "exclusion_reason": null,
+      "sample_order": 47,
+      "sampled": false,
+      "review": {
+        "decision": null,
+        "reason": null
+      }
+    },
+    {
+      "path": "httpx/_config.py",
+      "kind": "method",
+      "symbol": "SSLConfig.load_ssl_context_no_verify",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "removed",
+      "old": {
+        "revision": "0.27.2",
+        "commit": "609df7ecc0f7cb10a1c998aa9c269bba77337c5f",
+        "lines": [
+          94,
+          102
+        ],
+        "content_hash": "0e5c42485004f8b1299f6e0dc019f37ae9ed583861094262787e590f1eda8e59"
+      },
+      "new": null,
+      "lines_changed": 9,
+      "normalized": true,
+      "included": true,
+      "exclusion_reason": null,
+      "sample_order": 19,
+      "sampled": true,
+      "review": {
+        "decision": null,
+        "reason": null
+      }
+    },
+    {
+      "path": "httpx/_config.py",
+      "kind": "method",
+      "symbol": "SSLConfig.load_ssl_context_verify",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "removed",
+      "old": {
+        "revision": "0.27.2",
+        "commit": "609df7ecc0f7cb10a1c998aa9c269bba77337c5f",
+        "lines": [
+          104,
+          157
+        ],
+        "content_hash": "70311485677d62763ef8e59f1bec67f2a8b0ac2c18b5fef21666a778eb1ef54b"
+      },
+      "new": null,
+      "lines_changed": 54,
+      "normalized": true,
+      "included": true,
+      "exclusion_reason": null,
+      "sample_order": 38,
+      "sampled": false,
+      "review": {
+        "decision": null,
+        "reason": null
+      }
+    },
+    {
+      "path": "httpx/_content.py",
+      "kind": "function",
+      "symbol": "encode_json",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "0.27.2",
+        "commit": "609df7ecc0f7cb10a1c998aa9c269bba77337c5f",
+        "lines": [
+          176,
+          181
+        ],
+        "content_hash": "17e8135fd7fe6fc9db528ef08c7a0eb2b7f6c9aa00d427f29f4e82585a95e9ad"
+      },
+      "new": {
+        "revision": "0.28.1",
+        "commit": "26d48e0634e6ee9cdc0533996db289ce4b430177",
+        "lines": [
+          176,
+          183
+        ],
+        "content_hash": "30372895d631a8b5200f61f3cad175aa09b48db43be3b717291d7ef9f93f658e"
+      },
+      "lines_changed": 4,
+      "normalized": true,
+      "included": true,
+      "exclusion_reason": null,
+      "sample_order": 42,
+      "sampled": false,
+      "review": {
+        "decision": null,
+        "reason": null
+      }
+    },
+    {
+      "path": "httpx/_content.py",
+      "kind": "function",
+      "symbol": "encode_request",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "0.27.2",
+        "commit": "609df7ecc0f7cb10a1c998aa9c269bba77337c5f",
+        "lines": [
+          184,
+          216
+        ],
+        "content_hash": "a37d19578afa4bf4373596b4b1fb801d01cdd81c1b1206b86f6d0ba6c2f1b6ad"
+      },
+      "new": {
+        "revision": "0.28.1",
+        "commit": "26d48e0634e6ee9cdc0533996db289ce4b430177",
+        "lines": [
+          186,
+          218
+        ],
+        "content_hash": "6651ed432577431e4bd1617f2c8eab330b2ff249e4ee500e02694fadbf74d8ff"
+      },
+      "lines_changed": 2,
+      "normalized": true,
+      "included": true,
+      "exclusion_reason": null,
+      "sample_order": 39,
+      "sampled": false,
+      "review": {
+        "decision": null,
+        "reason": null
+      }
+    },
+    {
+      "path": "httpx/_decoders.py",
+      "kind": "class",
+      "symbol": "ZStandardDecoder",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "0.27.2",
+        "commit": "609df7ecc0f7cb10a1c998aa9c269bba77337c5f",
+        "lines": [
+          143,
+          178
+        ],
+        "content_hash": "4b303485ff625f764a4ed62433a86cb0e21da675a018933de36db9a5e3ac81ee"
+      },
+      "new": {
+        "revision": "0.28.1",
+        "commit": "26d48e0634e6ee9cdc0533996db289ce4b430177",
+        "lines": [
+          161,
+          200
+        ],
+        "content_hash": "69934a8e5075bcd2359e9cd8f246ce40baac218e8666423d2aa89bac8116171a"
+      },
+      "lines_changed": 14,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "contains_changed_symbol",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "httpx/_decoders.py",
+      "kind": "method",
+      "symbol": "ZStandardDecoder.__init__",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "0.27.2",
+        "commit": "609df7ecc0f7cb10a1c998aa9c269bba77337c5f",
+        "lines": [
+          152,
+          159
+        ],
+        "content_hash": "8fad23f9e5e6918e0ee815e65260a29c317f752e4d7071cf921e3fda7f4eaa51"
+      },
+      "new": {
+        "revision": "0.28.1",
+        "commit": "26d48e0634e6ee9cdc0533996db289ce4b430177",
+        "lines": [
+          170,
+          178
+        ],
+        "content_hash": "bd0c7853b17590bbf6b757424dc14085dc2ad9f4febdf04ac45247d3dd514552"
+      },
+      "lines_changed": 5,
+      "normalized": true,
+      "included": true,
+      "exclusion_reason": null,
+      "sample_order": 10,
+      "sampled": true,
+      "review": {
+        "decision": null,
+        "reason": null
+      }
+    },
+    {
+      "path": "httpx/_decoders.py",
+      "kind": "method",
+      "symbol": "ZStandardDecoder.decode",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "0.27.2",
+        "commit": "609df7ecc0f7cb10a1c998aa9c269bba77337c5f",
+        "lines": [
+          161,
+          172
+        ],
+        "content_hash": "05fd36acd9c7ba651172f998fe934005197ecf0931281975a15ff2aaa14bf3ac"
+      },
+      "new": {
+        "revision": "0.28.1",
+        "commit": "26d48e0634e6ee9cdc0533996db289ce4b430177",
+        "lines": [
+          180,
+          192
+        ],
+        "content_hash": "12518f00aa71a18315f8210b251bb38fd7478fa277c981dc22cc2a1ede89e870"
+      },
+      "lines_changed": 7,
+      "normalized": true,
+      "included": true,
+      "exclusion_reason": null,
+      "sample_order": 13,
+      "sampled": true,
+      "review": {
+        "decision": null,
+        "reason": null
+      }
+    },
+    {
+      "path": "httpx/_decoders.py",
+      "kind": "method",
+      "symbol": "ZStandardDecoder.flush",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "0.27.2",
+        "commit": "609df7ecc0f7cb10a1c998aa9c269bba77337c5f",
+        "lines": [
+          174,
+          178
+        ],
+        "content_hash": "a76dcd87afce94a5128f3ba025cc3343a9098801e089d5367cba9dbf1630dcd6"
+      },
+      "new": {
+        "revision": "0.28.1",
+        "commit": "26d48e0634e6ee9cdc0533996db289ce4b430177",
+        "lines": [
+          194,
+          200
+        ],
+        "content_hash": "2d1bb822185d4a23cef6cfce1b0d9b029d7ed0431824e780a7977ba49163f35b"
+      },
+      "lines_changed": 2,
+      "normalized": true,
+      "included": true,
+      "exclusion_reason": null,
+      "sample_order": 21,
+      "sampled": false,
+      "review": {
+        "decision": null,
+        "reason": null
+      }
+    },
+    {
+      "path": "httpx/_exceptions.py",
+      "kind": "method",
+      "symbol": "HTTPError.request",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "0.27.2",
+        "commit": "609df7ecc0f7cb10a1c998aa9c269bba77337c5f",
+        "lines": [
+          97,
+          100
+        ],
+        "content_hash": "f944d8bd8789fe62118de8496c77c5c983549091224c3f6efc616742d02179fd"
+      },
+      "new": {
+        "revision": "0.28.1",
+        "commit": "26d48e0634e6ee9cdc0533996db289ce4b430177",
+        "lines": [
+          103,
+          104
+        ],
+        "content_hash": "73742385eeadf6eb524386bd8bf71b127d64d345532354cb39c610b331e490f9"
+      },
+      "lines_changed": 6,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "ambiguous_location",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "httpx/_main.py",
+      "kind": "function",
+      "symbol": "main",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "0.27.2",
+        "commit": "609df7ecc0f7cb10a1c998aa9c269bba77337c5f",
+        "lines": [
+          450,
+          509
+        ],
+        "content_hash": "04631603f3aaa25e4723e85b217ef68088c836f395f73e4324f24bf39891027b"
+      },
+      "new": {
+        "revision": "0.28.1",
+        "commit": "26d48e0634e6ee9cdc0533996db289ce4b430177",
+        "lines": [
+          452,
+          506
+        ],
+        "content_hash": "c41d6d3f2b0215eed461aba83fa1f2378e2176a193f72ae0941e3bfc3572a859"
+      },
+      "lines_changed": 7,
+      "normalized": true,
+      "included": true,
+      "exclusion_reason": null,
+      "sample_order": 8,
+      "sampled": true,
+      "review": {
+        "decision": null,
+        "reason": null
+      }
+    },
+    {
+      "path": "httpx/_models.py",
+      "kind": "class",
+      "symbol": "Headers",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "0.27.2",
+        "commit": "609df7ecc0f7cb10a1c998aa9c269bba77337c5f",
+        "lines": [
+          59,
+          307
+        ],
+        "content_hash": "87014ca4a3c953289952b0000c04db984a4eea351bb4abbe0178665b2c3b11be"
+      },
+      "new": {
+        "revision": "0.28.1",
+        "commit": "26d48e0634e6ee9cdc0533996db289ce4b430177",
+        "lines": [
+          139,
+          379
+        ],
+        "content_hash": "7ec95358c63430437034a37c1182d1131aa22622e468be8c5983fbc45840882d"
+      },
+      "lines_changed": 34,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "contains_changed_symbol",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "httpx/_models.py",
+      "kind": "class",
+      "symbol": "Request",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "0.27.2",
+        "commit": "609df7ecc0f7cb10a1c998aa9c269bba77337c5f",
+        "lines": [
+          310,
+          446
+        ],
+        "content_hash": "77c00e22849d0663a56a1cea1aa4d8026929b8a065af7f2e95f0adffad34b0ef"
+      },
+      "new": {
+        "revision": "0.28.1",
+        "commit": "26d48e0634e6ee9cdc0533996db289ce4b430177",
+        "lines": [
+          382,
+          512
+        ],
+        "content_hash": "adbd488d78a4efde3dbe2406d54b5141d566c36f5968c1ecb848b4f6bba5715c"
+      },
+      "lines_changed": 14,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "contains_changed_symbol",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "httpx/_models.py",
+      "kind": "class",
+      "symbol": "Response",
+      "part_index": 1,
+      "part_count": 2,
+      "status": "superseded",
+      "old": {
+        "revision": "0.27.2",
+        "commit": "609df7ecc0f7cb10a1c998aa9c269bba77337c5f",
+        "lines": [
+          449,
+          792
+        ],
+        "content_hash": "41acaf832f1650f548a7e88e426c00bb2f2f0cfe40c8776040647141742b1eee"
+      },
+      "new": {
+        "revision": "0.28.1",
+        "commit": "26d48e0634e6ee9cdc0533996db289ce4b430177",
+        "lines": [
+          515,
+          859
+        ],
+        "content_hash": "612cf51d1251652d27f659a847b27651cae8aae1a1f87dc73aadc5047e239eb5"
+      },
+      "lines_changed": 9,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "contains_changed_symbol",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "httpx/_models.py",
+      "kind": "class",
+      "symbol": "Response",
+      "part_index": 2,
+      "part_count": 2,
+      "status": "superseded",
+      "old": {
+        "revision": "0.27.2",
+        "commit": "609df7ecc0f7cb10a1c998aa9c269bba77337c5f",
+        "lines": [
+          793,
+          1010
+        ],
+        "content_hash": "bdb776050985ceacefe286fe58dc494ed18c4c3b135119d872632ad1e6fe0ae0"
+      },
+      "new": {
+        "revision": "0.28.1",
+        "commit": "26d48e0634e6ee9cdc0533996db289ce4b430177",
+        "lines": [
+          860,
+          1076
+        ],
+        "content_hash": "ed63a9edfb3e15766668bcfb90a7a51cdab2cf870f20467f486fe2c99d0359b5"
+      },
+      "lines_changed": 1,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "contains_changed_symbol",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "httpx/_models.py",
+      "kind": "method",
+      "symbol": "Headers.__init__",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "0.27.2",
+        "commit": "609df7ecc0f7cb10a1c998aa9c269bba77337c5f",
+        "lines": [
+          64,
+          92
+        ],
+        "content_hash": "25af0b382c0b863f8286a6d60894b01934d1e85befb31be22f8e4634c0ec6158"
+      },
+      "new": {
+        "revision": "0.28.1",
+        "commit": "26d48e0634e6ee9cdc0533996db289ce4b430177",
+        "lines": [
+          144,
+          164
+        ],
+        "content_hash": "6e29ee106a1fac76e3c8dcd7d2824716d2d310a374003556ebeb0e007d6839b6"
+      },
+      "lines_changed": 32,
+      "normalized": true,
+      "included": true,
+      "exclusion_reason": null,
+      "sample_order": 9,
+      "sampled": true,
+      "review": {
+        "decision": null,
+        "reason": null
+      }
+    },
+    {
+      "path": "httpx/_models.py",
+      "kind": "method",
+      "symbol": "Headers.__repr__",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "0.27.2",
+        "commit": "609df7ecc0f7cb10a1c998aa9c269bba77337c5f",
+        "lines": [
+          294,
+          307
+        ],
+        "content_hash": "207186183a7b5ff19cd7115490175ae6d1d601e13c6374bbc73407e5cae3f9ce"
+      },
+      "new": {
+        "revision": "0.28.1",
+        "commit": "26d48e0634e6ee9cdc0533996db289ce4b430177",
+        "lines": [
+          366,
+          379
+        ],
+        "content_hash": "7cf0bb30aadd80753723e5669b15e4b57b8146981db42837921bf42b1bc0c9ba"
+      },
+      "lines_changed": 2,
+      "normalized": true,
+      "included": true,
+      "exclusion_reason": null,
+      "sample_order": 2,
+      "sampled": true,
+      "review": {
+        "decision": null,
+        "reason": null
+      }
+    },
+    {
+      "path": "httpx/_models.py",
+      "kind": "method",
+      "symbol": "Headers.encoding",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "0.27.2",
+        "commit": "609df7ecc0f7cb10a1c998aa9c269bba77337c5f",
+        "lines": [
+          95,
+          117
+        ],
+        "content_hash": "f166bd3a77a17ef0d54f2b941d3c179d5fa6b4de3cde2e29297d51cf011e95b8"
+      },
+      "new": {
+        "revision": "0.28.1",
+        "commit": "26d48e0634e6ee9cdc0533996db289ce4b430177",
+        "lines": [
+          192,
+          193
+        ],
+        "content_hash": "128f5368533b68e4923c0dac76472eccf0ad54b7471077c32f7f61893a7d2cee"
+      },
+      "lines_changed": 25,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "ambiguous_location",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "httpx/_models.py",
+      "kind": "method",
+      "symbol": "Request.__init__",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "0.27.2",
+        "commit": "609df7ecc0f7cb10a1c998aa9c269bba77337c5f",
+        "lines": [
+          311,
+          373
+        ],
+        "content_hash": "6849ab77a653789ce13f2707e41526d026642bcd906ba37e00cbdc9d29e9d1d6"
+      },
+      "new": {
+        "revision": "0.28.1",
+        "commit": "26d48e0634e6ee9cdc0533996db289ce4b430177",
+        "lines": [
+          383,
+          439
+        ],
+        "content_hash": "23b22679c8fb43190f18e4d00f018e9e9c6f806fca22234486740d001cd52b36"
+      },
+      "lines_changed": 14,
+      "normalized": true,
+      "included": true,
+      "exclusion_reason": null,
+      "sample_order": 54,
+      "sampled": false,
+      "review": {
+        "decision": null,
+        "reason": null
+      }
+    },
+    {
+      "path": "httpx/_models.py",
+      "kind": "method",
+      "symbol": "Response.__init__",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "0.27.2",
+        "commit": "609df7ecc0f7cb10a1c998aa9c269bba77337c5f",
+        "lines": [
+          450,
+          503
+        ],
+        "content_hash": "c7205eb49bf9034d2ed744d55c4e29d08d693cacb03efa7d938553cdde4d12c4"
+      },
+      "new": {
+        "revision": "0.28.1",
+        "commit": "26d48e0634e6ee9cdc0533996db289ce4b430177",
+        "lines": [
+          516,
+          569
+        ],
+        "content_hash": "44f5163543520e9d5d9847a7efe087b878996d4c47344567c98bd8d69b81cf3b"
+      },
+      "lines_changed": 2,
+      "normalized": true,
+      "included": true,
+      "exclusion_reason": null,
+      "sample_order": 60,
+      "sampled": false,
+      "review": {
+        "decision": null,
+        "reason": null
+      }
+    },
+    {
+      "path": "httpx/_models.py",
+      "kind": "method",
+      "symbol": "Response.charset_encoding",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "0.27.2",
+        "commit": "609df7ecc0f7cb10a1c998aa9c269bba77337c5f",
+        "lines": [
+          623,
+          631
+        ],
+        "content_hash": "c5b50c446339d3054e114a34ddee8c6847217f7e6801e08da34e97187577d19a"
+      },
+      "new": {
+        "revision": "0.28.1",
+        "commit": "26d48e0634e6ee9cdc0533996db289ce4b430177",
+        "lines": [
+          689,
+          697
+        ],
+        "content_hash": "cbef82ecb3357e906d843731f59c510c0ce98e1f326b3c4ac9d61b3b53f68cee"
+      },
+      "lines_changed": 2,
+      "normalized": true,
+      "included": true,
+      "exclusion_reason": null,
+      "sample_order": 58,
+      "sampled": false,
+      "review": {
+        "decision": null,
+        "reason": null
+      }
+    },
+    {
+      "path": "httpx/_models.py",
+      "kind": "method",
+      "symbol": "Response.elapsed",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "0.27.2",
+        "commit": "609df7ecc0f7cb10a1c998aa9c269bba77337c5f",
+        "lines": [
+          513,
+          523
+        ],
+        "content_hash": "6d14c4aefd391b5ebd33034d87f5f714984ec4a5d05f0818e2848b6496d199b1"
+      },
+      "new": {
+        "revision": "0.28.1",
+        "commit": "26d48e0634e6ee9cdc0533996db289ce4b430177",
+        "lines": [
+          592,
+          593
+        ],
+        "content_hash": "cfa5f09c56e7befe59cdbb87cb5a593a2fe1600c1abc4ea244f681f725a7d9bc"
+      },
+      "lines_changed": 13,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "ambiguous_location",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "httpx/_models.py",
+      "kind": "method",
+      "symbol": "Response.encoding",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "0.27.2",
+        "commit": "609df7ecc0f7cb10a1c998aa9c269bba77337c5f",
+        "lines": [
+          587,
+          606
+        ],
+        "content_hash": "3716d5e6287a22f3fe684e6d53691d851e60ecd861b95da4cb0aced73702f54b"
+      },
+      "new": {
+        "revision": "0.28.1",
+        "commit": "26d48e0634e6ee9cdc0533996db289ce4b430177",
+        "lines": [
+          675,
+          686
+        ],
+        "content_hash": "099f89c892a7840c2f5b582e53dab6d9343dae2292cfc3e659df306fb5bf9f4d"
+      },
+      "lines_changed": 26,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "ambiguous_location",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "httpx/_models.py",
+      "kind": "method",
+      "symbol": "Response.links",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "0.27.2",
+        "commit": "609df7ecc0f7cb10a1c998aa9c269bba77337c5f",
+        "lines": [
+          776,
+          787
+        ],
+        "content_hash": "f4500c1c0ff2fb6e31de628e6ed85861cf564f698e9017c1244b54695938a60f"
+      },
+      "new": {
+        "revision": "0.28.1",
+        "commit": "26d48e0634e6ee9cdc0533996db289ce4b430177",
+        "lines": [
+          842,
+          853
+        ],
+        "content_hash": "ab59077592e07fd21576feba9143220ffafb80503af432da144be7fdb294b9f2"
+      },
+      "lines_changed": 2,
+      "normalized": true,
+      "included": true,
+      "exclusion_reason": null,
+      "sample_order": 45,
+      "sampled": false,
+      "review": {
+        "decision": null,
+        "reason": null
+      }
+    },
+    {
+      "path": "httpx/_models.py",
+      "kind": "method",
+      "symbol": "Response.request",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "0.27.2",
+        "commit": "609df7ecc0f7cb10a1c998aa9c269bba77337c5f",
+        "lines": [
+          530,
+          538
+        ],
+        "content_hash": "bbb224ce0b11470154909da9163874629bd48caa7335ad78065c0f0d2be9e549"
+      },
+      "new": {
+        "revision": "0.28.1",
+        "commit": "26d48e0634e6ee9cdc0533996db289ce4b430177",
+        "lines": [
+          607,
+          608
+        ],
+        "content_hash": "1998a57cbdd7c556e12e25cac021624191c51522e04fa0f885355d8276209e1d"
+      },
+      "lines_changed": 11,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "ambiguous_location",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "httpx/_multipart.py",
+      "kind": "class",
+      "symbol": "DataField",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "0.27.2",
+        "commit": "609df7ecc0f7cb10a1c998aa9c269bba77337c5f",
+        "lines": [
+          39,
+          81
+        ],
+        "content_hash": "e8824096fd217328510d74da58cc51cb51024b3174395192c7326c5a1da5dba5"
+      },
+      "new": {
+        "revision": "0.28.1",
+        "commit": "26d48e0634e6ee9cdc0533996db289ce4b430177",
+        "lines": [
+          70,
+          112
+        ],
+        "content_hash": "031951dce0938c5dd99b45cb2d2a02c5d38d265d0876f052c47b8a89d9928276"
+      },
+      "lines_changed": 2,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "contains_changed_symbol",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "httpx/_multipart.py",
+      "kind": "class",
+      "symbol": "FileField",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "0.27.2",
+        "commit": "609df7ecc0f7cb10a1c998aa9c269bba77337c5f",
+        "lines": [
+          84,
+          190
+        ],
+        "content_hash": "0379623d538bf90d0d7c394bd9a6c039038ae418916400a0cde8cbfb51efe1f7"
+      },
+      "new": {
+        "revision": "0.28.1",
+        "commit": "26d48e0634e6ee9cdc0533996db289ce4b430177",
+        "lines": [
+          115,
+          221
+        ],
+        "content_hash": "714853c7906479e91b383aac65fc5585a36ec9cb6c256045da319fdc5442d2a0"
+      },
+      "lines_changed": 6,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "contains_changed_symbol",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "httpx/_multipart.py",
+      "kind": "method",
+      "symbol": "DataField.render_headers",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "0.27.2",
+        "commit": "609df7ecc0f7cb10a1c998aa9c269bba77337c5f",
+        "lines": [
+          59,
+          66
+        ],
+        "content_hash": "e694b96fb0bdd4620ed93c6a2ec5d5a8ccf5209a2a278f65efb8b23009b40f9e"
+      },
+      "new": {
+        "revision": "0.28.1",
+        "commit": "26d48e0634e6ee9cdc0533996db289ce4b430177",
+        "lines": [
+          90,
+          97
+        ],
+        "content_hash": "20b23aa2583240348f69ad9f0210295a915474be6c0d14e92a41c597cf775ff3"
+      },
+      "lines_changed": 2,
+      "normalized": true,
+      "included": true,
+      "exclusion_reason": null,
+      "sample_order": 31,
+      "sampled": false,
+      "review": {
+        "decision": null,
+        "reason": null
+      }
+    },
+    {
+      "path": "httpx/_multipart.py",
+      "kind": "method",
+      "symbol": "FileField.__init__",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "0.27.2",
+        "commit": "609df7ecc0f7cb10a1c998aa9c269bba77337c5f",
+        "lines": [
+          91,
+          138
+        ],
+        "content_hash": "cb519187e98862bfd619bb5c381183b5aef4b1566045669d0c72d2cf79cd3b79"
+      },
+      "new": {
+        "revision": "0.28.1",
+        "commit": "26d48e0634e6ee9cdc0533996db289ce4b430177",
+        "lines": [
+          122,
+          169
+        ],
+        "content_hash": "cbffd11fca9dbec0ed9508151220ff48f91c4f9610d22592cebc33e6b6331ce7"
+      },
+      "lines_changed": 2,
+      "normalized": true,
+      "included": true,
+      "exclusion_reason": null,
+      "sample_order": 16,
+      "sampled": true,
+      "review": {
+        "decision": null,
+        "reason": null
+      }
+    },
+    {
+      "path": "httpx/_multipart.py",
+      "kind": "method",
+      "symbol": "FileField.render_headers",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "0.27.2",
+        "commit": "609df7ecc0f7cb10a1c998aa9c269bba77337c5f",
+        "lines": [
+          155,
+          170
+        ],
+        "content_hash": "21c973f6ac40a5c7794effd959535f3c61051626445e9b749ef15b5d9f7b7339"
+      },
+      "new": {
+        "revision": "0.28.1",
+        "commit": "26d48e0634e6ee9cdc0533996db289ce4b430177",
+        "lines": [
+          186,
+          201
+        ],
+        "content_hash": "c755590ccc7acd22b8b0ad5e67e99e37384ca895adb7aea6b86a2721c65fcbb1"
+      },
+      "lines_changed": 4,
+      "normalized": true,
+      "included": true,
+      "exclusion_reason": null,
+      "sample_order": 30,
+      "sampled": false,
+      "review": {
+        "decision": null,
+        "reason": null
+      }
+    },
+    {
+      "path": "httpx/_transports/asgi.py",
+      "kind": "function",
+      "symbol": "create_event",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "0.27.2",
+        "commit": "609df7ecc0f7cb10a1c998aa9c269bba77337c5f",
+        "lines": [
+          31,
+          39
+        ],
+        "content_hash": "f020875a3d4c0b4de7db66e82f62b727cff0df907f57f26967b5ce42f0f19b4f"
+      },
+      "new": {
+        "revision": "0.28.1",
+        "commit": "26d48e0634e6ee9cdc0533996db289ce4b430177",
+        "lines": [
+          44,
+          52
+        ],
+        "content_hash": "67411f4bbf1b168470f96b3315aa3f900b3c55111cf97236a06b3bf2f30822f8"
+      },
+      "lines_changed": 8,
+      "normalized": true,
+      "included": true,
+      "exclusion_reason": null,
+      "sample_order": 20,
+      "sampled": true,
+      "review": {
+        "decision": null,
+        "reason": null
+      }
+    },
+    {
+      "path": "httpx/_transports/default.py",
+      "kind": "class",
+      "symbol": "AsyncHTTPTransport",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "0.27.2",
+        "commit": "609df7ecc0f7cb10a1c998aa9c269bba77337c5f",
+        "lines": [
+          265,
+          389
+        ],
+        "content_hash": "030385b66354ad276891caac3328f2b0b56ce308136ebb0ac67b73090a5351f8"
+      },
+      "new": {
+        "revision": "0.28.1",
+        "commit": "26d48e0634e6ee9cdc0533996db289ce4b430177",
+        "lines": [
+          279,
+          406
+        ],
+        "content_hash": "0f94ecbca4d074b834b8c87732eed30f3418f195632411c53bf4e7c9012c56a8"
+      },
+      "lines_changed": 13,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "contains_changed_symbol",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "httpx/_transports/default.py",
+      "kind": "class",
+      "symbol": "HTTPTransport",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "0.27.2",
+        "commit": "609df7ecc0f7cb10a1c998aa9c269bba77337c5f",
+        "lines": [
+          124,
+          248
+        ],
+        "content_hash": "a53ea346452f81bfa2ce03ae3e26f3b73330cc148eb2492d48d2b5ac1b12769c"
+      },
+      "new": {
+        "revision": "0.28.1",
+        "commit": "26d48e0634e6ee9cdc0533996db289ce4b430177",
+        "lines": [
+          135,
+          262
+        ],
+        "content_hash": "37e4f256623e3690e40aa4049292e94d1fb5c99a2fc4ff69e790fc96526ca60b"
+      },
+      "lines_changed": 13,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "contains_changed_symbol",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "httpx/_transports/default.py",
+      "kind": "function",
+      "symbol": "map_httpcore_exceptions",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "0.27.2",
+        "commit": "609df7ecc0f7cb10a1c998aa9c269bba77337c5f",
+        "lines": [
+          70,
+          89
+        ],
+        "content_hash": "c44a36e17f3b24c469884dc439ab3ffab759bba1f9b0741b3b7878991b383dae"
+      },
+      "new": {
+        "revision": "0.28.1",
+        "commit": "26d48e0634e6ee9cdc0533996db289ce4b430177",
+        "lines": [
+          96,
+          118
+        ],
+        "content_hash": "2e3166d49ddfcfe1440919eacf7cc7c35b6fc56af05756c59b0a763361d60e47"
+      },
+      "lines_changed": 3,
+      "normalized": true,
+      "included": true,
+      "exclusion_reason": null,
+      "sample_order": 17,
+      "sampled": true,
+      "review": {
+        "decision": null,
+        "reason": null
+      }
+    },
+    {
+      "path": "httpx/_transports/default.py",
+      "kind": "method",
+      "symbol": "AsyncHTTPTransport.__init__",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "0.27.2",
+        "commit": "609df7ecc0f7cb10a1c998aa9c269bba77337c5f",
+        "lines": [
+          266,
+          343
+        ],
+        "content_hash": "be948936f3d2b208e8c1b9237b0945ea124308b1a8a2992e631167e4773108ab"
+      },
+      "new": {
+        "revision": "0.28.1",
+        "commit": "26d48e0634e6ee9cdc0533996db289ce4b430177",
+        "lines": [
+          280,
+          359
+        ],
+        "content_hash": "433c33239d86ec87383cba12229bd086b4a92985b25ff8b0859cf028f29250e0"
+      },
+      "lines_changed": 12,
+      "normalized": true,
+      "included": true,
+      "exclusion_reason": null,
+      "sample_order": 12,
+      "sampled": true,
+      "review": {
+        "decision": null,
+        "reason": null
+      }
+    },
+    {
+      "path": "httpx/_transports/default.py",
+      "kind": "method",
+      "symbol": "AsyncHTTPTransport.handle_async_request",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "0.27.2",
+        "commit": "609df7ecc0f7cb10a1c998aa9c269bba77337c5f",
+        "lines": [
+          358,
+          386
+        ],
+        "content_hash": "a4d0fd5d0ba65309fc28e686680ef562850eca59c309b3500f33b387a3d2c7a9"
+      },
+      "new": {
+        "revision": "0.28.1",
+        "commit": "26d48e0634e6ee9cdc0533996db289ce4b430177",
+        "lines": [
+          374,
+          403
+        ],
+        "content_hash": "4dfd2e15d472a02f00c8033af74acb24d614bbb3f46a6fefb100e82cf4f7bd51"
+      },
+      "lines_changed": 1,
+      "normalized": true,
+      "included": true,
+      "exclusion_reason": null,
+      "sample_order": 69,
+      "sampled": false,
+      "review": {
+        "decision": null,
+        "reason": null
+      }
+    },
+    {
+      "path": "httpx/_transports/default.py",
+      "kind": "method",
+      "symbol": "HTTPTransport.__init__",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "0.27.2",
+        "commit": "609df7ecc0f7cb10a1c998aa9c269bba77337c5f",
+        "lines": [
+          125,
+          202
+        ],
+        "content_hash": "ad19c7dd593b98e69e56f4be93bc752660f67fa1ea5f5e54313c3c2803934004"
+      },
+      "new": {
+        "revision": "0.28.1",
+        "commit": "26d48e0634e6ee9cdc0533996db289ce4b430177",
+        "lines": [
+          136,
+          215
+        ],
+        "content_hash": "c5fe8f1eadf4fb491a7b7cb18ca729b208952caa5ed47ad062a558d0f5d880ae"
+      },
+      "lines_changed": 12,
+      "normalized": true,
+      "included": true,
+      "exclusion_reason": null,
+      "sample_order": 18,
+      "sampled": true,
+      "review": {
+        "decision": null,
+        "reason": null
+      }
+    },
+    {
+      "path": "httpx/_transports/default.py",
+      "kind": "method",
+      "symbol": "HTTPTransport.handle_request",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "0.27.2",
+        "commit": "609df7ecc0f7cb10a1c998aa9c269bba77337c5f",
+        "lines": [
+          217,
+          245
+        ],
+        "content_hash": "b18e45cbe21e4e11bbad18894864983cef840e1c5682668ac756d70b2880c421"
+      },
+      "new": {
+        "revision": "0.28.1",
+        "commit": "26d48e0634e6ee9cdc0533996db289ce4b430177",
+        "lines": [
+          230,
+          259
+        ],
+        "content_hash": "9edcd0cdfa4b6872e902526042f467c9571c7f222fb2986e63375c9eddb062be"
+      },
+      "lines_changed": 1,
+      "normalized": true,
+      "included": true,
+      "exclusion_reason": null,
+      "sample_order": 15,
+      "sampled": true,
+      "review": {
+        "decision": null,
+        "reason": null
+      }
+    },
+    {
+      "path": "httpx/_urlparse.py",
+      "kind": "function",
+      "symbol": "percent_encoded",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "0.27.2",
+        "commit": "609df7ecc0f7cb10a1c998aa9c269bba77337c5f",
+        "lines": [
+          437,
+          449
+        ],
+        "content_hash": "5c056e0c03bda1a77cfe5c8dc48f794bcfba0076a3542e5a218c758e83260864"
+      },
+      "new": {
+        "revision": "0.28.1",
+        "commit": "26d48e0634e6ee9cdc0533996db289ce4b430177",
+        "lines": [
+          482,
+          494
+        ],
+        "content_hash": "96c59ae0cea1b548738673bb028d32ea658ccfe4f28109e3e03b887dc71fc417"
+      },
+      "lines_changed": 2,
+      "normalized": true,
+      "included": true,
+      "exclusion_reason": null,
+      "sample_order": 68,
+      "sampled": false,
+      "review": {
+        "decision": null,
+        "reason": null
+      }
+    },
+    {
+      "path": "httpx/_urlparse.py",
+      "kind": "function",
+      "symbol": "quote",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "0.27.2",
+        "commit": "609df7ecc0f7cb10a1c998aa9c269bba77337c5f",
+        "lines": [
+          452,
+          482
+        ],
+        "content_hash": "38dc3c308a42b7071fbf654e8334074efbb8484711a3b175bd50d7a0ccc54f33"
+      },
+      "new": {
+        "revision": "0.28.1",
+        "commit": "26d48e0634e6ee9cdc0533996db289ce4b430177",
+        "lines": [
+          497,
+          527
+        ],
+        "content_hash": "3743b0ecdca22ea5fc0abcca1773a6daa8af18fec7a2509120ac735eb4e3181d"
+      },
+      "lines_changed": 2,
+      "normalized": true,
+      "included": true,
+      "exclusion_reason": null,
+      "sample_order": 56,
+      "sampled": false,
+      "review": {
+        "decision": null,
+        "reason": null
+      }
+    },
+    {
+      "path": "httpx/_urlparse.py",
+      "kind": "function",
+      "symbol": "urlencode",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "removed",
+      "old": {
+        "revision": "0.27.2",
+        "commit": "609df7ecc0f7cb10a1c998aa9c269bba77337c5f",
+        "lines": [
+          485,
+          505
+        ],
+        "content_hash": "9ad4f0a55d6913700376a71db1efe5e6d99a7d6cc7ef3d649f891c782848f1c8"
+      },
+      "new": null,
+      "lines_changed": 21,
+      "normalized": true,
+      "included": true,
+      "exclusion_reason": null,
+      "sample_order": 43,
+      "sampled": false,
+      "review": {
+        "decision": null,
+        "reason": null
+      }
+    },
+    {
+      "path": "httpx/_urlparse.py",
+      "kind": "function",
+      "symbol": "urlparse",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "0.27.2",
+        "commit": "609df7ecc0f7cb10a1c998aa9c269bba77337c5f",
+        "lines": [
+          152,
+          300
+        ],
+        "content_hash": "5dcdd612f57e9d4d737373c4a4adfba89d322cb99d13c51411cee031446c5a6d"
+      },
+      "new": {
+        "revision": "0.28.1",
+        "commit": "26d48e0634e6ee9cdc0533996db289ce4b430177",
+        "lines": [
+          213,
+          345
+        ],
+        "content_hash": "3e531bf2e492ce3870e3066a3ebe8d0dedb7b1009c684732402107e6ae476b96"
+      },
+      "lines_changed": 32,
+      "normalized": true,
+      "included": true,
+      "exclusion_reason": null,
+      "sample_order": 7,
+      "sampled": true,
+      "review": {
+        "decision": null,
+        "reason": null
+      }
+    },
+    {
+      "path": "httpx/_urls.py",
+      "kind": "class",
+      "symbol": "QueryParams",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "0.27.2",
+        "commit": "609df7ecc0f7cb10a1c998aa9c269bba77337c5f",
+        "lines": [
+          420,
+          648
+        ],
+        "content_hash": "68f8c6fde8d960aa7e56605aa7880bec8af2cc59f82dbd3aa7921f10565aa218"
+      },
+      "new": {
+        "revision": "0.28.1",
+        "commit": "26d48e0634e6ee9cdc0533996db289ce4b430177",
+        "lines": [
+          420,
+          641
+        ],
+        "content_hash": "9ca6390eb88b73495fe30875de8ed1dbe7d1e6a2e8a026a536318d5f80a46c2f"
+      },
+      "lines_changed": 7,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "contains_changed_symbol",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "httpx/_urls.py",
+      "kind": "class",
+      "symbol": "URL",
+      "part_index": 1,
+      "part_count": 2,
+      "status": "superseded",
+      "old": {
+        "revision": "0.27.2",
+        "commit": "609df7ecc0f7cb10a1c998aa9c269bba77337c5f",
+        "lines": [
+          15,
+          360
+        ],
+        "content_hash": "b817d656882bdf152cfa4d71be66ce636114e8364b2dd71ceeb79b14dca858b1"
+      },
+      "new": {
+        "revision": "0.28.1",
+        "commit": "26d48e0634e6ee9cdc0533996db289ce4b430177",
+        "lines": [
+          15,
+          355
+        ],
+        "content_hash": "87e43bbf5b5bcdd54f496d0ed4529a8ba822c92fc2fadb9d280a95967e0e97e7"
+      },
+      "lines_changed": 27,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "contains_changed_symbol",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "httpx/_urls.py",
+      "kind": "class",
+      "symbol": "URL",
+      "part_index": 2,
+      "part_count": 2,
+      "status": "superseded",
+      "old": {
+        "revision": "0.27.2",
+        "commit": "609df7ecc0f7cb10a1c998aa9c269bba77337c5f",
+        "lines": [
+          361,
+          417
+        ],
+        "content_hash": "cc7a749b09259aa3d6aafb2d2783a75d82863153c5a4c483838762bbf729878f"
+      },
+      "new": {
+        "revision": "0.28.1",
+        "commit": "26d48e0634e6ee9cdc0533996db289ce4b430177",
+        "lines": [
+          356,
+          417
+        ],
+        "content_hash": "85a9c68641db6259b679c1f065e8964c10cf36660a1e87a710039bf19d368b46"
+      },
+      "lines_changed": 27,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "contains_changed_symbol",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "httpx/_urls.py",
+      "kind": "method",
+      "symbol": "QueryParams.__str__",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "0.27.2",
+        "commit": "609df7ecc0f7cb10a1c998aa9c269bba77337c5f",
+        "lines": [
+          623,
+          631
+        ],
+        "content_hash": "645a83a879f2e5a508e42d35a819392c6dd3fe8429ba2feb46351a36b60b1489"
+      },
+      "new": {
+        "revision": "0.28.1",
+        "commit": "26d48e0634e6ee9cdc0533996db289ce4b430177",
+        "lines": [
+          623,
+          624
+        ],
+        "content_hash": "24043c55683b7d4c173c60b74c6ae061dca24c96022b8bb236f89c0ddd013187"
+      },
+      "lines_changed": 7,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "formatting_or_docstring_only",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "httpx/_urls.py",
+      "kind": "method",
+      "symbol": "URL.raw",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "0.27.2",
+        "commit": "609df7ecc0f7cb10a1c998aa9c269bba77337c5f",
+        "lines": [
+          308,
+          321
+        ],
+        "content_hash": "74d155b33dfd3e225223d6da3ebe41c4a73f1c39d9fd1202f9d1cccd574cc2f1"
+      },
+      "new": {
+        "revision": "0.28.1",
+        "commit": "26d48e0634e6ee9cdc0533996db289ce4b430177",
+        "lines": [
+          404,
+          417
+        ],
+        "content_hash": "ef04e10d17796fc9d5a5c801bf08898d407c2fc41ba4e00253d69bcd05276737"
+      },
+      "lines_changed": 22,
+      "normalized": true,
+      "included": true,
+      "exclusion_reason": null,
+      "sample_order": 67,
+      "sampled": false,
+      "review": {
+        "decision": null,
+        "reason": null
+      }
+    },
+    {
+      "path": "httpx/_utils.py",
+      "kind": "class",
+      "symbol": "Timer",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "removed",
+      "old": {
+        "revision": "0.27.2",
+        "commit": "609df7ecc0f7cb10a1c998aa9c269bba77337c5f",
+        "lines": [
+          291,
+          315
+        ],
+        "content_hash": "484d8e15db40d656ebfe08f97f9fff69f655197c872a601218385b904dca0eaf"
+      },
+      "new": null,
+      "lines_changed": 25,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "contains_changed_symbol",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "httpx/_utils.py",
+      "kind": "function",
+      "symbol": "format_form_param",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "removed",
+      "old": {
+        "revision": "0.27.2",
+        "commit": "609df7ecc0f7cb10a1c998aa9c269bba77337c5f",
+        "lines": [
+          82,
+          91
+        ],
+        "content_hash": "9692d94136e831547aa58643baa0969e73068ca8c258e72b91e38dd03cc58e1c"
+      },
+      "new": null,
+      "lines_changed": 10,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "contains_changed_symbol",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "httpx/_utils.py",
+      "kind": "function",
+      "symbol": "format_form_param.replacer",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "removed",
+      "old": {
+        "revision": "0.27.2",
+        "commit": "609df7ecc0f7cb10a1c998aa9c269bba77337c5f",
+        "lines": [
+          87,
+          88
+        ],
+        "content_hash": "b1b8325f9bac9bd09b5323af0c87ce310c645dfbeeffd945e9037f53b104d90d"
+      },
+      "new": null,
+      "lines_changed": 2,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "renamed_or_moved",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "httpx/_utils.py",
+      "kind": "function",
+      "symbol": "get_ca_bundle_from_env",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "removed",
+      "old": {
+        "revision": "0.27.2",
+        "commit": "609df7ecc0f7cb10a1c998aa9c269bba77337c5f",
+        "lines": [
+          94,
+          103
+        ],
+        "content_hash": "8fb900d4df75e08d61604d5082a9d24b8147b347cccce4516f9004a6cd1247e1"
+      },
+      "new": null,
+      "lines_changed": 10,
+      "normalized": true,
+      "included": true,
+      "exclusion_reason": null,
+      "sample_order": 14,
+      "sampled": true,
+      "review": {
+        "decision": null,
+        "reason": null
+      }
+    },
+    {
+      "path": "httpx/_utils.py",
+      "kind": "function",
+      "symbol": "guess_content_type",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "removed",
+      "old": {
+        "revision": "0.27.2",
+        "commit": "609df7ecc0f7cb10a1c998aa9c269bba77337c5f",
+        "lines": [
+          260,
+          263
+        ],
+        "content_hash": "ff04f7a4b13e517886c88bcd596d2203558aca75a8534dda397ac6ffd14051f7"
+      },
+      "new": null,
+      "lines_changed": 4,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "renamed_or_moved",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "httpx/_utils.py",
+      "kind": "function",
+      "symbol": "is_https_redirect",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "removed",
+      "old": {
+        "revision": "0.27.2",
+        "commit": "609df7ecc0f7cb10a1c998aa9c269bba77337c5f",
+        "lines": [
+          180,
+          192
+        ],
+        "content_hash": "6afb278a83fe63f8afff98d80c1f6a935e8db5498b01b0d8f8083eab8587ccaa"
+      },
+      "new": null,
+      "lines_changed": 13,
+      "normalized": true,
+      "included": true,
+      "exclusion_reason": null,
+      "sample_order": 25,
+      "sampled": false,
+      "review": {
+        "decision": null,
+        "reason": null
+      }
+    },
+    {
+      "path": "httpx/_utils.py",
+      "kind": "function",
+      "symbol": "is_known_encoding",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "removed",
+      "old": {
+        "revision": "0.27.2",
+        "commit": "609df7ecc0f7cb10a1c998aa9c269bba77337c5f",
+        "lines": [
+          71,
+          79
+        ],
+        "content_hash": "0a75a67da6bf9cc20f01ba7e2dbc1a6cdde208ff1328c71a4fc2a076015496c0"
+      },
+      "new": null,
+      "lines_changed": 9,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "renamed_or_moved",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "httpx/_utils.py",
+      "kind": "function",
+      "symbol": "normalize_header_key",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "removed",
+      "old": {
+        "revision": "0.27.2",
+        "commit": "609df7ecc0f7cb10a1c998aa9c269bba77337c5f",
+        "lines": [
+          31,
+          44
+        ],
+        "content_hash": "3ed5e1d6fafef8d8ecbab119efaab530c0a8a0ba589bc7380cad12819304e4e2"
+      },
+      "new": null,
+      "lines_changed": 14,
+      "normalized": true,
+      "included": true,
+      "exclusion_reason": null,
+      "sample_order": 55,
+      "sampled": false,
+      "review": {
+        "decision": null,
+        "reason": null
+      }
+    },
+    {
+      "path": "httpx/_utils.py",
+      "kind": "function",
+      "symbol": "normalize_header_value",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "removed",
+      "old": {
+        "revision": "0.27.2",
+        "commit": "609df7ecc0f7cb10a1c998aa9c269bba77337c5f",
+        "lines": [
+          47,
+          53
+        ],
+        "content_hash": "2d85398639af35386ef0678ffcd79e54dc94f808f4d7f8276ed7237e7a02db04"
+      },
+      "new": null,
+      "lines_changed": 7,
+      "normalized": true,
+      "included": true,
+      "exclusion_reason": null,
+      "sample_order": 32,
+      "sampled": false,
+      "review": {
+        "decision": null,
+        "reason": null
+      }
+    },
+    {
+      "path": "httpx/_utils.py",
+      "kind": "function",
+      "symbol": "obfuscate_sensitive_headers",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "removed",
+      "old": {
+        "revision": "0.27.2",
+        "commit": "609df7ecc0f7cb10a1c998aa9c269bba77337c5f",
+        "lines": [
+          154,
+          160
+        ],
+        "content_hash": "1d4731a6732eab6f3c9f0ce8918a40ddf133c855fc308ef35eef88d123854769"
+      },
+      "new": null,
+      "lines_changed": 7,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "renamed_or_moved",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "httpx/_utils.py",
+      "kind": "function",
+      "symbol": "parse_content_type_charset",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "removed",
+      "old": {
+        "revision": "0.27.2",
+        "commit": "609df7ecc0f7cb10a1c998aa9c269bba77337c5f",
+        "lines": [
+          143,
+          148
+        ],
+        "content_hash": "867d7fe499a42fa9487233da78462992ff8359d8d81839291463c69817b5d99e"
+      },
+      "new": null,
+      "lines_changed": 6,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "renamed_or_moved",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "httpx/_utils.py",
+      "kind": "function",
+      "symbol": "parse_header_links",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "removed",
+      "old": {
+        "revision": "0.27.2",
+        "commit": "609df7ecc0f7cb10a1c998aa9c269bba77337c5f",
+        "lines": [
+          106,
+          140
+        ],
+        "content_hash": "0c43db802d85dc2784e40a49167b814cb9bc3160fda7eb1f44c9bfa9e102cdfa"
+      },
+      "new": null,
+      "lines_changed": 35,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "renamed_or_moved",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "httpx/_utils.py",
+      "kind": "function",
+      "symbol": "port_or_default",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "removed",
+      "old": {
+        "revision": "0.27.2",
+        "commit": "609df7ecc0f7cb10a1c998aa9c269bba77337c5f",
+        "lines": [
+          163,
+          166
+        ],
+        "content_hash": "8fcd9ff6859e062ba34654f091995da6a013b55c246c2fd61f72e2ba536bd77c"
+      },
+      "new": null,
+      "lines_changed": 4,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "renamed_or_moved",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "httpx/_utils.py",
+      "kind": "function",
+      "symbol": "same_origin",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "removed",
+      "old": {
+        "revision": "0.27.2",
+        "commit": "609df7ecc0f7cb10a1c998aa9c269bba77337c5f",
+        "lines": [
+          169,
+          177
+        ],
+        "content_hash": "f3bac7b13b51367b8a4536fc4bc78936dffe7f81dcab672cfebca48bd56b553a"
+      },
+      "new": null,
+      "lines_changed": 9,
+      "normalized": true,
+      "included": true,
+      "exclusion_reason": null,
+      "sample_order": 22,
+      "sampled": false,
+      "review": {
+        "decision": null,
+        "reason": null
+      }
+    },
+    {
+      "path": "httpx/_utils.py",
+      "kind": "method",
+      "symbol": "Timer._get_time",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "removed",
+      "old": {
+        "revision": "0.27.2",
+        "commit": "609df7ecc0f7cb10a1c998aa9c269bba77337c5f",
+        "lines": [
+          292,
+          301
+        ],
+        "content_hash": "c9f768be8abb28eec79cd23ec48fc4fd034113c6d7a4853e8f78a6ef759327c8"
+      },
+      "new": null,
+      "lines_changed": 10,
+      "normalized": true,
+      "included": true,
+      "exclusion_reason": null,
+      "sample_order": 3,
+      "sampled": true,
+      "review": {
+        "decision": null,
+        "reason": null
+      }
+    },
+    {
+      "path": "httpx/_utils.py",
+      "kind": "method",
+      "symbol": "Timer.async_elapsed",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "removed",
+      "old": {
+        "revision": "0.27.2",
+        "commit": "609df7ecc0f7cb10a1c998aa9c269bba77337c5f",
+        "lines": [
+          313,
+          315
+        ],
+        "content_hash": "e05ed0e7f1d957292d8081c16582fcae8b900054310ee8a44d9e8a763907a0d3"
+      },
+      "new": null,
+      "lines_changed": 3,
+      "normalized": true,
+      "included": true,
+      "exclusion_reason": null,
+      "sample_order": 4,
+      "sampled": true,
+      "review": {
+        "decision": null,
+        "reason": null
+      }
+    },
+    {
+      "path": "httpx/_utils.py",
+      "kind": "method",
+      "symbol": "Timer.async_start",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "removed",
+      "old": {
+        "revision": "0.27.2",
+        "commit": "609df7ecc0f7cb10a1c998aa9c269bba77337c5f",
+        "lines": [
+          306,
+          307
+        ],
+        "content_hash": "fad824c7c6ab097c766f625383fbdac8bf5182284e0175735a68be8256123099"
+      },
+      "new": null,
+      "lines_changed": 2,
+      "normalized": true,
+      "included": true,
+      "exclusion_reason": null,
+      "sample_order": 34,
+      "sampled": false,
+      "review": {
+        "decision": null,
+        "reason": null
+      }
+    },
+    {
+      "path": "httpx/_utils.py",
+      "kind": "method",
+      "symbol": "Timer.sync_elapsed",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "removed",
+      "old": {
+        "revision": "0.27.2",
+        "commit": "609df7ecc0f7cb10a1c998aa9c269bba77337c5f",
+        "lines": [
+          309,
+          311
+        ],
+        "content_hash": "ac3d467f9296565a6e0507b1ff92af6509bfe94ed7523d148663555f13d9b3a5"
+      },
+      "new": null,
+      "lines_changed": 3,
+      "normalized": true,
+      "included": true,
+      "exclusion_reason": null,
+      "sample_order": 61,
+      "sampled": false,
+      "review": {
+        "decision": null,
+        "reason": null
+      }
+    },
+    {
+      "path": "httpx/_utils.py",
+      "kind": "method",
+      "symbol": "Timer.sync_start",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "removed",
+      "old": {
+        "revision": "0.27.2",
+        "commit": "609df7ecc0f7cb10a1c998aa9c269bba77337c5f",
+        "lines": [
+          303,
+          304
+        ],
+        "content_hash": "ce3b59ac3c32ae5bc796ccb7bdb29990cdb03eab7918f4be9d3905ffaf8dc248"
+      },
+      "new": null,
+      "lines_changed": 2,
+      "normalized": true,
+      "included": true,
+      "exclusion_reason": null,
+      "sample_order": 23,
+      "sampled": false,
+      "review": {
+        "decision": null,
+        "reason": null
+      }
+    },
+    {
+      "path": "tests/client/test_auth.py",
+      "kind": "function",
+      "symbol": "test_async_auth_reads_response_body",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "0.27.2",
+        "commit": "609df7ecc0f7cb10a1c998aa9c269bba77337c5f",
+        "lines": [
+          733,
+          746
+        ],
+        "content_hash": "14234130aa93b4a7dc24cbfe820e3cf3fb51a744de7b7300b0a54eb9991c0df7"
+      },
+      "new": {
+        "revision": "0.28.1",
+        "commit": "26d48e0634e6ee9cdc0533996db289ce4b430177",
+        "lines": [
+          710,
+          723
+        ],
+        "content_hash": "f23e6636e07fc03e6f8a611a3bf35f1f7ca2a52ada3c900b942cbd6b436bcccd"
+      },
+      "lines_changed": 2,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "test_file",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "tests/client/test_auth.py",
+      "kind": "function",
+      "symbol": "test_netrc_auth_nopassword",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "removed",
+      "old": {
+        "revision": "0.27.2",
+        "commit": "609df7ecc0f7cb10a1c998aa9c269bba77337c5f",
+        "lines": [
+          277,
+          293
+        ],
+        "content_hash": "cd7346ea71866b125e690637bc7483e756f36fe826c68298a304b3f76e4b11c7"
+      },
+      "new": null,
+      "lines_changed": 17,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "test_file",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "tests/client/test_auth.py",
+      "kind": "function",
+      "symbol": "test_sync_auth_reads_response_body",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "0.27.2",
+        "commit": "609df7ecc0f7cb10a1c998aa9c269bba77337c5f",
+        "lines": [
+          749,
+          762
+        ],
+        "content_hash": "41017a8d665a0572b37cdda76d4adc4ed428f0f0007659fc063f4bccf9d8ff72"
+      },
+      "new": {
+        "revision": "0.28.1",
+        "commit": "26d48e0634e6ee9cdc0533996db289ce4b430177",
+        "lines": [
+          726,
+          739
+        ],
+        "content_hash": "a29304095d20e5fc5ac30d6d2ea7c88588aa35e409dc967891acb6c594495ea7"
+      },
+      "lines_changed": 2,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "test_file",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "tests/client/test_proxies.py",
+      "kind": "function",
+      "symbol": "test_async_proxy_close",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "0.27.2",
+        "commit": "609df7ecc0f7cb10a1c998aa9c269bba77337c5f",
+        "lines": [
+          159,
+          165
+        ],
+        "content_hash": "8882ff2cf28c9b95642f7b69726f1b33581d612ab6f758ee7044a69d82188515"
+      },
+      "new": {
+        "revision": "0.28.1",
+        "commit": "26d48e0634e6ee9cdc0533996db289ce4b430177",
+        "lines": [
+          104,
+          110
+        ],
+        "content_hash": "538e320ea2618091fcc814cd65b3b9b88339c5eef4b628600fa8373f6f4c04c0"
+      },
+      "lines_changed": 4,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "test_file",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "tests/client/test_proxies.py",
+      "kind": "function",
+      "symbol": "test_for_deprecated_proxy_params",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "0.27.2",
+        "commit": "609df7ecc0f7cb10a1c998aa9c269bba77337c5f",
+        "lines": [
+          310,
+          316
+        ],
+        "content_hash": "df01cec4621e5811aff6eee64b61c1d05ec883cbde016df723c7aaedada65b37"
+      },
+      "new": {
+        "revision": "0.28.1",
+        "commit": "26d48e0634e6ee9cdc0533996db289ce4b430177",
+        "lines": [
+          250,
+          257
+        ],
+        "content_hash": "022a7e145b076b36da5ba0cee5ee3b37194f6758152b3b24c2d5122c30fbd0a9"
+      },
+      "lines_changed": 13,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "test_file",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "tests/client/test_proxies.py",
+      "kind": "function",
+      "symbol": "test_proxies_parameter",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "removed",
+      "old": {
+        "revision": "0.27.2",
+        "commit": "609df7ecc0f7cb10a1c998aa9c269bba77337c5f",
+        "lines": [
+          35,
+          48
+        ],
+        "content_hash": "b5428bd7149d12fc9c4d10fa400af3d417f3c57dd762f7ade423aa92c370ad37"
+      },
+      "new": null,
+      "lines_changed": 14,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "test_file",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "tests/client/test_proxies.py",
+      "kind": "function",
+      "symbol": "test_proxy_and_proxies_together",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "removed",
+      "old": {
+        "revision": "0.27.2",
+        "commit": "609df7ecc0f7cb10a1c998aa9c269bba77337c5f",
+        "lines": [
+          319,
+          330
+        ],
+        "content_hash": "bdb40d7107b687511db94c7deb2eeb3cffd3d165ab8c0cceda49cbe89e0ae1f9"
+      },
+      "new": null,
+      "lines_changed": 12,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "test_file",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "tests/client/test_proxies.py",
+      "kind": "function",
+      "symbol": "test_socks_proxy",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "0.27.2",
+        "commit": "609df7ecc0f7cb10a1c998aa9c269bba77337c5f",
+        "lines": [
+          67,
+          78
+        ],
+        "content_hash": "62e419ecfe08cc4ea8a3cf50d4dba15423402b3814fe37b3fa64475b52544dd3"
+      },
+      "new": {
+        "revision": "0.28.1",
+        "commit": "26d48e0634e6ee9cdc0533996db289ce4b430177",
+        "lines": [
+          16,
+          28
+        ],
+        "content_hash": "4692f57a45fba4626e2e5ff7dbdcaf7eec016fb255f96ecb7edf726f7bddf709"
+      },
+      "lines_changed": 17,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "test_file",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "tests/client/test_proxies.py",
+      "kind": "function",
+      "symbol": "test_socks_proxy_deprecated",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "removed",
+      "old": {
+        "revision": "0.27.2",
+        "commit": "609df7ecc0f7cb10a1c998aa9c269bba77337c5f",
+        "lines": [
+          51,
+          64
+        ],
+        "content_hash": "caeefbbbf7006608489ea9bfb93cf2b8b9c20f5465b9d46e2bc19bd995b57d26"
+      },
+      "new": null,
+      "lines_changed": 14,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "test_file",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "tests/client/test_proxies.py",
+      "kind": "function",
+      "symbol": "test_sync_proxy_close",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "0.27.2",
+        "commit": "609df7ecc0f7cb10a1c998aa9c269bba77337c5f",
+        "lines": [
+          169,
+          175
+        ],
+        "content_hash": "4f56ce5962865dca91c5bb54d5d36b074506d62b9a0a454a9172f13998d90d50"
+      },
+      "new": {
+        "revision": "0.28.1",
+        "commit": "26d48e0634e6ee9cdc0533996db289ce4b430177",
+        "lines": [
+          114,
+          120
+        ],
+        "content_hash": "014f3856eab4116566516b204cadecf3a7d48a7addb4ba424485631be39a63c2"
+      },
+      "lines_changed": 4,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "test_file",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "tests/client/test_proxies.py",
+      "kind": "function",
+      "symbol": "test_transport_for_request",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "0.27.2",
+        "commit": "609df7ecc0f7cb10a1c998aa9c269bba77337c5f",
+        "lines": [
+          140,
+          154
+        ],
+        "content_hash": "958801e0555a2bcf649e18f212a1cfe17fb878836914813401f4e631f3713eed"
+      },
+      "new": {
+        "revision": "0.28.1",
+        "commit": "26d48e0634e6ee9cdc0533996db289ce4b430177",
+        "lines": [
+          88,
+          99
+        ],
+        "content_hash": "be8871d44983a21312b4517f84780efed2d624441086072de2f6aee5a64dc0c6"
+      },
+      "lines_changed": 7,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "test_file",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "tests/client/test_proxies.py",
+      "kind": "function",
+      "symbol": "test_unsupported_proxy_scheme_deprecated",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "removed",
+      "old": {
+        "revision": "0.27.2",
+        "commit": "609df7ecc0f7cb10a1c998aa9c269bba77337c5f",
+        "lines": [
+          178,
+          180
+        ],
+        "content_hash": "4c7b9da43c79ad6655949e9d9009c0ab0f245286488dadf1cb40ef709dd2e538"
+      },
+      "new": null,
+      "lines_changed": 3,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "test_file",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "tests/conftest.py",
+      "kind": "function",
+      "symbol": "ca_cert_pem_file",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "removed",
+      "old": {
+        "revision": "0.27.2",
+        "commit": "609df7ecc0f7cb10a1c998aa9c269bba77337c5f",
+        "lines": [
+          191,
+          193
+        ],
+        "content_hash": "73b7b92493a7344fb8a68224a864b2009806df33256deb1b1618e276d2a44e09"
+      },
+      "new": null,
+      "lines_changed": 3,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "test_file",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "tests/conftest.py",
+      "kind": "function",
+      "symbol": "https_server",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "removed",
+      "old": {
+        "revision": "0.27.2",
+        "commit": "609df7ecc0f7cb10a1c998aa9c269bba77337c5f",
+        "lines": [
+          297,
+          307
+        ],
+        "content_hash": "c5ecebbe899a967dba16814cb5b3d7d87ad3afb3afcabd97d7583d98b3126f77"
+      },
+      "new": null,
+      "lines_changed": 11,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "test_file",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "tests/models/test_requests.py",
+      "kind": "function",
+      "symbol": "test_headers",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "0.27.2",
+        "commit": "609df7ecc0f7cb10a1c998aa9c269bba77337c5f",
+        "lines": [
+          68,
+          75
+        ],
+        "content_hash": "1ec3447cd47c4f2b4c8bbbe103a3764732d70049f12d1f6b60e3268c85177499"
+      },
+      "new": {
+        "revision": "0.28.1",
+        "commit": "26d48e0634e6ee9cdc0533996db289ce4b430177",
+        "lines": [
+          68,
+          75
+        ],
+        "content_hash": "24b660b984cbd74548580065713df5bac407a0e088a7c36b1cbb396be69b282f"
+      },
+      "lines_changed": 2,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "test_file",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "tests/models/test_requests.py",
+      "kind": "function",
+      "symbol": "test_json_encoded_data",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "0.27.2",
+        "commit": "609df7ecc0f7cb10a1c998aa9c269bba77337c5f",
+        "lines": [
+          60,
+          65
+        ],
+        "content_hash": "658304dda52dd72082f3130cfc56259029bea85eec8aa7e81b281d27fb8b43d1"
+      },
+      "new": {
+        "revision": "0.28.1",
+        "commit": "26d48e0634e6ee9cdc0533996db289ce4b430177",
+        "lines": [
+          60,
+          65
+        ],
+        "content_hash": "6587c157d88a18c521c4ecbc5a5e02e953b290b25dcaf45271fa10a533efaf06"
+      },
+      "lines_changed": 2,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "test_file",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "tests/models/test_requests.py",
+      "kind": "function",
+      "symbol": "test_request_picklable",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "0.27.2",
+        "commit": "609df7ecc0f7cb10a1c998aa9c269bba77337c5f",
+        "lines": [
+          180,
+          192
+        ],
+        "content_hash": "aad80e944ed06914d36aa71f9d7ea49c8d332eafdd01b57da6a2b170f05f5a56"
+      },
+      "new": {
+        "revision": "0.28.1",
+        "commit": "26d48e0634e6ee9cdc0533996db289ce4b430177",
+        "lines": [
+          180,
+          192
+        ],
+        "content_hash": "0f24a61c60a0e99d79088099cf08b7774dbf8aac59540854bdb354a1a9c71777"
+      },
+      "lines_changed": 4,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "test_file",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "tests/models/test_responses.py",
+      "kind": "function",
+      "symbol": "test_response_json",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "0.27.2",
+        "commit": "609df7ecc0f7cb10a1c998aa9c269bba77337c5f",
+        "lines": [
+          79,
+          88
+        ],
+        "content_hash": "7646f4a9084ad1726eb78b4a4889a88adbefdfe49de26fac03b5bd7010c2368b"
+      },
+      "new": {
+        "revision": "0.28.1",
+        "commit": "26d48e0634e6ee9cdc0533996db289ce4b430177",
+        "lines": [
+          79,
+          88
+        ],
+        "content_hash": "8129a236f3864f722655a366ae4738c7ca72e7486d5cd5bff95ad343343ee96d"
+      },
+      "lines_changed": 4,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "test_file",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "tests/models/test_url.py",
+      "kind": "function",
+      "symbol": "test_param_does_not_require_encoding",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "removed",
+      "old": {
+        "revision": "0.27.2",
+        "commit": "609df7ecc0f7cb10a1c998aa9c269bba77337c5f",
+        "lines": [
+          297,
+          300
+        ],
+        "content_hash": "d4e33b4db69517d23e6c2fd6160589d5fa0e64afc5501944c2ad105d668a3ac8"
+      },
+      "new": null,
+      "lines_changed": 4,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "test_file",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "tests/models/test_url.py",
+      "kind": "function",
+      "symbol": "test_param_with_space",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "0.27.2",
+        "commit": "609df7ecc0f7cb10a1c998aa9c269bba77337c5f",
+        "lines": [
+          291,
+          294
+        ],
+        "content_hash": "cfa40c4c9f54715c643f9ead9edecd233ef3b24041aaf461874ffc178deb9543"
+      },
+      "new": {
+        "revision": "0.28.1",
+        "commit": "26d48e0634e6ee9cdc0533996db289ce4b430177",
+        "lines": [
+          286,
+          290
+        ],
+        "content_hash": "b3e268d44d1290d5fc150990bad3a54a7dafd8ed13d4fe340c4b14070399a0cf"
+      },
+      "lines_changed": 5,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "test_file",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "tests/models/test_url.py",
+      "kind": "function",
+      "symbol": "test_url_copywith_userinfo_subcomponents",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "0.27.2",
+        "commit": "609df7ecc0f7cb10a1c998aa9c269bba77337c5f",
+        "lines": [
+          610,
+          620
+        ],
+        "content_hash": "3c7af8461fd086fcaa55f5f7612fb7773c971854d987caec1618e1545699f43b"
+      },
+      "new": {
+        "revision": "0.28.1",
+        "commit": "26d48e0634e6ee9cdc0533996db289ce4b430177",
+        "lines": [
+          606,
+          616
+        ],
+        "content_hash": "28f3ae5cf3818367b743776026173df3dd9f0d325a0571ddaba0b5fcd2eeed9c"
+      },
+      "lines_changed": 4,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "test_file",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "tests/models/test_url.py",
+      "kind": "function",
+      "symbol": "test_url_query_encoding",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "0.27.2",
+        "commit": "609df7ecc0f7cb10a1c998aa9c269bba77337c5f",
+        "lines": [
+          143,
+          156
+        ],
+        "content_hash": "0a9d03b1015c51134cb39b40d716a62e7fa704aa0fc22c732941df33b6ae2224"
+      },
+      "new": {
+        "revision": "0.28.1",
+        "commit": "26d48e0634e6ee9cdc0533996db289ce4b430177",
+        "lines": [
+          143,
+          151
+        ],
+        "content_hash": "2cfffe2d490322a6822bbf5317e673c8f86daef232016f701012ae8fa9a268ce"
+      },
+      "lines_changed": 13,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "test_file",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "tests/models/test_url.py",
+      "kind": "function",
+      "symbol": "test_url_raw_compatibility",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "removed",
+      "old": {
+        "revision": "0.27.2",
+        "commit": "609df7ecc0f7cb10a1c998aa9c269bba77337c5f",
+        "lines": [
+          873,
+          883
+        ],
+        "content_hash": "ea80c1d3a8059c5316beedd2a0e7f78e5534c899d0a291bd18d1a793af1bc149"
+      },
+      "new": null,
+      "lines_changed": 11,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "test_file",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "tests/test_asgi.py",
+      "kind": "function",
+      "symbol": "test_deprecated_shortcut",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "removed",
+      "old": {
+        "revision": "0.27.2",
+        "commit": "609df7ecc0f7cb10a1c998aa9c269bba77337c5f",
+        "lines": [
+          228,
+          234
+        ],
+        "content_hash": "351141b6fe3e3d916378996d5d9df7a42a52c91bc9ec7fb7451788843155c4b6"
+      },
+      "new": null,
+      "lines_changed": 7,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "test_file",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "tests/test_config.py",
+      "kind": "function",
+      "symbol": "test_create_ssl_context_with_get_request",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "removed",
+      "old": {
+        "revision": "0.27.2",
+        "commit": "609df7ecc0f7cb10a1c998aa9c269bba77337c5f",
+        "lines": [
+          96,
+          99
+        ],
+        "content_hash": "3613af3c5d28da3f3def1b8b37a2f20298ff2311f1707a9506b76d99a30acc6c"
+      },
+      "new": null,
+      "lines_changed": 4,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "test_file",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "tests/test_config.py",
+      "kind": "function",
+      "symbol": "test_load_ssl_config_cert_and_encrypted_key",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "0.27.2",
+        "commit": "609df7ecc0f7cb10a1c998aa9c269bba77337c5f",
+        "lines": [
+          59,
+          66
+        ],
+        "content_hash": "4979a07cae155a11919a0d551c72b46a3e03045719bbe1213e0ac26d244e0c6c"
+      },
+      "new": {
+        "revision": "0.28.1",
+        "commit": "26d48e0634e6ee9cdc0533996db289ce4b430177",
+        "lines": [
+          51,
+          57
+        ],
+        "content_hash": "21003286152895834118e7e12152691d6b723b555205e2173c69247df7058e37"
+      },
+      "lines_changed": 5,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "test_file",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "tests/test_config.py",
+      "kind": "function",
+      "symbol": "test_load_ssl_config_cert_and_key",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "0.27.2",
+        "commit": "609df7ecc0f7cb10a1c998aa9c269bba77337c5f",
+        "lines": [
+          52,
+          55
+        ],
+        "content_hash": "656d983ef6f7fb46b87b8b63c84b2b8612ca31176c85947412eef685e6b66bf9"
+      },
+      "new": {
+        "revision": "0.28.1",
+        "commit": "26d48e0634e6ee9cdc0533996db289ce4b430177",
+        "lines": [
+          43,
+          47
+        ],
+        "content_hash": "d8eb9e51a04dd26c2e34455ff3fd7c43e83cb3519667d9516d1bf232666a4192"
+      },
+      "lines_changed": 3,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "test_file",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "tests/test_config.py",
+      "kind": "function",
+      "symbol": "test_load_ssl_config_cert_and_key_invalid_password",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "0.27.2",
+        "commit": "609df7ecc0f7cb10a1c998aa9c269bba77337c5f",
+        "lines": [
+          69,
+          75
+        ],
+        "content_hash": "861cbd12699c1c2d37489fb649d9ddbe0539992b997442d40d03bad121a673cb"
+      },
+      "new": {
+        "revision": "0.28.1",
+        "commit": "26d48e0634e6ee9cdc0533996db289ce4b430177",
+        "lines": [
+          60,
+          67
+        ],
+        "content_hash": "f1387b0cfba56b487630e883ca0170dadde4714f919b94c28c910ed350a65c94"
+      },
+      "lines_changed": 5,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "test_file",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "tests/test_config.py",
+      "kind": "function",
+      "symbol": "test_load_ssl_config_cert_without_key_raises",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "0.27.2",
+        "commit": "609df7ecc0f7cb10a1c998aa9c269bba77337c5f",
+        "lines": [
+          78,
+          80
+        ],
+        "content_hash": "9e14950037206199cc1cb03a9e93b23368a22abc6f4f5fe69250d69170e660ad"
+      },
+      "new": {
+        "revision": "0.28.1",
+        "commit": "26d48e0634e6ee9cdc0533996db289ce4b430177",
+        "lines": [
+          70,
+          73
+        ],
+        "content_hash": "6908d5756e44552fd46947723944d8f96e3cab6d7ee87af65eeea1b2ef0f5e65"
+      },
+      "lines_changed": 3,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "test_file",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "tests/test_config.py",
+      "kind": "function",
+      "symbol": "test_load_ssl_config_verify_directory",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "0.27.2",
+        "commit": "609df7ecc0f7cb10a1c998aa9c269bba77337c5f",
+        "lines": [
+          45,
+          49
+        ],
+        "content_hash": "7360e20e687415110479757b05ab902269546171d02c0a30a4b74c32df734dd4"
+      },
+      "new": {
+        "revision": "0.28.1",
+        "commit": "26d48e0634e6ee9cdc0533996db289ce4b430177",
+        "lines": [
+          36,
+          40
+        ],
+        "content_hash": "29c5dd2fbb0a1dc6fdd920c2cf75f8aa96a5f27ef342ef5cb08e2261b360ecf4"
+      },
+      "lines_changed": 4,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "test_file",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "tests/test_config.py",
+      "kind": "function",
+      "symbol": "test_load_ssl_config_verify_env_file",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "removed",
+      "old": {
+        "revision": "0.27.2",
+        "commit": "609df7ecc0f7cb10a1c998aa9c269bba77337c5f",
+        "lines": [
+          29,
+          42
+        ],
+        "content_hash": "b9518353d2a8aa92aa86a9faacd35d765bf1182d90418029cbefbb107394ea57"
+      },
+      "new": null,
+      "lines_changed": 14,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "test_file",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "tests/test_config.py",
+      "kind": "function",
+      "symbol": "test_load_ssl_config_verify_existing_file",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "0.27.2",
+        "commit": "609df7ecc0f7cb10a1c998aa9c269bba77337c5f",
+        "lines": [
+          22,
+          25
+        ],
+        "content_hash": "4482dba7c4e6606d47e61c9d58ee79928d66575d73a1efb8a842412146d93932"
+      },
+      "new": {
+        "revision": "0.28.1",
+        "commit": "26d48e0634e6ee9cdc0533996db289ce4b430177",
+        "lines": [
+          29,
+          33
+        ],
+        "content_hash": "c3ee41f2e4bd752ab0f6278e062e542bb31746e0b977c181069a73ce461f11b2"
+      },
+      "lines_changed": 3,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "test_file",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "tests/test_config.py",
+      "kind": "function",
+      "symbol": "test_load_ssl_config_verify_non_existing_path",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "removed",
+      "old": {
+        "revision": "0.27.2",
+        "commit": "609df7ecc0f7cb10a1c998aa9c269bba77337c5f",
+        "lines": [
+          17,
+          19
+        ],
+        "content_hash": "9762b677efa0046c9726c02119358d5dd713e54f380dcf11cba842696912ac15"
+      },
+      "new": null,
+      "lines_changed": 3,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "test_file",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "tests/test_config.py",
+      "kind": "function",
+      "symbol": "test_load_ssl_context",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "removed",
+      "old": {
+        "revision": "0.27.2",
+        "commit": "609df7ecc0f7cb10a1c998aa9c269bba77337c5f",
+        "lines": [
+          89,
+          93
+        ],
+        "content_hash": "1697cd02ebcd8374361f2cf8d5ade6146a15083d60669bbfe0da2de5ce4c2c80"
+      },
+      "new": null,
+      "lines_changed": 5,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "test_file",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "tests/test_config.py",
+      "kind": "function",
+      "symbol": "test_ssl_config_support_for_keylog_file",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "removed",
+      "old": {
+        "revision": "0.27.2",
+        "commit": "609df7ecc0f7cb10a1c998aa9c269bba77337c5f",
+        "lines": [
+          181,
+          200
+        ],
+        "content_hash": "4b399d59a5c414879381eda00090386a0342a3ec4469383dd21fd43422beb0b9"
+      },
+      "new": null,
+      "lines_changed": 20,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "test_file",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "tests/test_content.py",
+      "kind": "function",
+      "symbol": "test_json_content",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "0.27.2",
+        "commit": "609df7ecc0f7cb10a1c998aa9c269bba77337c5f",
+        "lines": [
+          166,
+          180
+        ],
+        "content_hash": "eb6b558e229d6fa29d93e35faabc257cba25191e5120e834472870a3e20c11bf"
+      },
+      "new": {
+        "revision": "0.28.1",
+        "commit": "26d48e0634e6ee9cdc0533996db289ce4b430177",
+        "lines": [
+          166,
+          180
+        ],
+        "content_hash": "2ad797150586908f932d582cd661dc6efd71b28aac0c2a964db6e9530dfb6665"
+      },
+      "lines_changed": 6,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "test_file",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "tests/test_main.py",
+      "kind": "function",
+      "symbol": "test_post",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "0.27.2",
+        "commit": "609df7ecc0f7cb10a1c998aa9c269bba77337c5f",
+        "lines": [
+          106,
+          118
+        ],
+        "content_hash": "dd25d009d7ba7ef86fb643f13c7266278f2853e57e0ee81326171703942b5b41"
+      },
+      "new": {
+        "revision": "0.28.1",
+        "commit": "26d48e0634e6ee9cdc0533996db289ce4b430177",
+        "lines": [
+          106,
+          118
+        ],
+        "content_hash": "874cccee03045d0572b74d758ed9e762ca179d8cfd46a3f20e5c0affee6e09ea"
+      },
+      "lines_changed": 2,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "test_file",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "tests/test_utils.py",
+      "kind": "function",
+      "symbol": "test_get_ssl_cert_file",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "removed",
+      "old": {
+        "revision": "0.27.2",
+        "commit": "609df7ecc0f7cb10a1c998aa9c269bba77337c5f",
+        "lines": [
+          145,
+          182
+        ],
+        "content_hash": "b994156d5292b753fcaa0d54facd895d3a71c78a39718d7ea29f9bb680ecf0e7"
+      },
+      "new": null,
+      "lines_changed": 38,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "test_file",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "tests/test_utils.py",
+      "kind": "function",
+      "symbol": "test_is_https_redirect",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "removed",
+      "old": {
+        "revision": "0.27.2",
+        "commit": "609df7ecc0f7cb10a1c998aa9c269bba77337c5f",
+        "lines": [
+          245,
+          254
+        ],
+        "content_hash": "a50c886dc690156b10b63d93591a3d4cd948a5b69a3fc55c1c5e7b538f6a5b1e"
+      },
+      "new": null,
+      "lines_changed": 10,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "test_file",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "tests/test_utils.py",
+      "kind": "function",
+      "symbol": "test_is_not_https_redirect",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "removed",
+      "old": {
+        "revision": "0.27.2",
+        "commit": "609df7ecc0f7cb10a1c998aa9c269bba77337c5f",
+        "lines": [
+          257,
+          266
+        ],
+        "content_hash": "14c18bae83f791a660946a99e8aad969eb95c4e786f1e6b632d75beb055bd8cb"
+      },
+      "new": null,
+      "lines_changed": 10,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "test_file",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "tests/test_utils.py",
+      "kind": "function",
+      "symbol": "test_is_not_https_redirect_if_not_default_ports",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "removed",
+      "old": {
+        "revision": "0.27.2",
+        "commit": "609df7ecc0f7cb10a1c998aa9c269bba77337c5f",
+        "lines": [
+          269,
+          278
+        ],
+        "content_hash": "c369a9f958dd3e553dc8063af851a9125aa1aa5a9b6fd95b3b95bd4fb5611d87"
+      },
+      "new": null,
+      "lines_changed": 10,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "test_file",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "tests/test_utils.py",
+      "kind": "function",
+      "symbol": "test_logging_ssl",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "removed",
+      "old": {
+        "revision": "0.27.2",
+        "commit": "609df7ecc0f7cb10a1c998aa9c269bba77337c5f",
+        "lines": [
+          125,
+          142
+        ],
+        "content_hash": "2dcacf465ffad19137e667197792c1d19d98f52f7bce071b6dbde84c14c8fee8"
+      },
+      "new": null,
+      "lines_changed": 18,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "test_file",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "tests/test_utils.py",
+      "kind": "function",
+      "symbol": "test_not_same_origin",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "removed",
+      "old": {
+        "revision": "0.27.2",
+        "commit": "609df7ecc0f7cb10a1c998aa9c269bba77337c5f",
+        "lines": [
+          235,
+          242
+        ],
+        "content_hash": "314874e3ec07c254dd1f692e7da02bb3280da5b198b490a91ecbe37d245bb22c"
+      },
+      "new": null,
+      "lines_changed": 8,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "test_file",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "tests/test_utils.py",
+      "kind": "function",
+      "symbol": "test_obfuscate_sensitive_headers",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "removed",
+      "old": {
+        "revision": "0.27.2",
+        "commit": "609df7ecc0f7cb10a1c998aa9c269bba77337c5f",
+        "lines": [
+          219,
+          222
+        ],
+        "content_hash": "21fbdcdfbaa8bd6a8d0014411584ee0ff4ee7e2c5c0b9ae8e4d64d47db47d00c"
+      },
+      "new": null,
+      "lines_changed": 4,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "test_file",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "tests/test_utils.py",
+      "kind": "function",
+      "symbol": "test_parse_header_links",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "removed",
+      "old": {
+        "revision": "0.27.2",
+        "commit": "609df7ecc0f7cb10a1c998aa9c269bba77337c5f",
+        "lines": [
+          79,
+          81
+        ],
+        "content_hash": "198b77bf18cf54915b549c0439025103b8690bb6a32908f6dcfbfa84a44d0ed2"
+      },
+      "new": null,
+      "lines_changed": 3,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "test_file",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "tests/test_utils.py",
+      "kind": "function",
+      "symbol": "test_parse_header_links_no_link",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "removed",
+      "old": {
+        "revision": "0.27.2",
+        "commit": "609df7ecc0f7cb10a1c998aa9c269bba77337c5f",
+        "lines": [
+          84,
+          86
+        ],
+        "content_hash": "43184044cbcbcdba1d1001fc3ab803ab906085881a25a75c4dfac84a5233525f"
+      },
+      "new": null,
+      "lines_changed": 3,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "test_file",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "tests/test_utils.py",
+      "kind": "function",
+      "symbol": "test_same_origin",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "removed",
+      "old": {
+        "revision": "0.27.2",
+        "commit": "609df7ecc0f7cb10a1c998aa9c269bba77337c5f",
+        "lines": [
+          225,
+          232
+        ],
+        "content_hash": "30cf8d7ed3498f733b0f64dd21706dcb52f38d2945fb741e6865f2b6b0e7426d"
+      },
+      "new": null,
+      "lines_changed": 8,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "test_file",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "tests/test_wsgi.py",
+      "kind": "function",
+      "symbol": "test_deprecated_shortcut",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "removed",
+      "old": {
+        "revision": "0.27.2",
+        "commit": "609df7ecc0f7cb10a1c998aa9c269bba77337c5f",
+        "lines": [
+          206,
+          212
+        ],
+        "content_hash": "d85581663bb68adba6a642e289ee56aabab9e922989a7ae42aa6190e2a4d8a8f"
+      },
+      "new": null,
+      "lines_changed": 7,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "test_file",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    }
+  ]
+}

@@ -1,0 +1,5474 @@
+{
+  "repository_url": "https://github.com/arrow-py/arrow",
+  "old": {
+    "revision": "1.3.0",
+    "commit": "87a1a774aad0505d9da18ad1d16f6e571f262503"
+  },
+  "new": {
+    "revision": "1.4.0",
+    "commit": "2c1f5185ad66bf3b1cf8c0812f4b4fe65ac46656"
+  },
+  "seed": 2026,
+  "sample_size": 20,
+  "counts": {
+    "candidates": 163,
+    "included": 24,
+    "sampled": 20,
+    "excluded_by_reason": {
+      "ambiguous_location": 18,
+      "contains_changed_symbol": 12,
+      "formatting_or_docstring_only": 14,
+      "test_file": 94,
+      "type_annotations_only": 1
+    }
+  },
+  "scanner_exclusions": {
+    "1.3.0": [],
+    "1.4.0": []
+  },
+  "candidates": [
+    {
+      "path": "arrow/api.py",
+      "kind": "function",
+      "symbol": "get",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "1.3.0",
+        "commit": "87a1a774aad0505d9da18ad1d16f6e571f262503",
+        "lines": [
+          24,
+          30
+        ],
+        "content_hash": "f01019f557563dc859a98f2860cfe34cb1c605d20d65efe7a0f41beb14a6b435"
+      },
+      "new": {
+        "revision": "1.4.0",
+        "commit": "2c1f5185ad66bf3b1cf8c0812f4b4fe65ac46656",
+        "lines": [
+          83,
+          86
+        ],
+        "content_hash": "7c2579b4e1c683aa48a499829fb5edfb92de0273c7ae6e8e35b902701f968bd8"
+      },
+      "lines_changed": 11,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "ambiguous_location",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "arrow/api.py",
+      "kind": "function",
+      "symbol": "get",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "1.3.0",
+        "commit": "87a1a774aad0505d9da18ad1d16f6e571f262503",
+        "lines": [
+          34,
+          40
+        ],
+        "content_hash": "7dc9bef90b9318609c18591ba0c2aeaf731052cbce23b5c907d8d8e3185a8647"
+      },
+      "new": {
+        "revision": "1.4.0",
+        "commit": "2c1f5185ad66bf3b1cf8c0812f4b4fe65ac46656",
+        "lines": [
+          83,
+          86
+        ],
+        "content_hash": "7c2579b4e1c683aa48a499829fb5edfb92de0273c7ae6e8e35b902701f968bd8"
+      },
+      "lines_changed": 11,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "ambiguous_location",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "arrow/api.py",
+      "kind": "function",
+      "symbol": "get",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "1.3.0",
+        "commit": "87a1a774aad0505d9da18ad1d16f6e571f262503",
+        "lines": [
+          44,
+          61
+        ],
+        "content_hash": "d1dfd7a1a22689f37c23c5293b03c4e2bdd8c5f05b0cbec533da66168ae36fa9"
+      },
+      "new": {
+        "revision": "1.4.0",
+        "commit": "2c1f5185ad66bf3b1cf8c0812f4b4fe65ac46656",
+        "lines": [
+          83,
+          86
+        ],
+        "content_hash": "7c2579b4e1c683aa48a499829fb5edfb92de0273c7ae6e8e35b902701f968bd8"
+      },
+      "lines_changed": 22,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "ambiguous_location",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "arrow/api.py",
+      "kind": "function",
+      "symbol": "get",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "1.3.0",
+        "commit": "87a1a774aad0505d9da18ad1d16f6e571f262503",
+        "lines": [
+          65,
+          73
+        ],
+        "content_hash": "8ddc802fac172c4c76fb0bc50feb809e5ea117fc4206c910c0b909e1dc09a757"
+      },
+      "new": {
+        "revision": "1.4.0",
+        "commit": "2c1f5185ad66bf3b1cf8c0812f4b4fe65ac46656",
+        "lines": [
+          83,
+          86
+        ],
+        "content_hash": "7c2579b4e1c683aa48a499829fb5edfb92de0273c7ae6e8e35b902701f968bd8"
+      },
+      "lines_changed": 13,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "ambiguous_location",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "arrow/api.py",
+      "kind": "function",
+      "symbol": "get",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "1.3.0",
+        "commit": "87a1a774aad0505d9da18ad1d16f6e571f262503",
+        "lines": [
+          77,
+          85
+        ],
+        "content_hash": "1baeae58479f405994a968c274690489a621e5244dde6342b41499f3b3913be0"
+      },
+      "new": {
+        "revision": "1.4.0",
+        "commit": "2c1f5185ad66bf3b1cf8c0812f4b4fe65ac46656",
+        "lines": [
+          83,
+          86
+        ],
+        "content_hash": "7c2579b4e1c683aa48a499829fb5edfb92de0273c7ae6e8e35b902701f968bd8"
+      },
+      "lines_changed": 13,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "ambiguous_location",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "arrow/arrow.py",
+      "kind": "class",
+      "symbol": "Arrow",
+      "part_index": 1,
+      "part_count": 6,
+      "status": "superseded",
+      "old": {
+        "revision": "1.3.0",
+        "commit": "87a1a774aad0505d9da18ad1d16f6e571f262503",
+        "lines": [
+          83,
+          464
+        ],
+        "content_hash": "4529db6f3f546155bc3076ba00b03b9cb7827b89cdb823b11faa4882d2d8d2a1"
+      },
+      "new": {
+        "revision": "1.4.0",
+        "commit": "2c1f5185ad66bf3b1cf8c0812f4b4fe65ac46656",
+        "lines": [
+          78,
+          459
+        ],
+        "content_hash": "9e0668df3b3ba22388dc1be5837dda507a06dda48516625b22195de78db505e9"
+      },
+      "lines_changed": 36,
+      "normalized": false,
+      "included": false,
+      "exclusion_reason": "contains_changed_symbol",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "arrow/arrow.py",
+      "kind": "class",
+      "symbol": "Arrow",
+      "part_index": 2,
+      "part_count": 6,
+      "status": "superseded",
+      "old": {
+        "revision": "1.3.0",
+        "commit": "87a1a774aad0505d9da18ad1d16f6e571f262503",
+        "lines": [
+          465,
+          742
+        ],
+        "content_hash": "d1b6d32623dcac5f5cbb298de33c73d146f5b6be664890decda0a06dc909cfa6"
+      },
+      "new": {
+        "revision": "1.4.0",
+        "commit": "2c1f5185ad66bf3b1cf8c0812f4b4fe65ac46656",
+        "lines": [
+          460,
+          741
+        ],
+        "content_hash": "46172531a6c0b2c831c49f57609442ff7dbe42c20c41f179f9b727651a2c945e"
+      },
+      "lines_changed": 48,
+      "normalized": false,
+      "included": false,
+      "exclusion_reason": "contains_changed_symbol",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "arrow/arrow.py",
+      "kind": "class",
+      "symbol": "Arrow",
+      "part_index": 3,
+      "part_count": 6,
+      "status": "superseded",
+      "old": {
+        "revision": "1.3.0",
+        "commit": "87a1a774aad0505d9da18ad1d16f6e571f262503",
+        "lines": [
+          743,
+          1130
+        ],
+        "content_hash": "0350a0a09a2056ccca19d50acf85abab83144b7c6a711d4e308f0ed5aafd364c"
+      },
+      "new": {
+        "revision": "1.4.0",
+        "commit": "2c1f5185ad66bf3b1cf8c0812f4b4fe65ac46656",
+        "lines": [
+          742,
+          1120
+        ],
+        "content_hash": "a8248a7f08852334deb376a1c5f10354d1ffe530eb1e722f5b3d584c5d5851d1"
+      },
+      "lines_changed": 51,
+      "normalized": false,
+      "included": false,
+      "exclusion_reason": "contains_changed_symbol",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "arrow/arrow.py",
+      "kind": "class",
+      "symbol": "Arrow",
+      "part_index": 4,
+      "part_count": 6,
+      "status": "superseded",
+      "old": {
+        "revision": "1.3.0",
+        "commit": "87a1a774aad0505d9da18ad1d16f6e571f262503",
+        "lines": [
+          1131,
+          1403
+        ],
+        "content_hash": "44954f226ad2b6955c8b8d54d8c253c0c898c1004e24ac629cab46c643cb7dc5"
+      },
+      "new": {
+        "revision": "1.4.0",
+        "commit": "2c1f5185ad66bf3b1cf8c0812f4b4fe65ac46656",
+        "lines": [
+          1121,
+          1404
+        ],
+        "content_hash": "1364ec3f89bd81295bd5f4eab12487d83772a541ab0f126b97f3e620466b2837"
+      },
+      "lines_changed": 107,
+      "normalized": false,
+      "included": false,
+      "exclusion_reason": "contains_changed_symbol",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "arrow/arrow.py",
+      "kind": "class",
+      "symbol": "Arrow",
+      "part_index": 5,
+      "part_count": 6,
+      "status": "superseded",
+      "old": {
+        "revision": "1.3.0",
+        "commit": "87a1a774aad0505d9da18ad1d16f6e571f262503",
+        "lines": [
+          1404,
+          1803
+        ],
+        "content_hash": "dab7840918305a62321f6303ec947ae7a4b5866e79139b28455986a0ac8b6c1e"
+      },
+      "new": {
+        "revision": "1.4.0",
+        "commit": "2c1f5185ad66bf3b1cf8c0812f4b4fe65ac46656",
+        "lines": [
+          1405,
+          1791
+        ],
+        "content_hash": "22798df1683290dad28034e0fff677241bd1236b6bc5874e3c05ea6578ecf81b"
+      },
+      "lines_changed": 81,
+      "normalized": false,
+      "included": false,
+      "exclusion_reason": "contains_changed_symbol",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "arrow/arrow.py",
+      "kind": "class",
+      "symbol": "Arrow",
+      "part_index": 6,
+      "part_count": 6,
+      "status": "superseded",
+      "old": {
+        "revision": "1.3.0",
+        "commit": "87a1a774aad0505d9da18ad1d16f6e571f262503",
+        "lines": [
+          1804,
+          1865
+        ],
+        "content_hash": "1c2e10fbeb554b7a3f9a6510f8afafbad44622beacc8e14073b1908e92a45492"
+      },
+      "new": {
+        "revision": "1.4.0",
+        "commit": "2c1f5185ad66bf3b1cf8c0812f4b4fe65ac46656",
+        "lines": [
+          1792,
+          1899
+        ],
+        "content_hash": "434ff39d352081b31c5ce9f0165e7612e651354f40c0d447db5a07c9ffc2553c"
+      },
+      "lines_changed": 48,
+      "normalized": false,
+      "included": false,
+      "exclusion_reason": "contains_changed_symbol",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "arrow/arrow.py",
+      "kind": "method",
+      "symbol": "Arrow.__getattr__",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "1.3.0",
+        "commit": "87a1a774aad0505d9da18ad1d16f6e571f262503",
+        "lines": [
+          805,
+          818
+        ],
+        "content_hash": "ead0bbfab9cfae6168c906d4f7c4fa007f9cec8ff4d8c077d4dad9ba7c242e3a"
+      },
+      "new": {
+        "revision": "1.4.0",
+        "commit": "2c1f5185ad66bf3b1cf8c0812f4b4fe65ac46656",
+        "lines": [
+          813,
+          826
+        ],
+        "content_hash": "1c3974f62cf5ea2ee408f2c075227ee398a966228e053b3acde803f4ddf9e89b"
+      },
+      "lines_changed": 4,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "type_annotations_only",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "arrow/arrow.py",
+      "kind": "method",
+      "symbol": "Arrow.__init__",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "1.3.0",
+        "commit": "87a1a774aad0505d9da18ad1d16f6e571f262503",
+        "lines": [
+          152,
+          181
+        ],
+        "content_hash": "03d1306df9d8fe866a7ce424033da6006463372d42df4a569b669d58b72bedaf"
+      },
+      "new": {
+        "revision": "1.4.0",
+        "commit": "2c1f5185ad66bf3b1cf8c0812f4b4fe65ac46656",
+        "lines": [
+          148,
+          177
+        ],
+        "content_hash": "ce6d083a910523e66105465cb4f55db58e9076c9c7a0244416ec3bde89b5092f"
+      },
+      "lines_changed": 2,
+      "normalized": true,
+      "included": true,
+      "exclusion_reason": null,
+      "sample_order": 15,
+      "sampled": true,
+      "review": {
+        "decision": null,
+        "reason": null
+      }
+    },
+    {
+      "path": "arrow/arrow.py",
+      "kind": "method",
+      "symbol": "Arrow.__sub__",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "1.3.0",
+        "commit": "87a1a774aad0505d9da18ad1d16f6e571f262503",
+        "lines": [
+          1723,
+          1724
+        ],
+        "content_hash": "b3a1ea2939dac644061bcc0cbc70af56d1be2108101692cbaae0ff3730cb4ff1"
+      },
+      "new": {
+        "revision": "1.4.0",
+        "commit": "2c1f5185ad66bf3b1cf8c0812f4b4fe65ac46656",
+        "lines": [
+          1764,
+          1774
+        ],
+        "content_hash": "4688edf6caaf2f3da7ce566ae1fc195bcb681421eb7281430920d743c9ace128"
+      },
+      "lines_changed": 13,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "ambiguous_location",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "arrow/arrow.py",
+      "kind": "method",
+      "symbol": "Arrow.__sub__",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "1.3.0",
+        "commit": "87a1a774aad0505d9da18ad1d16f6e571f262503",
+        "lines": [
+          1727,
+          1728
+        ],
+        "content_hash": "cb35e15865ddd1f022eba0ebb05125c0f020c709bb068d677ebf691641808e75"
+      },
+      "new": {
+        "revision": "1.4.0",
+        "commit": "2c1f5185ad66bf3b1cf8c0812f4b4fe65ac46656",
+        "lines": [
+          1764,
+          1774
+        ],
+        "content_hash": "4688edf6caaf2f3da7ce566ae1fc195bcb681421eb7281430920d743c9ace128"
+      },
+      "lines_changed": 13,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "ambiguous_location",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "arrow/arrow.py",
+      "kind": "method",
+      "symbol": "Arrow._get_tzinfo",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "1.3.0",
+        "commit": "87a1a774aad0505d9da18ad1d16f6e571f262503",
+        "lines": [
+          1788,
+          1798
+        ],
+        "content_hash": "283f31fbc85428fc8de6fa6d507a95b0730ecdd09ad32651ff43999951f9fdb5"
+      },
+      "new": {
+        "revision": "1.4.0",
+        "commit": "2c1f5185ad66bf3b1cf8c0812f4b4fe65ac46656",
+        "lines": [
+          1822,
+          1832
+        ],
+        "content_hash": "b984860765e9aa6bb3e42af5cc9a2ee815207b8128ea682ee396f20356005bdc"
+      },
+      "lines_changed": 2,
+      "normalized": true,
+      "included": true,
+      "exclusion_reason": null,
+      "sample_order": 16,
+      "sampled": true,
+      "review": {
+        "decision": null,
+        "reason": null
+      }
+    },
+    {
+      "path": "arrow/arrow.py",
+      "kind": "method",
+      "symbol": "Arrow._is_last_day_of_month",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "1.3.0",
+        "commit": "87a1a774aad0505d9da18ad1d16f6e571f262503",
+        "lines": [
+          1863,
+          1865
+        ],
+        "content_hash": "ba6afc93f32c4aed1216bb18215b88dd5ede2f03243152ec6dd4a9feaec798fe"
+      },
+      "new": {
+        "revision": "1.4.0",
+        "commit": "2c1f5185ad66bf3b1cf8c0812f4b4fe65ac46656",
+        "lines": [
+          1897,
+          1899
+        ],
+        "content_hash": "2b7d984512f491f05ab09fc452bf7ba7c94d5cd649c2557cabbe3f8a4f3fd81f"
+      },
+      "lines_changed": 2,
+      "normalized": true,
+      "included": true,
+      "exclusion_reason": null,
+      "sample_order": 18,
+      "sampled": true,
+      "review": {
+        "decision": null,
+        "reason": null
+      }
+    },
+    {
+      "path": "arrow/arrow.py",
+      "kind": "method",
+      "symbol": "Arrow.ceil",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "1.3.0",
+        "commit": "87a1a774aad0505d9da18ad1d16f6e571f262503",
+        "lines": [
+          617,
+          632
+        ],
+        "content_hash": "fda6984f1f49b754691a754bb413126590d270127ffc779a24576bc7861de140"
+      },
+      "new": {
+        "revision": "1.4.0",
+        "commit": "2c1f5185ad66bf3b1cf8c0812f4b4fe65ac46656",
+        "lines": [
+          620,
+          640
+        ],
+        "content_hash": "ee47fbd27974e20100fd5305a034331de18c21df7dc013579828f22fad4d20f7"
+      },
+      "lines_changed": 9,
+      "normalized": true,
+      "included": true,
+      "exclusion_reason": null,
+      "sample_order": 1,
+      "sampled": true,
+      "review": {
+        "decision": null,
+        "reason": null
+      }
+    },
+    {
+      "path": "arrow/arrow.py",
+      "kind": "method",
+      "symbol": "Arrow.dehumanize",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "1.3.0",
+        "commit": "87a1a774aad0505d9da18ad1d16f6e571f262503",
+        "lines": [
+          1310,
+          1447
+        ],
+        "content_hash": "94477bb60078eed80fb6440ed4f590e2c45cef1ac90347c21a8a589f29757793"
+      },
+      "new": {
+        "revision": "1.4.0",
+        "commit": "2c1f5185ad66bf3b1cf8c0812f4b4fe65ac46656",
+        "lines": [
+          1344,
+          1481
+        ],
+        "content_hash": "4c29a094a731ec890fc93f2571bed572098e2d9b8695ad549eb7d3aa44155b24"
+      },
+      "lines_changed": 2,
+      "normalized": true,
+      "included": true,
+      "exclusion_reason": null,
+      "sample_order": 24,
+      "sampled": false,
+      "review": {
+        "decision": null,
+        "reason": null
+      }
+    },
+    {
+      "path": "arrow/arrow.py",
+      "kind": "method",
+      "symbol": "Arrow.floor",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "1.3.0",
+        "commit": "87a1a774aad0505d9da18ad1d16f6e571f262503",
+        "lines": [
+          600,
+          615
+        ],
+        "content_hash": "6d7475a0098dc9f8ddd53141e3722165c41df196b4be32a7218cb89f1bced0c8"
+      },
+      "new": {
+        "revision": "1.4.0",
+        "commit": "2c1f5185ad66bf3b1cf8c0812f4b4fe65ac46656",
+        "lines": [
+          598,
+          618
+        ],
+        "content_hash": "6cd4446489ff1360bf091596c4869d7033f9359a70a7ad06419226886ffb242c"
+      },
+      "lines_changed": 9,
+      "normalized": true,
+      "included": true,
+      "exclusion_reason": null,
+      "sample_order": 21,
+      "sampled": false,
+      "review": {
+        "decision": null,
+        "reason": null
+      }
+    },
+    {
+      "path": "arrow/arrow.py",
+      "kind": "method",
+      "symbol": "Arrow.format",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "1.3.0",
+        "commit": "87a1a774aad0505d9da18ad1d16f6e571f262503",
+        "lines": [
+          1091,
+          1116
+        ],
+        "content_hash": "a6be1a1d2408ca92cb6b776d9bed6fba78edae38b29f18a22ff8bf40c81239fe"
+      },
+      "new": {
+        "revision": "1.4.0",
+        "commit": "2c1f5185ad66bf3b1cf8c0812f4b4fe65ac46656",
+        "lines": [
+          1105,
+          1131
+        ],
+        "content_hash": "5aec1fc880c7bc8599c7a9aee5950eec81414e6b32b7dd523aeb91bc25d83019"
+      },
+      "lines_changed": 3,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "formatting_or_docstring_only",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "arrow/arrow.py",
+      "kind": "method",
+      "symbol": "Arrow.fromdate",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "1.3.0",
+        "commit": "87a1a774aad0505d9da18ad1d16f6e571f262503",
+        "lines": [
+          342,
+          354
+        ],
+        "content_hash": "f2070dba572f15eda40f2702b971c3d28a0cafe8c220d9294a4dd97781d7a74a"
+      },
+      "new": {
+        "revision": "1.4.0",
+        "commit": "2c1f5185ad66bf3b1cf8c0812f4b4fe65ac46656",
+        "lines": [
+          338,
+          350
+        ],
+        "content_hash": "9217bec6714c13d86920e9f1be7a4760aa722a0110186558b8974b744ad02f5a"
+      },
+      "lines_changed": 2,
+      "normalized": true,
+      "included": true,
+      "exclusion_reason": null,
+      "sample_order": 22,
+      "sampled": false,
+      "review": {
+        "decision": null,
+        "reason": null
+      }
+    },
+    {
+      "path": "arrow/arrow.py",
+      "kind": "method",
+      "symbol": "Arrow.fromdatetime",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "1.3.0",
+        "commit": "87a1a774aad0505d9da18ad1d16f6e571f262503",
+        "lines": [
+          306,
+          339
+        ],
+        "content_hash": "3d3d402c1fac5cc6cd58d7b341234ef1a18084eb06b554413eefc15a788d0ed3"
+      },
+      "new": {
+        "revision": "1.4.0",
+        "commit": "2c1f5185ad66bf3b1cf8c0812f4b4fe65ac46656",
+        "lines": [
+          302,
+          335
+        ],
+        "content_hash": "e50312b6747d25a2343aea045fdda685c2fb22f17cbf9f8d06e0f7037d866509"
+      },
+      "lines_changed": 2,
+      "normalized": true,
+      "included": true,
+      "exclusion_reason": null,
+      "sample_order": 6,
+      "sampled": true,
+      "review": {
+        "decision": null,
+        "reason": null
+      }
+    },
+    {
+      "path": "arrow/arrow.py",
+      "kind": "method",
+      "symbol": "Arrow.fromtimestamp",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "1.3.0",
+        "commit": "87a1a774aad0505d9da18ad1d16f6e571f262503",
+        "lines": [
+          243,
+          277
+        ],
+        "content_hash": "38a0c7395440418381687079fb656c2fcc6da8a34146b86c2480fcd81492f5a3"
+      },
+      "new": {
+        "revision": "1.4.0",
+        "commit": "2c1f5185ad66bf3b1cf8c0812f4b4fe65ac46656",
+        "lines": [
+          239,
+          273
+        ],
+        "content_hash": "80fe555b9ab31f55d07078bba9962d97ee79f41c88c43c43f243c93682077c80"
+      },
+      "lines_changed": 2,
+      "normalized": true,
+      "included": true,
+      "exclusion_reason": null,
+      "sample_order": 17,
+      "sampled": true,
+      "review": {
+        "decision": null,
+        "reason": null
+      }
+    },
+    {
+      "path": "arrow/arrow.py",
+      "kind": "method",
+      "symbol": "Arrow.humanize",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "1.3.0",
+        "commit": "87a1a774aad0505d9da18ad1d16f6e571f262503",
+        "lines": [
+          1118,
+          1308
+        ],
+        "content_hash": "bcfb0436ae003e1d356834fd3c13eb1ed88c01c4c666d74c356b9fc8cf3699a0"
+      },
+      "new": {
+        "revision": "1.4.0",
+        "commit": "2c1f5185ad66bf3b1cf8c0812f4b4fe65ac46656",
+        "lines": [
+          1133,
+          1342
+        ],
+        "content_hash": "f2e94eb6bab357f581272637c69893d45868d1fb4b731e0ddb6d4131a9ce2683"
+      },
+      "lines_changed": 49,
+      "normalized": true,
+      "included": true,
+      "exclusion_reason": null,
+      "sample_order": 12,
+      "sampled": true,
+      "review": {
+        "decision": null,
+        "reason": null
+      }
+    },
+    {
+      "path": "arrow/arrow.py",
+      "kind": "method",
+      "symbol": "Arrow.now",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "1.3.0",
+        "commit": "87a1a774aad0505d9da18ad1d16f6e571f262503",
+        "lines": [
+          186,
+          214
+        ],
+        "content_hash": "ff07e8bc53ecbda20e17599bbe5984a0746c8d55845daa0cb7fc43bd2986857a"
+      },
+      "new": {
+        "revision": "1.4.0",
+        "commit": "2c1f5185ad66bf3b1cf8c0812f4b4fe65ac46656",
+        "lines": [
+          182,
+          210
+        ],
+        "content_hash": "915349e480774eed0e12c262aee8ba146ee6a72de3ddcb754546bd6fd39fdc30"
+      },
+      "lines_changed": 2,
+      "normalized": true,
+      "included": true,
+      "exclusion_reason": null,
+      "sample_order": 2,
+      "sampled": true,
+      "review": {
+        "decision": null,
+        "reason": null
+      }
+    },
+    {
+      "path": "arrow/arrow.py",
+      "kind": "method",
+      "symbol": "Arrow.range",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "1.3.0",
+        "commit": "87a1a774aad0505d9da18ad1d16f6e571f262503",
+        "lines": [
+          422,
+          506
+        ],
+        "content_hash": "de5f32e8de97bdc55cab7f4c94933ef612766365d65e6a68bc9764a8c2024fc7"
+      },
+      "new": {
+        "revision": "1.4.0",
+        "commit": "2c1f5185ad66bf3b1cf8c0812f4b4fe65ac46656",
+        "lines": [
+          418,
+          502
+        ],
+        "content_hash": "2650d974d4e97406a97061613f175aaaf9dafd5ca67683b56b532b163cf4aa4b"
+      },
+      "lines_changed": 2,
+      "normalized": true,
+      "included": true,
+      "exclusion_reason": null,
+      "sample_order": 23,
+      "sampled": false,
+      "review": {
+        "decision": null,
+        "reason": null
+      }
+    },
+    {
+      "path": "arrow/arrow.py",
+      "kind": "method",
+      "symbol": "Arrow.shift",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "1.3.0",
+        "commit": "87a1a774aad0505d9da18ad1d16f6e571f262503",
+        "lines": [
+          988,
+          1041
+        ],
+        "content_hash": "3ddec12d1a2186357f5c7c632c7e18ffc50edfab2335effc712df241bbfbbb3d"
+      },
+      "new": {
+        "revision": "1.4.0",
+        "commit": "2c1f5185ad66bf3b1cf8c0812f4b4fe65ac46656",
+        "lines": [
+          996,
+          1055
+        ],
+        "content_hash": "f598e4eb5c9ae84aa56e57bb3e861f74b596ac61643c6bac0e118f55935dfe00"
+      },
+      "lines_changed": 10,
+      "normalized": true,
+      "included": true,
+      "exclusion_reason": null,
+      "sample_order": 10,
+      "sampled": true,
+      "review": {
+        "decision": null,
+        "reason": null
+      }
+    },
+    {
+      "path": "arrow/arrow.py",
+      "kind": "method",
+      "symbol": "Arrow.span",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "1.3.0",
+        "commit": "87a1a774aad0505d9da18ad1d16f6e571f262503",
+        "lines": [
+          508,
+          598
+        ],
+        "content_hash": "75a0725e02c56dd1b4e650964e2983b21574a7d2a958127d15eaee4841542fb0"
+      },
+      "new": {
+        "revision": "1.4.0",
+        "commit": "2c1f5185ad66bf3b1cf8c0812f4b4fe65ac46656",
+        "lines": [
+          504,
+          596
+        ],
+        "content_hash": "1324a40168cae52ed023e7c7654412264501cf7394b7e488dded14883b9649b5"
+      },
+      "lines_changed": 8,
+      "normalized": true,
+      "included": true,
+      "exclusion_reason": null,
+      "sample_order": 8,
+      "sampled": true,
+      "review": {
+        "decision": null,
+        "reason": null
+      }
+    },
+    {
+      "path": "arrow/arrow.py",
+      "kind": "method",
+      "symbol": "Arrow.utcfromtimestamp",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "1.3.0",
+        "commit": "87a1a774aad0505d9da18ad1d16f6e571f262503",
+        "lines": [
+          280,
+          303
+        ],
+        "content_hash": "76c65405ecfad14b74c2a7e29ae01a499c1f71e043494f5a68b121fe26a337d7"
+      },
+      "new": {
+        "revision": "1.4.0",
+        "commit": "2c1f5185ad66bf3b1cf8c0812f4b4fe65ac46656",
+        "lines": [
+          276,
+          299
+        ],
+        "content_hash": "24b63db850743bda981215466cfa4d3ebd94af8a085640b35baed8c4f7115b45"
+      },
+      "lines_changed": 4,
+      "normalized": true,
+      "included": true,
+      "exclusion_reason": null,
+      "sample_order": 11,
+      "sampled": true,
+      "review": {
+        "decision": null,
+        "reason": null
+      }
+    },
+    {
+      "path": "arrow/arrow.py",
+      "kind": "method",
+      "symbol": "Arrow.utcnow",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "1.3.0",
+        "commit": "87a1a774aad0505d9da18ad1d16f6e571f262503",
+        "lines": [
+          217,
+          240
+        ],
+        "content_hash": "2a707a9ba44f7dbb46ca3379bf1cb39942524a61dd2e2a14fcd6944f0a245369"
+      },
+      "new": {
+        "revision": "1.4.0",
+        "commit": "2c1f5185ad66bf3b1cf8c0812f4b4fe65ac46656",
+        "lines": [
+          213,
+          236
+        ],
+        "content_hash": "97fb517d93d9a850e78ecac2e593884556594ab405cd99b7f37d1fe654752ee2"
+      },
+      "lines_changed": 2,
+      "normalized": true,
+      "included": true,
+      "exclusion_reason": null,
+      "sample_order": 9,
+      "sampled": true,
+      "review": {
+        "decision": null,
+        "reason": null
+      }
+    },
+    {
+      "path": "arrow/factory.py",
+      "kind": "class",
+      "symbol": "ArrowFactory",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "1.3.0",
+        "commit": "87a1a774aad0505d9da18ad1d16f6e571f262503",
+        "lines": [
+          24,
+          345
+        ],
+        "content_hash": "02ab59c2d42b901ca8ec5debb663d70f5a8f1d3aa57a399a02638b388ca345a9"
+      },
+      "new": {
+        "revision": "1.4.0",
+        "commit": "2c1f5185ad66bf3b1cf8c0812f4b4fe65ac46656",
+        "lines": [
+          21,
+          338
+        ],
+        "content_hash": "89d51572780fdab0bf27a9e4c471e39455a9ace1c4ff7411eab5f43067334368"
+      },
+      "lines_changed": 16,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "contains_changed_symbol",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "arrow/factory.py",
+      "kind": "method",
+      "symbol": "ArrowFactory.get",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "1.3.0",
+        "commit": "87a1a774aad0505d9da18ad1d16f6e571f262503",
+        "lines": [
+          38,
+          45
+        ],
+        "content_hash": "47f7154eb1d5f34745e0f96d27fcfd118620afe5067b00ba5bc27a74e750a4fc"
+      },
+      "new": {
+        "revision": "1.4.0",
+        "commit": "2c1f5185ad66bf3b1cf8c0812f4b4fe65ac46656",
+        "lines": [
+          85,
+          297
+        ],
+        "content_hash": "29d6fff116ce0c62137c90bdf1eff18c93cb51d92768209987ead17aa258d289"
+      },
+      "lines_changed": 221,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "ambiguous_location",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "arrow/factory.py",
+      "kind": "method",
+      "symbol": "ArrowFactory.get",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "1.3.0",
+        "commit": "87a1a774aad0505d9da18ad1d16f6e571f262503",
+        "lines": [
+          48,
+          66
+        ],
+        "content_hash": "dbacbf35ac63f108ef001851e3f43460527e07d91ae31fc1bc05777879be29d6"
+      },
+      "new": {
+        "revision": "1.4.0",
+        "commit": "2c1f5185ad66bf3b1cf8c0812f4b4fe65ac46656",
+        "lines": [
+          85,
+          297
+        ],
+        "content_hash": "29d6fff116ce0c62137c90bdf1eff18c93cb51d92768209987ead17aa258d289"
+      },
+      "lines_changed": 232,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "ambiguous_location",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "arrow/factory.py",
+      "kind": "method",
+      "symbol": "ArrowFactory.get",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "1.3.0",
+        "commit": "87a1a774aad0505d9da18ad1d16f6e571f262503",
+        "lines": [
+          69,
+          78
+        ],
+        "content_hash": "66af8cdd3884b26a444f0de4b8318a422ee3d1a02432179f3fed1538ed991d2a"
+      },
+      "new": {
+        "revision": "1.4.0",
+        "commit": "2c1f5185ad66bf3b1cf8c0812f4b4fe65ac46656",
+        "lines": [
+          85,
+          297
+        ],
+        "content_hash": "29d6fff116ce0c62137c90bdf1eff18c93cb51d92768209987ead17aa258d289"
+      },
+      "lines_changed": 223,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "ambiguous_location",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "arrow/factory.py",
+      "kind": "method",
+      "symbol": "ArrowFactory.get",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "1.3.0",
+        "commit": "87a1a774aad0505d9da18ad1d16f6e571f262503",
+        "lines": [
+          81,
+          90
+        ],
+        "content_hash": "0701dde7e5ff815a1a804f3bbb9749c34d4aeb99467cbf94794fe8a3303e149e"
+      },
+      "new": {
+        "revision": "1.4.0",
+        "commit": "2c1f5185ad66bf3b1cf8c0812f4b4fe65ac46656",
+        "lines": [
+          85,
+          297
+        ],
+        "content_hash": "29d6fff116ce0c62137c90bdf1eff18c93cb51d92768209987ead17aa258d289"
+      },
+      "lines_changed": 223,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "ambiguous_location",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "arrow/factory.py",
+      "kind": "method",
+      "symbol": "ArrowFactory.get",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "1.3.0",
+        "commit": "87a1a774aad0505d9da18ad1d16f6e571f262503",
+        "lines": [
+          92,
+          304
+        ],
+        "content_hash": "eb1068033e8cfe9eb6f8731ee31e777c726afceddb42d59a87315e914b0ff7c2"
+      },
+      "new": {
+        "revision": "1.4.0",
+        "commit": "2c1f5185ad66bf3b1cf8c0812f4b4fe65ac46656",
+        "lines": [
+          85,
+          297
+        ],
+        "content_hash": "29d6fff116ce0c62137c90bdf1eff18c93cb51d92768209987ead17aa258d289"
+      },
+      "lines_changed": 2,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "ambiguous_location",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "arrow/factory.py",
+      "kind": "method",
+      "symbol": "ArrowFactory.now",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "1.3.0",
+        "commit": "87a1a774aad0505d9da18ad1d16f6e571f262503",
+        "lines": [
+          318,
+          345
+        ],
+        "content_hash": "0aa6ea79538670dff01f5e622dd45334f13385b07c800ad62e694fc77fbecfc5"
+      },
+      "new": {
+        "revision": "1.4.0",
+        "commit": "2c1f5185ad66bf3b1cf8c0812f4b4fe65ac46656",
+        "lines": [
+          311,
+          338
+        ],
+        "content_hash": "86442b22d3d8e87bd368cc033d2950fd56430e21d4350c47ea536721917a44ab"
+      },
+      "lines_changed": 2,
+      "normalized": true,
+      "included": true,
+      "exclusion_reason": null,
+      "sample_order": 3,
+      "sampled": true,
+      "review": {
+        "decision": null,
+        "reason": null
+      }
+    },
+    {
+      "path": "arrow/formatter.py",
+      "kind": "class",
+      "symbol": "DateTimeFormatter",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "1.3.0",
+        "commit": "87a1a774aad0505d9da18ad1d16f6e571f262503",
+        "lines": [
+          31,
+          148
+        ],
+        "content_hash": "a09f95d61a61712e2ea11b7d465127774b8db1e6ef04141496c76774663bef30"
+      },
+      "new": {
+        "revision": "1.4.0",
+        "commit": "2c1f5185ad66bf3b1cf8c0812f4b4fe65ac46656",
+        "lines": [
+          23,
+          140
+        ],
+        "content_hash": "276418fc6b999b3fcaf20abbe078a45cc466846a0e0239c28143364433c5f74f"
+      },
+      "lines_changed": 2,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "contains_changed_symbol",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "arrow/formatter.py",
+      "kind": "method",
+      "symbol": "DateTimeFormatter._format_token",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "1.3.0",
+        "commit": "87a1a774aad0505d9da18ad1d16f6e571f262503",
+        "lines": [
+          51,
+          148
+        ],
+        "content_hash": "9930545dc50f45032bb57faaa7cba5ac002554e58bd6b97fa5d9c9d8dba96fa8"
+      },
+      "new": {
+        "revision": "1.4.0",
+        "commit": "2c1f5185ad66bf3b1cf8c0812f4b4fe65ac46656",
+        "lines": [
+          43,
+          140
+        ],
+        "content_hash": "95e71854aebfbf8032c47c9396ff0a6c217fa19df39ff421976bf816f9a4dd4b"
+      },
+      "lines_changed": 2,
+      "normalized": true,
+      "included": true,
+      "exclusion_reason": null,
+      "sample_order": 7,
+      "sampled": true,
+      "review": {
+        "decision": null,
+        "reason": null
+      }
+    },
+    {
+      "path": "arrow/locales.py",
+      "kind": "class",
+      "symbol": "CatalanLocale",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "1.3.0",
+        "commit": "87a1a774aad0505d9da18ad1d16f6e571f262503",
+        "lines": [
+          3562,
+          3633
+        ],
+        "content_hash": "cf922b074bce0fa51fff02c201aca3c66b7697222f97d86c32aa99f0f90357a5"
+      },
+      "new": {
+        "revision": "1.4.0",
+        "commit": "2c1f5185ad66bf3b1cf8c0812f4b4fe65ac46656",
+        "lines": [
+          3716,
+          3789
+        ],
+        "content_hash": "b8a85df1420ce82f9678f4debbbdf4c2294682f1f2aa6ba8046dbb6d94c458a3"
+      },
+      "lines_changed": 2,
+      "normalized": true,
+      "included": true,
+      "exclusion_reason": null,
+      "sample_order": 13,
+      "sampled": true,
+      "review": {
+        "decision": null,
+        "reason": null
+      }
+    },
+    {
+      "path": "arrow/locales.py",
+      "kind": "class",
+      "symbol": "ChineseCNLocale",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "1.3.0",
+        "commit": "87a1a774aad0505d9da18ad1d16f6e571f262503",
+        "lines": [
+          945,
+          1001
+        ],
+        "content_hash": "df4569ab019d3506067f1b29d48e67da9f6f767a8afb68779aa762f49df8e55e"
+      },
+      "new": {
+        "revision": "1.4.0",
+        "commit": "2c1f5185ad66bf3b1cf8c0812f4b4fe65ac46656",
+        "lines": [
+          949,
+          1014
+        ],
+        "content_hash": "cc136b240d3d875c3ac2f45d895644dd692928b19c21c1c43f40a6818638b302"
+      },
+      "lines_changed": 11,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "formatting_or_docstring_only",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "arrow/locales.py",
+      "kind": "class",
+      "symbol": "FarsiLocale",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "1.3.0",
+        "commit": "87a1a774aad0505d9da18ad1d16f6e571f262503",
+        "lines": [
+          3311,
+          3381
+        ],
+        "content_hash": "36b2b082db494402e43c530ae6e8464ed6ded84fe6397a31ea54c4d65d676e9f"
+      },
+      "new": {
+        "revision": "1.4.0",
+        "commit": "2c1f5185ad66bf3b1cf8c0812f4b4fe65ac46656",
+        "lines": [
+          3452,
+          3535
+        ],
+        "content_hash": "2d9095350845368cb3d336038b1838202a450ecdb786cbec08567b2cabb22b5d"
+      },
+      "lines_changed": 63,
+      "normalized": true,
+      "included": true,
+      "exclusion_reason": null,
+      "sample_order": 14,
+      "sampled": true,
+      "review": {
+        "decision": null,
+        "reason": null
+      }
+    },
+    {
+      "path": "arrow/locales.py",
+      "kind": "class",
+      "symbol": "GreekLocale",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "1.3.0",
+        "commit": "87a1a774aad0505d9da18ad1d16f6e571f262503",
+        "lines": [
+          659,
+          725
+        ],
+        "content_hash": "c86a4a7527cae754e84f288bc0fd40e4a8f79cb88c66134cc91d76909f6c655e"
+      },
+      "new": {
+        "revision": "1.4.0",
+        "commit": "2c1f5185ad66bf3b1cf8c0812f4b4fe65ac46656",
+        "lines": [
+          654,
+          720
+        ],
+        "content_hash": "e9a4f59952b005f9894454c3a309676e3169cb96a38c48e2667c7cb3038f86a8"
+      },
+      "lines_changed": 10,
+      "normalized": true,
+      "included": true,
+      "exclusion_reason": null,
+      "sample_order": 19,
+      "sampled": true,
+      "review": {
+        "decision": null,
+        "reason": null
+      }
+    },
+    {
+      "path": "arrow/locales.py",
+      "kind": "class",
+      "symbol": "HongKongLocale",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "1.3.0",
+        "commit": "87a1a774aad0505d9da18ad1d16f6e571f262503",
+        "lines": [
+          1064,
+          1120
+        ],
+        "content_hash": "51da2b5578f3bb16b6f1ffede6ea9f25a54b0d963c37318d7a87f140c05c473b"
+      },
+      "new": {
+        "revision": "1.4.0",
+        "commit": "2c1f5185ad66bf3b1cf8c0812f4b4fe65ac46656",
+        "lines": [
+          1077,
+          1142
+        ],
+        "content_hash": "e4023b28688c0479d7a50ede6f46003ae0b3bdba35e0a989312a15ac43651dfc"
+      },
+      "lines_changed": 11,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "formatting_or_docstring_only",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "arrow/locales.py",
+      "kind": "class",
+      "symbol": "JapaneseLocale",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "1.3.0",
+        "commit": "87a1a774aad0505d9da18ad1d16f6e571f262503",
+        "lines": [
+          728,
+          785
+        ],
+        "content_hash": "706fdd7eb17d1322c6a62b562da7ea836d96c8eaf55eea4049616fd7416d459f"
+      },
+      "new": {
+        "revision": "1.4.0",
+        "commit": "2c1f5185ad66bf3b1cf8c0812f4b4fe65ac46656",
+        "lines": [
+          723,
+          789
+        ],
+        "content_hash": "3dc9673bca55cb8bda5bc1a485a0a506c1fb8c883fc7ea7a9e315e2aaa10d089"
+      },
+      "lines_changed": 11,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "formatting_or_docstring_only",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "arrow/locales.py",
+      "kind": "class",
+      "symbol": "KoreanLocale",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "1.3.0",
+        "commit": "87a1a774aad0505d9da18ad1d16f6e571f262503",
+        "lines": [
+          1123,
+          1214
+        ],
+        "content_hash": "25db0795d325b0903c6fb091667adc09367f6591be99794fe1878967f95dd4e8"
+      },
+      "new": {
+        "revision": "1.4.0",
+        "commit": "2c1f5185ad66bf3b1cf8c0812f4b4fe65ac46656",
+        "lines": [
+          1145,
+          1256
+        ],
+        "content_hash": "9889e376beb3f6426f0b41df1a23970607749a5b519b536b42123afa4a3eff90"
+      },
+      "lines_changed": 28,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "contains_changed_symbol",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "arrow/locales.py",
+      "kind": "class",
+      "symbol": "ThaiLocale",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "1.3.0",
+        "commit": "87a1a774aad0505d9da18ad1d16f6e571f262503",
+        "lines": [
+          3853,
+          3939
+        ],
+        "content_hash": "c2bb4f3a4ed41399c80d5c1e343248adf85c8052912ae8626281da632cdd6f41"
+      },
+      "new": {
+        "revision": "1.4.0",
+        "commit": "2c1f5185ad66bf3b1cf8c0812f4b4fe65ac46656",
+        "lines": [
+          4009,
+          4106
+        ],
+        "content_hash": "b7062e0f639ce5848560c4d7251dc9caec49eeec0ca8bd5e7bdacfe18505087b"
+      },
+      "lines_changed": 27,
+      "normalized": true,
+      "included": true,
+      "exclusion_reason": null,
+      "sample_order": 4,
+      "sampled": true,
+      "review": {
+        "decision": null,
+        "reason": null
+      }
+    },
+    {
+      "path": "arrow/locales.py",
+      "kind": "method",
+      "symbol": "KoreanLocale._ordinal_number",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "1.3.0",
+        "commit": "87a1a774aad0505d9da18ad1d16f6e571f262503",
+        "lines": [
+          1193,
+          1197
+        ],
+        "content_hash": "0b2cb2929c1dcaa265e684fd75a777aca821733277c68a894b29078e01d3c8a3"
+      },
+      "new": {
+        "revision": "1.4.0",
+        "commit": "2c1f5185ad66bf3b1cf8c0812f4b4fe65ac46656",
+        "lines": [
+          1223,
+          1239
+        ],
+        "content_hash": "756662393e06e1983df2975bb38ba4db02240d759da68d47f822bbf7fd8ee9d5"
+      },
+      "lines_changed": 14,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "formatting_or_docstring_only",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "arrow/parser.py",
+      "kind": "class",
+      "symbol": "DateTimeParser",
+      "part_index": 1,
+      "part_count": 2,
+      "status": "superseded",
+      "old": {
+        "revision": "1.3.0",
+        "commit": "87a1a774aad0505d9da18ad1d16f6e571f262503",
+        "lines": [
+          104,
+          404
+        ],
+        "content_hash": "f270eec0d0398731dd706c4ab8b91a6847c23a1471bad282cc10e78b4fe7f8d5"
+      },
+      "new": {
+        "revision": "1.4.0",
+        "commit": "2c1f5185ad66bf3b1cf8c0812f4b4fe65ac46656",
+        "lines": [
+          142,
+          448
+        ],
+        "content_hash": "473f88ce284759f9bcc4915f14dd9a0259974384bb4b84536025d55980007448"
+      },
+      "lines_changed": 122,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "contains_changed_symbol",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "arrow/parser.py",
+      "kind": "class",
+      "symbol": "DateTimeParser",
+      "part_index": 2,
+      "part_count": 2,
+      "status": "superseded",
+      "old": {
+        "revision": "1.3.0",
+        "commit": "87a1a774aad0505d9da18ad1d16f6e571f262503",
+        "lines": [
+          405,
+          732
+        ],
+        "content_hash": "de2d61ca25ad9573b82386a86650fd3974d2ef3075a0fd2a071598e6b64d5e74"
+      },
+      "new": {
+        "revision": "1.4.0",
+        "commit": "2c1f5185ad66bf3b1cf8c0812f4b4fe65ac46656",
+        "lines": [
+          449,
+          776
+        ],
+        "content_hash": "54bc6f6ff6257b95355614d48ef4fb14ae65753ccf9407f8370ca141134443b6"
+      },
+      "lines_changed": 178,
+      "normalized": false,
+      "included": false,
+      "exclusion_reason": "contains_changed_symbol",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "arrow/parser.py",
+      "kind": "class",
+      "symbol": "ParserError",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "1.3.0",
+        "commit": "87a1a774aad0505d9da18ad1d16f6e571f262503",
+        "lines": [
+          37,
+          38
+        ],
+        "content_hash": "3df2291f0037062a0d68672d35913043dc109930b4d3034ebba599ffe7203847"
+      },
+      "new": {
+        "revision": "1.4.0",
+        "commit": "2c1f5185ad66bf3b1cf8c0812f4b4fe65ac46656",
+        "lines": [
+          36,
+          45
+        ],
+        "content_hash": "50de0260c0d0ebd5bb28bfae3b85502336c564cc9c602a73d7ce266d4173c1d0"
+      },
+      "lines_changed": 8,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "formatting_or_docstring_only",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "arrow/parser.py",
+      "kind": "class",
+      "symbol": "ParserMatchError",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "1.3.0",
+        "commit": "87a1a774aad0505d9da18ad1d16f6e571f262503",
+        "lines": [
+          46,
+          47
+        ],
+        "content_hash": "cd5a49a517d9eae45f67a256ebaf0e7a83dc8bcbdd0fb4ece4bfbdb8e9328e84"
+      },
+      "new": {
+        "revision": "1.4.0",
+        "commit": "2c1f5185ad66bf3b1cf8c0812f4b4fe65ac46656",
+        "lines": [
+          53,
+          62
+        ],
+        "content_hash": "43e125635de0607527b4d24c68efedb6adfca5ccad38c5049d9c706f66f09949"
+      },
+      "lines_changed": 8,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "formatting_or_docstring_only",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "arrow/parser.py",
+      "kind": "class",
+      "symbol": "TzinfoParser",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "1.3.0",
+        "commit": "87a1a774aad0505d9da18ad1d16f6e571f262503",
+        "lines": [
+          735,
+          771
+        ],
+        "content_hash": "da78b227fbf303180cadc3b4ab1f95b61c14fbdd758032681b4d12d0330bba84"
+      },
+      "new": {
+        "revision": "1.4.0",
+        "commit": "2c1f5185ad66bf3b1cf8c0812f4b4fe65ac46656",
+        "lines": [
+          885,
+          937
+        ],
+        "content_hash": "9b7044a7bac5e3b0a9bd04c44d75bb607e4bee547af3811f74412f25b6ebbf54"
+      },
+      "lines_changed": 24,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "contains_changed_symbol",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "arrow/parser.py",
+      "kind": "class",
+      "symbol": "_Parts",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "1.3.0",
+        "commit": "87a1a774aad0505d9da18ad1d16f6e571f262503",
+        "lines": [
+          87,
+          101
+        ],
+        "content_hash": "4ffca9cde74745fcff2a3e57cd763eaa20b8322791dbcd4bf9308beadfaa0f40"
+      },
+      "new": {
+        "revision": "1.4.0",
+        "commit": "2c1f5185ad66bf3b1cf8c0812f4b4fe65ac46656",
+        "lines": [
+          102,
+          139
+        ],
+        "content_hash": "f28392efbdf7fafef7df3a7a5014a484102a24200d9d7e6d9cc89b0e431cdf33"
+      },
+      "lines_changed": 23,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "formatting_or_docstring_only",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "arrow/parser.py",
+      "kind": "method",
+      "symbol": "DateTimeParser.__init__",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "1.3.0",
+        "commit": "87a1a774aad0505d9da18ad1d16f6e571f262503",
+        "lines": [
+          161,
+          191
+        ],
+        "content_hash": "c069a45411604aa7ce0a73c60d4cf15ab7780b686eb8ac4bd13aacd484fb4b21"
+      },
+      "new": {
+        "revision": "1.4.0",
+        "commit": "2c1f5185ad66bf3b1cf8c0812f4b4fe65ac46656",
+        "lines": [
+          209,
+          248
+        ],
+        "content_hash": "7fe225cca439d00082055635abfb2c2056d069565e1c2de5a4b5c1fae355a062"
+      },
+      "lines_changed": 9,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "formatting_or_docstring_only",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "arrow/parser.py",
+      "kind": "method",
+      "symbol": "DateTimeParser._build_datetime",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "1.3.0",
+        "commit": "87a1a774aad0505d9da18ad1d16f6e571f262503",
+        "lines": [
+          583,
+          707
+        ],
+        "content_hash": "82a0fec3b68ffba150039d44dcc76cb8d68319c701c86fde25dc915d3b5b1adf"
+      },
+      "new": {
+        "revision": "1.4.0",
+        "commit": "2c1f5185ad66bf3b1cf8c0812f4b4fe65ac46656",
+        "lines": [
+          696,
+          828
+        ],
+        "content_hash": "3327e3593c81dd8fa563673628f06dcd80fa39d7eb6610de5904ac5e7e637f37"
+      },
+      "lines_changed": 12,
+      "normalized": true,
+      "included": true,
+      "exclusion_reason": null,
+      "sample_order": 20,
+      "sampled": true,
+      "review": {
+        "decision": null,
+        "reason": null
+      }
+    },
+    {
+      "path": "arrow/parser.py",
+      "kind": "method",
+      "symbol": "DateTimeParser._generate_choice_re",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "1.3.0",
+        "commit": "87a1a774aad0505d9da18ad1d16f6e571f262503",
+        "lines": [
+          729,
+          732
+        ],
+        "content_hash": "297c28415c38469c4bb1e4cf595dbc7855ff3ac44a89f055012db1c4ebee7959"
+      },
+      "new": {
+        "revision": "1.4.0",
+        "commit": "2c1f5185ad66bf3b1cf8c0812f4b4fe65ac46656",
+        "lines": [
+          865,
+          882
+        ],
+        "content_hash": "d7e83b1be9f76ed14b1b70811d96511608515648912f3996c2c9f957a31bff87"
+      },
+      "lines_changed": 14,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "formatting_or_docstring_only",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "arrow/parser.py",
+      "kind": "method",
+      "symbol": "DateTimeParser._generate_pattern_re",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "1.3.0",
+        "commit": "87a1a774aad0505d9da18ad1d16f6e571f262503",
+        "lines": [
+          346,
+          426
+        ],
+        "content_hash": "68c91dfd2041bd914ca95a02f5af1c91d4dffa017ff9650d3ad180465c07412f"
+      },
+      "new": {
+        "revision": "1.4.0",
+        "commit": "2c1f5185ad66bf3b1cf8c0812f4b4fe65ac46656",
+        "lines": [
+          441,
+          530
+        ],
+        "content_hash": "b07277a573bd09a2ccd1a2f10251d4406a9e4817131dae1adf8c9311273bab88"
+      },
+      "lines_changed": 9,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "formatting_or_docstring_only",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "arrow/parser.py",
+      "kind": "method",
+      "symbol": "DateTimeParser._parse_multiformat",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "1.3.0",
+        "commit": "87a1a774aad0505d9da18ad1d16f6e571f262503",
+        "lines": [
+          709,
+          725
+        ],
+        "content_hash": "4df99404f298a8ba0c35f3f0ea8bfb74c7677044a7bb2c3a688b27bc98c6fdf1"
+      },
+      "new": {
+        "revision": "1.4.0",
+        "commit": "2c1f5185ad66bf3b1cf8c0812f4b4fe65ac46656",
+        "lines": [
+          830,
+          861
+        ],
+        "content_hash": "a29543012aa53db84416d6b107d5bef400589c4211ff14a457baf4a54b4221ff"
+      },
+      "lines_changed": 15,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "formatting_or_docstring_only",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "arrow/parser.py",
+      "kind": "method",
+      "symbol": "DateTimeParser._parse_token",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "1.3.0",
+        "commit": "87a1a774aad0505d9da18ad1d16f6e571f262503",
+        "lines": [
+          429,
+          454
+        ],
+        "content_hash": "e15856df293236409b26c0099417973191307a27065175ffa814b0ab6b1cc3df"
+      },
+      "new": {
+        "revision": "1.4.0",
+        "commit": "2c1f5185ad66bf3b1cf8c0812f4b4fe65ac46656",
+        "lines": [
+          591,
+          693
+        ],
+        "content_hash": "81464e0d8844898f846f0cad82877211d9f1e0b71a25631f42a3adbf6e6d5c99"
+      },
+      "lines_changed": 121,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "ambiguous_location",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "arrow/parser.py",
+      "kind": "method",
+      "symbol": "DateTimeParser._parse_token",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "1.3.0",
+        "commit": "87a1a774aad0505d9da18ad1d16f6e571f262503",
+        "lines": [
+          457,
+          463
+        ],
+        "content_hash": "a24d4ee7976135e56b46b3519bd1e60444b5258c9022ab12e86516f90a63a2f8"
+      },
+      "new": {
+        "revision": "1.4.0",
+        "commit": "2c1f5185ad66bf3b1cf8c0812f4b4fe65ac46656",
+        "lines": [
+          591,
+          693
+        ],
+        "content_hash": "81464e0d8844898f846f0cad82877211d9f1e0b71a25631f42a3adbf6e6d5c99"
+      },
+      "lines_changed": 102,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "ambiguous_location",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "arrow/parser.py",
+      "kind": "method",
+      "symbol": "DateTimeParser._parse_token",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "1.3.0",
+        "commit": "87a1a774aad0505d9da18ad1d16f6e571f262503",
+        "lines": [
+          466,
+          472
+        ],
+        "content_hash": "6d77a85a01285e1274fa798dd6cfb2fcac7077fd9eb36eb23cf98476267e467d"
+      },
+      "new": {
+        "revision": "1.4.0",
+        "commit": "2c1f5185ad66bf3b1cf8c0812f4b4fe65ac46656",
+        "lines": [
+          591,
+          693
+        ],
+        "content_hash": "81464e0d8844898f846f0cad82877211d9f1e0b71a25631f42a3adbf6e6d5c99"
+      },
+      "lines_changed": 102,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "ambiguous_location",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "arrow/parser.py",
+      "kind": "method",
+      "symbol": "DateTimeParser._parse_token",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "1.3.0",
+        "commit": "87a1a774aad0505d9da18ad1d16f6e571f262503",
+        "lines": [
+          475,
+          481
+        ],
+        "content_hash": "ef3a78fe19a2b1d699dee671c62ce4e0c3ebad4ef0284d0dd6544b332318ad2f"
+      },
+      "new": {
+        "revision": "1.4.0",
+        "commit": "2c1f5185ad66bf3b1cf8c0812f4b4fe65ac46656",
+        "lines": [
+          591,
+          693
+        ],
+        "content_hash": "81464e0d8844898f846f0cad82877211d9f1e0b71a25631f42a3adbf6e6d5c99"
+      },
+      "lines_changed": 102,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "ambiguous_location",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "arrow/parser.py",
+      "kind": "method",
+      "symbol": "DateTimeParser._parse_token",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "1.3.0",
+        "commit": "87a1a774aad0505d9da18ad1d16f6e571f262503",
+        "lines": [
+          484,
+          490
+        ],
+        "content_hash": "b16f74aa99f44cd69cedc98b9f0f53ad960fb75a50c13e815ac662808e9f5f2a"
+      },
+      "new": {
+        "revision": "1.4.0",
+        "commit": "2c1f5185ad66bf3b1cf8c0812f4b4fe65ac46656",
+        "lines": [
+          591,
+          693
+        ],
+        "content_hash": "81464e0d8844898f846f0cad82877211d9f1e0b71a25631f42a3adbf6e6d5c99"
+      },
+      "lines_changed": 102,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "ambiguous_location",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "arrow/parser.py",
+      "kind": "method",
+      "symbol": "DateTimeParser._parse_token",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "1.3.0",
+        "commit": "87a1a774aad0505d9da18ad1d16f6e571f262503",
+        "lines": [
+          492,
+          580
+        ],
+        "content_hash": "4909499fd985ba34401eaab2994ead1cec63cff777f9ccc870f2c1606ac20035"
+      },
+      "new": {
+        "revision": "1.4.0",
+        "commit": "2c1f5185ad66bf3b1cf8c0812f4b4fe65ac46656",
+        "lines": [
+          591,
+          693
+        ],
+        "content_hash": "81464e0d8844898f846f0cad82877211d9f1e0b71a25631f42a3adbf6e6d5c99"
+      },
+      "lines_changed": 14,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "ambiguous_location",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "arrow/parser.py",
+      "kind": "method",
+      "symbol": "DateTimeParser.parse",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "1.3.0",
+        "commit": "87a1a774aad0505d9da18ad1d16f6e571f262503",
+        "lines": [
+          299,
+          344
+        ],
+        "content_hash": "80099daed66837140f5cb15beb8018abf805e015f4913afc50a761cc2e5646d2"
+      },
+      "new": {
+        "revision": "1.4.0",
+        "commit": "2c1f5185ad66bf3b1cf8c0812f4b4fe65ac46656",
+        "lines": [
+          373,
+          439
+        ],
+        "content_hash": "bc3ec7c2ef374f3cc135849f7e55e49957c2a695a4acf839547b08ceb9a39f6e"
+      },
+      "lines_changed": 21,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "formatting_or_docstring_only",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "arrow/parser.py",
+      "kind": "method",
+      "symbol": "DateTimeParser.parse_iso",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "1.3.0",
+        "commit": "87a1a774aad0505d9da18ad1d16f6e571f262503",
+        "lines": [
+          195,
+          297
+        ],
+        "content_hash": "5c51864889270a6e7e9e8623d207e15658bccc8f8c1e39dce4cb8b8cff8099b6"
+      },
+      "new": {
+        "revision": "1.4.0",
+        "commit": "2c1f5185ad66bf3b1cf8c0812f4b4fe65ac46656",
+        "lines": [
+          252,
+          371
+        ],
+        "content_hash": "fbb1b16d6058c2108582e5bbeb35ff2fc8b28fd347dbbf779729d1599d831771"
+      },
+      "lines_changed": 17,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "formatting_or_docstring_only",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "arrow/parser.py",
+      "kind": "method",
+      "symbol": "TzinfoParser.parse",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "1.3.0",
+        "commit": "87a1a774aad0505d9da18ad1d16f6e571f262503",
+        "lines": [
+          741,
+          771
+        ],
+        "content_hash": "f636e4ada95aed44932079ebcd3bf572f3369deb85068434bfb6423cfae03726"
+      },
+      "new": {
+        "revision": "1.4.0",
+        "commit": "2c1f5185ad66bf3b1cf8c0812f4b4fe65ac46656",
+        "lines": [
+          895,
+          937
+        ],
+        "content_hash": "6c73af49f50c1b71ba858b37d2e0fb6325c22559fede7fe21f182d39e4e2b188"
+      },
+      "lines_changed": 20,
+      "normalized": true,
+      "included": true,
+      "exclusion_reason": null,
+      "sample_order": 5,
+      "sampled": true,
+      "review": {
+        "decision": null,
+        "reason": null
+      }
+    },
+    {
+      "path": "tests/conftest.py",
+      "kind": "function",
+      "symbol": "time_1975_12_25",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "1.3.0",
+        "commit": "87a1a774aad0505d9da18ad1d16f6e571f262503",
+        "lines": [
+          33,
+          37
+        ],
+        "content_hash": "7555f624f4a32021e040c4a7b0652e2da84182b8d891a3d38900c227f4c69c85"
+      },
+      "new": {
+        "revision": "1.4.0",
+        "commit": "2c1f5185ad66bf3b1cf8c0812f4b4fe65ac46656",
+        "lines": [
+          37,
+          41
+        ],
+        "content_hash": "c3910040fa68a1e4a4e311b1d0f9709f6b02e760659e4f4e79d2724361ad795c"
+      },
+      "lines_changed": 2,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "test_file",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "tests/test_arrow.py",
+      "kind": "class",
+      "symbol": "TestArrowAttribute",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "1.3.0",
+        "commit": "87a1a774aad0505d9da18ad1d16f6e571f262503",
+        "lines": [
+          232,
+          303
+        ],
+        "content_hash": "e8a985d337a376f5511e04dc78fb61c7ab41b967b19f1cabd1a054ae7734ec4d"
+      },
+      "new": {
+        "revision": "1.4.0",
+        "commit": "2c1f5185ad66bf3b1cf8c0812f4b4fe65ac46656",
+        "lines": [
+          253,
+          324
+        ],
+        "content_hash": "14bb0d0589cd8009cf747217893672996dbac9fcd7fac0f06fbaaf2a41b0a903"
+      },
+      "lines_changed": 2,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "test_file",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "tests/test_arrow.py",
+      "kind": "class",
+      "symbol": "TestArrowConversion",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "1.3.0",
+        "commit": "87a1a774aad0505d9da18ad1d16f6e571f262503",
+        "lines": [
+          547,
+          608
+        ],
+        "content_hash": "c54c81764d1431d04b48da2521f77b9b894d47506451390f6cd5b90b16f2900f"
+      },
+      "new": {
+        "revision": "1.4.0",
+        "commit": "2c1f5185ad66bf3b1cf8c0812f4b4fe65ac46656",
+        "lines": [
+          568,
+          629
+        ],
+        "content_hash": "d84e30f2fd903135bedda2491b5640ca28ace94ff05bedcb9639ff18aca0d2b7"
+      },
+      "lines_changed": 6,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "test_file",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "tests/test_arrow.py",
+      "kind": "class",
+      "symbol": "TestArrowDatetimeInterface",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "1.3.0",
+        "commit": "87a1a774aad0505d9da18ad1d16f6e571f262503",
+        "lines": [
+          403,
+          497
+        ],
+        "content_hash": "b3edefbeb1d5b7d0351f41c2fe95b2c70b78a195ec9d835bbdf0d1152e1821bc"
+      },
+      "new": {
+        "revision": "1.4.0",
+        "commit": "2c1f5185ad66bf3b1cf8c0812f4b4fe65ac46656",
+        "lines": [
+          424,
+          518
+        ],
+        "content_hash": "8bcfae63a2bb920952954902591bf2bd6cc6f1609bd1c120a45ed31620a97cf9"
+      },
+      "lines_changed": 2,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "test_file",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "tests/test_arrow.py",
+      "kind": "class",
+      "symbol": "TestArrowFalsePositiveDst",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "1.3.0",
+        "commit": "87a1a774aad0505d9da18ad1d16f6e571f262503",
+        "lines": [
+          500,
+          544
+        ],
+        "content_hash": "7aa1bcf4e335ed3b8371308d3b72e72467d43a1d02fd4841b5bc0b4894fda221"
+      },
+      "new": {
+        "revision": "1.4.0",
+        "commit": "2c1f5185ad66bf3b1cf8c0812f4b4fe65ac46656",
+        "lines": [
+          521,
+          565
+        ],
+        "content_hash": "3ee97b2932c610387119ef193434247b388720f6db762eef75b984bd8ae8acd9"
+      },
+      "lines_changed": 16,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "test_file",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "tests/test_arrow.py",
+      "kind": "class",
+      "symbol": "TestArrowHumanize",
+      "part_index": 2,
+      "part_count": 2,
+      "status": "superseded",
+      "old": {
+        "revision": "1.3.0",
+        "commit": "87a1a774aad0505d9da18ad1d16f6e571f262503",
+        "lines": [
+          2014,
+          2160
+        ],
+        "content_hash": "ad9a1bb4b2e13ee8bf1cee3c59774116cf06efb7637f4ec12e31f044ed45f275"
+      },
+      "new": {
+        "revision": "1.4.0",
+        "commit": "2c1f5185ad66bf3b1cf8c0812f4b4fe65ac46656",
+        "lines": [
+          2205,
+          2341
+        ],
+        "content_hash": "c019216c5869fd05bac51abbe6e63781fe8c1f6f48cb35aa375a0f7ad04b0ff5"
+      },
+      "lines_changed": 10,
+      "normalized": false,
+      "included": false,
+      "exclusion_reason": "test_file",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "tests/test_arrow.py",
+      "kind": "class",
+      "symbol": "TestArrowRange",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "1.3.0",
+        "commit": "87a1a774aad0505d9da18ad1d16f6e571f262503",
+        "lines": [
+          869,
+          1107
+        ],
+        "content_hash": "4f4eb7b6856d412a5ad55d0c65c944b1903d5d3ce71baf6ae78ca39fa9a72e05"
+      },
+      "new": {
+        "revision": "1.4.0",
+        "commit": "2c1f5185ad66bf3b1cf8c0812f4b4fe65ac46656",
+        "lines": [
+          900,
+          1142
+        ],
+        "content_hash": "cccf95441fc31bc82e6b6787a6e4a186736812edea09ff3c0619506bdfe44e40"
+      },
+      "lines_changed": 46,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "test_file",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "tests/test_arrow.py",
+      "kind": "class",
+      "symbol": "TestArrowReplace",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "1.3.0",
+        "commit": "87a1a774aad0505d9da18ad1d16f6e571f262503",
+        "lines": [
+          622,
+          676
+        ],
+        "content_hash": "2d5bc5272794e21f14a989ed56cd2aa3454553596244ec7790d4ed58713a6698"
+      },
+      "new": {
+        "revision": "1.4.0",
+        "commit": "2c1f5185ad66bf3b1cf8c0812f4b4fe65ac46656",
+        "lines": [
+          643,
+          697
+        ],
+        "content_hash": "a2d36fdc52ef7344441ebcdba53d06e00545a9b4aa82da261fab2d3d9544be6a"
+      },
+      "lines_changed": 4,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "test_file",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "tests/test_arrow.py",
+      "kind": "class",
+      "symbol": "TestArrowShift",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "1.3.0",
+        "commit": "87a1a774aad0505d9da18ad1d16f6e571f262503",
+        "lines": [
+          679,
+          866
+        ],
+        "content_hash": "da5e202cb01d17183f7ad34cfd3f724486dc73088edb39fb487a02fe9fd75bbd"
+      },
+      "new": {
+        "revision": "1.4.0",
+        "commit": "2c1f5185ad66bf3b1cf8c0812f4b4fe65ac46656",
+        "lines": [
+          700,
+          897
+        ],
+        "content_hash": "5b8c91614e995858ab033abb73891eabc9d9f58a29fb4ccf3f5e51c3d45a975b"
+      },
+      "lines_changed": 10,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "test_file",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "tests/test_arrow.py",
+      "kind": "class",
+      "symbol": "TestArrowSpan",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "1.3.0",
+        "commit": "87a1a774aad0505d9da18ad1d16f6e571f262503",
+        "lines": [
+          1598,
+          1748
+        ],
+        "content_hash": "12016494620be70c34f22a966bc69aa85b60ed76b5e36b51a88e28a298917e81"
+      },
+      "new": {
+        "revision": "1.4.0",
+        "commit": "2c1f5185ad66bf3b1cf8c0812f4b4fe65ac46656",
+        "lines": [
+          1633,
+          1911
+        ],
+        "content_hash": "d515827fb1a9851229505e0584433be088485a31ffa4a9ac57095588cd5632f6"
+      },
+      "lines_changed": 184,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "test_file",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "tests/test_arrow.py",
+      "kind": "class",
+      "symbol": "TestArrowSpanRange",
+      "part_index": 1,
+      "part_count": 2,
+      "status": "superseded",
+      "old": {
+        "revision": "1.3.0",
+        "commit": "87a1a774aad0505d9da18ad1d16f6e571f262503",
+        "lines": [
+          1110,
+          1497
+        ],
+        "content_hash": "649fb061ca5856c5d15459c87bafa8d003cd7bb62e452ee8f3743b450db15902"
+      },
+      "new": {
+        "revision": "1.4.0",
+        "commit": "2c1f5185ad66bf3b1cf8c0812f4b4fe65ac46656",
+        "lines": [
+          1145,
+          1532
+        ],
+        "content_hash": "48b24e5dacc52f60081ed38e952c381c829ca7c12af5edad31a5d5969cc35197"
+      },
+      "lines_changed": 16,
+      "normalized": false,
+      "included": false,
+      "exclusion_reason": "test_file",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "tests/test_arrow.py",
+      "kind": "class",
+      "symbol": "TestArrowUtil",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "1.3.0",
+        "commit": "87a1a774aad0505d9da18ad1d16f6e571f262503",
+        "lines": [
+          2887,
+          2918
+        ],
+        "content_hash": "2ccd3c430a3aa7af03b5eb992d325bf8f6011bf420e96f3f2d87cb76e23ee1a8"
+      },
+      "new": {
+        "revision": "1.4.0",
+        "commit": "2c1f5185ad66bf3b1cf8c0812f4b4fe65ac46656",
+        "lines": [
+          3068,
+          3099
+        ],
+        "content_hash": "bc9f22a9a0946cf77874503b912147073a08b62e881b87066cf06f6bdfeda3de"
+      },
+      "lines_changed": 2,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "test_file",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "tests/test_arrow.py",
+      "kind": "class",
+      "symbol": "TestTestArrowFactory",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "1.3.0",
+        "commit": "87a1a774aad0505d9da18ad1d16f6e571f262503",
+        "lines": [
+          82,
+          189
+        ],
+        "content_hash": "edc37525bb93624e9f3fa78173af5b5168b1056f83f560a7b4403f3b2c063ac0"
+      },
+      "new": {
+        "revision": "1.4.0",
+        "commit": "2c1f5185ad66bf3b1cf8c0812f4b4fe65ac46656",
+        "lines": [
+          107,
+          210
+        ],
+        "content_hash": "9e7aadb9b53b7a2c1914b410be3aa2ba5306f6aeb06ebae3a8ca2d83dd5f161e"
+      },
+      "lines_changed": 34,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "test_file",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "tests/test_arrow.py",
+      "kind": "class",
+      "symbol": "TestTestArrowInit",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "1.3.0",
+        "commit": "87a1a774aad0505d9da18ad1d16f6e571f262503",
+        "lines": [
+          19,
+          79
+        ],
+        "content_hash": "434e298eee4a2c08cfa77fe5ad7f5f87381e2f3432f74eb3ae9cd969d25d4150"
+      },
+      "new": {
+        "revision": "1.4.0",
+        "commit": "2c1f5185ad66bf3b1cf8c0812f4b4fe65ac46656",
+        "lines": [
+          24,
+          104
+        ],
+        "content_hash": "677e97802e07d12dd24d473077ddcc2d0b3adbbdd49537e736bec017ce74fc87"
+      },
+      "lines_changed": 26,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "test_file",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "tests/test_arrow.py",
+      "kind": "method",
+      "symbol": "TestArrowAttribute.test_tzinfo",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "1.3.0",
+        "commit": "87a1a774aad0505d9da18ad1d16f6e571f262503",
+        "lines": [
+          264,
+          265
+        ],
+        "content_hash": "ec47d42557c98f74b89e6bef0ae1ed1c94f5086cc22ca1a40f29826e9e4b7c6d"
+      },
+      "new": {
+        "revision": "1.4.0",
+        "commit": "2c1f5185ad66bf3b1cf8c0812f4b4fe65ac46656",
+        "lines": [
+          285,
+          286
+        ],
+        "content_hash": "6bf3f326cea205f1605b0b953db979b7367dcb336e5dee74f7b6f24dc4f30132"
+      },
+      "lines_changed": 2,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "test_file",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "tests/test_arrow.py",
+      "kind": "method",
+      "symbol": "TestArrowConversion.test_anchorage_dst",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "1.3.0",
+        "commit": "87a1a774aad0505d9da18ad1d16f6e571f262503",
+        "lines": [
+          578,
+          582
+        ],
+        "content_hash": "ae50581bd6f6255c48fb7caf53133ec02d326442a8b18e9c26415346ac38d89e"
+      },
+      "new": {
+        "revision": "1.4.0",
+        "commit": "2c1f5185ad66bf3b1cf8c0812f4b4fe65ac46656",
+        "lines": [
+          599,
+          603
+        ],
+        "content_hash": "df61fafe9c0c917111bc1684366a2f559d2070805c31aa6577084d04823c2da0"
+      },
+      "lines_changed": 2,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "test_file",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "tests/test_arrow.py",
+      "kind": "method",
+      "symbol": "TestArrowConversion.test_to",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "1.3.0",
+        "commit": "87a1a774aad0505d9da18ad1d16f6e571f262503",
+        "lines": [
+          548,
+          557
+        ],
+        "content_hash": "865b9437ba8162d3873556cc9072b347a0a46f81e9004c2701390d4ef4b25fda"
+      },
+      "new": {
+        "revision": "1.4.0",
+        "commit": "2c1f5185ad66bf3b1cf8c0812f4b4fe65ac46656",
+        "lines": [
+          569,
+          578
+        ],
+        "content_hash": "b31b2bc0de7d0fb913232bf09d9b08177e1234d192f22aa9ffccd7b22e777488"
+      },
+      "lines_changed": 4,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "test_file",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "tests/test_arrow.py",
+      "kind": "method",
+      "symbol": "TestArrowDatetimeInterface.test_astimezone",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "1.3.0",
+        "commit": "87a1a774aad0505d9da18ad1d16f6e571f262503",
+        "lines": [
+          419,
+          424
+        ],
+        "content_hash": "7d1acba91d9da784e9d7ae13a5249bf840c11f9a445fa62bb9ae1947567f97fe"
+      },
+      "new": {
+        "revision": "1.4.0",
+        "commit": "2c1f5185ad66bf3b1cf8c0812f4b4fe65ac46656",
+        "lines": [
+          440,
+          445
+        ],
+        "content_hash": "28a1ee1d4a20fe8a4b2e84d7f7852daee6777d3428c72ec590ec9c9ca1669aa0"
+      },
+      "lines_changed": 2,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "test_file",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "tests/test_arrow.py",
+      "kind": "method",
+      "symbol": "TestArrowFalsePositiveDst.test_dst",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "1.3.0",
+        "commit": "87a1a774aad0505d9da18ad1d16f6e571f262503",
+        "lines": [
+          524,
+          544
+        ],
+        "content_hash": "253dd8a7b518c915832b3f1e63a6fede9a2a7ddaeeb3012a7b9db6dd43c7db40"
+      },
+      "new": {
+        "revision": "1.4.0",
+        "commit": "2c1f5185ad66bf3b1cf8c0812f4b4fe65ac46656",
+        "lines": [
+          545,
+          565
+        ],
+        "content_hash": "ce9dfde34b3ddd1387a74f8388e39d99dd1ea21981119bf984ec3e6c118a9469"
+      },
+      "lines_changed": 16,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "test_file",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "tests/test_arrow.py",
+      "kind": "method",
+      "symbol": "TestArrowHumanize.test_month",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "1.3.0",
+        "commit": "87a1a774aad0505d9da18ad1d16f6e571f262503",
+        "lines": [
+          2027,
+          2035
+        ],
+        "content_hash": "d1a244a007af5863606add10380f25926eba1c0a45bb3a089bd8fff4e5cc2f48"
+      },
+      "new": {
+        "revision": "1.4.0",
+        "commit": "2c1f5185ad66bf3b1cf8c0812f4b4fe65ac46656",
+        "lines": [
+          2217,
+          2224
+        ],
+        "content_hash": "c4b61cbfdde11dfffde074297cef5b3f691da634555c11f357ab5a68cb05b75f"
+      },
+      "lines_changed": 1,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "test_file",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "tests/test_arrow.py",
+      "kind": "method",
+      "symbol": "TestArrowHumanize.test_month_plus_4_days",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "removed",
+      "old": {
+        "revision": "1.3.0",
+        "commit": "87a1a774aad0505d9da18ad1d16f6e571f262503",
+        "lines": [
+          2037,
+          2042
+        ],
+        "content_hash": "8309039a68faf344222bf1ecb07fb17a188cbdb55273043154932a8af079ced5"
+      },
+      "new": null,
+      "lines_changed": 6,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "test_file",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "tests/test_arrow.py",
+      "kind": "method",
+      "symbol": "TestArrowRange.test_aware_different_tz",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "1.3.0",
+        "commit": "87a1a774aad0505d9da18ad1d16f6e571f262503",
+        "lines": [
+          1023,
+          1031
+        ],
+        "content_hash": "1b83b9c91a11553a432423c51a560b2433b900be56febe062eaea19f7529de5f"
+      },
+      "new": {
+        "revision": "1.4.0",
+        "commit": "2c1f5185ad66bf3b1cf8c0812f4b4fe65ac46656",
+        "lines": [
+          1054,
+          1062
+        ],
+        "content_hash": "d3245c4362655450a78fb036a807f61d3763a61f5426b52b72a8b0a7fdce3fcc"
+      },
+      "lines_changed": 6,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "test_file",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "tests/test_arrow.py",
+      "kind": "method",
+      "symbol": "TestArrowRange.test_aware_same_tz",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "1.3.0",
+        "commit": "87a1a774aad0505d9da18ad1d16f6e571f262503",
+        "lines": [
+          1013,
+          1021
+        ],
+        "content_hash": "59956fa6f29377f9ee111cbbb7f8edeb722d7ae873275db407d83b9a7910e866"
+      },
+      "new": {
+        "revision": "1.4.0",
+        "commit": "2c1f5185ad66bf3b1cf8c0812f4b4fe65ac46656",
+        "lines": [
+          1044,
+          1052
+        ],
+        "content_hash": "524be7f118562c70e8fa90b032c619c89dcc832a8549bc734a06278729c3674a"
+      },
+      "lines_changed": 6,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "test_file",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "tests/test_arrow.py",
+      "kind": "method",
+      "symbol": "TestArrowRange.test_aware_tz",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "1.3.0",
+        "commit": "87a1a774aad0505d9da18ad1d16f6e571f262503",
+        "lines": [
+          1033,
+          1042
+        ],
+        "content_hash": "2fd2ff8008d4fd6c77db8f76783430780dbee143a62b687625627e7546e86abc"
+      },
+      "new": {
+        "revision": "1.4.0",
+        "commit": "2c1f5185ad66bf3b1cf8c0812f4b4fe65ac46656",
+        "lines": [
+          1064,
+          1073
+        ],
+        "content_hash": "ddc60b2ccac4c07f803ccdf2979d61141e1b1a812f68d8ed1ce7752cb8a2f510"
+      },
+      "lines_changed": 8,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "test_file",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "tests/test_arrow.py",
+      "kind": "method",
+      "symbol": "TestArrowRange.test_naive_tz",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "1.3.0",
+        "commit": "87a1a774aad0505d9da18ad1d16f6e571f262503",
+        "lines": [
+          1005,
+          1011
+        ],
+        "content_hash": "6c801c463db48964c711ad55e8fffd6f85a57140eaa44185d394502b772e4b1a"
+      },
+      "new": {
+        "revision": "1.4.0",
+        "commit": "2c1f5185ad66bf3b1cf8c0812f4b4fe65ac46656",
+        "lines": [
+          1036,
+          1042
+        ],
+        "content_hash": "e9562935b544053bffea6a9ad07ca4a0675d9cff60ba066786adb46991070378"
+      },
+      "lines_changed": 2,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "test_file",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "tests/test_arrow.py",
+      "kind": "method",
+      "symbol": "TestArrowRange.test_unsupported",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "1.3.0",
+        "commit": "87a1a774aad0505d9da18ad1d16f6e571f262503",
+        "lines": [
+          1056,
+          1058
+        ],
+        "content_hash": "f1b59ec10aa0c6eec256fb2117f8940d726f8b0f70074a020cd3504024232d07"
+      },
+      "new": {
+        "revision": "1.4.0",
+        "commit": "2c1f5185ad66bf3b1cf8c0812f4b4fe65ac46656",
+        "lines": [
+          1087,
+          1093
+        ],
+        "content_hash": "a96fc5efe414b8850d9368826f00034584c803ea3eef9f1ef65d461f76cf3168"
+      },
+      "lines_changed": 6,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "test_file",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "tests/test_arrow.py",
+      "kind": "method",
+      "symbol": "TestArrowReplace.test_replace_tzinfo",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "1.3.0",
+        "commit": "87a1a774aad0505d9da18ad1d16f6e571f262503",
+        "lines": [
+          637,
+          642
+        ],
+        "content_hash": "0f55cf166ed4056f8f5758c5133f7280c63abe6b2e25a11e845db129f3b9d3b9"
+      },
+      "new": {
+        "revision": "1.4.0",
+        "commit": "2c1f5185ad66bf3b1cf8c0812f4b4fe65ac46656",
+        "lines": [
+          658,
+          663
+        ],
+        "content_hash": "610347731738e0f957b78d1e10d0512bf348d46d4c957847d6139e5fa631fd2a"
+      },
+      "lines_changed": 4,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "test_file",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "tests/test_arrow.py",
+      "kind": "method",
+      "symbol": "TestArrowSpanRange.test_aware_different_tz",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "1.3.0",
+        "commit": "87a1a774aad0505d9da18ad1d16f6e571f262503",
+        "lines": [
+          1342,
+          1354
+        ],
+        "content_hash": "5b9d72dadbd13476cc100e33ac0ffc392e03bfd23cb7961655b9c11241719572"
+      },
+      "new": {
+        "revision": "1.4.0",
+        "commit": "2c1f5185ad66bf3b1cf8c0812f4b4fe65ac46656",
+        "lines": [
+          1377,
+          1389
+        ],
+        "content_hash": "d0c37659bf0eb0fe27d1e6620bd2223ff40f47935e5bde944a1a386f4acf58b7"
+      },
+      "lines_changed": 4,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "test_file",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "tests/test_arrow.py",
+      "kind": "method",
+      "symbol": "TestArrowSpanRange.test_aware_same_tz",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "1.3.0",
+        "commit": "87a1a774aad0505d9da18ad1d16f6e571f262503",
+        "lines": [
+          1329,
+          1340
+        ],
+        "content_hash": "8c57b258c9bcdc645dcde025fa5efc58016ef1087c6bf9879776e8b23f5bdcc2"
+      },
+      "new": {
+        "revision": "1.4.0",
+        "commit": "2c1f5185ad66bf3b1cf8c0812f4b4fe65ac46656",
+        "lines": [
+          1364,
+          1375
+        ],
+        "content_hash": "f5205e984c776d28913c7581cc6d037bc2af0f96d4a8bec2ff33f04a7091f265"
+      },
+      "lines_changed": 2,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "test_file",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "tests/test_arrow.py",
+      "kind": "method",
+      "symbol": "TestArrowSpanRange.test_aware_tz",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "1.3.0",
+        "commit": "87a1a774aad0505d9da18ad1d16f6e571f262503",
+        "lines": [
+          1356,
+          1366
+        ],
+        "content_hash": "76128477aa80484bec9d842fe644b247c5f903f92b9d41f5cae418c0b8e23306"
+      },
+      "new": {
+        "revision": "1.4.0",
+        "commit": "2c1f5185ad66bf3b1cf8c0812f4b4fe65ac46656",
+        "lines": [
+          1391,
+          1401
+        ],
+        "content_hash": "83d1e6774cd0b0fe44c98cb7c56a521163d7d708e173808368cb56fbd6965c98"
+      },
+      "lines_changed": 8,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "test_file",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "tests/test_arrow.py",
+      "kind": "method",
+      "symbol": "TestArrowSpanRange.test_naive_tz",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "1.3.0",
+        "commit": "87a1a774aad0505d9da18ad1d16f6e571f262503",
+        "lines": [
+          1318,
+          1327
+        ],
+        "content_hash": "4d8650c603284d1e414921420ac76417b890cf5cba4f89ae5db7ab87e31b3480"
+      },
+      "new": {
+        "revision": "1.4.0",
+        "commit": "2c1f5185ad66bf3b1cf8c0812f4b4fe65ac46656",
+        "lines": [
+          1353,
+          1362
+        ],
+        "content_hash": "909e8ceab86d4161f515ac664ed0ccf3e8a2ed6143722c42807505f98214236d"
+      },
+      "lines_changed": 2,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "test_file",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "tests/test_arrow.py",
+      "kind": "method",
+      "symbol": "TestArrowUtil.test_get_datetime",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "1.3.0",
+        "commit": "87a1a774aad0505d9da18ad1d16f6e571f262503",
+        "lines": [
+          2888,
+          2903
+        ],
+        "content_hash": "1c2f08e04cacb2ed41a92d97ba8a0d30f4f50672e1a577e72deb0f6a33d80a8e"
+      },
+      "new": {
+        "revision": "1.4.0",
+        "commit": "2c1f5185ad66bf3b1cf8c0812f4b4fe65ac46656",
+        "lines": [
+          3069,
+          3084
+        ],
+        "content_hash": "813980af8d520625547d712252acb51958f6b32de3a263f6702c98758a08c059"
+      },
+      "lines_changed": 2,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "test_file",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "tests/test_arrow.py",
+      "kind": "method",
+      "symbol": "TestTestArrowFactory.test_fromdate",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "1.3.0",
+        "commit": "87a1a774aad0505d9da18ad1d16f6e571f262503",
+        "lines": [
+          154,
+          159
+        ],
+        "content_hash": "67516cf1ddaad3582822d8b3c3c80888239822a60efb5b2629ec6524b3a55aab"
+      },
+      "new": {
+        "revision": "1.4.0",
+        "commit": "2c1f5185ad66bf3b1cf8c0812f4b4fe65ac46656",
+        "lines": [
+          175,
+          180
+        ],
+        "content_hash": "03663fc128178a2b0c95487aca89bc2665f4dc3450ea11a51ef9e65b6252cab1"
+      },
+      "lines_changed": 4,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "test_file",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "tests/test_arrow.py",
+      "kind": "method",
+      "symbol": "TestTestArrowFactory.test_fromdatetime_dt_tzinfo",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "1.3.0",
+        "commit": "87a1a774aad0505d9da18ad1d16f6e571f262503",
+        "lines": [
+          140,
+          145
+        ],
+        "content_hash": "976ccd511439664dc356cf6d3bd32c689e477babed71eef7892a2dd8d2c440a7"
+      },
+      "new": {
+        "revision": "1.4.0",
+        "commit": "2c1f5185ad66bf3b1cf8c0812f4b4fe65ac46656",
+        "lines": [
+          161,
+          166
+        ],
+        "content_hash": "539da1a32c58a2d1cd82d5b83c76c62abd2cc215ac348b08a7272aa2df1ed629"
+      },
+      "lines_changed": 4,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "test_file",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "tests/test_arrow.py",
+      "kind": "method",
+      "symbol": "TestTestArrowFactory.test_fromdatetime_tzinfo_arg",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "1.3.0",
+        "commit": "87a1a774aad0505d9da18ad1d16f6e571f262503",
+        "lines": [
+          147,
+          152
+        ],
+        "content_hash": "101f37e25256017ab430301c0a72310f18027943644f90b584903661e3b98a71"
+      },
+      "new": {
+        "revision": "1.4.0",
+        "commit": "2c1f5185ad66bf3b1cf8c0812f4b4fe65ac46656",
+        "lines": [
+          168,
+          173
+        ],
+        "content_hash": "ea21abd6cb38e17e71333946685690a3670adff4796dcde0764247684900e3f6"
+      },
+      "lines_changed": 4,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "test_file",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "tests/test_arrow.py",
+      "kind": "method",
+      "symbol": "TestTestArrowFactory.test_fromtimestamp",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "1.3.0",
+        "commit": "87a1a774aad0505d9da18ad1d16f6e571f262503",
+        "lines": [
+          99,
+          120
+        ],
+        "content_hash": "2fe837d52eda61e35d2b95a609cdf732e7faeaae8e5086e48095c33f9d040271"
+      },
+      "new": {
+        "revision": "1.4.0",
+        "commit": "2c1f5185ad66bf3b1cf8c0812f4b4fe65ac46656",
+        "lines": [
+          122,
+          141
+        ],
+        "content_hash": "32d3033f423b54078aa6574eaacad24021a7960f0b3b372f2547eeb22a454ee1"
+      },
+      "lines_changed": 10,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "test_file",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "tests/test_arrow.py",
+      "kind": "method",
+      "symbol": "TestTestArrowFactory.test_now",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "1.3.0",
+        "commit": "87a1a774aad0505d9da18ad1d16f6e571f262503",
+        "lines": [
+          83,
+          88
+        ],
+        "content_hash": "8194848680bc84517682e3f99a254cc76253c006a205c0499fc85e2fc457e04a"
+      },
+      "new": {
+        "revision": "1.4.0",
+        "commit": "2c1f5185ad66bf3b1cf8c0812f4b4fe65ac46656",
+        "lines": [
+          108,
+          111
+        ],
+        "content_hash": "43c01bb59e0c4043b46016d0fdccd4942052ed56e1e49153c239bf2a3f5352c4"
+      },
+      "lines_changed": 4,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "test_file",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "tests/test_arrow.py",
+      "kind": "method",
+      "symbol": "TestTestArrowFactory.test_strptime",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "1.3.0",
+        "commit": "87a1a774aad0505d9da18ad1d16f6e571f262503",
+        "lines": [
+          161,
+          172
+        ],
+        "content_hash": "165f93f5255782d8c4d04afd9d337dbb790d8781a3551fc1cc98738f092bf004"
+      },
+      "new": {
+        "revision": "1.4.0",
+        "commit": "2c1f5185ad66bf3b1cf8c0812f4b4fe65ac46656",
+        "lines": [
+          182,
+          193
+        ],
+        "content_hash": "55ddcfd3c7e556d96d9dab404bbea5cd89703ea3970ad4257900ab55ed124745"
+      },
+      "lines_changed": 4,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "test_file",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "tests/test_arrow.py",
+      "kind": "method",
+      "symbol": "TestTestArrowFactory.test_utcfromtimestamp",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "1.3.0",
+        "commit": "87a1a774aad0505d9da18ad1d16f6e571f262503",
+        "lines": [
+          122,
+          131
+        ],
+        "content_hash": "32379387cc8722a7d649ea7ae3cce9a40b18a2e27aa67d3248e3dd993996a542"
+      },
+      "new": {
+        "revision": "1.4.0",
+        "commit": "2c1f5185ad66bf3b1cf8c0812f4b4fe65ac46656",
+        "lines": [
+          143,
+          152
+        ],
+        "content_hash": "6231e643e68190a8dacb0da7320589a503a19002f41d0b02fad4357e1f05656b"
+      },
+      "lines_changed": 2,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "test_file",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "tests/test_arrow.py",
+      "kind": "method",
+      "symbol": "TestTestArrowFactory.test_utcnow",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "1.3.0",
+        "commit": "87a1a774aad0505d9da18ad1d16f6e571f262503",
+        "lines": [
+          90,
+          97
+        ],
+        "content_hash": "285051c750c713d95da2fb622504ff19450e415a52392a6d3460cbe7a65bc0d4"
+      },
+      "new": {
+        "revision": "1.4.0",
+        "commit": "2c1f5185ad66bf3b1cf8c0812f4b4fe65ac46656",
+        "lines": [
+          113,
+          120
+        ],
+        "content_hash": "c7710e8dc1165fcbfa04b67ac66c24233b869c639584fa861e35c9faff58eb72"
+      },
+      "lines_changed": 2,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "test_file",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "tests/test_arrow.py",
+      "kind": "method",
+      "symbol": "TestTestArrowInit.test_init",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "1.3.0",
+        "commit": "87a1a774aad0505d9da18ad1d16f6e571f262503",
+        "lines": [
+          30,
+          57
+        ],
+        "content_hash": "343d9f97945b8163bba51f0c41f8068ee4ec7c6d4424ee46b1503bfd55ea9490"
+      },
+      "new": {
+        "revision": "1.4.0",
+        "commit": "2c1f5185ad66bf3b1cf8c0812f4b4fe65ac46656",
+        "lines": [
+          35,
+          62
+        ],
+        "content_hash": "0a910e669cbe942b6fc569c8dab314a458ffb43c6b2064cdf3db276a130851bf"
+      },
+      "lines_changed": 4,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "test_file",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "tests/test_arrow.py",
+      "kind": "method",
+      "symbol": "TestTestArrowInit.test_init_pytz_timezone",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "1.3.0",
+        "commit": "87a1a774aad0505d9da18ad1d16f6e571f262503",
+        "lines": [
+          60,
+          68
+        ],
+        "content_hash": "0172df31e4efc513d84e34bdf1e62c429f19a14b7d20cbd6e8d5b7c8f316913b"
+      },
+      "new": {
+        "revision": "1.4.0",
+        "commit": "2c1f5185ad66bf3b1cf8c0812f4b4fe65ac46656",
+        "lines": [
+          65,
+          73
+        ],
+        "content_hash": "f2a135d387098efa4bf90fc0118839df2906eac890454e9decc72bf886013f3b"
+      },
+      "lines_changed": 2,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "test_file",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "tests/test_factory.py",
+      "kind": "class",
+      "symbol": "TestGet",
+      "part_index": 1,
+      "part_count": 2,
+      "status": "superseded",
+      "old": {
+        "revision": "1.3.0",
+        "commit": "87a1a774aad0505d9da18ad1d16f6e571f262503",
+        "lines": [
+          15,
+          367
+        ],
+        "content_hash": "261a9c7e477d0875662307d6e3b53f9a77daad27c34afe154f5fbf994e207929"
+      },
+      "new": {
+        "revision": "1.4.0",
+        "commit": "2c1f5185ad66bf3b1cf8c0812f4b4fe65ac46656",
+        "lines": [
+          20,
+          367
+        ],
+        "content_hash": "ddaa189c6ede43b7fbf1f978a58c2aa22661c996d14422ff1af9dfa53560dd0d"
+      },
+      "lines_changed": 95,
+      "normalized": false,
+      "included": false,
+      "exclusion_reason": "test_file",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "tests/test_factory.py",
+      "kind": "class",
+      "symbol": "TestGet",
+      "part_index": 2,
+      "part_count": 2,
+      "status": "superseded",
+      "old": {
+        "revision": "1.3.0",
+        "commit": "87a1a774aad0505d9da18ad1d16f6e571f262503",
+        "lines": [
+          368,
+          369
+        ],
+        "content_hash": "55e948765d3206ba90120a9fcfaac4cd643912dd098f5f4bb899454d0983843f"
+      },
+      "new": {
+        "revision": "1.4.0",
+        "commit": "2c1f5185ad66bf3b1cf8c0812f4b4fe65ac46656",
+        "lines": [
+          368,
+          372
+        ],
+        "content_hash": "69fb631dc503ada4052379ed947d368d4f85647089194560c3075b4c7c36dee5"
+      },
+      "lines_changed": 7,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "test_file",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "tests/test_factory.py",
+      "kind": "class",
+      "symbol": "TestNow",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "1.3.0",
+        "commit": "87a1a774aad0505d9da18ad1d16f6e571f262503",
+        "lines": [
+          382,
+          392
+        ],
+        "content_hash": "63a0e685c4885743b76d7c9b609248ebcc93ce03b094f71243fcc6be2e005062"
+      },
+      "new": {
+        "revision": "1.4.0",
+        "commit": "2c1f5185ad66bf3b1cf8c0812f4b4fe65ac46656",
+        "lines": [
+          385,
+          395
+        ],
+        "content_hash": "e96ec21b827f4cb5165bea0845e2d4783f1eaaaf4652ff57409c796e747a925a"
+      },
+      "lines_changed": 6,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "test_file",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "tests/test_factory.py",
+      "kind": "class",
+      "symbol": "TestUtcNow",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "1.3.0",
+        "commit": "87a1a774aad0505d9da18ad1d16f6e571f262503",
+        "lines": [
+          373,
+          378
+        ],
+        "content_hash": "c385f9339801ba090b095726671aa8eeee4e77f08e30cdedb617ba147e6946d9"
+      },
+      "new": {
+        "revision": "1.4.0",
+        "commit": "2c1f5185ad66bf3b1cf8c0812f4b4fe65ac46656",
+        "lines": [
+          376,
+          381
+        ],
+        "content_hash": "2add774a9bb5d0bd3e06bb03d057132acc48decc6859210774161a31117b2f47"
+      },
+      "lines_changed": 2,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "test_file",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "tests/test_factory.py",
+      "kind": "method",
+      "symbol": "TestGet.test_kwarg_tzinfo",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "1.3.0",
+        "commit": "87a1a774aad0505d9da18ad1d16f6e571f262503",
+        "lines": [
+          124,
+          133
+        ],
+        "content_hash": "ea9f63d5ff612ab91a9dfb48c64607ad03c8b3df36346da044c70c815be0d56a"
+      },
+      "new": {
+        "revision": "1.4.0",
+        "commit": "2c1f5185ad66bf3b1cf8c0812f4b4fe65ac46656",
+        "lines": [
+          129,
+          138
+        ],
+        "content_hash": "41ff10b0a4e6f5c779b2cd63a383dd5c70cc7f885bc3d570798db75add46be7c"
+      },
+      "lines_changed": 6,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "test_file",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "tests/test_factory.py",
+      "kind": "method",
+      "symbol": "TestGet.test_kwarg_tzinfo_string",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "1.3.0",
+        "commit": "87a1a774aad0505d9da18ad1d16f6e571f262503",
+        "lines": [
+          135,
+          145
+        ],
+        "content_hash": "fe7213079fdbbfebacf73bd7924dc85036ca1b627fb204a27a2541c8e0b3c2b6"
+      },
+      "new": {
+        "revision": "1.4.0",
+        "commit": "2c1f5185ad66bf3b1cf8c0812f4b4fe65ac46656",
+        "lines": [
+          140,
+          150
+        ],
+        "content_hash": "d280649da175ae91d1e334941121689fe553727f02945f3767fdf6e44e4817ed"
+      },
+      "lines_changed": 4,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "test_file",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "tests/test_factory.py",
+      "kind": "method",
+      "symbol": "TestGet.test_locale_kwarg_only",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "1.3.0",
+        "commit": "87a1a774aad0505d9da18ad1d16f6e571f262503",
+        "lines": [
+          363,
+          365
+        ],
+        "content_hash": "a7cea2b92db9c85339e9571c056f655ee29413aee6083b7d32249532f9cfd462"
+      },
+      "new": {
+        "revision": "1.4.0",
+        "commit": "2c1f5185ad66bf3b1cf8c0812f4b4fe65ac46656",
+        "lines": [
+          366,
+          368
+        ],
+        "content_hash": "1a35477f35c0652be429bf6f0040a9fdc6293c3eb6041fe562bcf885fb66e6d5"
+      },
+      "lines_changed": 2,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "test_file",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "tests/test_factory.py",
+      "kind": "method",
+      "symbol": "TestGet.test_locale_with_tzinfo",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "1.3.0",
+        "commit": "87a1a774aad0505d9da18ad1d16f6e571f262503",
+        "lines": [
+          367,
+          369
+        ],
+        "content_hash": "dd0858ce94556714e44a2613a2bae7bdbd2f0916d175689dc44a6b9997f0df52"
+      },
+      "new": {
+        "revision": "1.4.0",
+        "commit": "2c1f5185ad66bf3b1cf8c0812f4b4fe65ac46656",
+        "lines": [
+          370,
+          372
+        ],
+        "content_hash": "7daa5674bc5fa4bbb4577988ae866217879beeefaaa5d5b808aa0751b1609c00"
+      },
+      "lines_changed": 4,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "test_file",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "tests/test_factory.py",
+      "kind": "method",
+      "symbol": "TestGet.test_no_args",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "1.3.0",
+        "commit": "87a1a774aad0505d9da18ad1d16f6e571f262503",
+        "lines": [
+          16,
+          19
+        ],
+        "content_hash": "3313c42b04dcdc67fa2d4aa234d595e7d49f98c54fab6fc1ecbc291403100798"
+      },
+      "new": {
+        "revision": "1.4.0",
+        "commit": "2c1f5185ad66bf3b1cf8c0812f4b4fe65ac46656",
+        "lines": [
+          21,
+          24
+        ],
+        "content_hash": "5341fe58d197b7a05db3ee00742c14a05a9b2102db1b99a5339633fd517c4353"
+      },
+      "lines_changed": 2,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "test_file",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "tests/test_factory.py",
+      "kind": "method",
+      "symbol": "TestGet.test_one_arg_arrow_tzinfo_kwarg",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "1.3.0",
+        "commit": "87a1a774aad0505d9da18ad1d16f6e571f262503",
+        "lines": [
+          175,
+          182
+        ],
+        "content_hash": "6f00272fb749729798ffacc812747ef4b6f069f6ff805f27dd6873299b6ad9c4"
+      },
+      "new": {
+        "revision": "1.4.0",
+        "commit": "2c1f5185ad66bf3b1cf8c0812f4b4fe65ac46656",
+        "lines": [
+          180,
+          187
+        ],
+        "content_hash": "312a24954fd16db32e0e31c3b4fc9648da235029aa3d2299e4b01ffa66cbbc5a"
+      },
+      "lines_changed": 2,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "test_file",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "tests/test_factory.py",
+      "kind": "method",
+      "symbol": "TestGet.test_one_arg_date_tzinfo_kwarg",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "1.3.0",
+        "commit": "87a1a774aad0505d9da18ad1d16f6e571f262503",
+        "lines": [
+          184,
+          192
+        ],
+        "content_hash": "3d1dcca70c99549f3ae10cb13ed74f9df7422fe960f78c6ea53434cbb4138af2"
+      },
+      "new": {
+        "revision": "1.4.0",
+        "commit": "2c1f5185ad66bf3b1cf8c0812f4b4fe65ac46656",
+        "lines": [
+          189,
+          197
+        ],
+        "content_hash": "92484a54576580873882f341bfe099c1f7941fe89d0e7941bf63f72f08276ee6"
+      },
+      "lines_changed": 2,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "test_file",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "tests/test_factory.py",
+      "kind": "method",
+      "symbol": "TestGet.test_one_arg_datetime",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "1.3.0",
+        "commit": "87a1a774aad0505d9da18ad1d16f6e571f262503",
+        "lines": [
+          93,
+          96
+        ],
+        "content_hash": "79e1eace358a97f61b2d357ffec0bd87be5d2e1c5143ccb1c834c9377a08f37a"
+      },
+      "new": {
+        "revision": "1.4.0",
+        "commit": "2c1f5185ad66bf3b1cf8c0812f4b4fe65ac46656",
+        "lines": [
+          98,
+          101
+        ],
+        "content_hash": "035c60f818e19b7baed46ce8287d288081b7077c9dce7821c94ef5071f7484d3"
+      },
+      "lines_changed": 2,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "test_file",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "tests/test_factory.py",
+      "kind": "method",
+      "symbol": "TestGet.test_one_arg_datetime_tzinfo_kwarg",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "1.3.0",
+        "commit": "87a1a774aad0505d9da18ad1d16f6e571f262503",
+        "lines": [
+          166,
+          173
+        ],
+        "content_hash": "6898e94775e57934eeed47d9a4f42bf72f60068c791d889dc2c584ac7ba1eb7f"
+      },
+      "new": {
+        "revision": "1.4.0",
+        "commit": "2c1f5185ad66bf3b1cf8c0812f4b4fe65ac46656",
+        "lines": [
+          171,
+          178
+        ],
+        "content_hash": "10c930ccae068b90708ae3ef1282548e4dcd96bc294e46bc8379e0396430f389"
+      },
+      "lines_changed": 2,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "test_file",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "tests/test_factory.py",
+      "kind": "method",
+      "symbol": "TestGet.test_one_arg_expanded_timestamp",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "1.3.0",
+        "commit": "87a1a774aad0505d9da18ad1d16f6e571f262503",
+        "lines": [
+          64,
+          74
+        ],
+        "content_hash": "b6e20c17348aa12a5876f8cf4ec050e396f4b3858e29f76fcac58858f83de9f6"
+      },
+      "new": {
+        "revision": "1.4.0",
+        "commit": "2c1f5185ad66bf3b1cf8c0812f4b4fe65ac46656",
+        "lines": [
+          69,
+          79
+        ],
+        "content_hash": "f425dbdfffc02c0dcd234ccf6487799f9891cf76e953e3b861f4b85bcd1e6c04"
+      },
+      "lines_changed": 8,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "test_file",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "tests/test_factory.py",
+      "kind": "method",
+      "symbol": "TestGet.test_one_arg_iso_str",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "1.3.0",
+        "commit": "87a1a774aad0505d9da18ad1d16f6e571f262503",
+        "lines": [
+          201,
+          206
+        ],
+        "content_hash": "3a6dee7d11c5800934dbc6b8730c87fa8fb4462254a1dd60b42a90acefd1f45a"
+      },
+      "new": {
+        "revision": "1.4.0",
+        "commit": "2c1f5185ad66bf3b1cf8c0812f4b4fe65ac46656",
+        "lines": [
+          206,
+          209
+        ],
+        "content_hash": "e3a1fea80cb722302f6c3e41874c05f5cf9e050977f50e89367c7e7330e83893"
+      },
+      "lines_changed": 6,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "test_file",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "tests/test_factory.py",
+      "kind": "method",
+      "symbol": "TestGet.test_one_arg_timestamp",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "1.3.0",
+        "commit": "87a1a774aad0505d9da18ad1d16f6e571f262503",
+        "lines": [
+          37,
+          62
+        ],
+        "content_hash": "f6dd3f9755df18bf66186dde6e7ea89103e902efba6593a6f906598a35f112f1"
+      },
+      "new": {
+        "revision": "1.4.0",
+        "commit": "2c1f5185ad66bf3b1cf8c0812f4b4fe65ac46656",
+        "lines": [
+          42,
+          67
+        ],
+        "content_hash": "15d01786eba602c3b25898370a085c8437bd9b1be4f3cafb60f567de483ce976"
+      },
+      "lines_changed": 4,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "test_file",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "tests/test_factory.py",
+      "kind": "method",
+      "symbol": "TestGet.test_one_arg_timestamp_with_tzinfo",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "1.3.0",
+        "commit": "87a1a774aad0505d9da18ad1d16f6e571f262503",
+        "lines": [
+          76,
+          85
+        ],
+        "content_hash": "28008ed4878bf28ab348de293c5b1a2a073201255ba77b6eff6415bfcba49721"
+      },
+      "new": {
+        "revision": "1.4.0",
+        "commit": "2c1f5185ad66bf3b1cf8c0812f4b4fe65ac46656",
+        "lines": [
+          81,
+          90
+        ],
+        "content_hash": "041f6689f214c81b12170c1d4601c6394b1564098e8ef74e65c81e0bbd01f4b9"
+      },
+      "lines_changed": 4,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "test_file",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "tests/test_factory.py",
+      "kind": "method",
+      "symbol": "TestGet.test_one_arg_tzinfo",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "1.3.0",
+        "commit": "87a1a774aad0505d9da18ad1d16f6e571f262503",
+        "lines": [
+          104,
+          113
+        ],
+        "content_hash": "629b2af60ba9c8dec699f42522dbd72148fb3463f31a210989f331cd4cab3de4"
+      },
+      "new": {
+        "revision": "1.4.0",
+        "commit": "2c1f5185ad66bf3b1cf8c0812f4b4fe65ac46656",
+        "lines": [
+          109,
+          118
+        ],
+        "content_hash": "e425add5224d81cf14e4cb3093891a610c064c888fa102950b649f9e62ebae8b"
+      },
+      "lines_changed": 6,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "test_file",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "tests/test_factory.py",
+      "kind": "method",
+      "symbol": "TestGet.test_struct_time",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "1.3.0",
+        "commit": "87a1a774aad0505d9da18ad1d16f6e571f262503",
+        "lines": [
+          31,
+          35
+        ],
+        "content_hash": "63c3186b2e3d780cc7ec7aabf0db164ed3719373ad541d45e6046ab5927ae194"
+      },
+      "new": {
+        "revision": "1.4.0",
+        "commit": "2c1f5185ad66bf3b1cf8c0812f4b4fe65ac46656",
+        "lines": [
+          36,
+          40
+        ],
+        "content_hash": "7d400533837c5098e4f37a1cc1cd213ed9d507d98065f83830e564372318eadc"
+      },
+      "lines_changed": 2,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "test_file",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "tests/test_factory.py",
+      "kind": "method",
+      "symbol": "TestGet.test_two_args_date_tz_str",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "1.3.0",
+        "commit": "87a1a774aad0505d9da18ad1d16f6e571f262503",
+        "lines": [
+          269,
+          272
+        ],
+        "content_hash": "fa12fb87ad33e4c7bb1b09b81028bd7420ece8389f4d46a028bbf975974544b2"
+      },
+      "new": {
+        "revision": "1.4.0",
+        "commit": "2c1f5185ad66bf3b1cf8c0812f4b4fe65ac46656",
+        "lines": [
+          272,
+          275
+        ],
+        "content_hash": "b1d17337359fe250eb84c1124afda2825f4b757d2ad3b986fe4b11a52f0b873a"
+      },
+      "lines_changed": 2,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "test_file",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "tests/test_factory.py",
+      "kind": "method",
+      "symbol": "TestGet.test_two_args_date_tzinfo",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "1.3.0",
+        "commit": "87a1a774aad0505d9da18ad1d16f6e571f262503",
+        "lines": [
+          264,
+          267
+        ],
+        "content_hash": "c7d1743cfb643b883c8b6c519acbebcc3d73b3d424d9f877ee2c2d7de58327cb"
+      },
+      "new": {
+        "revision": "1.4.0",
+        "commit": "2c1f5185ad66bf3b1cf8c0812f4b4fe65ac46656",
+        "lines": [
+          267,
+          270
+        ],
+        "content_hash": "6766a0a19487888f61ed17a1ec2571ec7d58f913e49eacd5a0d4521f77de8d9f"
+      },
+      "lines_changed": 4,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "test_file",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "tests/test_factory.py",
+      "kind": "method",
+      "symbol": "TestGet.test_two_args_datetime_other",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "1.3.0",
+        "commit": "87a1a774aad0505d9da18ad1d16f6e571f262503",
+        "lines": [
+          274,
+          276
+        ],
+        "content_hash": "a36296d73ba7c71cbfd27ba7757f7233c1bd8978714bb14ed7c6b4513bea3461"
+      },
+      "new": {
+        "revision": "1.4.0",
+        "commit": "2c1f5185ad66bf3b1cf8c0812f4b4fe65ac46656",
+        "lines": [
+          277,
+          279
+        ],
+        "content_hash": "87a9d889dea4de1296bfef5ef7a7fa0f7def24f18bbe2246f03d073cb6cf7e17"
+      },
+      "lines_changed": 2,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "test_file",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "tests/test_factory.py",
+      "kind": "method",
+      "symbol": "TestGet.test_two_args_datetime_tz_str",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "1.3.0",
+        "commit": "87a1a774aad0505d9da18ad1d16f6e571f262503",
+        "lines": [
+          259,
+          262
+        ],
+        "content_hash": "6c96386118a6abcb8abcbe2ad0edada7a53f44347e3e58cd50b6fe8f99f28632"
+      },
+      "new": {
+        "revision": "1.4.0",
+        "commit": "2c1f5185ad66bf3b1cf8c0812f4b4fe65ac46656",
+        "lines": [
+          262,
+          265
+        ],
+        "content_hash": "dbb836d3361cd0ed406a92328cd9d984f9c54210dfe0c7a979c4558951da8ffd"
+      },
+      "lines_changed": 2,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "test_file",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "tests/test_factory.py",
+      "kind": "method",
+      "symbol": "TestGet.test_two_args_datetime_tzinfo",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "1.3.0",
+        "commit": "87a1a774aad0505d9da18ad1d16f6e571f262503",
+        "lines": [
+          254,
+          257
+        ],
+        "content_hash": "2274b10c3e1be5aa10cd7e15050426b4a6fc3dbe79cca1e122b670180685c0f7"
+      },
+      "new": {
+        "revision": "1.4.0",
+        "commit": "2c1f5185ad66bf3b1cf8c0812f4b4fe65ac46656",
+        "lines": [
+          257,
+          260
+        ],
+        "content_hash": "19e72444789179dcb998ca0075d84dde0b356b4deafabbe3521d3319995729c3"
+      },
+      "lines_changed": 4,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "test_file",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "tests/test_factory.py",
+      "kind": "method",
+      "symbol": "TestGet.test_two_args_str_tzinfo",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "1.3.0",
+        "commit": "87a1a774aad0505d9da18ad1d16f6e571f262503",
+        "lines": [
+          287,
+          292
+        ],
+        "content_hash": "367f795d63a2fa4f10c5c1f95973667909cbdd39d725d5a894212a6268fc15a8"
+      },
+      "new": {
+        "revision": "1.4.0",
+        "commit": "2c1f5185ad66bf3b1cf8c0812f4b4fe65ac46656",
+        "lines": [
+          290,
+          295
+        ],
+        "content_hash": "97e41f630f94401e23283e0c3bdc142bdb495dd11c9d43ac20c7225206484984"
+      },
+      "lines_changed": 4,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "test_file",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "tests/test_factory.py",
+      "kind": "method",
+      "symbol": "TestNow.test_no_tz",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "1.3.0",
+        "commit": "87a1a774aad0505d9da18ad1d16f6e571f262503",
+        "lines": [
+          383,
+          384
+        ],
+        "content_hash": "d385fd40767a4fa07597b6108f1b1f82ba5047ca0a8bed5f68d3e5ef2eda3176"
+      },
+      "new": {
+        "revision": "1.4.0",
+        "commit": "2c1f5185ad66bf3b1cf8c0812f4b4fe65ac46656",
+        "lines": [
+          386,
+          387
+        ],
+        "content_hash": "95af3c0cf711621d66c0aeee961ae4f970b5af5f07c4a977cdc2ecd970605b27"
+      },
+      "lines_changed": 2,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "test_file",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "tests/test_factory.py",
+      "kind": "method",
+      "symbol": "TestNow.test_tz_str",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "1.3.0",
+        "commit": "87a1a774aad0505d9da18ad1d16f6e571f262503",
+        "lines": [
+          391,
+          392
+        ],
+        "content_hash": "de431bb2275358d8e46334d652f4c9d28f4bf7e82bbd87e8aff0bca4d30e4b76"
+      },
+      "new": {
+        "revision": "1.4.0",
+        "commit": "2c1f5185ad66bf3b1cf8c0812f4b4fe65ac46656",
+        "lines": [
+          394,
+          395
+        ],
+        "content_hash": "09e3ca1ac5e6bdebbd6b9fc31030803164577eac7d8718367df9a425ced1a6f8"
+      },
+      "lines_changed": 2,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "test_file",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "tests/test_factory.py",
+      "kind": "method",
+      "symbol": "TestNow.test_tzinfo",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "1.3.0",
+        "commit": "87a1a774aad0505d9da18ad1d16f6e571f262503",
+        "lines": [
+          386,
+          389
+        ],
+        "content_hash": "cad12348ee07eb4a1cdf1d796ebc4f5b819fac203a17689ebdf338870fd2406d"
+      },
+      "new": {
+        "revision": "1.4.0",
+        "commit": "2c1f5185ad66bf3b1cf8c0812f4b4fe65ac46656",
+        "lines": [
+          389,
+          392
+        ],
+        "content_hash": "5c17ba22dac501314148e1426b7ef7c337877a36c865e0924d20b42dadf71e72"
+      },
+      "lines_changed": 2,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "test_file",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "tests/test_factory.py",
+      "kind": "method",
+      "symbol": "TestUtcNow.test_utcnow",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "1.3.0",
+        "commit": "87a1a774aad0505d9da18ad1d16f6e571f262503",
+        "lines": [
+          374,
+          378
+        ],
+        "content_hash": "d21592025b3c144cbc2f3952ddc1addd4b6aec6574dbb18cafc33abfacb69efa"
+      },
+      "new": {
+        "revision": "1.4.0",
+        "commit": "2c1f5185ad66bf3b1cf8c0812f4b4fe65ac46656",
+        "lines": [
+          377,
+          381
+        ],
+        "content_hash": "20c0bfd6d18726e3f3f3d610273b0b72a8bbe68db2f5c18de769646f73bafe19"
+      },
+      "lines_changed": 2,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "test_file",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "tests/test_formatter.py",
+      "kind": "class",
+      "symbol": "TestFormatterBuiltinFormats",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "1.3.0",
+        "commit": "87a1a774aad0505d9da18ad1d16f6e571f262503",
+        "lines": [
+          208,
+          267
+        ],
+        "content_hash": "94b00dd761d565d97425f4bb8572192049bd95382a7d0d418160adc5b291bdad"
+      },
+      "new": {
+        "revision": "1.4.0",
+        "commit": "2c1f5185ad66bf3b1cf8c0812f4b4fe65ac46656",
+        "lines": [
+          213,
+          278
+        ],
+        "content_hash": "c08e8ea6f2e0c7aa0f87e5bbc5559629dfe707641d9edccf81d7e195bdd32eaa"
+      },
+      "lines_changed": 6,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "test_file",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "tests/test_formatter.py",
+      "kind": "class",
+      "symbol": "TestFormatterFormatToken",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "1.3.0",
+        "commit": "87a1a774aad0505d9da18ad1d16f6e571f262503",
+        "lines": [
+          24,
+          204
+        ],
+        "content_hash": "c9213861ae1a45ff41fc15fa5e2b5f47df3784b5dd74b4894b1cfa9d52ff0f80"
+      },
+      "new": {
+        "revision": "1.4.0",
+        "commit": "2c1f5185ad66bf3b1cf8c0812f4b4fe65ac46656",
+        "lines": [
+          29,
+          209
+        ],
+        "content_hash": "aa8f0b3f67a4d876c301c57505836c986ddafa75cbca8b360ec933b442607eef"
+      },
+      "lines_changed": 6,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "test_file",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "tests/test_formatter.py",
+      "kind": "method",
+      "symbol": "TestFormatterFormatToken.test_timezone",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "1.3.0",
+        "commit": "87a1a774aad0505d9da18ad1d16f6e571f262503",
+        "lines": [
+          115,
+          122
+        ],
+        "content_hash": "5278eaab2a4a218d5f639138673e830d0525a6522a2fc102f0324442bd3fd410"
+      },
+      "new": {
+        "revision": "1.4.0",
+        "commit": "2c1f5185ad66bf3b1cf8c0812f4b4fe65ac46656",
+        "lines": [
+          120,
+          127
+        ],
+        "content_hash": "8e1be9899203a86026949c442cef2e3ee04d9e1a018f69fdf07ba7a118356750"
+      },
+      "lines_changed": 2,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "test_file",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "tests/test_formatter.py",
+      "kind": "method",
+      "symbol": "TestFormatterFormatToken.test_timezone_formatter",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "1.3.0",
+        "commit": "87a1a774aad0505d9da18ad1d16f6e571f262503",
+        "lines": [
+          125,
+          133
+        ],
+        "content_hash": "18b00491f2ec9bf6a229a3218c5e5fc8344872d3afb6d8e64125f4054511ae2f"
+      },
+      "new": {
+        "revision": "1.4.0",
+        "commit": "2c1f5185ad66bf3b1cf8c0812f4b4fe65ac46656",
+        "lines": [
+          130,
+          138
+        ],
+        "content_hash": "167ea7116f2cdfa856ff93e834bb70635dbdb4f2eaebfdb4ac5c18a7b69996b1"
+      },
+      "lines_changed": 4,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "test_file",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "tests/test_locales.py",
+      "kind": "class",
+      "symbol": "TestKoreanLocale",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "1.3.0",
+        "commit": "87a1a774aad0505d9da18ad1d16f6e571f262503",
+        "lines": [
+          2345,
+          2417
+        ],
+        "content_hash": "3627f81ec7537a9b26fbc7b5cbe4b48fe184c71a3b15f4db4863063b65107630"
+      },
+      "new": {
+        "revision": "1.4.0",
+        "commit": "2c1f5185ad66bf3b1cf8c0812f4b4fe65ac46656",
+        "lines": [
+          2552,
+          2624
+        ],
+        "content_hash": "00bc9ad299c6a14730e3563b116a3768567b519fa181f4148d8be643e8703557"
+      },
+      "lines_changed": 4,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "test_file",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "tests/test_locales.py",
+      "kind": "class",
+      "symbol": "TestLocaleValidation",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "1.3.0",
+        "commit": "87a1a774aad0505d9da18ad1d16f6e571f262503",
+        "lines": [
+          7,
+          49
+        ],
+        "content_hash": "cbc8d2d273aa90a6397a20c452e7f5205f5b90be90739243a9a9581a28c7bd26"
+      },
+      "new": {
+        "revision": "1.4.0",
+        "commit": "2c1f5185ad66bf3b1cf8c0812f4b4fe65ac46656",
+        "lines": [
+          7,
+          48
+        ],
+        "content_hash": "333995a42ae650898f3f606c936bf20b84f25acebe700b9a3cfcff31f2bcdfa8"
+      },
+      "lines_changed": 9,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "test_file",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "tests/test_locales.py",
+      "kind": "class",
+      "symbol": "TestThaiLocale",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "1.3.0",
+        "commit": "87a1a774aad0505d9da18ad1d16f6e571f262503",
+        "lines": [
+          1337,
+          1358
+        ],
+        "content_hash": "b41d97915528a8bb2243baca54907ffa79e0ce647189980d4a27b36db4f50b6e"
+      },
+      "new": {
+        "revision": "1.4.0",
+        "commit": "2c1f5185ad66bf3b1cf8c0812f4b4fe65ac46656",
+        "lines": [
+          1478,
+          1537
+        ],
+        "content_hash": "cfaa66679a58a73caa8b37005c2a79e311a1f1e8b72ed1e800a96320988beda1"
+      },
+      "lines_changed": 38,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "test_file",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "tests/test_locales.py",
+      "kind": "method",
+      "symbol": "TestKoreanLocale.test_format_relative",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "1.3.0",
+        "commit": "87a1a774aad0505d9da18ad1d16f6e571f262503",
+        "lines": [
+          2363,
+          2401
+        ],
+        "content_hash": "94f000a62bf9860f0169a91e8a4a886a266b6669fe8ec57bf25b0bc81c6de4a5"
+      },
+      "new": {
+        "revision": "1.4.0",
+        "commit": "2c1f5185ad66bf3b1cf8c0812f4b4fe65ac46656",
+        "lines": [
+          2570,
+          2608
+        ],
+        "content_hash": "0f0740c3a2e06e44c736d4b1824d944d58cb19f92a8417d0f32539c646eb1128"
+      },
+      "lines_changed": 4,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "test_file",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "tests/test_locales.py",
+      "kind": "method",
+      "symbol": "TestLocaleValidation.test_locale_name_validation",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "1.3.0",
+        "commit": "87a1a774aad0505d9da18ad1d16f6e571f262503",
+        "lines": [
+          35,
+          43
+        ],
+        "content_hash": "0688951a76f06c0fbd2249a5ddad92823ef14c3180659072a8ab226ebbae62aa"
+      },
+      "new": {
+        "revision": "1.4.0",
+        "commit": "2c1f5185ad66bf3b1cf8c0812f4b4fe65ac46656",
+        "lines": [
+          35,
+          42
+        ],
+        "content_hash": "901870e1791a7b9dff8d2913b2c1130a81ef11e588410d7aa8a83adca30ad46e"
+      },
+      "lines_changed": 9,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "test_file",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "tests/test_parser.py",
+      "kind": "class",
+      "symbol": "TestDateTimeParserISO",
+      "part_index": 1,
+      "part_count": 2,
+      "status": "superseded",
+      "old": {
+        "revision": "1.3.0",
+        "commit": "87a1a774aad0505d9da18ad1d16f6e571f262503",
+        "lines": [
+          912,
+          1222
+        ],
+        "content_hash": "2903427d4a4c65ea00b2fed38158f7113a2f097f24c618bf776a7fe640794c86"
+      },
+      "new": {
+        "revision": "1.4.0",
+        "commit": "2c1f5185ad66bf3b1cf8c0812f4b4fe65ac46656",
+        "lines": [
+          917,
+          1227
+        ],
+        "content_hash": "536d9de44b3fedaba38da7424dd28ef8b3864d762f719bcefd72b940434d72d1"
+      },
+      "lines_changed": 2,
+      "normalized": false,
+      "included": false,
+      "exclusion_reason": "test_file",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "tests/test_parser.py",
+      "kind": "class",
+      "symbol": "TestDateTimeParserParse",
+      "part_index": 1,
+      "part_count": 3,
+      "status": "superseded",
+      "old": {
+        "revision": "1.3.0",
+        "commit": "87a1a774aad0505d9da18ad1d16f6e571f262503",
+        "lines": [
+          164,
+          447
+        ],
+        "content_hash": "cad55d6d495605c126a7d779f38518df66ff2c9f8c2de06044c5c5aa779d4b64"
+      },
+      "new": {
+        "revision": "1.4.0",
+        "commit": "2c1f5185ad66bf3b1cf8c0812f4b4fe65ac46656",
+        "lines": [
+          169,
+          452
+        ],
+        "content_hash": "e30dbcf6aad219330c5bbfcb6e3286a289f0b7d23c305efd23a0062e8f1508ae"
+      },
+      "lines_changed": 2,
+      "normalized": false,
+      "included": false,
+      "exclusion_reason": "test_file",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "tests/test_parser.py",
+      "kind": "class",
+      "symbol": "TestTzinfoParser",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "1.3.0",
+        "commit": "87a1a774aad0505d9da18ad1d16f6e571f262503",
+        "lines": [
+          1310,
+          1345
+        ],
+        "content_hash": "8a1fa225fe78aa0282d18efef79c2440ca76b792f78f0fd4146ca92b46967daf"
+      },
+      "new": {
+        "revision": "1.4.0",
+        "commit": "2c1f5185ad66bf3b1cf8c0812f4b4fe65ac46656",
+        "lines": [
+          1315,
+          1354
+        ],
+        "content_hash": "611a52a12231c878ff04ec58c9ba6a36e3024c54e6ec73a3ea2f8320ee874b7f"
+      },
+      "lines_changed": 40,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "test_file",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "tests/test_parser.py",
+      "kind": "method",
+      "symbol": "TestDateTimeParserISO.test_isoformat",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "1.3.0",
+        "commit": "87a1a774aad0505d9da18ad1d16f6e571f262503",
+        "lines": [
+          1151,
+          1154
+        ],
+        "content_hash": "3dffaf5bb690c94cba0b1fde8fc0f41acbb62bb2e33368cd3489dad6bb6734c4"
+      },
+      "new": {
+        "revision": "1.4.0",
+        "commit": "2c1f5185ad66bf3b1cf8c0812f4b4fe65ac46656",
+        "lines": [
+          1156,
+          1159
+        ],
+        "content_hash": "062642cfd000220e234a2a3bba56c87ef88479f4473d8b9a2c5b0dfb234cc018"
+      },
+      "lines_changed": 2,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "test_file",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "tests/test_parser.py",
+      "kind": "method",
+      "symbol": "TestDateTimeParserParse.test_parse_tz_name_zzz",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "1.3.0",
+        "commit": "87a1a774aad0505d9da18ad1d16f6e571f262503",
+        "lines": [
+          321,
+          336
+        ],
+        "content_hash": "ec8d13462db9ffba3cc375f0ee7da2ccff67dc8aaf91011f7f8cd4c5cea9a881"
+      },
+      "new": {
+        "revision": "1.4.0",
+        "commit": "2c1f5185ad66bf3b1cf8c0812f4b4fe65ac46656",
+        "lines": [
+          326,
+          341
+        ],
+        "content_hash": "e2ab08bacc85886224f743eb64470262ad694d9a19ba28aac6c43674c0cdc1d4"
+      },
+      "lines_changed": 2,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "test_file",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "tests/test_parser.py",
+      "kind": "method",
+      "symbol": "TestTzinfoParser.test_parse_iso",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "1.3.0",
+        "commit": "87a1a774aad0505d9da18ad1d16f6e571f262503",
+        "lines": [
+          1326,
+          1338
+        ],
+        "content_hash": "3bbdb43b2735c87330410473e6e4cdbf52576429410232d39e6ad08d570ac86e"
+      },
+      "new": {
+        "revision": "1.4.0",
+        "commit": "2c1f5185ad66bf3b1cf8c0812f4b4fe65ac46656",
+        "lines": [
+          1333,
+          1347
+        ],
+        "content_hash": "3408208873ad6862882452a98560c0a4cbf677c6bd61aebc6b886d531b1c1c21"
+      },
+      "lines_changed": 22,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "test_file",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "tests/test_parser.py",
+      "kind": "method",
+      "symbol": "TestTzinfoParser.test_parse_local",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "1.3.0",
+        "commit": "87a1a774aad0505d9da18ad1d16f6e571f262503",
+        "lines": [
+          1311,
+          1312
+        ],
+        "content_hash": "10a01b41362939bba15647b4aa6906e9b05a667a59741aba793eb1d0bfd16409"
+      },
+      "new": {
+        "revision": "1.4.0",
+        "commit": "2c1f5185ad66bf3b1cf8c0812f4b4fe65ac46656",
+        "lines": [
+          1316,
+          1319
+        ],
+        "content_hash": "a46414639f21b1cba5d0943147ac2cfdecabd20fcbb13f61514065e6067c600e"
+      },
+      "lines_changed": 4,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "test_file",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "tests/test_parser.py",
+      "kind": "method",
+      "symbol": "TestTzinfoParser.test_parse_str",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "1.3.0",
+        "commit": "87a1a774aad0505d9da18ad1d16f6e571f262503",
+        "lines": [
+          1340,
+          1341
+        ],
+        "content_hash": "50758f6cafbca15f6b55e655dc53123ea00129ed6416e7ea7a1716c498962d45"
+      },
+      "new": {
+        "revision": "1.4.0",
+        "commit": "2c1f5185ad66bf3b1cf8c0812f4b4fe65ac46656",
+        "lines": [
+          1349,
+          1350
+        ],
+        "content_hash": "8287120980844d294fff62af6ee3c9f98b8ec1af791051676ccca65096ca65d9"
+      },
+      "lines_changed": 2,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "test_file",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "tests/test_parser.py",
+      "kind": "method",
+      "symbol": "TestTzinfoParser.test_parse_utc",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "1.3.0",
+        "commit": "87a1a774aad0505d9da18ad1d16f6e571f262503",
+        "lines": [
+          1314,
+          1316
+        ],
+        "content_hash": "63125cebb0e860f5d63eb0c9b0aa62f2702bfeac632857eb731dfda720fd8439"
+      },
+      "new": {
+        "revision": "1.4.0",
+        "commit": "2c1f5185ad66bf3b1cf8c0812f4b4fe65ac46656",
+        "lines": [
+          1321,
+          1323
+        ],
+        "content_hash": "b69860b5f97364ef95f78829ea69a91e7640dae7b3f0a138848f10ddd408a20f"
+      },
+      "lines_changed": 4,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "test_file",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "tests/test_parser.py",
+      "kind": "method",
+      "symbol": "TestTzinfoParser.test_parse_utc_withoffset",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "1.3.0",
+        "commit": "87a1a774aad0505d9da18ad1d16f6e571f262503",
+        "lines": [
+          1318,
+          1324
+        ],
+        "content_hash": "b5000378a55d028ef53348f9851342e18ccc7d6429a6d2fc0fdbbd797bd571dc"
+      },
+      "new": {
+        "revision": "1.4.0",
+        "commit": "2c1f5185ad66bf3b1cf8c0812f4b4fe65ac46656",
+        "lines": [
+          1325,
+          1331
+        ],
+        "content_hash": "e2737a227e169c805336c592050c86e37a5c41840b418124b646ba4a2dd24995"
+      },
+      "lines_changed": 8,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "test_file",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "tests/test_util.py",
+      "kind": "class",
+      "symbol": "TestUtil",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "1.3.0",
+        "commit": "87a1a774aad0505d9da18ad1d16f6e571f262503",
+        "lines": [
+          9,
+          133
+        ],
+        "content_hash": "c19b18256d1b5587940c7a89f793e03ca7765e67043e3db2eacdb996a4232308"
+      },
+      "new": {
+        "revision": "1.4.0",
+        "commit": "2c1f5185ad66bf3b1cf8c0812f4b4fe65ac46656",
+        "lines": [
+          9,
+          133
+        ],
+        "content_hash": "aa5b02ae02397d9581ff2e37414efb38b8b34503ae87814433af467afd11b2d9"
+      },
+      "lines_changed": 2,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "test_file",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "tests/test_util.py",
+      "kind": "method",
+      "symbol": "TestUtil.test_validate_ordinal",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "1.3.0",
+        "commit": "87a1a774aad0505d9da18ad1d16f6e571f262503",
+        "lines": [
+          59,
+          114
+        ],
+        "content_hash": "f6dd3bac70d7dd020ac4a55ccaa50f8121935d6acc8012c94f6be8787e926f74"
+      },
+      "new": {
+        "revision": "1.4.0",
+        "commit": "2c1f5185ad66bf3b1cf8c0812f4b4fe65ac46656",
+        "lines": [
+          59,
+          114
+        ],
+        "content_hash": "53d590e6ab42d354e4d3d5ce9097a3736442caf4223ede91052710f4a187ae58"
+      },
+      "lines_changed": 2,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "test_file",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "tests/utils.py",
+      "kind": "function",
+      "symbol": "assert_datetime_equality",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "1.3.0",
+        "commit": "87a1a774aad0505d9da18ad1d16f6e571f262503",
+        "lines": [
+          11,
+          13
+        ],
+        "content_hash": "28c4067890d61579af0617f3075993b0ce50a6c88b54cfbf2b8763cf2d7bbc3b"
+      },
+      "new": {
+        "revision": "1.4.0",
+        "commit": "2c1f5185ad66bf3b1cf8c0812f4b4fe65ac46656",
+        "lines": [
+          18,
+          21
+        ],
+        "content_hash": "bef325bca2052fd9f0ad3813713112884fa81b28170679db735ef969d79a5b8f"
+      },
+      "lines_changed": 3,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "test_file",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    },
+    {
+      "path": "tests/utils.py",
+      "kind": "function",
+      "symbol": "make_full_tz_list",
+      "part_index": 1,
+      "part_count": 1,
+      "status": "superseded",
+      "old": {
+        "revision": "1.3.0",
+        "commit": "87a1a774aad0505d9da18ad1d16f6e571f262503",
+        "lines": [
+          5,
+          8
+        ],
+        "content_hash": "65c489b548aa303b40bcd9ff6117a869c35d3c497ecf62fd69b317cedd7e42e4"
+      },
+      "new": {
+        "revision": "1.4.0",
+        "commit": "2c1f5185ad66bf3b1cf8c0812f4b4fe65ac46656",
+        "lines": [
+          8,
+          15
+        ],
+        "content_hash": "7693d5d6e17c2b0ca61c182e8d3567f84aad812239e6a417b7e1c966d6cacd33"
+      },
+      "lines_changed": 8,
+      "normalized": true,
+      "included": false,
+      "exclusion_reason": "test_file",
+      "sample_order": null,
+      "sampled": false,
+      "review": null
+    }
+  ]
+}
