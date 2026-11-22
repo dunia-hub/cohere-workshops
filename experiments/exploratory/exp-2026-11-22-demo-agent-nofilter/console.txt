@@ -1,0 +1,202 @@
+$ cohere-agent /home/dhub/cohere-workshops/demo_repo --old v1 --new v2 --target v2 --question How is the transfer fee calculated? --command-model command-a-03-2025 --no-git-filter --output /home/dhub/cohere-workshops/experiments/exploratory/exp-2026-11-22-demo-agent-nofilter/raw-output.jsonl
+Question: How is the transfer fee calculated?
+Target: v2 (722f230, 2026-11-18)
+Git filter: off (ablation)
+
+Command's plan: I will search for 'transfer fee calculation' to find out how the transfer fee is calculated.
+
+Search 1: "transfer fee calculation"
+Rank  Score   Git check  Sent  Found in  Location
+1     0.9612  valid      yes   v2        payments.py::calculate_transfer_fee
+2     0.9582  INVALID    yes   v1        payments.py::calculate_transfer_fee
+3     0.8488  valid      yes   v2        payments.py::send_payment
+4     0.8457  INVALID    yes   v1        payments.py::send_payment
+5     0.6545  valid      no    v2        receipts.py::format_receipt
+6     0.2795  INVALID    no    v1        payments.py::validate_phone_number
+
+Answer: The transfer fee is calculated using tiered pricing. If the amount is less than or equal to 1000, the fee is 0. If the amount is between 1001 and 10000, the fee is 1% of the amount. For amounts above 10000, the fee is 1.5% of the amount. The fee is rounded to two decimal places.
+  - payments.py::calculate_transfer_fee lines 4-10 @ 722f230
+Citations not valid at target: 0 of 1
+Stale references in answer: none
+
+Saved trace to /home/dhub/cohere-workshops/experiments/exploratory/exp-2026-11-22-demo-agent-nofilter/raw-output.jsonl
+
+[exit code 0, 10.598 s]
+
+$ cohere-agent /home/dhub/cohere-workshops/demo_repo --old v1 --new v2 --target v1 --question How is the transfer fee calculated? --command-model command-a-03-2025 --no-git-filter --output /home/dhub/cohere-workshops/experiments/exploratory/exp-2026-11-22-demo-agent-nofilter/raw-output.jsonl
+Question: How is the transfer fee calculated?
+Target: v1 (62eb1ea, 2026-11-18)
+Git filter: off (ablation)
+
+Command's plan: I will search for 'transfer fee calculation' to find out how the transfer fee is calculated.
+
+Search 1: "transfer fee calculation"
+Rank  Score   Git check  Sent  Found in  Location
+1     0.9612  INVALID    yes   v2        payments.py::calculate_transfer_fee
+2     0.9582  valid      yes   v1        payments.py::calculate_transfer_fee
+3     0.8488  INVALID    yes   v2        payments.py::send_payment
+4     0.8457  valid      yes   v1        payments.py::send_payment
+5     0.6545  valid      no    v2        receipts.py::format_receipt
+6     0.2795  valid      no    v1        payments.py::validate_phone_number
+
+Answer: The transfer fee is calculated as a flat 2 percent of the amount.
+  - payments.py::calculate_transfer_fee lines 4-6 @ 62eb1ea
+Citations not valid at target: 0 of 1
+Stale references in answer: none
+
+Saved trace to /home/dhub/cohere-workshops/experiments/exploratory/exp-2026-11-22-demo-agent-nofilter/raw-output.jsonl
+
+[exit code 0, 5.598 s]
+
+$ cohere-agent /home/dhub/cohere-workshops/demo_repo --old v1 --new v2 --target v2 --question How is a phone number checked before sending money? --command-model command-a-03-2025 --no-git-filter --output /home/dhub/cohere-workshops/experiments/exploratory/exp-2026-11-22-demo-agent-nofilter/raw-output.jsonl
+Question: How is a phone number checked before sending money?
+Target: v2 (722f230, 2026-11-18)
+Git filter: off (ablation)
+
+Command's plan: I will search for 'phone number check before sending money'.
+
+Search 1: "phone number check before sending money"
+Rank  Score   Git check  Sent  Found in  Location
+1     0.9582  INVALID    yes   v1        payments.py::send_payment
+2     0.8331  INVALID    yes   v1        payments.py::validate_phone_number
+3     0.8293  valid      yes   v2        payments.py::send_payment
+4     0.6036  valid      yes   v2        payments.py::normalize_phone_number
+5     0.5405  valid      no    v2        receipts.py::format_receipt
+6     0.3901  INVALID    no    v1        payments.py::calculate_transfer_fee
+
+Answer: In revision v2, before sending money, a phone number is checked by normalizing it to the international format (2547XXXXXXXX). This is done by the `normalize_phone_number` function, which first removes all non-digit characters from the phone number. It then checks if the resulting digits start with '0' and have a length of 10, or if they start with '254' and have a length of 12. If the phone number does not meet these criteria, a `ValueError` is raised indicating an invalid phone number.
+  - payments.py::send_payment lines 23-27 @ 722f230
+  - payments.py::normalize_phone_number lines 13-20 @ 722f230
+Citations not valid at target: 0 of 2
+Stale references in answer: none
+
+Saved trace to /home/dhub/cohere-workshops/experiments/exploratory/exp-2026-11-22-demo-agent-nofilter/raw-output.jsonl
+
+[exit code 0, 8.827 s]
+
+$ cohere-agent /home/dhub/cohere-workshops/demo_repo --old v1 --new v2 --target v1 --question How is a phone number checked before sending money? --command-model command-a-03-2025 --no-git-filter --output /home/dhub/cohere-workshops/experiments/exploratory/exp-2026-11-22-demo-agent-nofilter/raw-output.jsonl
+Question: How is a phone number checked before sending money?
+Target: v1 (62eb1ea, 2026-11-18)
+Git filter: off (ablation)
+
+Command's plan: I will search for 'phone number check before sending money'.
+
+Search 1: "phone number check before sending money"
+Rank  Score   Git check  Sent  Found in  Location
+1     0.9585  valid      yes   v1        payments.py::send_payment
+2     0.8342  valid      yes   v1        payments.py::validate_phone_number
+3     0.8304  INVALID    yes   v2        payments.py::send_payment
+4     0.6036  INVALID    yes   v2        payments.py::normalize_phone_number
+5     0.5405  valid      no    v2        receipts.py::format_receipt
+6     0.3901  valid      no    v1        payments.py::calculate_transfer_fee
+
+Answer: Before sending money, the phone number is checked using the `validate_phone_number` function, which ensures that the phone number starts with '07' and has exactly 10 digits. If the phone number does not meet these criteria, a `ValueError` is raised with the message 'Invalid phone number'.
+  - payments.py::send_payment lines 14-19 @ 62eb1ea
+  - payments.py::validate_phone_number lines 9-11 @ 62eb1ea
+Citations not valid at target: 0 of 2
+Stale references in answer: none
+
+Saved trace to /home/dhub/cohere-workshops/experiments/exploratory/exp-2026-11-22-demo-agent-nofilter/raw-output.jsonl
+
+[exit code 0, 7.274 s]
+
+$ cohere-agent /home/dhub/cohere-workshops/demo_repo --old v1 --new v2 --target v2 --question Which payments API version does send_payment use? --command-model command-a-03-2025 --no-git-filter --output /home/dhub/cohere-workshops/experiments/exploratory/exp-2026-11-22-demo-agent-nofilter/raw-output.jsonl
+Question: Which payments API version does send_payment use?
+Target: v2 (722f230, 2026-11-18)
+Git filter: off (ablation)
+
+Command's plan: I will search for 'send_payment' to find out which payments API version it uses.
+
+Search 1: "send_payment"
+Rank  Score   Git check  Sent  Found in  Location
+1     0.9589  INVALID    yes   v1        payments.py::send_payment
+2     0.9577  valid      yes   v2        payments.py::send_payment
+3     0.5599  valid      yes   v2        payments.py::calculate_transfer_fee
+4     0.5560  INVALID    yes   v1        payments.py::calculate_transfer_fee
+5     0.5405  valid      no    v2        receipts.py::format_receipt
+6     0.4898  valid      no    v2        payments.py::normalize_phone_number
+
+Answer: v2
+  - payments.py::send_payment lines 23-27 @ 722f230
+Citations not valid at target: 0 of 1
+Stale references in answer: none
+
+Saved trace to /home/dhub/cohere-workshops/experiments/exploratory/exp-2026-11-22-demo-agent-nofilter/raw-output.jsonl
+
+[exit code 0, 6.246 s]
+
+$ cohere-agent /home/dhub/cohere-workshops/demo_repo --old v1 --new v2 --target v1 --question Which payments API version does send_payment use? --command-model command-a-03-2025 --no-git-filter --output /home/dhub/cohere-workshops/experiments/exploratory/exp-2026-11-22-demo-agent-nofilter/raw-output.jsonl
+Question: Which payments API version does send_payment use?
+Target: v1 (62eb1ea, 2026-11-18)
+Git filter: off (ablation)
+
+Command's plan: I will search for 'send_payment' to find out which payments API version it uses.
+
+Search 1: "send_payment"
+Rank  Score   Git check  Sent  Found in  Location
+1     0.9586  valid      yes   v1        payments.py::send_payment
+2     0.9577  INVALID    yes   v2        payments.py::send_payment
+3     0.5599  INVALID    yes   v2        payments.py::calculate_transfer_fee
+4     0.5560  valid      yes   v1        payments.py::calculate_transfer_fee
+5     0.5405  valid      no    v2        receipts.py::format_receipt
+6     0.4898  INVALID    no    v2        payments.py::normalize_phone_number
+
+Answer: v1
+  - payments.py::send_payment lines 14-19 @ 62eb1ea
+Citations not valid at target: 0 of 1
+Stale references in answer: none
+
+Saved trace to /home/dhub/cohere-workshops/experiments/exploratory/exp-2026-11-22-demo-agent-nofilter/raw-output.jsonl
+
+[exit code 0, 6.561 s]
+
+$ cohere-agent /home/dhub/cohere-workshops/demo_repo --old v1 --new v2 --target v2 --question What fee is charged on a transfer of 500? --command-model command-a-03-2025 --no-git-filter --output /home/dhub/cohere-workshops/experiments/exploratory/exp-2026-11-22-demo-agent-nofilter/raw-output.jsonl
+Question: What fee is charged on a transfer of 500?
+Target: v2 (722f230, 2026-11-18)
+Git filter: off (ablation)
+
+Command's plan: I will search for the fee charged on a transfer of 500.
+
+Search 1: "fee charged on a transfer of 500"
+Rank  Score   Git check  Sent  Found in  Location
+1     0.9059  valid      yes   v2        payments.py::calculate_transfer_fee
+2     0.8973  INVALID    yes   v1        payments.py::calculate_transfer_fee
+3     0.7575  INVALID    yes   v1        payments.py::send_payment
+4     0.7338  valid      yes   v2        payments.py::send_payment
+5     0.7183  valid      no    v2        receipts.py::format_receipt
+6     0.2795  INVALID    no    v1        payments.py::validate_phone_number
+
+Answer: 0
+  - payments.py::calculate_transfer_fee lines 4-10 @ 722f230
+Citations not valid at target: 0 of 1
+Stale references in answer: none
+
+Saved trace to /home/dhub/cohere-workshops/experiments/exploratory/exp-2026-11-22-demo-agent-nofilter/raw-output.jsonl
+
+[exit code 0, 7.885 s]
+
+$ cohere-agent /home/dhub/cohere-workshops/demo_repo --old v1 --new v2 --target v1 --question What fee is charged on a transfer of 500? --command-model command-a-03-2025 --no-git-filter --output /home/dhub/cohere-workshops/experiments/exploratory/exp-2026-11-22-demo-agent-nofilter/raw-output.jsonl
+Question: What fee is charged on a transfer of 500?
+Target: v1 (62eb1ea, 2026-11-18)
+Git filter: off (ablation)
+
+Command's plan: I will search for the fee charged on a transfer of 500.
+
+Search 1: "fee charged on a transfer of 500"
+Rank  Score   Git check  Sent  Found in  Location
+1     0.9059  INVALID    yes   v2        payments.py::calculate_transfer_fee
+2     0.8970  valid      yes   v1        payments.py::calculate_transfer_fee
+3     0.7575  valid      yes   v1        payments.py::send_payment
+4     0.7323  INVALID    yes   v2        payments.py::send_payment
+5     0.7167  valid      no    v2        receipts.py::format_receipt
+6     0.2827  valid      no    v1        payments.py::validate_phone_number
+
+Answer: 10.00
+  - payments.py::calculate_transfer_fee lines 4-6 @ 62eb1ea
+Citations not valid at target: 0 of 1
+Stale references in answer: none
+
+Saved trace to /home/dhub/cohere-workshops/experiments/exploratory/exp-2026-11-22-demo-agent-nofilter/raw-output.jsonl
+
+[exit code 0, 6.179 s]
+

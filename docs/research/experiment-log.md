@@ -19,6 +19,7 @@ Development checks are clearly labelled and must not be presented as research re
 | exp-2026-11-22-demo-embed | 22 November 2026 | Exploratory retrieval | Embed across v1 and v2 of the practice repository | Completed; development only |
 | exp-2026-11-22-demo-rerank | 22 November 2026 | Exploratory retrieval | Rerank in code and metadata formats, with Git filter | Completed; development only |
 | exp-2026-11-22-demo-agent | 22 November 2026 | Exploratory agent | 4 questions at targets v1 and v2, Command A; scored in scoring.md | Completed; development only |
+| exp-2026-11-22-demo-agent-nofilter | 22 November 2026 | Exploratory agent ablation | Same questions without the Git filter (configuration 7); scored in scoring.md | Completed; development only |
 
 ## Protocol changes
 
