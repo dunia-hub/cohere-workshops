@@ -1,0 +1,100 @@
+{
+  "by_config": {
+    "filter": {
+      "correct": 8,
+      "incomplete": 13,
+      "wrong_version": 2,
+      "declined": 1,
+      "answers": 24
+    },
+    "nofilter": {
+      "correct": 9,
+      "incomplete": 9,
+      "wrong_version": 4,
+      "declined": 2,
+      "answers": 24
+    }
+  },
+  "by_config_and_target": {
+    "filter@old": {
+      "correct": 3,
+      "incomplete": 7,
+      "wrong_version": 1,
+      "declined": 1
+    },
+    "filter@new": {
+      "correct": 5,
+      "incomplete": 6,
+      "wrong_version": 1,
+      "declined": 0
+    },
+    "nofilter@old": {
+      "correct": 4,
+      "incomplete": 3,
+      "wrong_version": 3,
+      "declined": 2
+    },
+    "nofilter@new": {
+      "correct": 5,
+      "incomplete": 6,
+      "wrong_version": 1,
+      "declined": 0
+    }
+  },
+  "h4_wrong_version_nofilter_vs_filter": {
+    "only_first": 2,
+    "only_second": 0,
+    "p_value": 0.5,
+    "pairs": 24
+  },
+  "declines_nofilter_vs_filter": {
+    "only_first": 1,
+    "only_second": 0,
+    "p_value": 1.0,
+    "pairs": 24
+  },
+  "wrong_version_answers": [
+    {
+      "answer_number": 10,
+      "case_id": "arrow-1",
+      "target": "old",
+      "config": "nofilter",
+      "note": "recommends ceil(week_start=7), which only exists in the newer release"
+    },
+    {
+      "answer_number": 12,
+      "case_id": "click-1",
+      "target": "old",
+      "config": "nofilter",
+      "note": "says PAGER arguments are passed on, which is newer-release behaviour"
+    },
+    {
+      "answer_number": 26,
+      "case_id": "marshmallow-2",
+      "target": "old",
+      "config": "nofilter",
+      "note": "says NaN gives a validation error, which is newer-release behaviour"
+    },
+    {
+      "answer_number": 40,
+      "case_id": "marshmallow-6",
+      "target": "new",
+      "config": "nofilter",
+      "note": "says an empty data_key falls back to the field name, which is older-release behaviour"
+    },
+    {
+      "answer_number": 41,
+      "case_id": "marshmallow-6",
+      "target": "new",
+      "config": "filter",
+      "note": "says an empty data_key falls back to the field name, which is older-release behaviour"
+    },
+    {
+      "answer_number": 46,
+      "case_id": "marshmallow-2",
+      "target": "old",
+      "config": "filter",
+      "note": "says NaN gives a validation error (newer-release behaviour) plus unrelated allow_nan details"
+    }
+  ]
+}
