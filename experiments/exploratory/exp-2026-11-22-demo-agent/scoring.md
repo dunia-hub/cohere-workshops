@@ -19,7 +19,10 @@ Searches: 8 (one per question); top-ranked result was the wrong version in 4.
 
 Notes:
 - Agent model was command-a-03-2025. Command A+ was capped (see the attempt2 records).
-- "Stale references: none" holds by construction, because only Git-validated
-  evidence reaches the model. Answer text against the answer key is the real test.
+- "Stale references: none" is a name match: it flags answers that mention a
+  symbol Git rejected, but skips names that also exist in valid code. A superseded
+  function that kept its name (calculate_transfer_fee) can never be flagged; only
+  removed symbols (validate_phone_number) can. Answer text against the answer key
+  is the real test.
 - Embed scores varied slightly between stages for the same query
   (0.5622 vs 0.5629), so single-run scores should not be reported as exact.
