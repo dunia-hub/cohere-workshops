@@ -83,3 +83,31 @@ def test_live_mode_requires_api_key(
 
     with pytest.raises(RuntimeError, match="COHERE_API_KEY is missing"):
         rerank_cli.main([str(demo_repository), "--old", "v1", "--new", "v2"])
+
+
+def test_target_option_checks_against_the_older_commit(
+    demo_repository: Path,
+    tmp_path: Path,
+    capsys: pytest.CaptureFixture[str],
+) -> None:
+    output = tmp_path / "runs.jsonl"
+
+    rerank_cli.main(
+        [
+            str(demo_repository),
+            "--old", "v1",
+            "--new", "v2",
+            "--target", "v1",
+            "--offline",
+            "--output", str(output),
+        ]
+    )
+
+    printed = capsys.readouterr().out
+    records = [json.loads(line) for line in output.read_text().splitlines()]
+    assert "Target: v1" in printed
+    assert all(r["target"]["revision"] == "v1" for r in records)
+    assert all(r["filtered_top"][0]["valid_at_target"] for r in records)
+    assert all(
+        r["filtered_top"][0]["symbol"] != "normalize_phone_number" for r in records
+    )

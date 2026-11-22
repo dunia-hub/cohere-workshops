@@ -4,13 +4,14 @@ import argparse
 import os
 import re
 import subprocess
-from collections.abc import Sequence
+from collections.abc import Callable, Sequence
 from datetime import UTC, datetime
 from pathlib import Path
 from types import SimpleNamespace
 
 from dotenv import load_dotenv
 
+from cohere_workshops.agent_tools import TargetValidator
 from cohere_workshops.embeddings import EMBED_MODEL
 from cohere_workshops.rerank_versions import (
     FORMATS,
@@ -24,7 +25,11 @@ from cohere_workshops.rerank_versions import (
 from cohere_workshops.reranking import RERANK_MODEL
 from cohere_workshops.version_cli import DEMO_QUERIES, OFFLINE_MODEL, OfflineEmbedClient
 from cohere_workshops.version_search import LEVELS, append_records, search_versions
-from cohere_workshops.versions import build_versioned_corpus
+from cohere_workshops.versions import (
+    VersionedChunk,
+    build_versioned_corpus,
+    load_revision,
+)
 
 OFFLINE_RERANK_MODEL = "offline-word-overlap"
 
@@ -58,6 +63,10 @@ def build_parser() -> argparse.ArgumentParser:
     parser.add_argument("repository", help="Local Git repository.")
     parser.add_argument("--old", required=True, help="Older revision, e.g. v1.")
     parser.add_argument("--new", required=True, help="Current revision, e.g. v2.")
+    parser.add_argument(
+        "--target",
+        help="Commit the code must be valid at. Defaults to --new.",
+    )
     parser.add_argument(
         "--query",
         action="append",
@@ -118,13 +127,19 @@ def _location(candidate: RankedCandidate) -> str:
     return f"{chunk.path}::{chunk.symbol or '<file>'}"
 
 
-def print_ranking(title: str, ranking: Sequence[RankedCandidate], rows: int) -> None:
+def print_ranking(
+    title: str,
+    ranking: Sequence[RankedCandidate],
+    rows: int,
+    is_valid: Callable[[VersionedChunk], bool],
+) -> None:
     print(f"\n{title}")
-    print(f"{'Rank':<5} {'Score':<7} {'Was':<4} {'Version':<11} Location")
+    print(f"{'Rank':<5} {'Score':<7} {'Was':<4} {'Version':<11} {'Valid':<6} Location")
     for c in ranking[:rows]:
+        valid = "yes" if is_valid(c.item) else "NO"
         print(
             f"{c.rank:<5} {c.score:<7.4f} {c.retrieval_rank:<4} "
-            f"{c.item.status:<11} {_location(c)}"
+            f"{c.item.status:<11} {valid:<6} {_location(c)}"
         )
 
 
@@ -151,6 +166,12 @@ def main(arguments: Sequence[str] | None = None) -> None:
         f"{corpus.previous.revision} ({dates[corpus.previous.commit]}) -> "
         f"{corpus.current.revision} ({dates[corpus.current.commit]})"
     )
+    validator = TargetValidator(load_revision(repository, options.target or options.new))
+
+    def is_valid(item: VersionedChunk) -> bool:
+        return validator.is_valid(item.chunk)
+
+    print(f"Target: {validator.revision} ({validator.commit[:7]})")
 
     results = search_versions(
         client,
@@ -170,8 +191,8 @@ def main(arguments: Sequence[str] | None = None) -> None:
     for result in results:
         print(f"\n=== Query: {result.query}")
         before = retrieval_order(result.hits)
-        print_ranking("Embed order (before Rerank)", before, rows)
-        before_check = check_ranking(before, k=options.k)
+        print_ranking("Embed order (before Rerank)", before, rows, is_valid)
+        before_check = check_ranking(before, k=options.k, is_valid=is_valid)
 
         for style in styles:
             after = rerank_hits(
@@ -182,22 +203,23 @@ def main(arguments: Sequence[str] | None = None) -> None:
                 commit_dates=dates,
                 model=RERANK_MODEL,
             )
-            after_check = check_ranking(after, k=options.k)
-            filtered = temporal_filter(after)
+            after_check = check_ranking(after, k=options.k, is_valid=is_valid)
+            filtered = temporal_filter(after, is_valid)
 
-            print_ranking(f"Rerank order (format: {style})", after, rows)
+            print_ranking(f"Rerank order (format: {style})", after, rows, is_valid)
             print(
-                f"Stale code above current code: Embed {_yes(before_check.stale_above_current)}"
+                "Wrong-version code above valid code: "
+                f"Embed {_yes(before_check.stale_above_current)}"
                 f" -> Rerank {_yes(after_check.stale_above_current)}"
             )
             print(
-                f"Current code in top {options.k}: {_yes(after_check.current_in_top_k)}"
-                f" | Stale share of top {options.k}: {after_check.stale_rate_at_k:.0%}"
+                f"Valid code in top {options.k}: {_yes(after_check.current_in_top_k)}"
+                f" | Wrong-version share of top {options.k}: {after_check.stale_rate_at_k:.0%}"
             )
             if filtered:
                 print(f"After the Git filter, top result: {_location(filtered[0])}")
             else:
-                print("After the Git filter, nothing current is left.")
+                print("After the Git filter, nothing valid is left.")
 
             records.append(
                 serialize_rerank_result(
@@ -211,6 +233,8 @@ def main(arguments: Sequence[str] | None = None) -> None:
                     current=(corpus.current.revision, corpus.current.commit),
                     retrieval=before,
                     reranked=after,
+                    target=(validator.revision, validator.commit),
+                    is_valid=is_valid,
                 )
             )
 
