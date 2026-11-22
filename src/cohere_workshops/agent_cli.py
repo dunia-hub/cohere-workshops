@@ -82,6 +82,14 @@ def build_parser() -> argparse.ArgumentParser:
         help=f"Cohere Command model for tool planning and answers. Default: {COMMAND_MODEL}.",
     )
     parser.add_argument(
+        "--no-git-filter",
+        action="store_true",
+        help=(
+            "Ablation: send the top candidates to Command whether or not they are valid "
+            "at the target, labelled with the revisions they exist in."
+        ),
+    )
+    parser.add_argument(
         "--offline",
         action="store_true",
         help="Practice without an API key. Not real answers.",
@@ -113,9 +121,16 @@ def main(arguments: Sequence[str] | None = None) -> None:
     date = commit_dates(repository, [validator.commit])[validator.commit]
     print(f"Question: {options.question}")
     print(f"Target: {validator.revision} ({validator.commit[:7]}, {date})")
+    git_filter = not options.no_git_filter
+    print(f"Git filter: {'on' if git_filter else 'off (ablation)'}")
 
     tool = CodeSearchTool(
-        client, corpus, validator, candidates=options.candidates, keep=options.keep
+        client,
+        corpus,
+        validator,
+        candidates=options.candidates,
+        keep=options.keep,
+        git_filter=git_filter,
     )
     result = run_agent(
         client,
@@ -132,11 +147,17 @@ def main(arguments: Sequence[str] | None = None) -> None:
 
     for number, call in enumerate(tool.calls, start=1):
         print(f'\nSearch {number}: "{call.query}"')
-        print(f"{'Rank':<5} {'Score':<7} {'Git check':<10} {'Found in':<9} Location")
+        print(
+            f"{'Rank':<5} {'Score':<7} {'Git check':<10} {'Sent':<5} {'Found in':<9} Location"
+        )
         for d in call.decisions[:6]:
-            check = "valid" if d.valid else "REJECTED"
+            check = "valid" if d.valid else ("REJECTED" if git_filter else "INVALID")
+            sent = "yes" if d.evidence_id else "no"
             location = f"{d.item.chunk.path}::{d.item.chunk.symbol}"
-            print(f"{d.rank:<5} {d.rerank_score:<7.4f} {check:<10} {d.item.revision:<9} {location}")
+            print(
+                f"{d.rank:<5} {d.rerank_score:<7.4f} {check:<10} {sent:<5} "
+                f"{d.item.revision:<9} {location}"
+            )
 
     print()
     if result.declined:
@@ -144,10 +165,14 @@ def main(arguments: Sequence[str] | None = None) -> None:
     else:
         print(f"Answer: {result.answer}")
         for ref in result.references:
-            print(
-                f"  - {ref['path']}::{ref['symbol']} lines {ref['lines']}"
-                f" @ {str(ref['valid_at_commit'])[:7]}"
+            where = (
+                f"@ {str(ref['valid_at_commit'])[:7]}"
+                if ref["valid_at_target"]
+                else "NOT valid at target"
             )
+            print(f"  - {ref['path']}::{ref['symbol']} lines {ref['lines']} {where}")
+    invalid = sum(not ref["valid_at_target"] for ref in result.references)
+    print(f"Citations not valid at target: {invalid} of {len(result.references)}")
     print(f"Stale references in answer: {', '.join(result.stale) or 'none'}")
 
     run_id = datetime.now(UTC).strftime("%Y%m%dT%H%M%SZ")

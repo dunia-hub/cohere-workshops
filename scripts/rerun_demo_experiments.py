@@ -8,9 +8,13 @@ Runs three stages on demo_repo (v1 -> v2):
 Each stage writes one folder under experiments/exploratory/ containing
 raw-output.jsonl, console.txt and metadata.json. Records never contain API keys.
 
+With --no-git-filter, only the agent stage runs, without the Git filter
+(configuration 7, the ablation), and writes exp-<date>-demo-agent-nofilter.
+
 Usage:
-    python scripts/rerun_demo_experiments.py            # live, spends Cohere credits
-    python scripts/rerun_demo_experiments.py --offline  # practice, writes to a temp folder
+    python scripts/rerun_demo_experiments.py                  # live, spends Cohere credits
+    python scripts/rerun_demo_experiments.py --offline        # practice, writes to a temp folder
+    python scripts/rerun_demo_experiments.py --no-git-filter  # live ablation, agent stage only
 """
 
 import argparse
@@ -97,7 +101,13 @@ def main() -> None:
         default=DEFAULT_COMMAND_MODEL,
         help=f"Command model for the agent stage. Default: {DEFAULT_COMMAND_MODEL}.",
     )
+    parser.add_argument(
+        "--no-git-filter",
+        action="store_true",
+        help="Run only the agent stage, without the Git filter (ablation).",
+    )
     options = parser.parse_args()
+    git_filter = not options.no_git_filter
 
     if not DEMO.exists():
         raise SystemExit("demo_repo is missing. Run: cohere-demo-repo")
@@ -129,10 +139,18 @@ def main() -> None:
         "demo_tags": demo_state(),
         "api_usage": "not_recorded",
         "final_evaluation_eligible": False,
-        "notes": [
-            "Rerun of the exploratory findings stated in README.md.",
-            "The original runs behind those findings were not preserved in the repository.",
-        ],
+        "notes": (
+            [
+                "Rerun of the exploratory findings stated in README.md.",
+                "The original runs behind those findings were not preserved in the repository.",
+            ]
+            if git_filter
+            else [
+                "Ablation: agent without the Git filter (configuration 7).",
+                "Candidates are sent whether or not they are valid at the target.",
+                "Each candidate is labelled with the revisions it exists in.",
+            ]
+        ),
     }
     models = (
         {"embed": "offline-word-hashing", "rerank": "offline-word-overlap", "command": "offline"}
@@ -142,41 +160,44 @@ def main() -> None:
 
     stages = []
 
-    # 1. Embed
-    folder = base / f"exp-{today}-demo-embed"
-    folder.mkdir(parents=True, exist_ok=False)
-    command = ["cohere-versions", str(DEMO), "--old", "v1", "--new", "v2",
-               "--output", str(folder / "raw-output.jsonl"), *offline_flag]
-    seconds = run_stage(command, folder / "console.txt")
-    write_metadata(folder, {**common, "experiment_id": folder.name, "stage": "embed",
-                            "models": {"embed": models["embed"]}, "command": command,
-                            "settings": {"level": "symbol", "top_k": 5},
-                            "latency_seconds": {"total": seconds}})
-    stages.append(folder)
+    if git_filter:
+        # 1. Embed
+        folder = base / f"exp-{today}-demo-embed"
+        folder.mkdir(parents=True, exist_ok=False)
+        command = ["cohere-versions", str(DEMO), "--old", "v1", "--new", "v2",
+                   "--output", str(folder / "raw-output.jsonl"), *offline_flag]
+        seconds = run_stage(command, folder / "console.txt")
+        write_metadata(folder, {**common, "experiment_id": folder.name, "stage": "embed",
+                                "models": {"embed": models["embed"]}, "command": command,
+                                "settings": {"level": "symbol", "top_k": 5},
+                                "latency_seconds": {"total": seconds}})
+        stages.append(folder)
 
-    # 2. Rerank
-    folder = base / f"exp-{today}-demo-rerank"
-    folder.mkdir(parents=True, exist_ok=False)
-    command = ["cohere-rerank", str(DEMO), "--old", "v1", "--new", "v2", "--format", "both",
-               "--output", str(folder / "raw-output.jsonl"), *offline_flag]
-    seconds = run_stage(command, folder / "console.txt")
-    write_metadata(folder, {**common, "experiment_id": folder.name, "stage": "rerank",
-                            "models": {"embed": models["embed"], "rerank": models["rerank"]},
-                            "command": command,
-                            "settings": {"level": "symbol", "candidates": 10, "k": 3,
-                                         "formats": ["code", "metadata"]},
-                            "latency_seconds": {"total": seconds}})
-    stages.append(folder)
+        # 2. Rerank
+        folder = base / f"exp-{today}-demo-rerank"
+        folder.mkdir(parents=True, exist_ok=False)
+        command = ["cohere-rerank", str(DEMO), "--old", "v1", "--new", "v2", "--format", "both",
+                   "--output", str(folder / "raw-output.jsonl"), *offline_flag]
+        seconds = run_stage(command, folder / "console.txt")
+        write_metadata(folder, {**common, "experiment_id": folder.name, "stage": "rerank",
+                                "models": {"embed": models["embed"], "rerank": models["rerank"]},
+                                "command": command,
+                                "settings": {"level": "symbol", "candidates": 10, "k": 3,
+                                             "formats": ["code", "metadata"]},
+                                "latency_seconds": {"total": seconds}})
+        stages.append(folder)
 
     # 3. Agent
-    folder = base / f"exp-{today}-demo-agent"
+    suffix = "" if git_filter else "-nofilter"
+    folder = base / f"exp-{today}-demo-agent{suffix}"
     folder.mkdir(parents=True, exist_ok=False)
+    filter_flag = [] if git_filter else ["--no-git-filter"]
     commands, latency = [], {}
     for item in key["questions"]:
         for target in TARGETS:
             command = ["cohere-agent", str(DEMO), "--old", "v1", "--new", "v2",
                        "--target", target, "--question", item["question"],
-                       "--command-model", options.command_model,
+                       "--command-model", options.command_model, *filter_flag,
                        "--output", str(folder / "raw-output.jsonl"), *offline_flag]
             latency[f"{item['id']}@{target}"] = run_stage(command, folder / "console.txt")
             commands.append(command)
@@ -184,7 +205,7 @@ def main() -> None:
     write_metadata(folder, {**common, "experiment_id": folder.name, "stage": "agent",
                             "models": models, "commands": commands,
                             "settings": {"candidates": 10, "keep": 4, "max_tool_calls": 3,
-                                         "temperature": 0},
+                                         "temperature": 0, "git_filter": git_filter},
                             "answer_key": str(ANSWER_KEY.relative_to(ROOT)),
                             "answer_key_id": key["answer_key_id"],
                             "scoring": "not_yet_scored",

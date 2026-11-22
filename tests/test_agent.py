@@ -4,7 +4,13 @@ from types import SimpleNamespace
 
 import pytest
 
-from cohere_workshops.agent import agent_record, answer_schema, message_text, run_agent
+from cohere_workshops.agent import (
+    AGENT_PROMPT,
+    agent_record,
+    answer_schema,
+    message_text,
+    run_agent,
+)
 from cohere_workshops.agent_tools import CodeSearchTool, TargetValidator
 from cohere_workshops.demo_repo import create_demo_repository
 from cohere_workshops.versions import build_versioned_corpus, load_revision
@@ -149,3 +155,52 @@ def test_trace_has_tool_calls_decisions_and_answer(repo: Path) -> None:
     assert "valid_at_target" in record["tool_calls"][0]["candidates"][0]
     assert record["answer"] == "Fees are tiered."
     assert record["target"]["revision"] == "v2"
+
+
+def make_unfiltered_tool(repo: Path, client, target: str = "v2") -> CodeSearchTool:
+    corpus = build_versioned_corpus(repo, "v1", "v2")
+    validator = TargetValidator(load_revision(repo, target))
+    return CodeSearchTool(client, corpus, validator, git_filter=False)
+
+
+def test_without_git_filter_prompts_name_the_target(repo: Path) -> None:
+    client = FakeCommandClient()
+    tool = make_unfiltered_tool(repo, client, target="v1")
+
+    run_agent(client, tool, "fee?")
+
+    planning, answering = client.chat_calls[0], client.chat_calls[-1]
+    system = planning["messages"][0]["content"]
+    assert "target revision v1" in system
+    assert tool.validator.commit[:12] in system
+    assert "valid at the target commit" not in system
+    assert planning["tools"][0]["function"]["description"].startswith("Searches")
+    assert "more than one revision" in planning["tools"][0]["function"]["description"]
+    assert "target revision v1" in answering["messages"][0]["content"]
+    assert "Every piece of evidence is valid" not in answering["messages"][0]["content"]
+
+
+def test_without_git_filter_citations_record_whether_they_are_valid(repo: Path) -> None:
+    client = FakeCommandClient()
+    tool = make_unfiltered_tool(repo, client)
+
+    result = run_agent(client, tool, "fee?")
+    record = agent_record(result, tool, run_id="r1", models={"command": "x"})
+
+    assert record["git_filter"] is False
+    for ref in result.references:
+        chunk = tool.evidence[ref["evidence_id"]].chunk
+        assert ref["valid_at_target"] is tool.validator.is_valid(chunk)
+        assert (ref["valid_at_commit"] is None) is (not ref["valid_at_target"])
+
+
+def test_with_git_filter_prompts_are_unchanged(repo: Path) -> None:
+    client = FakeCommandClient()
+    tool = make_tool(repo, client)
+
+    result = run_agent(client, tool, "fee?")
+    record = agent_record(result, tool, run_id="r1", models={"command": "x"})
+
+    assert client.chat_calls[0]["messages"][0]["content"] == AGENT_PROMPT
+    assert record["git_filter"] is True
+    assert all(ref["valid_at_target"] for ref in result.references)

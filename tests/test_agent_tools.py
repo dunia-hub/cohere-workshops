@@ -5,6 +5,7 @@ import pytest
 
 from cohere_workshops.agent_tools import (
     SEARCH_TOOL,
+    UNFILTERED_SEARCH_TOOL,
     CodeSearchTool,
     TargetValidator,
     decision_records,
@@ -130,3 +131,35 @@ def test_rejects_empty_query(repo: Path) -> None:
 
     with pytest.raises(ValueError, match="query must not be empty"):
         tool.search("  ")
+
+
+def test_without_git_filter_sends_invalid_code_with_revision_labels(repo: Path) -> None:
+    tool, _ = make_tool(repo, "v2", git_filter=False)
+
+    documents = tool.search("How is the transfer fee calculated?")
+
+    assert tool.definition is UNFILTERED_SEARCH_TOOL
+    assert all("valid_at_commit" not in doc for doc in documents)
+    assert any(doc["exists_in_revisions"] == ["v1"] for doc in documents)
+    assert any("0.02" in str(doc["code"]) for doc in documents)
+    assert set(tool.evidence) - set(tool.valid_evidence)
+
+
+def test_without_git_filter_unchanged_code_is_labelled_with_both_revisions(repo: Path) -> None:
+    tool, _ = make_tool(repo, "v2", git_filter=False, keep=10)
+
+    documents = tool.search("receipt")
+    labels = {doc["symbol"]: doc["exists_in_revisions"] for doc in documents}
+
+    assert labels["format_receipt"] == ["v1", "v2"]
+    assert labels["normalize_phone_number"] == ["v2"]
+
+
+def test_without_git_filter_trace_still_records_git_decisions(repo: Path) -> None:
+    tool, _ = make_tool(repo, "v2", git_filter=False)
+    tool.search("fee")
+
+    [record] = decision_records(tool.calls)
+
+    sent = [c for c in record["candidates"] if c["sent_to_model"]]
+    assert any(c["valid_at_target"] is False for c in sent)

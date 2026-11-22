@@ -101,3 +101,20 @@ def test_command_model_is_used_and_recorded(
     assert client.chat_models
     assert set(client.chat_models) == {"command-a-03-2025"}
     assert record["models"]["command"] == "command-a-03-2025"
+
+
+def test_no_git_filter_runs_the_ablation_and_records_it(
+    demo_repository: Path,
+    tmp_path: Path,
+    capsys: pytest.CaptureFixture[str],
+) -> None:
+    [record] = run(demo_repository, tmp_path, "--no-git-filter")
+
+    printed = capsys.readouterr().out
+    assert "Git filter: off (ablation)" in printed
+    assert "Citations not valid at target:" in printed
+    assert record["git_filter"] is False
+    sent = [
+        c for call in record["tool_calls"] for c in call["candidates"] if c["sent_to_model"]
+    ]
+    assert any(not c["valid_at_target"] for c in sent)
