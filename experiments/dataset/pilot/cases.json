@@ -1,0 +1,1096 @@
+{
+  "study": "Right Code, Wrong Version: pilot",
+  "cases": [
+    {
+      "case_id": "arrow-1",
+      "repository": "arrow",
+      "repository_url": "https://github.com/arrow-py/arrow",
+      "candidate_list": "experiments/dataset/candidates/arrow-1.3.0-1.4.0.json",
+      "old": {
+        "revision": "1.3.0",
+        "commit": "87a1a774aad0505d9da18ad1d16f6e571f262503"
+      },
+      "new": {
+        "revision": "1.4.0",
+        "commit": "2c1f5185ad66bf3b1cf8c0812f4b4fe65ac46656"
+      },
+      "location": {
+        "path": "arrow/arrow.py",
+        "kind": "method",
+        "symbol": "Arrow.ceil",
+        "part_index": 1
+      },
+      "status": "superseded",
+      "review_reason": "ceil now accepts week_start",
+      "query": "How do you get the last moment of the week containing a date, with weeks starting on Sunday?",
+      "answer_key": {
+        "old": [
+          "ceil does not accept week_start",
+          "use span('week', week_start=7) and take its end"
+        ],
+        "new": [
+          "ceil accepts week_start",
+          "ceil('week', week_start=7)"
+        ]
+      }
+    },
+    {
+      "case_id": "arrow-2",
+      "repository": "arrow",
+      "repository_url": "https://github.com/arrow-py/arrow",
+      "candidate_list": "experiments/dataset/candidates/arrow-1.3.0-1.4.0.json",
+      "old": {
+        "revision": "1.3.0",
+        "commit": "87a1a774aad0505d9da18ad1d16f6e571f262503"
+      },
+      "new": {
+        "revision": "1.4.0",
+        "commit": "2c1f5185ad66bf3b1cf8c0812f4b4fe65ac46656"
+      },
+      "location": {
+        "path": "arrow/arrow.py",
+        "kind": "method",
+        "symbol": "Arrow.now",
+        "part_index": 1
+      },
+      "status": "superseded",
+      "review_reason": "local time zone is now a fixed offset, not dateutil tzlocal",
+      "query": "Which time zone is attached to the current local time when no time zone is given?",
+      "answer_key": {
+        "old": [
+          "dateutil tzlocal()"
+        ],
+        "new": [
+          "fixed-offset local time zone from datetime.now().astimezone()",
+          "standard library timezone, not dateutil"
+        ]
+      }
+    },
+    {
+      "case_id": "arrow-3",
+      "repository": "arrow",
+      "repository_url": "https://github.com/arrow-py/arrow",
+      "candidate_list": "experiments/dataset/candidates/arrow-1.3.0-1.4.0.json",
+      "old": {
+        "revision": "1.3.0",
+        "commit": "87a1a774aad0505d9da18ad1d16f6e571f262503"
+      },
+      "new": {
+        "revision": "1.4.0",
+        "commit": "2c1f5185ad66bf3b1cf8c0812f4b4fe65ac46656"
+      },
+      "location": {
+        "path": "arrow/factory.py",
+        "kind": "method",
+        "symbol": "ArrowFactory.now",
+        "part_index": 1
+      },
+      "status": "superseded",
+      "review_reason": "local time zone is now a fixed offset, not dateutil tzlocal",
+      "query": "When the current time is created through the module-level helper without a time zone, which tzinfo is used?",
+      "answer_key": null
+    },
+    {
+      "case_id": "arrow-4",
+      "repository": "arrow",
+      "repository_url": "https://github.com/arrow-py/arrow",
+      "candidate_list": "experiments/dataset/candidates/arrow-1.3.0-1.4.0.json",
+      "old": {
+        "revision": "1.3.0",
+        "commit": "87a1a774aad0505d9da18ad1d16f6e571f262503"
+      },
+      "new": {
+        "revision": "1.4.0",
+        "commit": "2c1f5185ad66bf3b1cf8c0812f4b4fe65ac46656"
+      },
+      "location": {
+        "path": "arrow/locales.py",
+        "kind": "class",
+        "symbol": "ThaiLocale",
+        "part_index": 1
+      },
+      "status": "superseded",
+      "review_reason": "Thai humanize and day names changed, weeks added",
+      "query": "How are relative times such as 'in 2 weeks' written in Thai?",
+      "answer_key": null
+    },
+    {
+      "case_id": "arrow-5",
+      "repository": "arrow",
+      "repository_url": "https://github.com/arrow-py/arrow",
+      "candidate_list": "experiments/dataset/candidates/arrow-1.3.0-1.4.0.json",
+      "old": {
+        "revision": "1.3.0",
+        "commit": "87a1a774aad0505d9da18ad1d16f6e571f262503"
+      },
+      "new": {
+        "revision": "1.4.0",
+        "commit": "2c1f5185ad66bf3b1cf8c0812f4b4fe65ac46656"
+      },
+      "location": {
+        "path": "arrow/parser.py",
+        "kind": "method",
+        "symbol": "TzinfoParser.parse",
+        "part_index": 1
+      },
+      "status": "superseded",
+      "review_reason": "time zone strings now parsed with zoneinfo, not dateutil",
+      "query": "How is a time zone name such as 'Europe/Paris' turned into a tzinfo object?",
+      "answer_key": null
+    },
+    {
+      "case_id": "arrow-6",
+      "repository": "arrow",
+      "repository_url": "https://github.com/arrow-py/arrow",
+      "candidate_list": "experiments/dataset/candidates/arrow-1.3.0-1.4.0.json",
+      "old": {
+        "revision": "1.3.0",
+        "commit": "87a1a774aad0505d9da18ad1d16f6e571f262503"
+      },
+      "new": {
+        "revision": "1.4.0",
+        "commit": "2c1f5185ad66bf3b1cf8c0812f4b4fe65ac46656"
+      },
+      "location": {
+        "path": "arrow/arrow.py",
+        "kind": "method",
+        "symbol": "Arrow.fromdatetime",
+        "part_index": 1
+      },
+      "status": "superseded",
+      "review_reason": "naive datetimes now get timezone.utc, not dateutil tzutc",
+      "query": "Which time zone is assigned when converting a naive Python datetime without specifying one?",
+      "answer_key": null
+    },
+    {
+      "case_id": "arrow-8",
+      "repository": "arrow",
+      "repository_url": "https://github.com/arrow-py/arrow",
+      "candidate_list": "experiments/dataset/candidates/arrow-1.3.0-1.4.0.json",
+      "old": {
+        "revision": "1.3.0",
+        "commit": "87a1a774aad0505d9da18ad1d16f6e571f262503"
+      },
+      "new": {
+        "revision": "1.4.0",
+        "commit": "2c1f5185ad66bf3b1cf8c0812f4b4fe65ac46656"
+      },
+      "location": {
+        "path": "arrow/arrow.py",
+        "kind": "method",
+        "symbol": "Arrow.span",
+        "part_index": 1
+      },
+      "status": "superseded",
+      "review_reason": "week_start now only validated for week spans",
+      "query": "When is the week start day validated while computing the start and end of a period?",
+      "answer_key": null
+    },
+    {
+      "case_id": "attrs-1",
+      "repository": "attrs",
+      "repository_url": "https://github.com/python-attrs/attrs",
+      "candidate_list": "experiments/dataset/candidates/attrs-25.4.0-26.1.0.json",
+      "old": {
+        "revision": "25.4.0",
+        "commit": "9a98e00a7c078360add417c5d62db820d4645ab1"
+      },
+      "new": {
+        "revision": "26.1.0",
+        "commit": "7bfc49e9b22d5ba25b6e429524c3d49fee27cb36"
+      },
+      "location": {
+        "path": "src/attr/_make.py",
+        "kind": "function",
+        "symbol": "_make_init_script",
+        "part_index": 1
+      },
+      "status": "superseded",
+      "review_reason": "frozen classes now accept on_setattr=setters.NO_OP instead of raising ValueError",
+      "query": "Can a frozen class use a no-op on-setattr hook on one of its fields?",
+      "answer_key": {
+        "old": [
+          "raises ValueError",
+          "Frozen classes can't use on_setattr"
+        ],
+        "new": [
+          "allowed when on_setattr is setters.NO_OP",
+          "other on_setattr hooks still raise ValueError"
+        ]
+      }
+    },
+    {
+      "case_id": "attrs-2",
+      "repository": "attrs",
+      "repository_url": "https://github.com/python-attrs/attrs",
+      "candidate_list": "experiments/dataset/candidates/attrs-25.4.0-26.1.0.json",
+      "old": {
+        "revision": "25.4.0",
+        "commit": "9a98e00a7c078360add417c5d62db820d4645ab1"
+      },
+      "new": {
+        "revision": "26.1.0",
+        "commit": "7bfc49e9b22d5ba25b6e429524c3d49fee27cb36"
+      },
+      "location": {
+        "path": "src/attr/_make.py",
+        "kind": "method",
+        "symbol": "Attribute.__setstate__",
+        "part_index": 1
+      },
+      "status": "superseded",
+      "review_reason": "unpickling Attribute objects from older attrs now infers the new alias_is_default field",
+      "query": "How are pickled attribute definitions from an older version restored?",
+      "answer_key": {
+        "old": [
+          "state is set directly from the pickled tuple",
+          "no alias_is_default field"
+        ],
+        "new": [
+          "older pickles are missing alias_is_default",
+          "alias_is_default is inferred from the alias"
+        ]
+      }
+    },
+    {
+      "case_id": "attrs-4",
+      "repository": "attrs",
+      "repository_url": "https://github.com/python-attrs/attrs",
+      "candidate_list": "experiments/dataset/candidates/attrs-25.4.0-26.1.0.json",
+      "old": {
+        "revision": "25.4.0",
+        "commit": "9a98e00a7c078360add417c5d62db820d4645ab1"
+      },
+      "new": {
+        "revision": "26.1.0",
+        "commit": "7bfc49e9b22d5ba25b6e429524c3d49fee27cb36"
+      },
+      "location": {
+        "path": "src/attr/_make.py",
+        "kind": "method",
+        "symbol": "_ClassBuilder.add_replace",
+        "part_index": 1
+      },
+      "status": "superseded",
+      "review_reason": "on Python 3.13+ defining a class now overwrites attrs.evolve’s qualname and doc (verified by running both releases)",
+      "query": "What happens to the evolve function's name and docstring when classes get a __replace__ method?",
+      "answer_key": null
+    },
+    {
+      "case_id": "attrs-5",
+      "repository": "attrs",
+      "repository_url": "https://github.com/python-attrs/attrs",
+      "candidate_list": "experiments/dataset/candidates/attrs-25.4.0-26.1.0.json",
+      "old": {
+        "revision": "25.4.0",
+        "commit": "9a98e00a7c078360add417c5d62db820d4645ab1"
+      },
+      "new": {
+        "revision": "26.1.0",
+        "commit": "7bfc49e9b22d5ba25b6e429524c3d49fee27cb36"
+      },
+      "location": {
+        "path": "src/attr/validators.py",
+        "kind": "function",
+        "symbol": "disabled",
+        "part_index": 1
+      },
+      "status": "superseded",
+      "review_reason": "nested validators.disabled() now restores the previous setting instead of re-enabling validators",
+      "query": "What happens to the checks on field values when the context manager that turns them off is nested?",
+      "answer_key": null
+    },
+    {
+      "case_id": "attrs-6",
+      "repository": "attrs",
+      "repository_url": "https://github.com/python-attrs/attrs",
+      "candidate_list": "experiments/dataset/candidates/attrs-25.4.0-26.1.0.json",
+      "old": {
+        "revision": "25.4.0",
+        "commit": "9a98e00a7c078360add417c5d62db820d4645ab1"
+      },
+      "new": {
+        "revision": "26.1.0",
+        "commit": "7bfc49e9b22d5ba25b6e429524c3d49fee27cb36"
+      },
+      "location": {
+        "path": "src/attr/_make.py",
+        "kind": "method",
+        "symbol": "Attribute.from_counting_attr",
+        "part_index": 1
+      },
+      "status": "superseded",
+      "review_reason": "Attribute now records alias_is_default, True when no alias was given",
+      "query": "How does an attribute record whether its init alias was generated automatically?",
+      "answer_key": null
+    },
+    {
+      "case_id": "attrs-7",
+      "repository": "attrs",
+      "repository_url": "https://github.com/python-attrs/attrs",
+      "candidate_list": "experiments/dataset/candidates/attrs-25.4.0-26.1.0.json",
+      "old": {
+        "revision": "25.4.0",
+        "commit": "9a98e00a7c078360add417c5d62db820d4645ab1"
+      },
+      "new": {
+        "revision": "26.1.0",
+        "commit": "7bfc49e9b22d5ba25b6e429524c3d49fee27cb36"
+      },
+      "location": {
+        "path": "src/attr/_make.py",
+        "kind": "method",
+        "symbol": "Attribute.__init__",
+        "part_index": 1
+      },
+      "status": "superseded",
+      "review_reason": "Attribute takes a new alias_is_default argument, defaulting to whether alias is None",
+      "query": "Which parameters control how a field's init alias is stored when a field definition object is created?",
+      "answer_key": null
+    },
+    {
+      "case_id": "attrs-8",
+      "repository": "attrs",
+      "repository_url": "https://github.com/python-attrs/attrs",
+      "candidate_list": "experiments/dataset/candidates/attrs-25.4.0-26.1.0.json",
+      "old": {
+        "revision": "25.4.0",
+        "commit": "9a98e00a7c078360add417c5d62db820d4645ab1"
+      },
+      "new": {
+        "revision": "26.1.0",
+        "commit": "7bfc49e9b22d5ba25b6e429524c3d49fee27cb36"
+      },
+      "location": {
+        "path": "src/attr/exceptions.py",
+        "kind": "class",
+        "symbol": "FrozenError",
+        "part_index": 1
+      },
+      "status": "superseded",
+      "review_reason": "FrozenError now has str() and tuple args but can no longer be pickled (verified by running both releases)",
+      "query": "Can the error raised when assigning to an immutable instance be pickled, and what is its message?",
+      "answer_key": null
+    },
+    {
+      "case_id": "attrs-9",
+      "repository": "attrs",
+      "repository_url": "https://github.com/python-attrs/attrs",
+      "candidate_list": "experiments/dataset/candidates/attrs-25.4.0-26.1.0.json",
+      "old": {
+        "revision": "25.4.0",
+        "commit": "9a98e00a7c078360add417c5d62db820d4645ab1"
+      },
+      "new": {
+        "revision": "26.1.0",
+        "commit": "7bfc49e9b22d5ba25b6e429524c3d49fee27cb36"
+      },
+      "location": {
+        "path": "src/attr/_make.py",
+        "kind": "function",
+        "symbol": "fields",
+        "part_index": 1
+      },
+      "status": "superseded",
+      "review_reason": "fields() now accepts attrs instances, not only classes",
+      "query": "How do you get the attribute definitions of an instance instead of its class?",
+      "answer_key": null
+    },
+    {
+      "case_id": "attrs-10",
+      "repository": "attrs",
+      "repository_url": "https://github.com/python-attrs/attrs",
+      "candidate_list": "experiments/dataset/candidates/attrs-25.4.0-26.1.0.json",
+      "old": {
+        "revision": "25.4.0",
+        "commit": "9a98e00a7c078360add417c5d62db820d4645ab1"
+      },
+      "new": {
+        "revision": "26.1.0",
+        "commit": "7bfc49e9b22d5ba25b6e429524c3d49fee27cb36"
+      },
+      "location": {
+        "path": "src/attr/_make.py",
+        "kind": "function",
+        "symbol": "_transform_attrs",
+        "part_index": 1
+      },
+      "status": "superseded",
+      "review_reason": "field_transformer now receives attributes with default aliases already filled in",
+      "query": "Do field transformers see default init aliases on the attributes they receive?",
+      "answer_key": null
+    },
+    {
+      "case_id": "attrs-11",
+      "repository": "attrs",
+      "repository_url": "https://github.com/python-attrs/attrs",
+      "candidate_list": "experiments/dataset/candidates/attrs-25.4.0-26.1.0.json",
+      "old": {
+        "revision": "25.4.0",
+        "commit": "9a98e00a7c078360add417c5d62db820d4645ab1"
+      },
+      "new": {
+        "revision": "26.1.0",
+        "commit": "7bfc49e9b22d5ba25b6e429524c3d49fee27cb36"
+      },
+      "location": {
+        "path": "src/attr/_make.py",
+        "kind": "method",
+        "symbol": "Attribute.evolve",
+        "part_index": 1
+      },
+      "status": "superseded",
+      "review_reason": "Attribute.evolve(name=...) now updates an auto-generated alias; an explicit alias marks it as not default",
+      "query": "When an attribute definition is copied with a new name, what happens to its init alias?",
+      "answer_key": null
+    },
+    {
+      "case_id": "click-1",
+      "repository": "click",
+      "repository_url": "https://github.com/pallets/click",
+      "candidate_list": "experiments/dataset/candidates/click-8.4.2-8.5.1.json",
+      "old": {
+        "revision": "8.4.2",
+        "commit": "b2e30a175449cfda909ee4fbf4a29a6a071cad53"
+      },
+      "new": {
+        "revision": "8.5.1",
+        "commit": "cf19179e8e2fd54c601378cec9e0d21bb12b6fb1"
+      },
+      "location": {
+        "path": "src/click/_termui_impl.py",
+        "kind": "function",
+        "symbol": "_tempfilepager",
+        "part_index": 1
+      },
+      "status": "superseded",
+      "review_reason": "PAGER arguments now passed to the pager",
+      "query": "How are arguments in the PAGER environment variable handled when paging through a temporary file?",
+      "answer_key": {
+        "old": [
+          "only the pager command is run with the file name",
+          "PAGER arguments are dropped"
+        ],
+        "new": [
+          "PAGER arguments are passed before the temporary file name"
+        ]
+      }
+    },
+    {
+      "case_id": "click-2",
+      "repository": "click",
+      "repository_url": "https://github.com/pallets/click",
+      "candidate_list": "experiments/dataset/candidates/click-8.4.2-8.5.1.json",
+      "old": {
+        "revision": "8.4.2",
+        "commit": "b2e30a175449cfda909ee4fbf4a29a6a071cad53"
+      },
+      "new": {
+        "revision": "8.5.1",
+        "commit": "cf19179e8e2fd54c601378cec9e0d21bb12b6fb1"
+      },
+      "location": {
+        "path": "src/click/core.py",
+        "kind": "method",
+        "symbol": "Command.get_short_help_str",
+        "part_index": 1
+      },
+      "status": "superseded",
+      "review_reason": "deprecated short help no longer translated",
+      "query": "How is the short help text built for a deprecated command?",
+      "answer_key": {
+        "old": [
+          "help text is passed through gettext translation before the deprecated label"
+        ],
+        "new": [
+          "help text is not passed through gettext translation",
+          "deprecated label is appended"
+        ]
+      }
+    },
+    {
+      "case_id": "click-6",
+      "repository": "click",
+      "repository_url": "https://github.com/pallets/click",
+      "candidate_list": "experiments/dataset/candidates/click-8.4.2-8.5.1.json",
+      "old": {
+        "revision": "8.4.2",
+        "commit": "b2e30a175449cfda909ee4fbf4a29a6a071cad53"
+      },
+      "new": {
+        "revision": "8.5.1",
+        "commit": "cf19179e8e2fd54c601378cec9e0d21bb12b6fb1"
+      },
+      "location": {
+        "path": "src/click/_termui_impl.py",
+        "kind": "function",
+        "symbol": "_pipepager",
+        "part_index": 1
+      },
+      "status": "superseded",
+      "review_reason": "less colour detection now parses flags properly",
+      "query": "When output is paged through less, how is it decided whether to keep colours?",
+      "answer_key": null
+    },
+    {
+      "case_id": "click-7",
+      "repository": "click",
+      "repository_url": "https://github.com/pallets/click",
+      "candidate_list": "experiments/dataset/candidates/click-8.4.2-8.5.1.json",
+      "old": {
+        "revision": "8.4.2",
+        "commit": "b2e30a175449cfda909ee4fbf4a29a6a071cad53"
+      },
+      "new": {
+        "revision": "8.5.1",
+        "commit": "cf19179e8e2fd54c601378cec9e0d21bb12b6fb1"
+      },
+      "location": {
+        "path": "src/click/core.py",
+        "kind": "method",
+        "symbol": "Command.format_help",
+        "part_index": 1
+      },
+      "status": "superseded",
+      "review_reason": "help now shows an arguments section",
+      "query": "Which sections appear on a command's help page, and in what order?",
+      "answer_key": null
+    },
+    {
+      "case_id": "click-8",
+      "repository": "click",
+      "repository_url": "https://github.com/pallets/click",
+      "candidate_list": "experiments/dataset/candidates/click-8.4.2-8.5.1.json",
+      "old": {
+        "revision": "8.4.2",
+        "commit": "b2e30a175449cfda909ee4fbf4a29a6a071cad53"
+      },
+      "new": {
+        "revision": "8.5.1",
+        "commit": "cf19179e8e2fd54c601378cec9e0d21bb12b6fb1"
+      },
+      "location": {
+        "path": "src/click/testing.py",
+        "kind": "method",
+        "symbol": "CliRunner.isolated_filesystem",
+        "part_index": 1
+      },
+      "status": "superseded",
+      "review_reason": "isolated_filesystem now warns deprecated",
+      "query": "Is the test runner helper that runs code inside a temporary working directory deprecated?",
+      "answer_key": null
+    },
+    {
+      "case_id": "click-9",
+      "repository": "click",
+      "repository_url": "https://github.com/pallets/click",
+      "candidate_list": "experiments/dataset/candidates/click-8.4.2-8.5.1.json",
+      "old": {
+        "revision": "8.4.2",
+        "commit": "b2e30a175449cfda909ee4fbf4a29a6a071cad53"
+      },
+      "new": {
+        "revision": "8.5.1",
+        "commit": "cf19179e8e2fd54c601378cec9e0d21bb12b6fb1"
+      },
+      "location": {
+        "path": "src/click/termui.py",
+        "kind": "function",
+        "symbol": "_interpret_color",
+        "part_index": 1
+      },
+      "status": "superseded",
+      "review_reason": "invalid colours now raise ValueError",
+      "query": "What happens when an invalid colour value is passed to styled terminal output?",
+      "answer_key": null
+    },
+    {
+      "case_id": "click-10",
+      "repository": "click",
+      "repository_url": "https://github.com/pallets/click",
+      "candidate_list": "experiments/dataset/candidates/click-8.4.2-8.5.1.json",
+      "old": {
+        "revision": "8.4.2",
+        "commit": "b2e30a175449cfda909ee4fbf4a29a6a071cad53"
+      },
+      "new": {
+        "revision": "8.5.1",
+        "commit": "cf19179e8e2fd54c601378cec9e0d21bb12b6fb1"
+      },
+      "location": {
+        "path": "src/click/core.py",
+        "kind": "method",
+        "symbol": "Option.get_help_extra",
+        "part_index": 1
+      },
+      "status": "superseded",
+      "review_reason": "empty envvar now treated as unset",
+      "query": "Which environment variable name is shown in an option's help when its envvar is an empty string?",
+      "answer_key": null
+    },
+    {
+      "case_id": "httpx-3",
+      "repository": "httpx",
+      "repository_url": "https://github.com/encode/httpx",
+      "candidate_list": "experiments/dataset/candidates/httpx-0.27.2-0.28.1.json",
+      "old": {
+        "revision": "0.27.2",
+        "commit": "609df7ecc0f7cb10a1c998aa9c269bba77337c5f"
+      },
+      "new": {
+        "revision": "0.28.1",
+        "commit": "26d48e0634e6ee9cdc0533996db289ce4b430177"
+      },
+      "location": {
+        "path": "httpx/_utils.py",
+        "kind": "method",
+        "symbol": "Timer._get_time",
+        "part_index": 1
+      },
+      "status": "removed",
+      "review_reason": "async elapsed time now uses perf_counter, not the event loop clock",
+      "query": "How does the client measure elapsed time for async responses?",
+      "answer_key": {
+        "old": [
+          "event loop clock",
+          "trio.current_time() under trio",
+          "asyncio loop time otherwise"
+        ],
+        "new": [
+          "time.perf_counter",
+          "same clock for sync and async"
+        ]
+      }
+    },
+    {
+      "case_id": "httpx-4",
+      "repository": "httpx",
+      "repository_url": "https://github.com/encode/httpx",
+      "candidate_list": "experiments/dataset/candidates/httpx-0.27.2-0.28.1.json",
+      "old": {
+        "revision": "0.27.2",
+        "commit": "609df7ecc0f7cb10a1c998aa9c269bba77337c5f"
+      },
+      "new": {
+        "revision": "0.28.1",
+        "commit": "26d48e0634e6ee9cdc0533996db289ce4b430177"
+      },
+      "location": {
+        "path": "httpx/_utils.py",
+        "kind": "method",
+        "symbol": "Timer.async_elapsed",
+        "part_index": 1
+      },
+      "status": "removed",
+      "review_reason": "async elapsed time now uses perf_counter, not the event loop clock",
+      "query": "How is the elapsed duration computed when an async response is closed?",
+      "answer_key": {
+        "old": [
+          "event loop clock",
+          "trio.current_time() under trio",
+          "asyncio loop time otherwise"
+        ],
+        "new": [
+          "time.perf_counter",
+          "same clock for sync and async"
+        ]
+      }
+    },
+    {
+      "case_id": "httpx-5",
+      "repository": "httpx",
+      "repository_url": "https://github.com/encode/httpx",
+      "candidate_list": "experiments/dataset/candidates/httpx-0.27.2-0.28.1.json",
+      "old": {
+        "revision": "0.27.2",
+        "commit": "609df7ecc0f7cb10a1c998aa9c269bba77337c5f"
+      },
+      "new": {
+        "revision": "0.28.1",
+        "commit": "26d48e0634e6ee9cdc0533996db289ce4b430177"
+      },
+      "location": {
+        "path": "httpx/_client.py",
+        "kind": "method",
+        "symbol": "AsyncClient.request",
+        "part_index": 1
+      },
+      "status": "superseded",
+      "review_reason": "cookie deprecation warning now points at the caller",
+      "query": "Which code location does the warning about passing cookies to an individual call point to?",
+      "answer_key": null
+    },
+    {
+      "case_id": "httpx-6",
+      "repository": "httpx",
+      "repository_url": "https://github.com/encode/httpx",
+      "candidate_list": "experiments/dataset/candidates/httpx-0.27.2-0.28.1.json",
+      "old": {
+        "revision": "0.27.2",
+        "commit": "609df7ecc0f7cb10a1c998aa9c269bba77337c5f"
+      },
+      "new": {
+        "revision": "0.28.1",
+        "commit": "26d48e0634e6ee9cdc0533996db289ce4b430177"
+      },
+      "location": {
+        "path": "httpx/_config.py",
+        "kind": "method",
+        "symbol": "SSLConfig._create_default_ssl_context",
+        "part_index": 1
+      },
+      "status": "removed",
+      "review_reason": "default SSL context no longer sets custom ciphers or SSLKEYLOGFILE",
+      "query": "How is the default SSL context configured for verified connections?",
+      "answer_key": null
+    },
+    {
+      "case_id": "httpx-7",
+      "repository": "httpx",
+      "repository_url": "https://github.com/encode/httpx",
+      "candidate_list": "experiments/dataset/candidates/httpx-0.27.2-0.28.1.json",
+      "old": {
+        "revision": "0.27.2",
+        "commit": "609df7ecc0f7cb10a1c998aa9c269bba77337c5f"
+      },
+      "new": {
+        "revision": "0.28.1",
+        "commit": "26d48e0634e6ee9cdc0533996db289ce4b430177"
+      },
+      "location": {
+        "path": "httpx/_urlparse.py",
+        "kind": "function",
+        "symbol": "urlparse",
+        "part_index": 1
+      },
+      "status": "superseded",
+      "review_reason": "curly braces in URL paths are now percent-escaped",
+      "query": "Which characters are percent-escaped in a URL path?",
+      "answer_key": null
+    },
+    {
+      "case_id": "httpx-10",
+      "repository": "httpx",
+      "repository_url": "https://github.com/encode/httpx",
+      "candidate_list": "experiments/dataset/candidates/httpx-0.27.2-0.28.1.json",
+      "old": {
+        "revision": "0.27.2",
+        "commit": "609df7ecc0f7cb10a1c998aa9c269bba77337c5f"
+      },
+      "new": {
+        "revision": "0.28.1",
+        "commit": "26d48e0634e6ee9cdc0533996db289ce4b430177"
+      },
+      "location": {
+        "path": "httpx/_decoders.py",
+        "kind": "method",
+        "symbol": "ZStandardDecoder.__init__",
+        "part_index": 1
+      },
+      "status": "superseded",
+      "review_reason": "empty zstd response no longer raises incomplete-data error",
+      "query": "What happens when decoding a zstd-encoded response with an empty body?",
+      "answer_key": null
+    },
+    {
+      "case_id": "httpx-11",
+      "repository": "httpx",
+      "repository_url": "https://github.com/encode/httpx",
+      "candidate_list": "experiments/dataset/candidates/httpx-0.27.2-0.28.1.json",
+      "old": {
+        "revision": "0.27.2",
+        "commit": "609df7ecc0f7cb10a1c998aa9c269bba77337c5f"
+      },
+      "new": {
+        "revision": "0.28.1",
+        "commit": "26d48e0634e6ee9cdc0533996db289ce4b430177"
+      },
+      "location": {
+        "path": "httpx/_config.py",
+        "kind": "method",
+        "symbol": "Proxy.__init__",
+        "part_index": 1
+      },
+      "status": "superseded",
+      "review_reason": "socks5h proxy URLs now accepted",
+      "query": "Which proxy URL schemes are accepted?",
+      "answer_key": null
+    },
+    {
+      "case_id": "marshmallow-2",
+      "repository": "marshmallow",
+      "repository_url": "https://github.com/marshmallow-code/marshmallow",
+      "candidate_list": "experiments/dataset/candidates/marshmallow-4.3.1-4.4.0.json",
+      "old": {
+        "revision": "4.3.1",
+        "commit": "c7b559a1fa3aba57ca6dba0ab336841c5038a782"
+      },
+      "new": {
+        "revision": "4.4.0",
+        "commit": "a38b7f6842042e65fd1a485ed152ca99f87880c0"
+      },
+      "location": {
+        "path": "src/marshmallow/fields.py",
+        "kind": "method",
+        "symbol": "TimeDelta._deserialize",
+        "part_index": 1
+      },
+      "status": "superseded",
+      "review_reason": "NaN input now raises the field's invalid validation error instead of an uncaught ValueError",
+      "query": "What happens when a duration field receives NaN?",
+      "answer_key": {
+        "old": [
+          "NaN raises an uncaught ValueError",
+          "only OverflowError is turned into a validation error"
+        ],
+        "new": [
+          "NaN raises the field's invalid validation error"
+        ]
+      }
+    },
+    {
+      "case_id": "marshmallow-6",
+      "repository": "marshmallow",
+      "repository_url": "https://github.com/marshmallow-code/marshmallow",
+      "candidate_list": "experiments/dataset/candidates/marshmallow-4.3.1-4.4.0.json",
+      "old": {
+        "revision": "4.3.1",
+        "commit": "c7b559a1fa3aba57ca6dba0ab336841c5038a782"
+      },
+      "new": {
+        "revision": "4.4.0",
+        "commit": "a38b7f6842042e65fd1a485ed152ca99f87880c0"
+      },
+      "location": {
+        "path": "src/marshmallow/fields.py",
+        "kind": "method",
+        "symbol": "Pluck._field_data_key",
+        "part_index": 1
+      },
+      "status": "superseded",
+      "review_reason": "empty-string data_key is now used as the key instead of falling back to the field name",
+      "query": "When a field extracts a single value from a nested schema, which key is used if that field's data_key is an empty string?",
+      "answer_key": {
+        "old": [
+          "empty string falls back to the field name"
+        ],
+        "new": [
+          "empty string is used as the key",
+          "falls back to the field name only when data_key is None"
+        ]
+      }
+    },
+    {
+      "case_id": "marshmallow-7",
+      "repository": "marshmallow",
+      "repository_url": "https://github.com/marshmallow-code/marshmallow",
+      "candidate_list": "experiments/dataset/candidates/marshmallow-4.3.1-4.4.0.json",
+      "old": {
+        "revision": "4.3.1",
+        "commit": "c7b559a1fa3aba57ca6dba0ab336841c5038a782"
+      },
+      "new": {
+        "revision": "4.4.0",
+        "commit": "a38b7f6842042e65fd1a485ed152ca99f87880c0"
+      },
+      "location": {
+        "path": "src/marshmallow/utils.py",
+        "kind": "function",
+        "symbol": "get_value",
+        "part_index": 1
+      },
+      "status": "superseded",
+      "review_reason": "integer keys are no longer supported and now raise TypeError; dotted keys handled by a loop",
+      "query": "How are dotted and integer keys looked up when reading a value from an object?",
+      "answer_key": null
+    },
+    {
+      "case_id": "rich-3",
+      "repository": "rich",
+      "repository_url": "https://github.com/Textualize/rich",
+      "candidate_list": "experiments/dataset/candidates/rich-v14.2.0-v14.3.4.json",
+      "old": {
+        "revision": "v14.2.0",
+        "commit": "494f83c923ca54ecc943bf5e60c0004e65fbb54e"
+      },
+      "new": {
+        "revision": "v14.3.4",
+        "commit": "ee8378c3bbbd7c75abc2f55c6c19e83b218ae81d"
+      },
+      "location": {
+        "path": "rich/style.py",
+        "kind": "method",
+        "symbol": "Style.__init__",
+        "part_index": 1
+      },
+      "status": "superseded",
+      "review_reason": "link ids now sequential instead of random",
+      "query": "How are ids generated for hyperlinks in styles?",
+      "answer_key": {
+        "old": [
+          "random number from randint(0, 999999)"
+        ],
+        "new": [
+          "sequential ids from a counter"
+        ]
+      }
+    },
+    {
+      "case_id": "rich-5",
+      "repository": "rich",
+      "repository_url": "https://github.com/Textualize/rich",
+      "candidate_list": "experiments/dataset/candidates/rich-v14.2.0-v14.3.4.json",
+      "old": {
+        "revision": "v14.2.0",
+        "commit": "494f83c923ca54ecc943bf5e60c0004e65fbb54e"
+      },
+      "new": {
+        "revision": "v14.3.4",
+        "commit": "ee8378c3bbbd7c75abc2f55c6c19e83b218ae81d"
+      },
+      "location": {
+        "path": "rich/traceback.py",
+        "kind": "function",
+        "symbol": "install.excepthook",
+        "part_index": 1
+      },
+      "status": "superseded",
+      "review_reason": "install() now passes locals_max_depth and locals_overflow to tracebacks",
+      "query": "When rich is set as the default exception handler, which options for showing local variables does it pass on?",
+      "answer_key": {
+        "old": [
+          "locals_max_depth is not passed on",
+          "locals_overflow is not passed on"
+        ],
+        "new": [
+          "locals_max_depth is passed on",
+          "locals_overflow is passed on"
+        ]
+      }
+    },
+    {
+      "case_id": "rich-6",
+      "repository": "rich",
+      "repository_url": "https://github.com/Textualize/rich",
+      "candidate_list": "experiments/dataset/candidates/rich-v14.2.0-v14.3.4.json",
+      "old": {
+        "revision": "v14.2.0",
+        "commit": "494f83c923ca54ecc943bf5e60c0004e65fbb54e"
+      },
+      "new": {
+        "revision": "v14.3.4",
+        "commit": "ee8378c3bbbd7c75abc2f55c6c19e83b218ae81d"
+      },
+      "location": {
+        "path": "rich/cells.py",
+        "kind": "function",
+        "symbol": "set_cell_size",
+        "part_index": 1
+      },
+      "status": "superseded",
+      "review_reason": "emoji sequences now cropped as one character instead of cut mid-sequence",
+      "query": "How is a string containing emoji sequences cropped to fit a given display width?",
+      "answer_key": null
+    },
+    {
+      "case_id": "rich-7",
+      "repository": "rich",
+      "repository_url": "https://github.com/Textualize/rich",
+      "candidate_list": "experiments/dataset/candidates/rich-v14.2.0-v14.3.4.json",
+      "old": {
+        "revision": "v14.2.0",
+        "commit": "494f83c923ca54ecc943bf5e60c0004e65fbb54e"
+      },
+      "new": {
+        "revision": "v14.3.4",
+        "commit": "ee8378c3bbbd7c75abc2f55c6c19e83b218ae81d"
+      },
+      "location": {
+        "path": "rich/console.py",
+        "kind": "method",
+        "symbol": "Console.print",
+        "part_index": 1
+      },
+      "status": "superseded",
+      "review_reason": "print style no longer applied to newlines",
+      "query": "Is the style given when writing output applied to line breaks?",
+      "answer_key": null
+    },
+    {
+      "case_id": "rich-8",
+      "repository": "rich",
+      "repository_url": "https://github.com/Textualize/rich",
+      "candidate_list": "experiments/dataset/candidates/rich-v14.2.0-v14.3.4.json",
+      "old": {
+        "revision": "v14.2.0",
+        "commit": "494f83c923ca54ecc943bf5e60c0004e65fbb54e"
+      },
+      "new": {
+        "revision": "v14.3.4",
+        "commit": "ee8378c3bbbd7c75abc2f55c6c19e83b218ae81d"
+      },
+      "location": {
+        "path": "rich/text.py",
+        "kind": "method",
+        "symbol": "Text.wrap",
+        "part_index": 1
+      },
+      "status": "superseded",
+      "review_reason": "no_wrap text with overflow ignore is no longer cropped",
+      "query": "What happens to strings with line breaking turned off when overflow is set to ignore?",
+      "answer_key": null
+    },
+    {
+      "case_id": "rich-10",
+      "repository": "rich",
+      "repository_url": "https://github.com/Textualize/rich",
+      "candidate_list": "experiments/dataset/candidates/rich-v14.2.0-v14.3.4.json",
+      "old": {
+        "revision": "v14.2.0",
+        "commit": "494f83c923ca54ecc943bf5e60c0004e65fbb54e"
+      },
+      "new": {
+        "revision": "v14.3.4",
+        "commit": "ee8378c3bbbd7c75abc2f55c6c19e83b218ae81d"
+      },
+      "location": {
+        "path": "rich/style.py",
+        "kind": "method",
+        "symbol": "Style.update_link",
+        "part_index": 1
+      },
+      "status": "superseded",
+      "review_reason": "link ids now sequential instead of random",
+      "query": "How is the hyperlink id set when a style's link is changed?",
+      "answer_key": null
+    },
+    {
+      "case_id": "rich-11",
+      "repository": "rich",
+      "repository_url": "https://github.com/Textualize/rich",
+      "candidate_list": "experiments/dataset/candidates/rich-v14.2.0-v14.3.4.json",
+      "old": {
+        "revision": "v14.2.0",
+        "commit": "494f83c923ca54ecc943bf5e60c0004e65fbb54e"
+      },
+      "new": {
+        "revision": "v14.3.4",
+        "commit": "ee8378c3bbbd7c75abc2f55c6c19e83b218ae81d"
+      },
+      "location": {
+        "path": "rich/prompt.py",
+        "kind": "method",
+        "symbol": "PromptBase.on_validate_error",
+        "part_index": 1
+      },
+      "status": "superseded",
+      "review_reason": "validation errors now render markup even if the console disables it",
+      "query": "Is markup rendered in the error message shown when an interactive question gets an invalid answer?",
+      "answer_key": null
+    }
+  ],
+  "counts": {
+    "cases": 41,
+    "answering_cases": 12
+  }
+}

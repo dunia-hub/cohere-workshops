@@ -4,7 +4,12 @@ from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from cohere_workshops.chunks import RepositoryChunk
-from cohere_workshops.embeddings import EmbedClient, embed_chunks, embed_query
+from cohere_workshops.embeddings import (
+    EmbedClient,
+    EmbeddedChunk,
+    embed_chunks,
+    embed_query,
+)
 from cohere_workshops.rerank_versions import rerank_hits
 from cohere_workshops.reranking import RerankClient
 from cohere_workshops.retrieval import retrieve_chunks
@@ -111,6 +116,7 @@ class CodeSearchTool:
         candidates: int = 10,
         keep: int = 4,
         git_filter: bool = True,
+        embedded: Sequence[EmbeddedChunk] | None = None,
     ) -> None:
         if candidates < 1 or keep < 1:
             raise ValueError("candidates and keep must be at least 1")
@@ -126,7 +132,14 @@ class CodeSearchTool:
         )
         self.items = select_level(corpus.chunks, "symbol")
         self._by_id = {item.chunk.chunk_id: item for item in self.items}
-        self._embedded = embed_chunks(client, [item.chunk for item in self.items])
+        # Pass embedded to reuse an index already embedded for these chunks.
+        self._embedded = (
+            tuple(embedded)
+            if embedded is not None
+            else embed_chunks(client, [item.chunk for item in self.items])
+        )
+        if {e.chunk.chunk_id for e in self._embedded} != set(self._by_id):
+            raise ValueError("embedded chunks do not match the corpus")
         self.calls: list[SearchCall] = []
         self.evidence: dict[str, VersionedChunk] = {}
         self.rejected: dict[str, VersionedChunk] = {}
