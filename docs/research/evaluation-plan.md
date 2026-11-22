@@ -22,12 +22,13 @@ Each case must contain:
 
 1. **Choose repositories.** Public Python repositories with a permissive licence, tagged releases and Python source in most changes. Repositories used during development are excluded.
 2. **Choose commit pairs.** Use consecutive release tags as the older and newer commits. An index built from an older release is the realistic case this study models. Where a repository has too few releases, use commits at least 50 commits apart and record why.
-3. **List candidate locations.** Build the two-revision corpus (`build_versioned_corpus`) and list every symbol-level chunk labelled superseded or removed.
-4. **Filter candidates.** Apply the inclusion and exclusion criteria below and record every exclusion with its reason.
-5. **Sample.** Select up to 20 locations per commit pair at random with a recorded seed, so large releases do not dominate.
-6. **Write queries.** For each location, read the code at both commits and the commit messages, then write one query describing the behaviour in plain words. The query must not contain the symbol name or the file path.
-7. **Write answer keys.** For the answering subset, list the facts true at each commit, checked by reading the code at both commits and, where practical, by running it.
-8. **Freeze.** Commit the manifest, queries and answer keys before any final run. Changes after that point are recorded as protocol changes.
+3. **List candidate locations.** Run `cohere-candidates` on the commit pair. It builds the two-revision corpus and lists every symbol-level chunk labelled superseded or removed.
+4. **Filter candidates.** `cohere-candidates` applies the automatic exclusion criteria below and records every exclusion with its reason.
+5. **Sample.** `cohere-candidates` shuffles every included location with a recorded seed (default 2026) and marks the first 20 per commit pair as sampled, so large releases do not dominate.
+6. **Review.** Read each sampled location at both commits. Some non-behavioural changes pass the automatic filters, for example renaming a typing alias, so record a decision and reason for every sampled location in its `review` field. A rejected location is replaced by the next included one in `sample_order`, never by choice.
+7. **Write queries.** For each location, read the code at both commits and the commit messages, then write one query describing the behaviour in plain words. The query must not contain the symbol name or the file path.
+8. **Write answer keys.** For the answering subset, list the facts true at each commit, checked by reading the code at both commits and, where practical, by running it.
+9. **Freeze.** Commit the manifest, queries and answer keys before any final run. Changes after that point are recorded as protocol changes.
 
 ### Target size
 
@@ -47,12 +48,16 @@ A location may be included when:
 A location must be excluded when:
 
 - the change is whitespace, formatting, comments or docstrings only;
+- the change is to type annotations only;
 - the file is generated, vendored or a test file;
 - the change is a pure rename or move with no change in behaviour;
+- the location is ambiguous: more than one chunk shares its path and symbol at either commit, for example `typing.overload` definitions;
+- the location is a class or function whose change lies inside a changed nested symbol, which is a case of its own;
 - the repository or file is excluded by the safety scanner;
+- review finds the change is not behavioural;
 - a fair query cannot be written without revealing the symbol or path.
 
-Every exclusion and its reason must be recorded.
+Every exclusion and its reason must be recorded. `cohere-candidates` applies the first six automatically; the last three are review decisions.
 
 ## Ground truth
 
