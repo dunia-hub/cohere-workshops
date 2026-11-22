@@ -391,3 +391,32 @@ Development and evaluation separation reduces overfitting and supports credible 
 ### Consequences
 
 Exploratory results may document failures and guide implementation, but they cannot be reported as final benchmark evidence.
+
+---
+
+## D017: Refocus the study on version-aware retrieval
+
+**Date:** 22 November 2026
+**Status:** Accepted
+
+### Context
+
+The protocol, evaluation plan and architecture were written for change-impact prediction: given a change request, predict which files a merged pull request modified. During Workshops 2–4 the prototype gained version-aware components (`versions.py`, `version_search.py`, `rerank_versions.py`, `agent_tools.py`, `agent.py`). Exploratory runs with them showed a narrower problem: retrieval over two revisions often ranks superseded or removed code above current code. The README already presents the project as *Right Code, Wrong Version*, so the README and the research documents describe different studies.
+
+### Decision
+
+The study is *Right Code, Wrong Version: Evaluating Temporal Robustness in Repository Level Code Retrieval*. Its question is whether retrieval, and an agent grounded in retrieval, can tell code that is valid at a target commit from other versions of the same code. Change-impact prediction is no longer a research question of this study.
+
+### Rationale
+
+- The exploratory evidence points to the version-aware question.
+- Validity at a commit can be derived deterministically from Git, which follows D003 and D014: models rank and answer, Git decides what is valid.
+- One question keeps the dataset, ground truth and metrics consistent.
+
+### Consequences
+
+- `protocol.md`, `evaluation-plan.md` and `architecture.md` are rewritten for the version-aware study.
+- Change-impact components (BM25, `cohere-search`, grounded and ungrounded prediction, pull-request manifests) stay in the codebase as foundation and possible baselines. Their results are not reported as findings of this study.
+- Ground truth changes from merged pull-request diffs to Git-derived chunk validity at a target commit, plus answer keys committed before any run.
+- The October exploratory records and the November demo reruns remain development evidence under D016 and are excluded from the final evaluation.
+- Earlier experiments ran under the previous protocol. This change is recorded before any final evaluation run, as the protocol requires.

@@ -13,6 +13,18 @@ Development checks are clearly labelled and must not be presented as research re
 | PRACTICE-001 | 21 September 2026 | API connection check | First Cohere Chat request from the Python prototype | Completed |
 | exp-2026-10-12-gitignore-retrieval | 12 October 2026 | Exploratory retrieval | Retrieve files relevant to Git ignore support | Completed; development only |
 | exp-2026-10-13-chunk-limits-prediction | 13 October 2026 | Exploratory prediction | Predict files affected by bounded chunking | Completed; development only |
+| exp-2026-10-13-chunk-limits-ungrounded | 13 October 2026 | Exploratory prediction | Ungrounded Command baseline for bounded chunking | Completed; development only |
+| exp-2026-11-18-demo-*-attempt1 | 18 November 2026 | Exploratory rerun | Embed, Rerank and agent on the practice repository | Failed at agent stage: trial key monthly limit; kept as record |
+| exp-2026-11-18-demo-*-attempt2 | 18 November 2026 | Exploratory rerun | Same, on a production key | Failed at agent stage: Command A+ monthly cap; kept as record |
+| exp-2026-11-22-demo-embed | 22 November 2026 | Exploratory retrieval | Embed across v1 and v2 of the practice repository | Completed; development only |
+| exp-2026-11-22-demo-rerank | 22 November 2026 | Exploratory retrieval | Rerank in code and metadata formats, with Git filter | Completed; development only |
+| exp-2026-11-22-demo-agent | 22 November 2026 | Exploratory agent | 4 questions at targets v1 and v2, Command A; scored in scoring.md | Completed; development only |
+
+## Protocol changes
+
+| Date | Change | Record |
+| --- | --- | --- |
+| 22 November 2026 | Study changed from change-impact prediction to version-aware retrieval. Runs before this date were made under the earlier protocol and are development evidence only. | D017 |
 
 ## Entry template
 
