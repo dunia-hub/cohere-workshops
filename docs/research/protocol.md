@@ -2,147 +2,178 @@
 
 ## Working title
 
-**Predict Before You Patch: Evidence-Grounded Change Impact Analysis for Open-Source Repositories**
+**Right Code, Wrong Version: Evaluating Temporal Robustness in Repository Level Code Retrieval**
 
 ## Status
 
-Draft protocol  
-Last updated: 21 September 2026
+Draft protocol, revised for the version-aware study (D017)  
+Last updated: 22 November 2026
+
+The first version of this protocol (21 September 2026) described a change-impact study, *Predict Before You Patch*. D017 replaced it with the study described here.
 
 ## Background
 
-Developers often receive an issue or feature request before knowing which files, functions, tests and dependencies will need modification. Language models can suggest possible changes, but their recommendations may be incomplete, unsupported or confidently incorrect.
+AI coding tools answer questions about a repository by retrieving code and passing it to a language model. A repository's history holds many versions of the same function, and an index can end up containing more than one of them: an index that was not refreshed, an index built across branches or releases, or vendored copies of older code. When that happens, retrieval can return code that was correct once but is not correct at the commit the developer is working on.
 
-This research investigates whether deterministic repository analysis combined with Cohere Embed, Rerank and Command can produce more accurate and auditable change-impact predictions.
+Old and new versions of a function are usually close in wording, so similarity-based retrieval has little signal to tell them apart. A model that answers from the wrong version can give a confident, well-cited answer that is wrong for the code in front of the developer.
+
+This study measures how often Cohere Embed and Cohere Rerank prefer the wrong version, whether showing Rerank revision metadata helps, and whether a deterministic Git validity check, combined with a read-only Cohere Command agent, keeps answers to code that is valid at the target commit.
 
 ## Primary research question
 
-Can an evidence-grounded AI system predict which parts of a Python repository will be affected by a proposed code change more accurately than keyword search, embedding retrieval or a language model without repository grounding?
+When a repository index contains code from two revisions, can retrieval, and an agent grounded in retrieval, return and use only code that is valid at a chosen target commit?
 
 ## Secondary research questions
 
-1. Does structural repository information improve file-level prediction accuracy?
-2. Does Cohere Rerank improve the ordering of relevant files retrieved with Cohere Embed?
-3. Can repository evidence reduce unsupported change recommendations?
-4. Can calibrated abstention reduce incorrect predictions when repository evidence is insufficient?
-5. What quality, latency and API-usage trade-offs arise between the evaluated approaches?
+1. How often does Cohere Embed rank a wrong-version chunk above the target-valid chunk for the same code location?
+2. Does Cohere Rerank reduce that rate?
+3. Does adding revision and commit-date metadata to the text Rerank reads reduce that rate?
+4. Does a Git validity filter change the answer correctness, wrong-version fact rate and decline rate of a Command agent, compared with the same agent without the filter and with Command answering without retrieval?
+5. Do the results hold when the target is the older revision rather than the newer one?
+6. What latency and API usage does each configuration add?
 
 ## Hypotheses
 
 ### H1
 
-Structural and semantic retrieval will achieve higher file-level recall than keyword retrieval alone.
+Embed-only retrieval will rank a wrong-version chunk above the target-valid chunk for the same location at a rate above zero, with a 95% confidence interval that excludes zero.
 
 ### H2
 
-Cohere Rerank will improve the ranking of files that were actually modified in the corresponding pull request.
+Cohere Rerank will lower the wrong-version-above-valid rate compared with Embed alone, but will not reduce it to zero.
 
 ### H3
 
-Requiring repository evidence for each prediction will reduce unsupported file and symbol recommendations.
+Adding revision and commit-date metadata to the Rerank input will not lower the wrong-version-above-valid rate compared with Rerank on code text alone.
 
 ### H4
 
-An abstention mechanism will reduce false-positive predictions on ambiguous or incomplete change requests.
+The agent with the Git validity filter will state fewer wrong-version facts than the same agent without the filter and than Command without retrieval, without a higher rate of unnecessary declines.
+
+## Definitions
+
+- **Code location:** a chunk's path, kind, symbol and part index (`versions.py`, `_version_key`).
+- **Target-valid chunk:** a chunk whose location and content hash both exist at the target commit (`agent_tools.py`, `TargetValidator`).
+- **Wrong-version chunk:** a chunk from the other revision whose location changed (superseded) or no longer exists (removed) at the target. When the target is the newer revision, wrong-version chunks are stale code.
+- **Unchanged chunk:** a chunk identical in both revisions. It is indexed once.
+
+Validity is decided by Git history alone. Models never decide which code is valid.
 
 ## Unit of analysis
 
-One experiment unit consists of:
+One case consists of:
 
-- A repository snapshot before a merged pull request
-- The issue or change request associated with that pull request
-- The files and tests actually changed by the pull request
-- Predictions produced from the pre-change repository
+- a public repository and two commits on the same line of history, older and newer;
+- a target commit, which is either of the two;
+- a query or question written by the researcher;
+- the target-valid chunk or chunks that answer it, and their wrong-version counterparts, derived from Git;
+- for answering cases, an answer key listing the facts true at the target and the facts true only at the other revision, committed before any run.
 
-The merged pull-request diff provides the primary ground truth.
+Every query is evaluated at both targets, giving paired cases.
 
 ## Planned system configurations
 
-1. Keyword retrieval
-2. Cohere Embed retrieval
-3. Cohere Embed with Cohere Rerank
-4. Structural and semantic retrieval
-5. Ungrounded Cohere Command prediction
-6. Evidence-grounded prediction with abstention
+Retrieval configurations:
 
-Each configuration will receive the same change request and pre-change repository snapshot.
+1. BM25 keyword retrieval over the two-revision index
+2. Cohere Embed
+3. Cohere Embed and Rerank, code text only
+4. Cohere Embed and Rerank, code text with revision and commit-date metadata
+5. Cohere Embed, Rerank and the Git validity filter (proposed retrieval)
+
+Answering configurations:
+
+6. Cohere Command without retrieval
+7. Read-only agent without the Git validity filter (ablation)
+8. Read-only agent with the Git validity filter (proposed system)
+
+Every configuration receives the same cases, models, candidate counts and settings.
+
+## Models
+
+- Embed: `embed-v4.0`
+- Rerank: `rerank-v4.0-pro`
+- Command: `command-a-03-2025` as the primary model; `command-a-plus-05-2026` as a second model if its rate limit allows
+
+The model used is recorded in every run.
 
 ## Scope
 
-The initial study will focus on:
+The study covers:
 
-- Publicly available open-source repositories
-- Python repositories
-- Merged pull requests with identifiable pre-change commits
-- Text-based source, configuration, test and documentation files
-- File-level and symbol-level change-impact prediction
+- public Python repositories;
+- text files supported by the repository scanner;
+- commit pairs where at least one indexed symbol was superseded or removed;
+- indexes built from exactly two revisions;
+- symbol-level chunks (functions, classes and methods);
+- read-only retrieval and answering.
 
 ## Out of scope
 
-The initial study will not evaluate:
+The study does not evaluate:
 
-- Automatic code modification
-- Pull-request generation
-- Private repositories
-- Security vulnerability detection
-- Developer productivity claims beyond the measured tasks
-- Fully autonomous software maintenance
-- Non-Python structural parsing
+- indexes with more than two revisions;
+- change-impact prediction (see D017);
+- automatic code modification or pull-request generation;
+- private repositories;
+- non-Python structural parsing;
+- security vulnerability detection;
+- developer productivity.
 
 ## Prototype role
 
-The current repository contains the reference prototype used to develop and evaluate the research system.
+The repository contains the reference prototype used for the study.
 
-It currently supports:
+Implemented:
 
-- Repository file discovery
-- Deterministic document loading
-- SHA-256 content hashing
-- Python AST analysis
-- Symbol and import extraction
-- Structural repository mapping
-- JSON command-line output
-- Safety exclusions and processing-error records
-- Deterministic file-level and symbol-level chunks
-- BM25 keyword retrieval
-- Cohere Embed semantic retrieval
-- Cohere Rerank candidate ordering
-- Optional structural import expansion
-- Evidence-grounded Cohere Command predictions
-- Local prediction validation and explicit abstention
-- File-level ranking metrics
+- loading any Git revision through the safety exclusions (`versions.py`);
+- labelling chunks as current, superseded or removed;
+- Embed retrieval across two revisions (`cohere-versions`);
+- Rerank in code and metadata formats, with a Git filter (`cohere-rerank`);
+- the read-only agent, validated against any target commit (`cohere-agent`);
+- JSON Lines records for every run;
+- a rerun script for recorded exploratory runs (`scripts/rerun_demo_experiments.py`).
 
-Pull-request dataset construction and aggregate benchmarking remain under development.
+Not yet implemented:
+
+- BM25 over the two-revision index (configuration 1);
+- Command without retrieval for questions (configuration 6);
+- the agent without the Git filter (configuration 7);
+- a manifest format for commit-pair cases, gold chunk labels and answer keys at scale;
+- an aggregate runner and the version-aware metrics;
+- embedding caching, a dependency lock file and continuous integration.
+
+## Development and evaluation separation
+
+The practice repository (`cohere-demo-repo`), this repository, and any repository used while writing queries, prompts or thresholds are development repositories. Their runs are exploratory and are excluded from the final evaluation (D016).
+
+Final evaluation repositories and cases are fixed in a committed manifest before any final run.
 
 ## Workshop relationship
 
-The prototype will be developed and tested before Workshops 2–4 are designed.
+Workshops 2–4 were built on this prototype and taught its retrieval, reranking and agent stages.
 
-Workshop attendance is separate from research participation. Attendees may participate in every workshop without contributing research data. Any participant study data will require separate voluntary consent.
+Workshop attendance is separate from research participation. Attendees may take part in every workshop without contributing research data. Any participant study data requires separate voluntary consent.
 
-The primary technical evaluation will use public repository history and will not depend on workshop participation.
+The technical evaluation uses public repository history and does not depend on workshop participation.
 
 ## Reproducibility
 
 Every experiment must record:
 
-- Repository URL
-- Repository commit
-- Pull-request identifier
-- Model names
-- Prompt or query
-- Retrieval configuration
-- Random seed where applicable
-- Date and time
-- Latency
-- API usage
-- Predictions
-- Ground truth
-- Evaluation results
-- Relevant code version
+- repository URL, both commits, the target, and tree hashes;
+- application commit and whether the working tree was clean;
+- model names, Cohere SDK version and Python version;
+- query or question, and the answer key identifier;
+- configuration settings;
+- date and time;
+- latency;
+- API usage;
+- ranked outputs, validity decisions and answers;
+- evaluation results.
 
 ## Protocol changes
 
 Material changes to the research questions, hypotheses, dataset or evaluation method must be recorded before running the affected experiments.
 
-Changes must be documented in the experiment log and committed to Git.
+Changes must be documented in the decision log and the experiment log and committed to Git. The change from change-impact prediction to version-aware retrieval is recorded as D017.

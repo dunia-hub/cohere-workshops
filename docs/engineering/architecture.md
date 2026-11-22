@@ -2,214 +2,173 @@
 
 ## Status
 
-Implemented and planned architecture for the evidence-grounded change-impact research prototype.
+Implemented and planned architecture for the version-aware retrieval prototype behind *Right Code, Wrong Version*.
 
-Last updated: 13 October 2026
+Last updated: 22 November 2026 (D017). The earlier version of this document described the change-impact pipeline, which is now the foundation layer below.
 
 ## Design principle
 
-Deterministic repository evidence is created and validated before a model reasons about a proposed change. Models are not treated as sources of truth for file existence, symbols, imports, exclusions or evaluation ground truth.
+Models rank and answer. Git decides what is valid.
 
-## Implemented pipeline
+Deterministic repository evidence is created and checked before a model reasons about it. Models are never the source of truth for which code exists, which version it belongs to, or whether it is valid at a commit.
+
+## Version-aware pipeline
 
 ```mermaid
 flowchart TD
-    A[Local repository] --> B[Safe scanner]
-    B --> C[Document loader]
-    C --> D[Python AST analysis]
-    C --> E[Deterministic chunking]
-    D --> E
-    E --> F[Cohere Embed]
-    Q[Change request] --> G[Query embedding]
-    F --> H[Cosine retrieval]
-    G --> H
-    H --> I[Optional import expansion]
-    I --> J[Cohere Rerank]
-    J --> K[Cohere Command prediction]
-    K --> L[Local evidence validator]
-    L --> M[Prediction or abstention]
+    A[Git repository] --> B[Load older revision]
+    A --> C[Load newer revision]
+    B --> D[Label versions]
+    C --> D
+    D --> E[Cohere Embed]
+    Q[Query or question] --> F[Query embedding]
+    E --> G[Cosine retrieval]
+    F --> G
+    G --> H[Cohere Rerank]
+    H --> I[Git validity check at target]
+    I -->|valid| J[Cohere Command answer]
+    I -->|rejected| K[Recorded, never sent to Command]
+    J --> L[Answer with cited evidence, or decline]
 ```
 
-The same repository corpus also supports a deterministic BM25 keyword baseline.
+## Loading revisions
 
-## Safety and ingestion
+`src/cohere_workshops/versions.py`
 
-### Repository scanner
+`load_revision` reads files directly from a Git commit with `git ls-tree` and `git cat-file`, without checking the commit out. It applies the same safety rules as the working-tree scanner: ignored directories, sensitive file names, supported extensions, the 1,000,000-byte size limit and secret detection. Excluded files and processing errors are recorded.
 
-`src/cohere_workshops/scanner.py`
+Each accepted file is hashed with SHA-256 and split into the same deterministic chunks the scanner pipeline uses.
 
-The scanner:
+## Labelling versions
 
-- discovers supported text files in deterministic order;
-- applies directory exclusions and Git ignore rules;
-- rejects sensitive filenames;
-- excludes files larger than 1,000,000 bytes;
-- records every exclusion and its reason.
+`label_versions` compares two revisions by code location: path, chunk kind, symbol and part index.
 
-### Secret detection
+| Label | Meaning |
+| --- | --- |
+| current | the chunk at the newer revision |
+| superseded | an older chunk whose location still exists but whose content changed |
+| removed | an older chunk whose location no longer exists |
 
-`src/cohere_workshops/safety.py`
+Older chunks identical to the newer revision are skipped, so each unchanged chunk is indexed once.
 
-High-confidence patterns for private keys and selected provider credentials are detected before content enters the model pipeline. Suspected files are excluded and recorded. Test fixtures construct fake patterns at runtime so the repository itself is not incorrectly excluded.
+## Retrieval across versions
 
-### Document loading
+`src/cohere_workshops/version_search.py`, `cohere-versions`
 
-`src/cohere_workshops/documents.py`
+Labelled chunks are embedded with `embed-v4.0` (`search_document`), and queries with `search_query`. Local cosine similarity ranks them. Retrieval runs at symbol level by default (functions, classes and methods) or at file level.
 
-Accepted files are decoded as UTF-8, assigned repository-relative paths and languages, and hashed with SHA-256. Invalid UTF-8 is recorded as a processing error rather than terminating the complete scan.
+For each query, the output reports whether the top result is current, how many outdated chunks are in the top K, and the score gap between the best current and the best outdated result.
 
-## Deterministic repository evidence
+## Reranking and the Git filter
 
-### Python structure
+`src/cohere_workshops/rerank_versions.py`, `cohere-rerank`
 
-`src/cohere_workshops/structure.py`
+`rerank-v4.0-pro` reorders the Embed candidates. The text Rerank reads has two formats:
 
-Python's AST provides:
+- **code:** path, symbol and code;
+- **metadata:** the same, plus revision, commit and commit date.
 
-- classes, functions and methods;
-- qualified symbol names;
-- start and end lines;
-- imports.
+`check_ranking` then records whether stale code ranked above current code, whether current code is in the top K, and the stale share of the top K. `temporal_filter` removes stale chunks after Rerank.
 
-Malformed Python is recorded as a processing error. Non-Python files remain available as text but do not receive invented structural metadata.
+This stage treats the newer revision as valid. The agent validates against any target, as described below.
 
-### Repository map
+## The read-only agent
 
-`src/cohere_workshops/mapper.py`
+`src/cohere_workshops/agent_tools.py`, `src/cohere_workshops/agent.py`, `cohere-agent`
 
-The map combines file metadata, hashes, symbols, imports, exclusions and processing errors. The `cohere-workshops` command serializes this evidence as JSON.
+### Search tool
 
-### Traceable chunks
+`CodeSearchTool` exposes one tool to Command, `search_code`. Each call runs Embed, then Rerank, then the Git check, and returns only valid evidence. It never writes to the repository.
 
-`src/cohere_workshops/chunks.py` and `src/cohere_workshops/corpus.py`
+### Git validity check
 
-The corpus contains deterministic file-level and symbol-level chunks. Every chunk retains:
+`TargetValidator` loads the target commit, which may be either revision. A chunk is valid only if its location and content hash both exist at the target. Rejected chunks are recorded in the trace and never reach Command.
 
-- source path and language;
-- kind and optional symbol;
-- start and end lines;
-- source and chunk hashes;
-- stable chunk identifier;
-- part index and count when content is split.
+### Answering
 
-Chunks are capped at 12,000 characters while preserving full source coverage, including exceptionally long lines.
+`run_agent` works in two steps with the same Command model:
 
-## Retrieval configurations
+1. **Tool planning.** Command decides what to search for and may call `search_code` up to 3 times. If it never calls the tool, the app searches with the question.
+2. **Answering.** Command answers from validated evidence only. A JSON Schema restricts the cited evidence IDs to chunks that passed the Git check. Command may decline when the evidence does not answer the question.
 
-### BM25 baseline
+The default Command model is `command-a-plus-05-2026`. `--command-model` selects another; exploratory reruns use `command-a-03-2025` because of the Command A+ monthly limit.
 
-`src/cohere_workshops/keyword.py`
+### Stale-name check
 
-A local deterministic BM25 implementation provides the lexical baseline without using Cohere credits.
-
-### Cohere Embed retrieval
-
-`src/cohere_workshops/embeddings.py` and `src/cohere_workshops/retrieval.py`
-
-Repository chunks use `embed-v4.0` with the `search_document` input type. Change requests use `search_query`. Local cosine similarity ranks the initial candidates.
-
-### Structural expansion
-
-`src/cohere_workshops/relationships.py` and `src/cohere_workshops/structural_retrieval.py`
-
-The optional structural configuration resolves local Python import relationships and adds bounded one-hop related files to the candidate set. Every expansion remains tied to deterministic repository evidence.
-
-### Cohere Rerank
-
-`src/cohere_workshops/reranking.py`
-
-`rerank-v4.0-pro` reranks only the supplied candidates against the original change request. It cannot introduce content outside that set.
-
-### Semantic orchestration
-
-`src/cohere_workshops/semantic.py`
-
-This layer coordinates corpus construction, embedding, retrieval, optional structural expansion and reranking.
-
-## Evidence-grounded prediction
-
-`src/cohere_workshops/prediction.py`
-
-`command-a-plus-05-2026` receives the change request and reranked evidence. JSON Schema constrains the response to supported paths, symbols, chunk identifiers and test paths.
-
-The local validator then checks:
-
-- predicted files exist in retrieved evidence;
-- symbols are supported by cited evidence;
-- evidence identifiers are valid;
-- test paths are supported;
-- confidence values are within range;
-- duplicate file predictions are normalized;
-- required fields are present.
-
-Unsupported model output is rejected. When no usable repository evidence is available, the system returns an explicit abstention with a reason.
+`stale_references` flags an answer that names a rejected symbol. It skips names that also exist in valid code, so it cannot flag a superseded function that kept its name. It is a secondary signal; answer keys are the real check.
 
 ## Command-line interfaces
 
-### Repository mapping
-
 ```bash
-cohere-workshops /path/to/repository
+cohere-demo-repo
+cohere-versions demo_repo --old v1 --new v2
+cohere-rerank demo_repo --old v1 --new v2 --format both
+cohere-agent demo_repo --old v1 --new v2 --target v1 --question "How is the transfer fee calculated?"
 ```
 
-### Semantic retrieval and prediction
+`cohere-demo-repo` creates the practice repository with tags `v1` and `v2`. The other three commands accept `--offline`, which uses fake clients and spends no credits.
 
-```bash
-cohere-search /path/to/repository "change request"
-cohere-search /path/to/repository "change request" --structural
-cohere-search /path/to/repository "change request" --structural --predict
-```
+## Records
 
-The search command returns JSON containing configuration, exclusions, errors, ranked evidence and, when requested, a validated prediction. It does not expose API keys, embedding vectors or complete source content.
+Each command appends JSON Lines records: queries, ranks, scores, version labels, validity decisions, answers and citations. Records never contain API keys or embedding vectors.
 
-## Evaluation boundary
+`scripts/rerun_demo_experiments.py` runs all three stages on the practice repository and writes one folder per stage under `experiments/exploratory/`, with `raw-output.jsonl`, `console.txt` and `metadata.json`. A live run refuses to start when the working tree has uncommitted changes, so each record is tied to an exact application commit.
 
-`src/cohere_workshops/evaluation.py`
+## Foundation layer
 
-Metrics are calculated locally from recorded predictions and pull-request ground truth. Implemented file-level metrics include:
+These components were built for the earlier change-impact design (D017). The version-aware pipeline reuses the first group directly.
 
-- Recall@K;
-- Precision@K;
-- reciprocal rank;
-- average precision.
+Reused by the version-aware pipeline:
 
-Ground truth must come from merged pull-request diffs against pre-change repository snapshots. Models do not generate ground truth.
+- `scanner.py`, `safety.py`: file discovery, exclusions and secret detection;
+- `documents.py`: UTF-8 loading and SHA-256 hashing;
+- `structure.py`: Python AST symbols, line ranges and imports;
+- `chunks.py`, `corpus.py`: deterministic file and symbol chunks, capped at 12,000 characters, with stable identifiers;
+- `embeddings.py`, `retrieval.py`, `reranking.py`: Cohere Embed, cosine retrieval and Cohere Rerank.
+
+Kept, not used in this study's findings:
+
+- `mapper.py`, `cohere-workshops`: repository map as JSON;
+- `keyword.py`: BM25 retrieval (planned as a baseline once wired to two-revision corpora);
+- `relationships.py`, `structural_retrieval.py`: one-hop import expansion;
+- `semantic.py`, `prediction.py`, `ungrounded.py`, `cohere-search`: change-impact prediction, grounded and ungrounded;
+- `dataset.py`, `manifest_writer.py`, `case_builder.py`, `git_ground_truth.py`, `cohere-dataset`, `cohere-case`: pull-request manifests and diff ground truth;
+- `evaluation.py`: Recall@K, Precision@K, reciprocal rank and average precision over files.
 
 ## Deterministic and model-assisted boundaries
 
-| Deterministic responsibilities | Model-assisted responsibilities |
+| Deterministic | Model-assisted |
 | --- | --- |
-| File discovery and exclusions | Semantic embeddings |
-| Git ignore evaluation | Candidate reranking |
-| Secret-pattern checks | Structured change-impact reasoning |
-| UTF-8 loading and hashing | Natural-language reasons |
-| AST parsing and import resolution | Confidence and unresolved questions |
-| Chunk construction and identifiers | Evidence-linked predictions |
-| Local output validation | Abstention recommendation |
-| Diff-based ground truth and metrics | None of the ground-truth calculation |
+| Reading revisions from Git | Query and chunk embeddings |
+| Safety exclusions and hashing | Candidate reranking |
+| Version labels | Choosing search queries |
+| Validity at the target commit | Writing the answer |
+| Restricting citable evidence | Choosing to decline |
+| Ground truth and metrics | None of the ground truth |
 
 ## Security boundaries
 
-- Cohere credentials remain in `.env`, which is excluded from Git and scanning.
+- Cohere credentials stay in `.env`, which is excluded from Git and from scanning.
 - Repository content reaches Cohere only through an explicit live command.
-- Automated tests use fake clients and do not spend API credits.
-- Private repositories are outside the research scope.
-- Sensitive paths, oversized files and suspected secrets are excluded before model calls.
-- Output and logs must never contain API keys.
+- Automated tests use fake clients and spend no credits.
+- The agent's only tool is read-only search.
+- Sensitive paths, oversized files and suspected secrets are excluded before any model call.
+- Records and logs never contain API keys.
 
 ## Reproducibility
 
-Every formal result must be traceable to the repository URL and pre-change commit, application commit, source hashes, chunk identifiers, model names, request configuration, experiment identifier, prediction and diff-derived ground truth.
+Every formal result must be traceable to the repository URL, both commits and their tree hashes, the target, the application commit, chunk identifiers, model names, settings, the experiment identifier, and the ground truth or answer key.
 
-Exploratory development runs are stored separately from the final evaluation dataset.
+Exploratory runs are stored separately from the final evaluation (D016).
 
 ## Remaining architecture work
 
-The prototype still requires:
-
-- a reproducible pull-request dataset builder and manifest;
-- an aggregate benchmark runner for every configuration;
-- embedding caching;
-- exact dependency locking;
-- continuous integration;
-- final experiment artifact and API-usage recording.
+- Git filter in the Rerank stage validated against the target, not always the newer revision;
+- per-location ranking metric (wrong-version above valid);
+- BM25 over two-revision corpora;
+- Command answering without retrieval, for questions;
+- the agent without the Git filter, as an ablation;
+- a manifest for commit-pair cases, queries and answer keys;
+- an aggregate runner over the manifest;
+- embedding caching, a dependency lock file and continuous integration;
+- API usage recording.

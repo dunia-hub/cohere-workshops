@@ -2,215 +2,202 @@
 
 ## Purpose
 
-This document defines how the change-impact system will be evaluated against historical merged pull requests.
+This document defines how the version-aware retrieval and answering configurations in the [research protocol](protocol.md) will be evaluated.
+
+Last updated: 22 November 2026 (D017). The earlier plan evaluated change-impact prediction against merged pull-request diffs.
 
 ## Evaluation dataset
 
-Each evaluation case must contain:
+Each case must contain:
 
-- A public Python repository
-- A merged pull request
-- The repository commit immediately before the pull request
-- A usable issue, pull-request description or change request
-- The files changed by the merged pull request
-- The associated diff
-- Identifiable test-file changes where applicable
+- a public Python repository;
+- an older and a newer commit on the same line of history;
+- a target, which is either commit;
+- one code location that was superseded or removed between the two commits;
+- a query or question written by the researcher about that location;
+- the target-valid chunk and the wrong-version chunk for that location, derived from Git;
+- for answering cases, an answer key with the facts true at each commit.
+
+## Dataset construction
+
+1. **Choose repositories.** Public Python repositories with a permissive licence, tagged releases and Python source in most changes. Repositories used during development are excluded.
+2. **Choose commit pairs.** Use consecutive release tags as the older and newer commits. An index built from an older release is the realistic case this study models. Where a repository has too few releases, use commits at least 50 commits apart and record why.
+3. **List candidate locations.** Build the two-revision corpus (`build_versioned_corpus`) and list every symbol-level chunk labelled superseded or removed.
+4. **Filter candidates.** Apply the inclusion and exclusion criteria below and record every exclusion with its reason.
+5. **Sample.** Select up to 20 locations per commit pair at random with a recorded seed, so large releases do not dominate.
+6. **Write queries.** For each location, read the code at both commits and the commit messages, then write one query describing the behaviour in plain words. The query must not contain the symbol name or the file path.
+7. **Write answer keys.** For the answering subset, list the facts true at each commit, checked by reading the code at both commits and, where practical, by running it.
+8. **Freeze.** Commit the manifest, queries and answer keys before any final run. Changes after that point are recorded as protocol changes.
+
+### Target size
+
+At least 5 repositories and 100 locations. Each location is evaluated at both targets, giving 200 paired retrieval cases. At 100 locations, a rate near 30% has a 95% confidence interval of about ±9 percentage points, which is enough to compare configurations that differ by more than that. Answering uses a subset of at least 40 locations (80 question and target cases), because every answering case needs a hand-written answer key.
 
 ## Inclusion criteria
 
-A case may be included when:
+A location may be included when:
 
-- The repository can be cloned and checked out reproducibly.
-- The pull request represents a code or documentation change.
-- The pre-change commit is available.
-- The change request contains enough text to form a query.
-- The changed files are present in the recorded diff.
+- both commits can be checked out reproducibly;
+- the location is a function, class or method in a non-test Python file;
+- the code changed in behaviour, not only in formatting;
+- the change can be described in a query without naming the symbol or path.
 
 ## Exclusion criteria
 
-A case must be excluded when:
+A location must be excluded when:
 
-- The repository or required commit is unavailable.
-- The pull request only changes generated files.
-- The change is primarily dependency-lockfile noise.
-- The pull request combines unrelated changes.
-- The change request reveals the exact target files in a way that makes retrieval trivial.
-- The repository cannot be processed safely or reproducibly.
+- the change is whitespace, formatting, comments or docstrings only;
+- the file is generated, vendored or a test file;
+- the change is a pure rename or move with no change in behaviour;
+- the repository or file is excluded by the safety scanner;
+- a fair query cannot be written without revealing the symbol or path.
 
 Every exclusion and its reason must be recorded.
 
 ## Ground truth
 
-The primary file-level ground truth is the set of files modified by the merged pull request.
+Ground truth comes from Git history alone:
 
-Secondary ground truth may include:
+- **Target-valid chunk:** the chunk at the location whose content hash exists at the target commit.
+- **Wrong-version chunk:** the chunk at the same location from the other commit.
+- **Removed locations:** at the newer target, there is no target-valid chunk at the location; the correct outcome is that no chunk from that location ranks first and the agent does not describe the removed code as current.
 
-- Modified Python symbols
-- Modified test files
-- Added or removed imports
-- Configuration changes
-- Documentation changes
-
-Ground truth must be extracted from the actual diff, not generated by a language model.
+For answering, the answer key is the ground truth. It is written by the researcher, not generated by a language model.
 
 ## Compared configurations
 
-### Baseline 1: Keyword retrieval
+### Retrieval
 
-Ranks repository files using lexical overlap between the change request and repository content.
+1. **BM25 keyword retrieval** over the two-revision index. Not yet wired to versioned corpora.
+2. **Cohere Embed.** `cohere-versions`.
+3. **Cohere Embed and Rerank, code text.** `cohere-rerank --format code`.
+4. **Cohere Embed and Rerank, code text with metadata.** `cohere-rerank --format metadata`. Adds revision, commit and commit date to the text Rerank reads.
+5. **Embed, Rerank and the Git validity filter.** The ranking from configuration 3 with wrong-version chunks removed.
 
-### Baseline 2: Cohere Embed
+The current `temporal_filter` treats the newer revision as valid. For final runs, configuration 5 must use `TargetValidator`, so it also works when the target is the older commit.
 
-Ranks files or code chunks using semantic similarity.
+### Answering
 
-### Baseline 3: Cohere Embed and Rerank
+6. **Command without retrieval.** The question and the repository name only. Not yet implemented for questions.
+7. **Agent without the Git validity filter.** The same agent, tools and prompts, with every candidate passed to Command. Not yet implemented.
+8. **Agent with the Git validity filter.** `cohere-agent`.
 
-Retrieves candidates with Cohere Embed and orders them with Cohere Rerank.
+## Retrieval metrics
 
-### Baseline 4: Structural and semantic retrieval
+Computed per case from the ranked candidates.
 
-Combines semantic similarity with deterministic repository evidence such as symbols, imports and file relationships.
+### Primary
 
-### Baseline 5: Ungrounded Cohere Command
+- **Wrong-version above valid:** the wrong-version chunk for the case's location ranks above its target-valid chunk. For removed locations at the newer target, any chunk from the removed location ranking first counts. This metric tests H1 to H3.
 
-Uses the same change request with repository file paths but without retrieved repository content. This measures whether evidence grounding improves predictions beyond model reasoning alone.
+### Secondary
 
-### Proposed system
+- **Valid@1:** the top result is target-valid.
+- **Gold Recall@K** for K = 1, 3, 5 and 10: the target-valid chunk is in the top K.
+- **Mean reciprocal rank** of the target-valid chunk.
+- **Wrong-version share of the top K** for K = 3 and 5.
+- **Score gap:** target-valid score minus wrong-version score for the location. Compared within a configuration only, because Embed and Rerank scores are on different scales.
 
-Uses structural retrieval, Cohere Embed, Cohere Rerank and Cohere Command to produce evidence-grounded predictions with confidence and abstention.
+For configuration 5, wrong-version share is zero by construction. Its cost is reported instead: how often the target-valid chunk was never retrieved, so the filter left nothing useful.
 
-## Primary metrics
+`check_ranking` in `rerank_versions.py` compares the best current and best stale chunk anywhere in the ranking. The primary metric needs a per-location comparison, which is new code.
 
-### Recall at K
+## Answering metrics
 
-The proportion of files actually changed that appear within the top K predictions.
+Each answer is scored against its answer key with one outcome:
 
-Report:
+- **Wrong-version:** states any fact true only at the other commit.
+- **Declined:** the agent declined to answer.
+- **Correct:** states every target fact and no wrong-version fact.
+- **Incomplete:** states some target facts, none from the wrong version.
 
-- Recall@1
-- Recall@3
-- Recall@5
-- Recall@10
+Outcomes are assigned in that order, so an answer that mixes versions is scored as wrong-version.
 
-### Precision at K
+Reported per configuration:
 
-The proportion of predicted files within the top K that were actually changed.
+- wrong-version fact rate (primary, tests H4);
+- correct rate;
+- decline rate, and unnecessary declines, where the target-valid chunk was among the candidates but the agent declined;
+- citation validity: cited evidence is target-valid. This holds by construction for configuration 8, because the answer schema only allows validated evidence IDs. It is measured for configuration 7.
 
-Report:
+The automatic stale-name check (`stale_references`) is reported as a secondary signal only. It skips names that also exist in valid code, so it cannot catch a superseded function that kept its name.
 
-- Precision@1
-- Precision@3
-- Precision@5
-- Precision@10
+### Scoring procedure
 
-### Mean reciprocal rank
+Answers are scored with the configuration hidden: answers are exported in random order with their configuration labels removed, scored, then joined back. Where a second scorer is available, a random 20% of answers is scored twice and agreement is reported.
 
-Measures how highly the first relevant changed file appears.
+## Repeated runs
 
-### Mean average precision
-
-Measures ranking quality when multiple files are relevant.
-
-## Secondary metrics
-
-- Symbol-level precision, recall and F1
-- Test-file recall
-- Unsupported prediction rate
-- Evidence citation accuracy
-- Abstention coverage
-- Error rate among non-abstained predictions
-- Confidence calibration
-- Request latency
-- Input and output token usage
-- API usage by configuration
-
-## Unsupported prediction
-
-A prediction is unsupported when the system recommends a file, symbol, dependency or test without valid evidence from the analyzed repository snapshot.
-
-Unsupported predictions must be counted even if the suggested change sounds plausible.
-
-## Abstention evaluation
-
-The proposed system may abstain when evidence is insufficient.
-
-Evaluation must report:
-
-- Percentage of cases answered
-- Percentage of cases abstained
-- Accuracy on answered cases
-- Error rate on answered cases
-- Correct and unnecessary abstentions
-- Coverage versus risk
-
-A system must not be considered better merely because it abstains on most cases.
+Embed scores varied between runs in exploratory work (0.5622 and 0.5629 for the same query). Each retrieval configuration is therefore run 3 times, and results report the mean and range. Answering configurations run once at temperature 0, with a random 20% subset repeated 3 times to measure answer stability.
 
 ## Experimental procedure
 
-For every evaluation case:
+For every case:
 
-1. Check out the recorded pre-change commit.
-2. Build the deterministic repository map.
-3. Submit the same change request to every configuration.
-4. Record the ranked predictions.
-5. Compare predictions with the merged pull-request diff.
-6. Calculate metrics using the same K values.
-7. Record latency and API usage.
-8. Store errors and abstention reasons.
-9. Preserve the raw output for later audit.
+1. Check out both recorded commits and verify their tree hashes.
+2. Build the two-revision corpus.
+3. Submit the same query or question to every configuration, at both targets.
+4. Record ranked candidates, validity decisions, answers and citations.
+5. Compute metrics against the Git ground truth and the answer key.
+6. Record latency and API usage.
+7. Store errors and decline reasons.
+8. Keep the raw output for later audit, including failed runs.
 
 ## Development and evaluation separation
 
-Cases used while developing prompts, thresholds or ranking logic must not be included in the final evaluation set.
-
-Repositories should be separated between development and evaluation where practical to reduce repository-specific leakage.
+Runs on the practice repository and on this repository are development runs (D016). Queries, prompts and thresholds are fixed before the final manifest is frozen, and no case used during development enters the final set.
 
 ## Statistical analysis
 
 Report:
 
-- Number of repositories
-- Number of pull-request cases
-- Mean and median results
-- Standard deviation
-- Bootstrap confidence intervals
-- Paired comparisons between configurations
-- Effect sizes alongside significance tests
+- number of repositories, commit pairs, locations and cases;
+- every metric per configuration, overall and per repository;
+- bootstrap 95% confidence intervals, resampling repositories and then cases, because cases from one repository are not independent;
+- paired comparisons on the same cases: McNemar's test for binary outcomes, for configurations 2 vs 3 (H2), 3 vs 4 (H3), and 8 vs 7 and 8 vs 6 (H4);
+- effect sizes as differences in rates with confidence intervals;
+- Holm correction across the hypothesis tests;
+- results at the older and newer target separately (secondary question 5).
 
 Results must not rely on a single aggregate score.
 
 ## Error analysis
 
-Incorrect predictions should be categorized as:
+Wrong-version and incorrect outcomes are categorised as:
 
-- Lexical mismatch
-- Semantic retrieval failure
-- Reranking failure
-- Missing structural relationship
-- Ambiguous change request
-- Cross-file dependency failure
-- Missing test prediction
-- Unsupported model inference
-- Excessive or unnecessary abstention
-- Dataset or ground-truth error
+- near-identical versions (small change, similar wording);
+- target-valid chunk not retrieved;
+- Rerank preferred the wrong version;
+- metadata changed the Rerank order for the worse;
+- the agent's own search query drifted from the question;
+- the answer mixed facts from both versions;
+- unnecessary decline;
+- rename or move counted as removal;
+- answer key or ground-truth error.
+
+## Known measurement limits
+
+- A code location is its path, kind, symbol and part index. Moved or renamed code appears as one removed and one new location.
+- Content hashes change on any edit, so formatting-only changes are removed during filtering, not by the hash.
+- The automatic stale-name check is weak, as described above.
 
 ## Human evaluation
 
-Workshop feedback may be used as a separate secondary usability study only with voluntary consent.
+Workshop feedback may be used as a separate, secondary usability study only with voluntary consent.
 
-Human ratings will not replace repository-diff ground truth in the primary technical evaluation.
+Human ratings do not replace Git ground truth or answer keys in the technical evaluation.
 
 ## Reporting requirements
 
 The final report must include:
 
-- Dataset construction method
-- Inclusion and exclusion counts
-- Model and API versions
-- Prompts and configuration
-- Results for every evaluated system
-- Confidence intervals
-- Failure examples
-- Limitations
-- API usage and latency
-- Reproduction instructions
+- the dataset construction method and seed;
+- inclusion and exclusion counts with reasons;
+- model and API versions;
+- prompts and configuration settings;
+- results for every configuration, at both targets;
+- confidence intervals;
+- failure examples from each error category;
+- limitations;
+- API usage and latency;
+- reproduction instructions.
