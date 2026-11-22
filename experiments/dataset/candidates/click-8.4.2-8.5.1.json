@@ -434,8 +434,8 @@
       "sample_order": 6,
       "sampled": true,
       "review": {
-        "decision": null,
-        "reason": null
+        "decision": "accept",
+        "reason": "less colour detection now parses flags properly"
       }
     },
     {
@@ -470,8 +470,8 @@
       "sample_order": 1,
       "sampled": true,
       "review": {
-        "decision": null,
-        "reason": null
+        "decision": "accept",
+        "reason": "PAGER arguments now passed to the pager"
       }
     },
     {
@@ -1391,8 +1391,8 @@
       "sample_order": 7,
       "sampled": true,
       "review": {
-        "decision": null,
-        "reason": null
+        "decision": "accept",
+        "reason": "help now shows an arguments section"
       }
     },
     {
@@ -1607,8 +1607,8 @@
       "sample_order": 2,
       "sampled": true,
       "review": {
-        "decision": null,
-        "reason": null
+        "decision": "accept",
+        "reason": "deprecated short help no longer translated"
       }
     },
     {
@@ -2285,8 +2285,8 @@
       "sample_order": 10,
       "sampled": true,
       "review": {
-        "decision": null,
-        "reason": null
+        "decision": "accept",
+        "reason": "empty envvar now treated as unset"
       }
     },
     {
@@ -3227,8 +3227,9 @@
       "sample_order": 3,
       "sampled": true,
       "review": {
-        "decision": null,
-        "reason": null
+        "decision": "reject",
+        "reason": "not_behavioural: same result",
+        "replaced_by_order": 21
       }
     },
     {
@@ -3294,7 +3295,7 @@
       "included": true,
       "exclusion_reason": null,
       "sample_order": 22,
-      "sampled": false,
+      "sampled": true,
       "review": {
         "decision": null,
         "reason": null
@@ -3368,8 +3369,8 @@
       "sample_order": 9,
       "sampled": true,
       "review": {
-        "decision": null,
-        "reason": null
+        "decision": "accept",
+        "reason": "invalid colours now raise ValueError"
       }
     },
     {
@@ -3669,7 +3670,7 @@
       "included": true,
       "exclusion_reason": null,
       "sample_order": 21,
-      "sampled": false,
+      "sampled": true,
       "review": {
         "decision": null,
         "reason": null
@@ -3773,8 +3774,8 @@
       "sample_order": 8,
       "sampled": true,
       "review": {
-        "decision": null,
-        "reason": null
+        "decision": "accept",
+        "reason": "isolated_filesystem now warns deprecated"
       }
     },
     {
@@ -4239,7 +4240,7 @@
       "included": true,
       "exclusion_reason": null,
       "sample_order": 23,
-      "sampled": false,
+      "sampled": true,
       "review": {
         "decision": null,
         "reason": null
@@ -4277,8 +4278,9 @@
       "sample_order": 5,
       "sampled": true,
       "review": {
-        "decision": null,
-        "reason": null
+        "decision": "reject",
+        "reason": "not_behavioural: same result",
+        "replaced_by_order": 23
       }
     },
     {
@@ -4502,8 +4504,9 @@
       "sample_order": 4,
       "sampled": true,
       "review": {
-        "decision": null,
-        "reason": null
+        "decision": "reject",
+        "reason": "not_behavioural: class rename only",
+        "replaced_by_order": 22
       }
     },
     {
